@@ -8,7 +8,7 @@ local _, ns = ...
 local oUF = ns.oUF
 
 -- Frame size
-local party_width = 140
+local party_width = 141
 local party_height = 27
 local partytarget_width = 30
 local partytarget_height = 27
