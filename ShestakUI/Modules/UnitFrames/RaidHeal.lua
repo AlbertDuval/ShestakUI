@@ -9,7 +9,7 @@ local oUF = ns.oUF
 
 -- Frame size
 local unit_width = 60.2
-local unit_height = 26
+local unit_height = 34
 
 -- Create layout
 local function Shared(self, unit)
@@ -290,7 +290,8 @@ end
 --	Default position of ShestakUI unitframes
 ----------------------------------------------------------------------------------------
 oUF:Factory(function(self)
-	if SavedOptions == nil or SavedOptions.RaidLayout ~= "HEAL" then return end
+	--if string.find(SavedOptions.RaidLayout,'HEAL') == nil then return end
+	if SavedOptions == nil or string.find(SavedOptions.RaidLayout,'HEAL') == nil then return end
 
 	oUF:RegisterStyle("ShestakHeal", Shared)
 	oUF:SetActiveStyle("ShestakHeal")
@@ -368,7 +369,7 @@ oUF:Factory(function(self)
 	end
 
 	if C.raidframe.show_raid == true then
-		if C.raidframe.raid_groups_vertical then
+		if C.raidframe.raid_groups_vertical or SavedOptions.RaidLayout == "VHEAL" then
 			-- Raid vertical
 			local raid = {}
 			for i = 1, C.raidframe.raid_groups do
@@ -379,7 +380,7 @@ oUF:Factory(function(self)
 						self:SetHeight(header:GetAttribute("initial-height"))
 					]],
 					"initial-width", unit_width,
-					"initial-height", T.Scale(unit_height),
+					"initial-height", T.Scale(27),
 					"showRaid", true,
 					"yOffset", T.Scale(-5),
 					"point", "TOPLEFT",
@@ -393,7 +394,7 @@ oUF:Factory(function(self)
 					"columnAnchorPoint", "TOP"
 				)
 				if i == 1 then
-					raidgroup:SetPoint(unpack(C.position.unitframes.raid_heal))
+					raidgroup:SetPoint("TOPLEFT", "oUF_Player", "BOTTOMRIGHT", 11, -8)
 				else
 					raidgroup:SetPoint("TOPLEFT", raid[i-1], "TOPRIGHT", 7, 0)
 				end
