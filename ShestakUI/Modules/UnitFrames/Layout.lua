@@ -816,7 +816,7 @@ local function Shared(self, unit)
 			self.Debuffs = CreateFrame("Frame", self:GetName().."Debuffs", self)
 			self.Debuffs:SetHeight(165)
 			self.Debuffs:SetWidth(221)
-			self.Debuffs.size = T.Scale(25)
+			self.Debuffs.size = T.Scale(35)
 			self.Debuffs.spacing = T.Scale(3)
 			self.Debuffs.initialAnchor = "BOTTOMRIGHT"
 			self.Debuffs["growth-y"] = "UP"
