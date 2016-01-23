@@ -1051,6 +1051,7 @@ local function Shared(self, unit)
 			self.Castbar.Text:SetPoint("RIGHT", self.Castbar.Time, "LEFT", -1, 0)
 			self.Castbar.Text:SetTextColor(1, 1, 1)
 			self.Castbar.Text:SetJustifyH("LEFT")
+			self.Castbar.Text:SetHeight(C.font.unit_frames_font_size)
 
 			if C.unitframe.castbar_icon == true and unit ~= "arena" then
 				self.Castbar.Button = CreateFrame("Frame", nil, self.Castbar)
@@ -1482,23 +1483,19 @@ SlashCmdList.TEST_UF = function(msg)
 	if InCombatLockdown() then print("|cffffff00"..ERR_NOT_IN_COMBAT.."|r") return end
 	if not moving then
 		for _, frames in pairs({"oUF_Target", "oUF_TargetTarget", "oUF_Pet", "oUF_Focus", "oUF_FocusTarget"}) do
-			_G[frames].Hide = function() end
-			_G[frames].unit = "player"
-			_G[frames]:Show()
+			_G[frames].oldunit = _G[frames].unit
+			_G[frames]:SetAttribute("unit", "player")
 		end
 
 		if C.unitframe.show_arena == true then
 			for i = 1, 5 do
-				_G["oUF_Arena"..i].Hide = function() end
-				_G["oUF_Arena"..i].unit = "player"
-				_G["oUF_Arena"..i]:Show()
-				_G["oUF_Arena"..i]:UpdateAllElements()
+				_G["oUF_Arena"..i].oldunit = _G["oUF_Arena"..i].unit
+				_G["oUF_Arena"..i].Trinket.Hide = T.dummy
 				_G["oUF_Arena"..i].Trinket.Icon:SetTexture("Interface\\Icons\\INV_Jewelry_Necklace_37")
+				_G["oUF_Arena"..i]:SetAttribute("unit", "player")
 
-				_G["oUF_Arena"..i.."Target"].Hide = function() end
-				_G["oUF_Arena"..i.."Target"].unit = "player"
-				_G["oUF_Arena"..i.."Target"]:Show()
-				_G["oUF_Arena"..i.."Target"]:UpdateAllElements()
+				_G["oUF_Arena"..i.."Target"].oldunit = 	_G["oUF_Arena"..i.."Target"].unit
+				_G["oUF_Arena"..i.."Target"]:SetAttribute("unit", "player")
 
 				if C.unitframe.plugins_enemy_spec == true then
 					_G["oUF_Arena"..i].EnemySpec:SetText(SPECIALIZATION)
@@ -1512,28 +1509,27 @@ SlashCmdList.TEST_UF = function(msg)
 
 		if C.unitframe.show_boss == true then
 			for i = 1, MAX_BOSS_FRAMES do
-				_G["oUF_Boss"..i].Hide = function() end
-				_G["oUF_Boss"..i].unit = "player"
-				_G["oUF_Boss"..i]:Show()
-				_G["oUF_Boss"..i]:UpdateAllElements()
+				_G["oUF_Boss"..i].oldunit = _G["oUF_Boss"..i].unit
+				_G["oUF_Boss"..i]:SetAttribute("unit", "player")
 			end
 		end
 		moving = true
 	else
 		for _, frames in pairs({"oUF_Target", "oUF_TargetTarget", "oUF_Pet", "oUF_Focus", "oUF_FocusTarget"}) do
-			_G[frames].Hide = nil
+			_G[frames]:SetAttribute("unit", _G[frames].oldunit)
 		end
 
 		if C.unitframe.show_arena == true then
 			for i = 1, 5 do
-				_G["oUF_Arena"..i].Hide = nil
-				_G["oUF_Arena"..i.."Target"].Hide = nil
+				_G["oUF_Arena"..i].Trinket.Hide = nil
+				_G["oUF_Arena"..i]:SetAttribute("unit", _G["oUF_Arena"..i].oldunit)
+				_G["oUF_Arena"..i.."Target"]:SetAttribute("unit", _G["oUF_Arena"..i.."Target"].oldunit)
 			end
 		end
 
 		if C.unitframe.show_boss == true then
 			for i = 1, MAX_BOSS_FRAMES do
-				_G["oUF_Boss"..i].Hide = nil
+				_G["oUF_Boss"..i]:SetAttribute("unit", _G["oUF_Boss"..i].oldunit)
 			end
 		end
 		moving = false
