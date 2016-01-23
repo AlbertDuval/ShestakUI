@@ -52,6 +52,7 @@ if C.enemycooldown.enable == true then
 		-- Interrupts and Silences
 		[57994] = 12,	-- Wind Shear
 		[47528] = 15,	-- Mind Freeze
+		[80965] = 15,	-- Skull Bash
 		[106839] = 15,	-- Skull Bash
 		[116705] = 15,	-- Spear Hand Strike
 		[96231] = 15,	-- Rebuke
@@ -61,12 +62,15 @@ if C.enemycooldown.enable == true then
 		[147362] = 24,	-- Counter Shot
 		[2139] = 24,	-- Counterspell
 		[19647] = 24,	-- Spell Lock
+		[119910] = 24,	-- Spell Lock
+		[19647] = 24,	-- Spell Lock (Ajout FM)
 		[115781] = 24,	-- Optical Blast
 		[102060] = 40,	-- Disrupting Shout
 		[15487] = 45,	-- Silence
 		[47476] = 60,	-- Strangulate
 		[78675] = 60,	-- Solar Beam
 		-- Crowd Controls
+		[5246] = 90,	-- Fear War (Ajout FM)
 		[115078] = 15,	-- Paralysis
 		[20066] = 15,	-- Repentance
 		[10326] = 15,	-- Turn Evil
@@ -87,6 +91,7 @@ if C.enemycooldown.enable == true then
 		[853] = 60,		-- Hammer of Justice
 		[108200] = 60,	-- Remorseless Winter
 		-- Defense abilities
+		[642] = 300,	-- Divine Shield
 		[48707] = 45,	-- Anti-Magic Shell
 		[31224] = 60,	-- Cloak of Shadows
 		[8143] = 60,	-- Tremor Totem
@@ -96,9 +101,10 @@ if C.enemycooldown.enable == true then
 		[137562] = 120,	-- Nimble Brew
 		[47585] = 120,	-- Dispersion
 		[1856] = 120,	-- Vanish
-		[7744] = 120,	-- Will of the Forsaken (Racial)
 		[19263] = 180,	-- Deterrence
+		[148467] = 180,	-- Deterrence (ajout FM)
 		[33206] = 180,	-- Pain Suppression
+		[7744] = 180,	-- Will of the Forsaken (Racial)
 	}
 end
 

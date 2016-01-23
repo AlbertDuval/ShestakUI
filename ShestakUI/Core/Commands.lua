@@ -1,4 +1,4 @@
-﻿local T, C, L, _ = unpack(select(2, ...))
+local T, C, L, _ = unpack(select(2, ...))
 
 ----------------------------------------------------------------------------------------
 --	Slash commands
@@ -183,6 +183,16 @@ SLASH_HEAL1 = "/heal"
 SLASH_HEAL2 = "/руфд"
 
 ----------------------------------------------------------------------------------------
+--	Switch to heal vertical layout
+----------------------------------------------------------------------------------------
+SlashCmdList.VHEAL = function()
+	SavedOptions.RaidLayout = "VHEAL"
+	ReloadUI()
+end
+SLASH_VHEAL1 = "/vheal"
+SLASH_VHEAL2 = "/vheal2"
+
+----------------------------------------------------------------------------------------
 --	Switch to dps layout
 ----------------------------------------------------------------------------------------
 SlashCmdList.DPS = function()
@@ -191,6 +201,17 @@ SlashCmdList.DPS = function()
 end
 SLASH_DPS1 = "/dps"
 SLASH_DPS2 = "/взы"
+
+--------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+--	Switch to blizzard layout
+----------------------------------------------------------------------------------------
+SlashCmdList.BLI = function()
+	SavedOptions.RaidLayout = "NONE"
+	ReloadUI()
+end
+SLASH_BLI1 = "/bliz"
+SLASH_BLI2 = "/bliz2"
 
 ----------------------------------------------------------------------------------------
 --	Command to show frame you currently have mouseovered
