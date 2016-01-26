@@ -48,6 +48,29 @@ if C.raidcooldown.enable == true then
 end
 
 if C.enemycooldown.enable == true then
+	T.trinket_spells = {
+		-- Trinket Alliance
+		[127125] = 120,
+		[125977] = 120,
+		[125979] = 120,
+		[125980] = 120,
+		[127123] = 120,
+		[124863] = 120,
+		[126152] = 120,
+		[126151] = 120,
+		[126153] = 120,
+		[126154] = 120,
+		-- Trinket Horde
+		[125978] = 120,
+		[126456] = 120,
+		[127126] = 120,
+		[126457] = 120,
+		[124864] = 120,
+		[126629] = 120,
+		[126630] = 120,
+		[126631] = 120,
+		[126152] = 120,
+	}
 	T.enemy_spells = {
 		-- Interrupts and Silences
 		[57994] = 12,	-- Wind Shear
@@ -63,7 +86,6 @@ if C.enemycooldown.enable == true then
 		[2139] = 24,	-- Counterspell
 		[19647] = 24,	-- Spell Lock
 		[119910] = 24,	-- Spell Lock
-		[19647] = 24,	-- Spell Lock (Ajout FM)
 		[115781] = 24,	-- Optical Blast
 		[102060] = 40,	-- Disrupting Shout
 		[15487] = 45,	-- Silence

@@ -469,7 +469,7 @@ C["unitframe"] = {
 	["plugins_friendship_bar"] = false,			-- Friendship bar
 	["plugins_smooth_bar"] = true,				-- Smooth bar
 	["plugins_enemy_spec"] = true,				-- Enemy specialization
-	["plugins_combat_feedback"] = true,		-- Combat text on player/target frame
+	["plugins_combat_feedback"] = false,		-- Combat text on player/target frame
 	["plugins_fader"] = true,					-- Fade unit frames
 	["plugins_diminishing"] = true,			-- Diminishing Returns icons on arena frames
 }

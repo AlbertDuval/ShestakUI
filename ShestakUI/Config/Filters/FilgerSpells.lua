@@ -1759,6 +1759,10 @@ C["filger_spells"] = {
 			Position = {unpack(C.position.filger.cooldown)},
 
 			-- Self
+			-- FM Adding
+			-- Holy Shock
+			{spellID = 20473, filter = "CD"},
+
 			-- Ardent Defender
 			{spellID = 31850, filter = "CD"},
 			-- Avenger's Shield
@@ -2054,6 +2058,12 @@ C["filger_spells"] = {
 			Position = {unpack(C.position.filger.cooldown)},
 
 			-- Self
+			-- FM Adding
+			-- Fade
+			{spellID = 586, filter = "CD"},
+			-- Spectra Guise
+			{spellID = 112833, filter = "CD"},
+
 			-- Archangel
 			{spellID = 81700, filter = "CD"},
 			-- Cascade
@@ -2080,8 +2090,8 @@ C["filger_spells"] = {
 			{spellID = 32375, filter = "CD"},
 			-- Mind Blast
 			{spellID = 8092, filter = "CD"},
-			-- Pain Suppression
-			{spellID = 33206, filter = "CD"},
+			-- (COMMENT FM) Pain Suppression
+			-- {spellID = 33206, filter = "CD"},
 			-- Penance
 			{spellID = 47540, filter = "CD"},
 			-- Prayer of Mending
@@ -2640,50 +2650,66 @@ C["filger_spells"] = {
 			Position = {unpack(C.position.filger.cooldown)},
 
 			-- Self
-			-- Ancestral Guidance
-			{spellID = 108281, filter = "CD"},
-			-- Ancestral Swiftness
-			{spellID = 16188, filter = "CD"},
-			-- Ascendance
-			{spellID = 114049, filter = "CD"},
-			-- Astral Shift
-			{spellID = 108271, filter = "CD"},
+			-- [ADD FM] Liquid Magma
+			{spellID = 152255, filter = "CD"},
+			-- [ADD FM] Unleash Flame
+			{spellID = 165462, filter = "CD"},
 			-- Cleanse Spirit
 			{spellID = 51886, filter = "CD"},
-			-- Earthbind Totem
-			{spellID = 2484, filter = "CD"},
-			-- Earth Shock
-			{spellID = 8042, filter = "CD"},
-			-- Elemental Blast
-			{spellID = 117014, filter = "CD"},
-			-- Feral Spirit
-			{spellID = 51533, filter = "CD"},
-			-- Healing Rain
-			{spellID = 73920, filter = "CD"},
-			-- Hex
-			{spellID = 51514, filter = "CD"},
-			-- Lava Burst
-			{spellID = 51505, filter = "CD"},
-			-- Lava Lash
-			{spellID = 60103, filter = "CD"},
-			-- Riptide
-			{spellID = 61295, filter = "CD"},
-			-- Shamanistic Rage
-			{spellID = 30823, filter = "CD"},
-			-- Spiritwalker's Grace
-			{spellID = 79206, filter = "CD"},
-			-- Stone Bulwark Totem
-			{spellID = 108270, filter = "CD"},
-			-- Stormstrike
-			{spellID = 17364, filter = "CD"},
-			-- Thunderstorm
-			{spellID = 51490, filter = "CD"},
-			-- Tremor Totem
-			{spellID = 8143, filter = "CD"},
-			-- Unleash Elements
-			{spellID = 73680, filter = "CD"},
 			-- Wind Shear
 			{spellID = 57994, filter = "CD"},
+			-- Hex
+			{spellID = 51514, filter = "CD"},
+			-- Earth Shock
+			{spellID = 8042, filter = "CD"},
+			-- Lava Burst
+			{spellID = 51505, filter = "CD"},
+			-- Riptide
+			{spellID = 61295, filter = "CD"},
+			-- Stormstrike
+			{spellID = 17364, filter = "CD"},
+			-- Lava Lash
+			{spellID = 60103, filter = "CD"},
+			-- Healing Rain
+			{spellID = 73920, filter = "CD"},
+			-- Elemental Blast
+			{spellID = 117014, filter = "CD"},
+			-- Unleash Elements
+			{spellID = 73680, filter = "CD"},
+			-- [ADD FM] Unleash Life
+			{spellID = 73685, filter = "CD"},
+			-- Thunderstorm
+			{spellID = 51490, filter = "CD"},
+			-- Earthbind Totem
+			{spellID = 2484, filter = "CD"},
+			-- Tremor Totem
+			{spellID = 8143, filter = "CD"},
+			-- Shamanistic Rage
+			{spellID = 30823, filter = "CD"},
+			-- Stone Bulwark Totem
+			{spellID = 108270, filter = "CD"},
+			-- Astral Shift
+			{spellID = 108271, filter = "CD"},
+			-- Ancestral Swiftness
+			{spellID = 16188, filter = "CD"},
+			-- Feral Spirit
+			{spellID = 51533, filter = "CD"},
+			-- Spiritwalker's Grace
+			--{spellID = 79206, filter = "CD"},
+			-- Ancestral Guidance
+			{spellID = 108281, filter = "CD"},
+			-- Ascendance
+			--{spellID = 114049, filter = "CD"},
+			-- [ADD FM] Windwalk Totem
+			{spellID = 108273, filter = "CD"},
+			-- [ADD FM] Healing Stream Totem
+			{spellID = 5394, filter = "CD"},
+			-- [ADD FM] Capacitor Totem
+			{spellID = 108269, filter = "CD"},
+			-- [ADD FM] Ground Totem
+			{spellID = 8177, filter = "CD"},
+			-- [ADD FM] Call of the Elements
+			{spellID = 108285, filter = "CD"},
 
 			-- Racial
 			-- Berserking (Troll)

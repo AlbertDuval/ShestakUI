@@ -107,7 +107,12 @@ local StartTimer = function(name, sID)
 	local icon = CreateIcon()
 	icon.Texture:SetTexture(texture)
 	icon.Texture:SetTexCoord(0.1, 0.9, 0.1, 0.9)
-	icon.endTime = GetTime() + T.enemy_spells[sID]
+	local timerID = 120
+	if T.enemy_spells[sID] then
+		timerID = T.enemy_spells[sID]
+	end
+	-- icon.endTime = GetTime() + T.enemy_spells[sID]
+	icon.endTime = GetTime() + timerID
 	local color = (CUSTOM_CLASS_COLORS or RAID_CLASS_COLORS)[select(2, UnitClass(name))]
 	if color then
 		name = format("|cff%02x%02x%02x%s|r", color.r * 255, color.g * 255, color.b * 255, name)
@@ -118,7 +123,8 @@ local StartTimer = function(name, sID)
 	icon:SetScript("OnUpdate", IconUpdate)
 	icon:SetScript("OnEnter", OnEnter)
 	icon:SetScript("OnLeave", GameTooltip_Hide)
-	CooldownFrame_SetTimer(icon.Cooldown, GetTime(), T.enemy_spells[sID], 1)
+	-- CooldownFrame_SetTimer(icon.Cooldown, GetTime(), T.enemy_spells[sID], 1)
+	CooldownFrame_SetTimer(icon.Cooldown, GetTime(), timerID, 1)
 	tinsert(icons, icon)
 	table.sort(icons, sortByExpiration)
 	UpdatePositions()
@@ -130,7 +136,7 @@ local OnEvent = function(self, event, ...)
 
 		if eventType == "SPELL_CAST_SUCCESS" and band(sourceFlags, filter) ~= 0 then
 			if sourceName ~= T.name then
-				if T.enemy_spells[spellID] and select(2, IsInInstance()) == "arena" then
+				if (T.enemy_spells[spellID] or spellID == 59752) and select(2, IsInInstance()) == "arena" then
 					StartTimer(sourceName, spellID)
 				end
 			end
@@ -152,6 +158,7 @@ SlashCmdList.FriendCD = function()
 	StartTimer(T.name, 19647)
 	StartTimer(T.name, 47476)
 	StartTimer(T.name, 51514)
+	StartTimer(T.name, 59752)
 end
 SLASH_FriendCD1 = "/friendcd"
 SLASH_FriendCD2 = "/св"
