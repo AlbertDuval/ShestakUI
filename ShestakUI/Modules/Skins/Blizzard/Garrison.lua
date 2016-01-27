@@ -50,6 +50,18 @@ local function LoadSkin()
 	GarrisonBuildingFrame.InfoBox.UpgradeButton:SkinButton()
 	GarrisonBuildingFrame.BuildingLevelTooltip:StripTextures()
 	GarrisonBuildingFrame.BuildingLevelTooltip:SetTemplate("Transparent")
+
+	-- Mission UI
+	GarrisonMissionFrame:StripTextures()
+	GarrisonMissionFrame.TitleText:Show()
+	GarrisonMissionFrame:SetTemplate("Transparent")
+	T.SkinCloseButton(GarrisonMissionFrame.CloseButton)
+	T.SkinCloseButton(GarrisonMissionFrame.MissionTab.MissionPage.CloseButton)
+	GarrisonMissionFrameTab1:SetPoint("BOTTOMLEFT", GarrisonMissionFrame, "BOTTOMLEFT", 11, -40)
+	T.SkinTab(GarrisonMissionFrameTab1)
+	T.SkinTab(GarrisonMissionFrameTab2)
+
+	-- Landing page
 	GarrisonLandingPage:StripTextures()
 	GarrisonLandingPage:SetTemplate("Transparent")
 	T.SkinCloseButton(GarrisonLandingPage.CloseButton)
@@ -61,18 +73,26 @@ local function LoadSkin()
 	GarrisonLandingPage.FollowerList:SetTemplate("Transparent")
 	GarrisonLandingPage.FollowerList.SearchBox:SetPoint("TOPLEFT", 2, 25)
 	T.SkinEditBox(GarrisonLandingPage.FollowerList.SearchBox)
-	GarrisonMissionFrame:StripTextures()
-	GarrisonMissionFrame.TitleText:Show()
-	GarrisonMissionFrame:SetTemplate("Transparent")
-	T.SkinCloseButton(GarrisonMissionFrame.CloseButton)
-	T.SkinCloseButton(GarrisonMissionFrame.MissionTab.MissionPage.CloseButton)
+	-- GarrisonLandingPage.ShipFollowerList:StripTextures()
+	GarrisonLandingPage.ShipFollowerList:SetTemplate("Transparent")
+	T.SkinEditBox(GarrisonLandingPage.ShipFollowerList.SearchBox)
+
+	-- Recruiter frame
+	GarrisonRecruiterFrame:StripTextures(true)
+	GarrisonRecruiterFrame:SetTemplate("Transparent")
+	GarrisonRecruiterFrame.Inset:StripTextures()
+	T.SkinCloseButton(GarrisonRecruiterFrame.CloseButton)
+	GarrisonRecruiterFrame.UnavailableFrame:GetChildren():SkinButton()
+	GarrisonRecruiterFrame.Pick.ChooseRecruits:SkinButton()
+	T.SkinDropDownBox(GarrisonRecruiterFrame.Pick.ThreatDropDown)
+	T.SkinCheckBox(GarrisonRecruiterFrame.Pick.Radio1)
+	T.SkinCheckBox(GarrisonRecruiterFrame.Pick.Radio2)
+
+	-- ShipYard
 	GarrisonShipyardFrame:StripTextures(true)
 	GarrisonShipyardFrame.BorderFrame:StripTextures(true)
 	GarrisonShipyardFrame:CreateBackdrop("Transparent")
 	GarrisonShipyardFrame.BorderFrame.TitleText:SetPoint("TOP", -6, -1)
-	--GarrisonLandingPage.ShipFollowerList:StripTextures()
-	GarrisonLandingPage.ShipFollowerList:SetTemplate("Transparent")
-	T.SkinEditBox(GarrisonLandingPage.ShipFollowerList.SearchBox)
 	T.SkinCloseButton(GarrisonShipyardFrame.BorderFrame.CloseButton2)
 	T.SkinTab(GarrisonShipyardFrameTab1)
 	T.SkinTab(GarrisonShipyardFrameTab2)
@@ -134,10 +154,6 @@ local function LoadSkin()
 		StartButton.overlay:SetVertexColor(0.3, 0.3, 0.3, 0.3)
 	end)
 
-	GarrisonMissionFrameTab1:SetPoint("BOTTOMLEFT", GarrisonMissionFrame, "BOTTOMLEFT", 11, -40)
-	T.SkinTab(GarrisonMissionFrameTab1)
-	T.SkinTab(GarrisonMissionFrameTab2)
-
 	GarrisonMissionFrameFollowers:StripTextures()
 	GarrisonMissionFrameFollowers:SetTemplate("Transparent")
 	T.SkinEditBox(GarrisonMissionFrameFollowers.SearchBox)
@@ -145,7 +161,7 @@ local function LoadSkin()
 	T.SkinScrollBar(GarrisonLandingPageReportListListScrollFrameScrollBar)
 	T.SkinScrollBar(GarrisonMissionFrame.FollowerList.listScroll.scrollBar)
 	T.SkinScrollBar(GarrisonShipyardFrame.FollowerList.listScroll.scrollBar)
-	--T.SkinScrollBar(GarrisonLandingPageListScrollFrameScrollBar)
+	-- T.SkinScrollBar(GarrisonLandingPageListScrollFrameScrollBar)
 
 	-- Mission list
 	local MissionTab = GarrisonMissionFrame.MissionTab
@@ -202,7 +218,7 @@ local function LoadSkin()
 	CapacitiveDisplay.ShipmentIconFrame.Icon:SetPoint("TOPLEFT", -2, 2)
 	CapacitiveDisplay.ShipmentIconFrame.Icon:SetPoint("BOTTOMRIGHT", 2, -2)
 
-	--Fix frame strata
+	-- Fix frame strata
 	GarrisonCapacitiveDisplayFrame:SetFrameStrata("MEDIUM")
 	GarrisonCapacitiveDisplayFrame:SetFrameLevel(45)
 
