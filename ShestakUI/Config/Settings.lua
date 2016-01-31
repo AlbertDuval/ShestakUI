@@ -48,7 +48,6 @@ C["misc"] = {
 	["profession_tabs"] = true,					-- Professions tabs on TradeSkill frames
 	["hide_bg_spam"] = false,					-- Remove Boss Emote spam during BG("Arathi Basin" and "The Battle for Gilneas")
 	["item_level"] = true,						-- Item level on character slot buttons
-	["gem_counter"] = true,					-- Displays how many red/blue/yellow gems you have
 	["already_known"] = true,					-- Colorizes recipes/mounts/pets that is already known
 	["disenchanting"] = true,					-- Milling, Prospecting and Disenchanting by Alt + click
 	["sum_buyouts"] = true,					-- Sum up all current auctions
