@@ -217,9 +217,9 @@ function T.SkinTab(tab, bg)
 	end
 end
 
-function T.SkinNextPrevButton(btn)
+function T.SkinNextPrevButton(btn, left)
 	local normal, pushed, disabled
-	local isPrevButton = btn:GetName() and (string.find(btn:GetName(), "Left") or string.find(btn:GetName(), "Prev") or string.find(btn:GetName(), "Decrement") or string.find(btn:GetName(), "Back"))
+	local isPrevButton = btn:GetName() and (string.find(btn:GetName(), "Left") or string.find(btn:GetName(), "Prev") or string.find(btn:GetName(), "Decrement") or string.find(btn:GetName(), "Back")) or left
 	local isScrollUpButton = btn:GetName() and string.find(btn:GetName(), "ScrollUp")
 	local isScrollDownButton = btn:GetName() and string.find(btn:GetName(), "ScrollDown")
 
@@ -1059,7 +1059,7 @@ T.UpdateComboPoint = function(self, event, unit)
 	end
 
 	if T.class == "DRUID" and C.unitframe_class_bar.comboalways ~= true then
-		local CatForm = function(self, event, unit)
+		local function CatForm(self, event, unit)
 			local unit = self.unit or "player"
 			local name = UnitBuff(unit, GetSpellInfo(768)) or UnitBuff(unit, GetSpellInfo(171745))
 			if name then
@@ -1071,14 +1071,10 @@ T.UpdateComboPoint = function(self, event, unit)
 			end
 		end
 
-		local CheckForm = CreateFrame("Frame", self:GetName().."_CheckForm", cpoints)
-		CheckForm:RegisterEvent("UNIT_AURA")
-		CheckForm:RegisterEvent("PLAYER_LOGIN")
-		CheckForm:RegisterEvent("PLAYER_ENTERING_WORLD")
-		CheckForm:SetScript("OnEvent", CatForm)
-		CheckForm:SetScript("OnUpdate", CatForm)
-		CheckForm:SetScript("OnShow", CatForm)
-		CheckForm:SetScript("OnHide", CatForm)
+		local frame = CreateFrame("Frame")
+		frame:RegisterEvent("UNIT_AURA")
+		frame:SetScript("OnEvent", CatForm)
+		CatForm(self, event, unit)
 	end
 end
 
