@@ -127,6 +127,17 @@ if C.enemycooldown.enable == true then
 		[148467] = 180,	-- Deterrence (ajout FM)
 		[33206] = 180,	-- Pain Suppression
 		[7744] = 180,	-- Will of the Forsaken (Racial)
+		[61336] = 180,	-- Survival Instincs
+		[30823] = 60,	-- Shamanistic Rage
+		-- Ofensive abilities
+		[114050] = 180,	-- Ascendance (Elemental)
+		[114051] = 180,	-- Ascendance (Enhancement)
+		[114052] = 180,	-- Ascendance (Restauration)
+		[31884] = 180,	-- Avenging Wrath
+		[12472] = 180,	-- Icy Veins
+		[102543] = 180,	-- Incarnation (Feral)
+		[102560] = 180,	-- Incarnation (Boomy)
+		[77801] = 120,	-- Dark Soul
 	}
 end
 

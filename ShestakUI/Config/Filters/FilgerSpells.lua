@@ -3415,6 +3415,8 @@ C["filger_spells"] = {
 			-- Pain Suppression
 			{spellID = 33206, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Rallying Cry
+			{spellID = 97462, unitID = "player", caster = "all", filter = "BUFF"},
+			-- Rallying Cry2
 			{spellID = 97463, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Slow Fall
 			{spellID = 130, unitID = "player", caster = "all", filter = "BUFF"},
