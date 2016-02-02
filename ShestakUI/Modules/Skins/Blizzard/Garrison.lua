@@ -11,18 +11,18 @@ LoadTootlipSkin:SetScript("OnEvent", function(self, event, addon)
 		return
 	end
 
-	if addon == "Blizzard_GarrisonUI" then
+	if addon == "ShestakUI" then
 		local Tooltips = {
 			FloatingGarrisonFollowerTooltip,
 			FloatingGarrisonFollowerAbilityTooltip,
 			FloatingGarrisonMissionTooltip,
-			GarrisonFollowerAbilityTooltip,
-			GarrisonBuildingFrame.BuildingLevelTooltip,
-			GarrisonShipyardFollowerTooltip,
 			FloatingGarrisonShipyardFollowerTooltip,
-			GarrisonFollowerTooltip
+			GarrisonFollowerTooltip,
+			GarrisonFollowerAbilityTooltip,
+			GarrisonShipyardFollowerTooltip
 		}
-		for i, tt in pairs(Tooltips) do
+
+		for _, tt in pairs(Tooltips) do
 			tt.Background:SetTexture(nil)
 			tt.BorderTop:SetTexture(nil)
 			tt.BorderTopLeft:SetTexture(nil)
@@ -33,9 +33,16 @@ LoadTootlipSkin:SetScript("OnEvent", function(self, event, addon)
 			tt.BorderBottomRight:SetTexture(nil)
 			tt.BorderBottomLeft:SetTexture(nil)
 			tt:SetTemplate("Transparent")
-
-			if tt.Portrait then tt.Portrait:StripTextures() end
 		end
+		T.SkinCloseButton(FloatingGarrisonFollowerTooltip.CloseButton)
+		T.SkinCloseButton(FloatingGarrisonFollowerAbilityTooltip.CloseButton)
+		T.SkinCloseButton(FloatingGarrisonMissionTooltip.CloseButton)
+		T.SkinCloseButton(FloatingGarrisonShipyardFollowerTooltip.CloseButton)
+	end
+
+	if addon == "Blizzard_GarrisonUI" then
+		GarrisonBuildingFrame.BuildingLevelTooltip:StripTextures()
+		GarrisonBuildingFrame.BuildingLevelTooltip:SetTemplate("Transparent")
 	end
 end)
 
@@ -46,10 +53,11 @@ local function LoadSkin()
 	GarrisonBuildingFrame:StripTextures()
 	GarrisonBuildingFrame:SetTemplate("Transparent")
 	T.SkinCloseButton(GarrisonBuildingFrame.CloseButton)
+
+	GarrisonBuildingFrame.TownHallBox.UpgradeButton:StripTextures(true)
 	GarrisonBuildingFrame.TownHallBox.UpgradeButton:SkinButton()
+	GarrisonBuildingFrame.InfoBox.UpgradeButton:StripTextures(true)
 	GarrisonBuildingFrame.InfoBox.UpgradeButton:SkinButton()
-	GarrisonBuildingFrame.BuildingLevelTooltip:StripTextures()
-	GarrisonBuildingFrame.BuildingLevelTooltip:SetTemplate("Transparent")
 
 	-- Mission UI
 	GarrisonMissionFrame:StripTextures()
@@ -204,6 +212,18 @@ local function LoadSkin()
 	T.SkinScrollBar(GarrisonShipyardFrame.FollowerList.listScroll.scrollBar)
 	T.SkinScrollBar(GarrisonLandingPageFollowerListListScrollFrameScrollBar)
 	T.SkinScrollBar(GarrisonLandingPageShipFollowerListListScrollFrameScrollBar)
+
+	-- Confirmation popup
+	local Confirmation = GarrisonBuildingFrame.Confirmation
+	Confirmation:StripTextures()
+	Confirmation:SetTemplate("Transparent")
+
+	Confirmation.CancelButton:SkinButton()
+	Confirmation.BuildButton:SkinButton()
+	Confirmation.UpgradeButton:SkinButton()
+	Confirmation.UpgradeGarrisonButton:SkinButton()
+	Confirmation.ReplaceButton:SkinButton()
+	Confirmation.SwitchButton:SkinButton()
 
 	-- Capacitive display frame
 	GarrisonCapacitiveDisplayFrame:StripTextures(true)
