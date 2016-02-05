@@ -510,7 +510,7 @@ C["raidframe"] = {
 	["player_in_party"] = true,					-- Show player frame in party
 	["raid_tanks"] = true,						-- Show raid tanks
 	["raid_tanks_tt"] = true,					-- Show raid tanks target target
-	["raid_groups"] = 5,						-- Number of groups in raid
+	["raid_groups"] = 6,						-- Number of groups in raid
 	["raid_groups_vertical"] = false,			-- Vertical raid groups(only for heal layout)
 	-- Icons
 	["icons_role"] = false,						-- Role icon on frames
