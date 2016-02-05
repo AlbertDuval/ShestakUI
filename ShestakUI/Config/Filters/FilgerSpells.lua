@@ -2058,9 +2058,9 @@ C["filger_spells"] = {
 			-- Self
 			-- FM Adding
 			-- Fade
-			{spellID = 586, filter = "CD"},
+			--{spellID = 586, filter = "CD"},
 			-- Spectra Guise
-			{spellID = 112833, filter = "CD"},
+			--{spellID = 112833, filter = "CD"},
 
 			-- Archangel
 			{spellID = 81700, filter = "CD"},
