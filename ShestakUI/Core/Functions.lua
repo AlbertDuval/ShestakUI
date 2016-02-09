@@ -174,6 +174,32 @@ function T.SkinScrollBar(frame)
 				if frame.trackbg then
 					frame.thumbbg:SetFrameLevel(frame.trackbg:GetFrameLevel())
 				end
+
+				frame:HookScript("OnShow", function()
+					local _, maxValue = frame:GetMinMaxValues()
+					if maxValue == 0 then
+						frame:Hide()
+					else
+						frame:Show()
+					end
+				end)
+
+				frame:HookScript("OnMinMaxChanged", function()
+					local _, maxValue = frame:GetMinMaxValues()
+					if maxValue == 0 then
+						frame:Hide()
+					else
+						frame:Show()
+					end
+				end)
+
+				frame:HookScript("OnDisable", function()
+					frame:Hide()
+				end)
+
+				frame:HookScript("OnEnable", function()
+					frame:Show()
+				end)
 			end
 		end
 	end
@@ -457,8 +483,13 @@ function T.SkinSlider(f)
 
 	local bd = CreateFrame("Frame", nil, f)
 	bd:SetTemplate("Overlay")
-	bd:SetPoint("TOPLEFT", 14, -2)
-	bd:SetPoint("BOTTOMRIGHT", -15, 3)
+	if f:GetOrientation() == "VERTICAL" then
+		bd:SetPoint("TOPLEFT", -2, -6)
+		bd:SetPoint("BOTTOMRIGHT", 2, 6)
+	else
+		bd:SetPoint("TOPLEFT", 14, -2)
+		bd:SetPoint("BOTTOMRIGHT", -15, 3)
+	end
 	bd:SetFrameLevel(f:GetFrameLevel() - 1)
 
 	local slider = select(4, f:GetRegions())
