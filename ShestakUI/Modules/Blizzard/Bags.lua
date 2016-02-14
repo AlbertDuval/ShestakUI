@@ -139,6 +139,8 @@ local upgrades = {
 	["507"] = 24, ["530"] = 5, ["531"] = 10
 }
 
+local weapon, armor = GetAuctionItemClasses()
+
 function Stuffing:SlotUpdate(b)
 	local texture, count, locked, quality = GetContainerItemInfo(b.bag, b.slot)
 	local clink = GetContainerItemLink(b.bag, b.slot)
@@ -159,9 +161,9 @@ function Stuffing:SlotUpdate(b)
 	end
 
 	if clink then
-		b.name, _, _, b.itemlevel, b.level = GetItemInfo(clink)
+		b.name, _, _, b.itemlevel, b.level, b.itemType = GetItemInfo(clink)
 
-		if C.bag.ilvl == true and b.itemlevel and b.itemlevel > 1 and quality > 1 then
+		if C.bag.ilvl == true and b.itemlevel and b.itemlevel > 1 and quality > 1 and (b.itemType == weapon or b.itemType == armor) then
 			local upgrade = clink:match(":(%d+)\124h%[")
 			if upgrades[upgrade] == nil then upgrades[upgrade] = 0 end
 			b.frame.text:SetText(b.itemlevel + upgrades[upgrade])
@@ -1426,7 +1428,7 @@ function Stuffing.Menu(self, level)
 	info.notCheckable = 1
 	info.func = function()
 		if InCombatLockdown() then
-			print("|cffffff00"..ERR_NOT_IN_COMBAT) return
+			print("|cffffff00"..ERR_NOT_IN_COMBAT.."|r") return
 		end
 		Stuffing_Sort("d")
 	end
@@ -1437,7 +1439,7 @@ function Stuffing.Menu(self, level)
 	info.notCheckable = 1
 	info.func = function()
 		if InCombatLockdown() then
-			print("|cffffff00"..ERR_NOT_IN_COMBAT) return
+			print("|cffffff00"..ERR_NOT_IN_COMBAT.."|r") return
 		end
 		Stuffing:SetBagsForSorting("d")
 		Stuffing:Restack()

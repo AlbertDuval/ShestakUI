@@ -189,8 +189,9 @@ local function LoadSkin()
 	SkinMoney("RaidFinderQueueFrameScrollFrameChildFrameMoneyReward")
 	SkinMoney("ScenarioQueueFrameRandomScrollFrameChildFrameMoneyReward")
 
-	hooksecurefunc("LFGDungeonListButton_SetDungeon", function(button, dungeonID)
+	hooksecurefunc("LFGDungeonListButton_SetDungeon", function(button)
 		T.SkinCheckBox(button.enableButton)
+		button.enableButton:SetFrameLevel(button.enableButton:GetFrameLevel() - 2)
 	end)
 
 	for i = 1, 3 do
