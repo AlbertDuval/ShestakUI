@@ -3646,10 +3646,10 @@ C["filger_spells"] = {
 			{spellID = 58180, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Typhoon
 			{spellID = 61391, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Concussive Shot
-			{spellID = 5116, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Freezing Trap (Glyph)
 			{spellID = 61394, unitID = "player", caster = "all", filter = "DEBUFF"},
+			-- Concussive Shot
+			{spellID = 5116, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Frost Breath (Chimaera)
 			{spellID = 54644, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Ice Trap
@@ -3658,16 +3658,18 @@ C["filger_spells"] = {
 			{spellID = 35346, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Ankle Crack (Crocolisk)
 			{spellID = 50433, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Chilled
-			{spellID = 7321, unitID = "player", caster = "all", filter = "DEBUFF"},
+			-- Blast Wave
+			{spellID = 157981, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Cone of Cold
 			{spellID = 120, unitID = "player", caster = "all", filter = "DEBUFF"},
+			-- Slow
+			{spellID = 31589, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Frostbolt
 			{spellID = 116, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Frostfire Bolt
 			{spellID = 44614, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Slow
-			{spellID = 31589, unitID = "player", caster = "all", filter = "DEBUFF"},
+			-- Chilled
+			{spellID = 7321, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Dazing Shield (Glyph)
 			{spellID = 63529, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Seal of Justice
@@ -3686,10 +3688,10 @@ C["filger_spells"] = {
 			{spellID = 8056, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Thunderstorm
 			{spellID = 51490, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Conflagrate
-			{spellID = 17962, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Cripple (Doomguard)
 			{spellID = 170995, unitID = "player", caster = "all", filter = "DEBUFF", absID = true},
+			-- Conflagrate
+			{spellID = 17962, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Hamstring
 			{spellID = 1715, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Piercing Howl
