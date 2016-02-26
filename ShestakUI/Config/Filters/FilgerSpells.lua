@@ -47,6 +47,8 @@ C["filger_spells"] = {
 			{spellID = 115989, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Vampiric Blood
 			{spellID = 55233, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Desecrated Ground
+			{spellID = 115018, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Summon Gargoyle
 			{spellID = 49206, filter = "ICD", trigger = "NONE", duration = 40},
 		},
@@ -250,6 +252,8 @@ C["filger_spells"] = {
 			{spellID = 115989, filter = "CD"},
 			-- Vampiric Blood
 			{spellID = 55233, filter = "CD"},
+			-- Breath of Sindragosa
+			{spellID = 152279, filter = "CD"},
 
 			-- Racial
 			-- Arcane Torrent (Blood Elf)
@@ -550,6 +554,8 @@ C["filger_spells"] = {
 			{spellID = 164815, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Thrash
 			{spellID = 77758, unitID = "target", caster = "player", filter = "DEBUFF"},
+			-- Stellar Flare
+			{spellID = 152221, unitID = "target", caster = "player", filter = "DEBUFF"},
 
 			-- Trinket Effects
 			-- Mark of Doom [Prophecy of Fear]
@@ -659,6 +665,8 @@ C["filger_spells"] = {
 			{spellID = 102401, filter = "CD"},
 			-- Wild Growth
 			{spellID = 48438, filter = "CD"},
+			-- Bristling Fur
+			{spellID = 155835, filter = "CD"},
 
 			-- Racial
 			-- Berserking (Troll)
@@ -1277,6 +1285,10 @@ C["filger_spells"] = {
 			{spellID = 116740, unitID = "player", caster = "player", filter = "BUFF", absID = true},
 			-- Touch of Karma
 			{spellID = 125174, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Nimble Brew
+			{spellID = 137562, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Serenity
+			{spellID = 152173, unitID = "player", caster = "player", filter = "BUFF"},
 		},
 		{
 			Name = "T_DEBUFF_ICON",
@@ -1506,6 +1518,14 @@ C["filger_spells"] = {
 			{spellID = 115080, filter = "CD"},
 			-- Zen Sphere
 			{spellID = 124081, filter = "CD"},
+			-- Breath of the Serpent
+			{spellID = 157535, filter = "CD"},
+			-- Hurricane Strike
+			{spellID = 152175, filter = "CD"},
+			-- Serenity
+			{spellID = 152173, filter = "CD"},
+			-- Diffuse Magic
+			{spellID = 122783, filter = "CD"},
 
 			-- Racial
 			-- Arcane Torrent (Blood Elf)
@@ -2381,6 +2401,10 @@ C["filger_spells"] = {
 			{spellID = 1856, filter = "CD"},
 			-- Vendetta
 			{spellID = 79140, filter = "CD"},
+			-- Marked for Death
+			{spellID = 137619, filter = "CD"},
+			-- Death from Above
+			{spellID = 152150, filter = "CD"},
 
 			-- Racial
 			-- Arcane Torrent (Blood Elf)
@@ -2476,6 +2500,8 @@ C["filger_spells"] = {
 			{spellID = 77762, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Tidal Waves
 			{spellID = 53390, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Elemental Fusion
+			{spellID = 157174, unitID = "player", caster = "player", filter = "BUFF"},
 
 			-- Trinkets
 			-- 1.0: Darkmoon Cards
@@ -2720,6 +2746,12 @@ C["filger_spells"] = {
 			{spellID = 8177, filter = "CD"},
 			-- [ADD FM] Call of the Elements
 			{spellID = 108285, filter = "CD"},
+			-- Unleash Elements
+			--{spellID = 73680, filter = "CD"},
+			-- Wind Shear
+			--{spellID = 57994, filter = "CD"},
+			-- Cloudburst Totem
+			{spellID = 157153, filter = "CD"},
 
 			-- Racial
 			-- Berserking (Troll)
@@ -2954,6 +2986,8 @@ C["filger_spells"] = {
 			{spellID = 74434, filter = "CD"},
 			-- Spell Lock (Felhunter)
 			{spellID = 19647, filter = "CD"},
+			-- Cataclysm
+			{spellID = 152108, filter = "CD"},
 
 			-- Racial
 			-- Arcane Torrent (Blood Elf)
@@ -3032,6 +3066,8 @@ C["filger_spells"] = {
 			{spellID = 12328, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Victorious
 			{spellID = 32216, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Ravager
+			{spellID = 152277, unitID = "player", caster = "player", filter = "BUFF", spec = 3},
 		},
 		{
 			Name = "P_PROC_ICON",
@@ -3218,6 +3254,10 @@ C["filger_spells"] = {
 			{spellID = 355, filter = "CD"},
 			-- Thunder Clap
 			{spellID = 6343, filter = "CD"},
+			-- Ravager
+			{spellID = 152277, filter = "CD"},
+			-- Intimidating Shout
+			{spellID = 5246, filter = "CD"},
 
 			-- Racial
 			-- Arcane Torrent (Blood Elf)
@@ -3652,6 +3692,8 @@ C["filger_spells"] = {
 			{spellID = 54644, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Ice Trap
 			{spellID = 135299, unitID = "player", caster = "all", filter = "DEBUFF"},
+			-- Frozen Ammo
+			{spellID = 162546, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Warp Time (Warp Stalker)
 			{spellID = 35346, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Ankle Crack (Crocolisk)
@@ -3876,6 +3918,8 @@ C["filger_spells"] = {
 			{spellID = 116844, unitID = "target", caster = "target", filter = "BUFF"},
 			-- Touch of Karma
 			{spellID = 125174, unitID = "target", caster = "target", filter = "BUFF"},
+			-- Nimble Brew
+			{spellID = 137562, unitID = "target", caster = "target", filter = "BUFF"},
 			-- Debuffs
 			-- Charging Ox Wave
 			{spellID = 119392, unitID = "target", caster = "all", filter = "DEBUFF"},
