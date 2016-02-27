@@ -5,9 +5,6 @@ if C.nameplate.enable ~= true then return end
 --	Based on rNamePlates(by zork, editor Tukz)
 ----------------------------------------------------------------------------------------
 local Plates = CreateFrame("Frame", nil, WorldFrame)
-local HiddenFrame = CreateFrame("Frame")
-HiddenFrame:Hide()
-
 local goodR, goodG, goodB = unpack(C.nameplate.good_color)
 local badR, badG, badB = unpack(C.nameplate.bad_color)
 local transitionR, transitionG, transitionB = unpack(C.nameplate.near_color)
@@ -55,11 +52,31 @@ if C.nameplate.healer_icon == true then
 		end
 	end
 
+	local function CheckArenaHealers(self, elapsed)
+		lastCheck = lastCheck + elapsed
+		if lastCheck > 25 then
+			lastCheck = 0
+			healList = {}
+			for i = 1, 5 do
+				local specID = GetArenaOpponentSpec(i)
+				if specID and specID > 0 then
+					local name = UnitName(format('arena%d', i))
+					local _, talentSpec = GetSpecializationInfoByID(specID)
+					if name and t.healers[talentSpec] then
+						healList[name] = talentSpec
+					end
+				end
+			end
+		end
+	end
+
 	local function CheckLoc(self, event)
 		if event == "PLAYER_ENTERING_WORLD" or event == "PLAYER_ENTERING_BATTLEGROUND" then
 			local _, instanceType = IsInInstance()
 			if instanceType == "pvp" then
 				t:SetScript("OnUpdate", CheckHealers)
+			elseif instanceType == "arena" then
+				t:SetScript("OnUpdate", CheckArenaHealers)
 			else
 				healList = {}
 				t:SetScript("OnUpdate", nil)
@@ -512,12 +529,11 @@ function Plates:Skin(obj)
 	local CastBarTextBG = Plate.ArtContainer.CastBarTextBG
 
 	local Name = Plate.NameContainer.NameText
-	local level = Plate.ArtContainer.LevelText
 
-	HealthBar:SetParent(HiddenFrame)
-	LevelText:SetParent(HiddenFrame)
-	Border:SetParent(HiddenFrame)
-	Name:SetParent(HiddenFrame)
+	HealthBar:SetStatusBarTexture("")
+	LevelText:SetWidth(0.001)
+	Border:SetTexture("")
+	Name:SetWidth(0.001)
 
 	CastBar:SetAlpha(0)
 
@@ -533,7 +549,7 @@ function Plates:Skin(obj)
 	self.Container[Plate] = CreateFrame("Frame", nil, self)
 
 	local NewPlate = self.Container[Plate]
-	NewPlate:SetSize(C.nameplate.width * T.noscalemult, C.nameplate.height * T.noscalemult + C.nameplate.height * T.noscalemult)
+	NewPlate:SetSize(C.nameplate.width * T.noscalemult, (C.nameplate.height * T.noscalemult) * 2 + 8)
 	NewPlate:SetFrameStrata("BACKGROUND")
 	NewPlate:SetFrameLevel(0)
 
