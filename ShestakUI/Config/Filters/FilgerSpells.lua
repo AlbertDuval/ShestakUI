@@ -2090,6 +2090,8 @@ C["filger_spells"] = {
 			-- Spectra Guise
 			--{spellID = 112833, filter = "CD"},
 
+			-- Purify [Modif Order FM]
+			{spellID = 527, filter = "CD"},
 			-- Archangel
 			{spellID = 81700, filter = "CD"},
 			-- Cascade
@@ -2127,7 +2129,7 @@ C["filger_spells"] = {
 			-- Psychic Scream
 			{spellID = 8122, filter = "CD"},
 			-- Purify
-			{spellID = 527, filter = "CD"},
+			--{spellID = 527, filter = "CD"},
 			-- Power Infusion
 			{spellID = 10060, filter = "CD"},
 			-- Power Word: Barrier
