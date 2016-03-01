@@ -13,7 +13,6 @@ local function LoadSkin()
 
 	for _, button in pairs(buttons) do
 		_G[button]:SkinButton()
-		_G[button].FlashAnim.Play = T.dummy
 	end
 	PlayerTalentFrameActivateButton:SkinButton()
 
