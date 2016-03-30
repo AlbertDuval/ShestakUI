@@ -39,6 +39,7 @@ L_GUI_MISC_ARCHAEOLOGY = "Artéfacts et temps de recharge en Archéologie"
 L_GUI_MISC_CHARS_CURRENCY = "Affiche les jetons et autres monnaies de vos différents personnages"
 L_GUI_MISC_ARMORY_LINK = "Ajouter un lien d'armurerie dans une fenêtre UnitPopupMenus (Cela casse les UnitPopupMenus)"
 L_GUI_MISC_MERCHANT_ITEMLEVEL = "Show item level for weapons and armor in merchant" -- Need review
+L_GUI_MISC_MINIMIZE_MOUSEOVER = "Mouseover for quest minimize button" -- Need review
 
 -- Announcements options
 L_GUI_ANNOUNCEMENTS = "Annonces"
@@ -68,6 +69,7 @@ L_GUI_AUTOMATION_ACCEPT_INVITE = "Accepter automatiquement les invitations"
 L_GUI_AUTOMATION_DECLINE_DUEL = "Décliner les duels automatiquement"
 L_GUI_AUTOMATION_ACCEPT_QUEST = "Accepter les quêtes automatiquement"
 L_GUI_AUTOMATION_AUTO_COLLAPSE = "Rétrécie automatiquement la liste des quêtes en instance"
+L_GUI_AUTOMATION_AUTO_COLLAPSE_RELOAD = "Auto collapse ObjectiveTrackerFrame after reload" -- Need review
 L_GUI_AUTOMATION_SKIP_CINEMATIC = "Désactive automatiquement les cinématiques/film (inactif si la touche Ctrl est appuyée)"
 L_GUI_AUTOMATION_AUTO_ROLE = "Active automatiquement l'affichage de votre rôle"
 L_GUI_AUTOMATION_CANCEL_BAD_BUFFS = "Annule automatiquement certains buffs"
@@ -157,7 +159,7 @@ L_GUI_COOLDOWN_RAID_HEIGHT = "Hauteur de la barre des CD de raid"
 L_GUI_COOLDOWN_RAID_WIDTH = "Largeur de la barre des CD de raid (+28 si l'icône est activé)"
 L_GUI_COOLDOWN_RAID_SORT = "Nouvelle barre vers le haut"
 L_GUI_COOLDOWN_RAID_EXPIRATION = "Tri par temps d'expiration"
-L_GUI_COOLDOWN_RAID_SHOW_MY = "Montrer mes temps de recharge"
+L_GUI_COOLDOWN_RAID_SHOW_SELF = "Montrer mes temps de recharge"
 L_GUI_COOLDOWN_RAID_ICONS = "Icônes des temps de recharge de raid"
 L_GUI_COOLDOWN_RAID_IN_RAID = "Voir les temps de recharge alliés en raid"
 L_GUI_COOLDOWN_RAID_IN_PARTY = "Voir les temps de recharge alliés en groupe"

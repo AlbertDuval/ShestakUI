@@ -3,7 +3,7 @@ local T, C, L, _ = unpack(select(2, ...))
 ----------------------------------------------------------------------------------------
 --	Move ObjectiveTrackerFrame
 ----------------------------------------------------------------------------------------
-local frame = CreateFrame("Frame", "WatchFrameAnchor", UIParent)
+local frame = CreateFrame("Frame", "ObjectiveTrackerAnchor", UIParent)
 frame:SetPoint(unpack(C.position.quest))
 frame:SetHeight(150)
 frame:SetWidth(224)
@@ -18,15 +18,18 @@ hooksecurefunc(ObjectiveTrackerFrame, "SetPoint", function(_, _, parent)
 		ObjectiveTrackerFrame:SetPoint("TOPLEFT", frame, "TOPLEFT", 20, 0)
 	end
 end)
-ObjectiveTrackerFrame.HeaderMenu.Title:SetAlpha(0)
 
 for _, headerName in pairs({"QuestHeader", "AchievementHeader", "ScenarioHeader"}) do
 	ObjectiveTrackerFrame.BlocksFrame[headerName].Background:Hide()
 end
-
 BONUS_OBJECTIVE_TRACKER_MODULE.Header.Background:Hide()
-ScenarioObjectiveTracker_AnimateReward = T.dummy
+
+ObjectiveTrackerFrame.HeaderMenu.Title:SetAlpha(0)
 OBJECTIVE_TRACKER_DOUBLE_LINE_HEIGHT = 30
+
+-- Kill reward animation when finished dungeon or bonus objectives
+ObjectiveTrackerScenarioRewardsFrame.Show = T.dummy
+ObjectiveTrackerBonusRewardsFrame.Show = T.dummy
 
 ----------------------------------------------------------------------------------------
 --	Skin ObjectiveTrackerFrame item buttons
@@ -46,11 +49,6 @@ hooksecurefunc(QUEST_TRACKER_MODULE, "SetBlockHeader", function(_, block)
 		item.icon:SetPoint("BOTTOMRIGHT", item, -2, 2)
 
 		item.Cooldown:SetAllPoints(item.icon)
-
-		item.HotKey:ClearAllPoints()
-		item.HotKey:SetPoint("BOTTOMRIGHT", 0, 2)
-		item.HotKey:SetFont(C.font.action_bars_font, C.font.action_bars_font_size, C.font.action_bars_font_style)
-		item.HotKey:SetShadowOffset(C.font.action_bars_font_shadow and 1 or 0, C.font.action_bars_font_shadow and -1 or 0)
 
 		item.Count:ClearAllPoints()
 		item.Count:SetPoint("TOPLEFT", 1, -1)
@@ -73,8 +71,17 @@ hooksecurefunc(QUEST_TRACKER_MODULE, "Update", function()
 		local _, level = GetQuestLogTitle(questIndex)
 		local col = GetQuestDifficultyColor(level)
 		local block = QUEST_TRACKER_MODULE:GetExistingBlock(questID)
-		block.HeaderText:SetTextColor(col.r, col.g, col.b)
-		block.HeaderText.col = col
+		if block then
+			block.HeaderText:SetTextColor(col.r, col.g, col.b)
+			block.HeaderText.col = col
+		end
+	end
+end)
+
+hooksecurefunc(DEFAULT_OBJECTIVE_TRACKER_MODULE, "AddObjective", function(self, block)
+	if block.module == ACHIEVEMENT_TRACKER_MODULE then
+		block.HeaderText:SetTextColor(0.75, 0.61, 0)
+		block.HeaderText.col = nil
 	end
 end)
 
@@ -117,11 +124,26 @@ if C.skins.blizzard_frames == true then
 	end)
 end
 
--- local frame1 = CreateFrame("Frame")
--- frame1:RegisterEvent("PLAYER_ENTERING_WORLD")
--- frame1:SetScript("OnEvent", function(self, event)
-	-- ObjectiveTracker_Collapse()
--- end)
+----------------------------------------------------------------------------------------
+--	Auto collapse ObjectiveTrackerFrame
+----------------------------------------------------------------------------------------
+if C.automation.auto_collapse_reload then
+	local collapse = CreateFrame("Frame")
+	collapse:RegisterEvent("PLAYER_ENTERING_WORLD")
+	collapse:SetScript("OnEvent", function(self, event)
+		ObjectiveTracker_Collapse()
+	end)
+end
+
+----------------------------------------------------------------------------------------
+--	Mouseover for ObjectiveTrackerFrame.HeaderMenu.MinimizeButton
+----------------------------------------------------------------------------------------
+if C.misc.minimize_mouseover then
+	local MinimizeButton = ObjectiveTrackerFrame.HeaderMenu.MinimizeButton
+	MinimizeButton:SetAlpha(0)
+	MinimizeButton:HookScript("OnEnter", function() MinimizeButton:SetAlpha(1) end)
+	MinimizeButton:HookScript("OnLeave", function() MinimizeButton:SetAlpha(0) end)
+end
 
 ----------------------------------------------------------------------------------------
 --	Skin bonus objective progress bar

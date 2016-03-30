@@ -66,6 +66,7 @@ local function Local(o)
 	if o == "UIConfigmiscchars_currency" then o = L_GUI_MISC_CHARS_CURRENCY end
 	if o == "UIConfigmiscarmory_link" then o = L_GUI_MISC_ARMORY_LINK end
 	if o == "UIConfigmiscmerchant_itemlevel" then o = L_GUI_MISC_MERCHANT_ITEMLEVEL end
+	if o == "UIConfigmiscminimize_mouseover" then o = L_GUI_MISC_MINIMIZE_MOUSEOVER end
 
 	-- Announcements options
 	if o == "UIConfigannouncements" then o = L_GUI_ANNOUNCEMENTS end
@@ -87,7 +88,7 @@ local function Local(o)
 
 	-- Automation options
 	if o == "UIConfigautomation" then o = L_GUI_AUTOMATION end
-	if o == "UIConfigautomationresurrection" then o = L_GUI_AUTOMATION_RELEASE end
+	if o == "UIConfigautomationrelease" then o = L_GUI_AUTOMATION_RELEASE end
 	if o == "UIConfigautomationscreenshot" then o = L_GUI_AUTOMATION_SCREENSHOT end
 	if o == "UIConfigautomationsolve_artifact" then o = L_GUI_AUTOMATION_SOLVE_ARTIFACT end
 	if o == "UIConfigautomationchefs_hat" then o = L_GUI_AUTOMATION_CHEFS_HAT end
@@ -95,6 +96,7 @@ local function Local(o)
 	if o == "UIConfigautomationdecline_duel" then o = L_GUI_AUTOMATION_DECLINE_DUEL end
 	if o == "UIConfigautomationaccept_quest" then o = L_GUI_AUTOMATION_ACCEPT_QUEST end
 	if o == "UIConfigautomationauto_collapse" then o = L_GUI_AUTOMATION_AUTO_COLLAPSE end
+	if o == "UIConfigautomationauto_collapse_reload" then o = L_GUI_AUTOMATION_AUTO_COLLAPSE_RELOAD end
 	if o == "UIConfigautomationskip_cinematic" then o = L_GUI_AUTOMATION_SKIP_CINEMATIC end
 	if o == "UIConfigautomationauto_role" then o = L_GUI_AUTOMATION_AUTO_ROLE end
 	if o == "UIConfigautomationcancel_bad_buffs" then o = L_GUI_AUTOMATION_CANCEL_BAD_BUFFS end
@@ -103,7 +105,7 @@ local function Local(o)
 	if o == "UIConfigautomationcurrency_cap" then o = L_GUI_AUTOMATION_CURRENCY_CAP end
 	if o == "UIConfigautomationbuff_on_scroll" then o = L_GUI_AUTOMATION_BUFF_ON_SCROLL end
 	if o == "UIConfigautomationopen_items" then o = L_GUI_AUTOMATION_OPEN_ITEMS end
-	if o == "UIConfigautomationbannerhide" then o = L_GUI_AUTOMATION_BANNER_HIDE end
+	if o == "UIConfigautomationbanner_hide" then o = L_GUI_AUTOMATION_BANNER_HIDE end
 
 	-- Skins options
 	if o == "UIConfigskins" then o = L_GUI_SKINS end
@@ -184,7 +186,7 @@ local function Local(o)
 	if o == "UIConfigraidcooldownwidth" then o = L_GUI_COOLDOWN_RAID_WIDTH end
 	if o == "UIConfigraidcooldownupwards" then o = L_GUI_COOLDOWN_RAID_SORT end
 	if o == "UIConfigraidcooldownexpiration" then o = L_GUI_COOLDOWN_RAID_EXPIRATION end
-	if o == "UIConfigraidcooldownshow_my" then o = L_GUI_COOLDOWN_RAID_SHOW_MY end
+	if o == "UIConfigraidcooldownshow_self" then o = L_GUI_COOLDOWN_RAID_SHOW_SELF end
 	if o == "UIConfigraidcooldownshow_icon" then o = L_GUI_COOLDOWN_RAID_ICONS end
 	if o == "UIConfigraidcooldownshow_inraid" then o = L_GUI_COOLDOWN_RAID_IN_RAID end
 	if o == "UIConfigraidcooldownshow_inparty" then o = L_GUI_COOLDOWN_RAID_IN_PARTY end
@@ -411,7 +413,7 @@ local function Local(o)
 	-- Unit Frames Class bar options
 	if o == "UIConfigunitframe_class_bar" then o = L_GUI_UF_PLUGINS_CLASS_BAR end
 	if o == "UIConfigunitframe_class_barcombo" then o = L_GUI_UF_PLUGINS_COMBO_BAR end
-	if o == "UIConfigunitframe_class_barcomboalways" then o = L_GUI_UF_PLUGINS_COMBO_BAR_ALWAYS end
+	if o == "UIConfigunitframe_class_barcombo_always" then o = L_GUI_UF_PLUGINS_COMBO_BAR_ALWAYS end
 	if o == "UIConfigunitframe_class_barcombo_old" then o = L_GUI_UF_PLUGINS_COMBO_BAR_OLD end
 	if o == "UIConfigunitframe_class_barshadow" then o = L_GUI_UF_PLUGINS_SHADOW_BAR end
 	if o == "UIConfigunitframe_class_barchi" then o = L_GUI_UF_PLUGINS_CHI_BAR end
@@ -767,6 +769,35 @@ function CreateUIConfig()
 		return iter
 	end
 
+	local GetOrderedIndex = function(t)
+		local OrderedIndex = {}
+
+		for key in pairs(t) do table.insert(OrderedIndex, key) end
+		table.sort(OrderedIndex)
+		return OrderedIndex
+	end
+
+	local OrderedNext = function(t, state)
+		local Key
+
+		if (state == nil) then
+			t.OrderedIndex = GetOrderedIndex(t)
+			Key = t.OrderedIndex[1]
+			return Key, t[Key]
+		end
+
+		Key = nil
+		for i = 1, #t.OrderedIndex do
+			if (t.OrderedIndex[i] == state) then Key = t.OrderedIndex[i + 1] end
+		end
+
+		if Key then return Key, t[Key] end
+		t.OrderedIndex = nil
+		return
+	end
+
+	local PairsByKeys = function(t) return OrderedNext, t, nil end
+
 	local child = CreateFrame("Frame", nil, groups)
 	child:SetPoint("TOPLEFT")
 	local offset = 5
@@ -831,7 +862,7 @@ function CreateUIConfig()
 		local offset = 5
 
 		if type(C[i]) ~= "table" then error(i.." GroupName not found in config table.") return end
-		for j, value in pairs(C[i]) do
+		for j, value in PairsByKeys(C[i]) do
 			if type(value) == "boolean" then
 				local button = CreateFrame("CheckButton", "UIConfig"..i..j, frame, "InterfaceOptionsCheckButtonTemplate")
 				if IsAddOnLoaded("Aurora") then

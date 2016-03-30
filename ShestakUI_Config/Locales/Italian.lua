@@ -39,6 +39,7 @@ L_GUI_MISC_ARCHAEOLOGY = "Archeologia: reliquie e recuperi"
 L_GUI_MISC_CHARS_CURRENCY = "Traccia la valuta complessiva posseduta dai tuoi personaggi"
 L_GUI_MISC_ARMORY_LINK = "Aggiungi un collegamento all’Armeria nei menu a comparsa delle unità (ciò disattiva alcune voci nei menu)"
 L_GUI_MISC_MERCHANT_ITEMLEVEL = "Show item level for weapons and armor in merchant" -- Need review
+L_GUI_MISC_MINIMIZE_MOUSEOVER = "Mouseover for quest minimize button" -- Need review
 
 -- Announcements options
 L_GUI_ANNOUNCEMENTS = "Annunci"
@@ -68,6 +69,7 @@ L_GUI_AUTOMATION_ACCEPT_INVITE = "'Auto-accetta' gli inviti"
 L_GUI_AUTOMATION_DECLINE_DUEL = "'Auto-declina' i duelli"
 L_GUI_AUTOMATION_ACCEPT_QUEST = "'Auto-accetta' le missioni"
 L_GUI_AUTOMATION_AUTO_COLLAPSE = "In instance, 'auto-chiudi' il tracciatore degli obiettivi"
+L_GUI_AUTOMATION_AUTO_COLLAPSE_RELOAD = "Auto collapse ObjectiveTrackerFrame after reload" -- Need review
 L_GUI_AUTOMATION_SKIP_CINEMATIC = "'Auto-salta' i filmati"
 L_GUI_AUTOMATION_AUTO_ROLE = "'Auto-imposta' il tuo ruolo"
 L_GUI_AUTOMATION_CANCEL_BAD_BUFFS = "'Auto-cancella' alcuni benefici"
@@ -157,7 +159,7 @@ L_GUI_COOLDOWN_RAID_HEIGHT = "Altezza delle barre dei recuperi d'incursione"
 L_GUI_COOLDOWN_RAID_WIDTH = "Larghezza barre recuperi d'incursione (se l'icona è attiva, larghezza + 28)"
 L_GUI_COOLDOWN_RAID_SORT = "Disposizione verso l'alto delle barre dei recuperi d'incursione"
 L_GUI_COOLDOWN_RAID_EXPIRATION = "Ordina in base al tempo di scadenza"
-L_GUI_COOLDOWN_RAID_SHOW_MY = "Mostra i miei recuperi"
+L_GUI_COOLDOWN_RAID_SHOW_SELF = "Mostra i miei recuperi"
 L_GUI_COOLDOWN_RAID_ICONS = "Icone dei recuperi d'incursione"
 L_GUI_COOLDOWN_RAID_IN_RAID = "Mostra i recuperi d'incursione nelle aree da incursione"
 L_GUI_COOLDOWN_RAID_IN_PARTY = "Mostra i recuperi d'incursione nelle aree da gruppo"

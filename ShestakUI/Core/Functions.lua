@@ -178,27 +178,27 @@ function T.SkinScrollBar(frame)
 				frame:HookScript("OnShow", function()
 					local _, maxValue = frame:GetMinMaxValues()
 					if maxValue == 0 then
-						frame:Hide()
+						frame:SetAlpha(0)
 					else
-						frame:Show()
+						frame:SetAlpha(1)
 					end
 				end)
 
 				frame:HookScript("OnMinMaxChanged", function()
 					local _, maxValue = frame:GetMinMaxValues()
 					if maxValue == 0 then
-						frame:Hide()
+						frame:SetAlpha(0)
 					else
-						frame:Show()
+						frame:SetAlpha(1)
 					end
 				end)
 
 				frame:HookScript("OnDisable", function()
-					frame:Hide()
+					frame:SetAlpha(0)
 				end)
 
 				frame:HookScript("OnEnable", function()
-					frame:Show()
+					frame:SetAlpha(1)
 				end)
 			end
 		end
@@ -414,15 +414,12 @@ function T.SkinCheckBox(frame, default)
 	end
 
 	if frame.SetCheckedTexture then
-		if default then
-			frame:SetCheckedTexture("Interface\\Buttons\\UI-CheckBox-Check")
-		else
-			local checked = frame:CreateTexture(nil, nil, self)
-			checked:SetTexture(1, 0.82, 0, 0.8)
-			checked:SetPoint("TOPLEFT", frame, 6, -6)
-			checked:SetPoint("BOTTOMRIGHT", frame, -6, 6)
-			frame:SetCheckedTexture(checked)
-		end
+		if default then return end
+		local checked = frame:CreateTexture(nil, nil, self)
+		checked:SetTexture(1, 0.82, 0, 0.8)
+		checked:SetPoint("TOPLEFT", frame, 6, -6)
+		checked:SetPoint("BOTTOMRIGHT", frame, -6, 6)
+		frame:SetCheckedTexture(checked)
 	end
 
 	if frame.SetDisabledCheckedTexture then
@@ -881,11 +878,17 @@ T.PostUpdatePower = function(power, unit, min, max)
 	end
 end
 
-local UpdateManaLevelDelay = 0
 T.UpdateManaLevel = function(self, elapsed)
-	UpdateManaLevelDelay = UpdateManaLevelDelay + elapsed
-	if UpdateManaLevelDelay < 0.2 or UnitPowerType("player") ~= 0 then return end
-	UpdateManaLevelDelay = 0
+	self.elapsed = (self.elapsed or 0) + elapsed
+	if self.elapsed < 0.2 then return end
+	self.elapsed = 0
+
+	if UnitPowerType("player") ~= 0 then
+		if T.class == "MONK" then
+			self.ManaLevel:SetText()
+		end
+		return
+	end
 
 	local percMana = UnitMana("player") / UnitManaMax("player") * 100
 
@@ -1089,7 +1092,7 @@ T.UpdateComboPoint = function(self, event, unit)
 		end
 	end
 
-	if T.class == "DRUID" and C.unitframe_class_bar.comboalways ~= true then
+	if T.class == "DRUID" and C.unitframe_class_bar.combo_always ~= true then
 		local function CatForm(self, event, unit)
 			local unit = self.unit or "player"
 			local name = UnitBuff(unit, GetSpellInfo(768)) or UnitBuff(unit, GetSpellInfo(171745))

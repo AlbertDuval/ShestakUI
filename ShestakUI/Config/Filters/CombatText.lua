@@ -130,7 +130,7 @@ elseif T.class == "MAGE" then
 		T.aoespam[120] = 0			-- Cone of Cold
 		T.aoespam[114923] = 3		-- Nether Tempest
 		T.aoespam[114954] = 3		-- Nether Tempest (AoE)
-		T.aoespam[7268] = 3			-- Arcane Missiles
+		T.aoespam[7268] = 1.6		-- Arcane Missiles
 		T.aoespam[113092] = 0		-- Frost Bomb
 		T.aoespam[44425] = 0		-- Arcane Barrage
 		T.aoespam[84721] = 3		-- Frozen Orb
@@ -145,7 +145,9 @@ elseif T.class == "MAGE" then
 		T.aoespam[155152] = 3		-- Prismatic Crystal
 		T.aoespam[153596] = 3		-- Comet Storm
 		T.aoespam[153640] = 3		-- Arcane Orb
-		T.aoespam[157977] = 3		-- Unstable Magic
+		T.aoespam[157977] = 0		-- Unstable Magic (Fire)
+		T.aoespam[157978] = 0		-- Unstable Magic (Frost)
+		T.aoespam[157979] = 0		-- Unstable Magic (Arcane)
 		T.aoespam[153564] = 3		-- Meteor
 		T.aoespam[155158] = 3		-- Meteor Burn
 		T.aoespam[88084] = 3		-- Arcane Blast (Mirror Image)
@@ -173,6 +175,7 @@ elseif T.class == "MONK" then
 		T.merge[173438] = 159620	-- Chi Explosion
 		T.merge[182078] = 159620	-- Chi Explosion
 		T.merge[173439] = 159620	-- Chi Explosion
+		T.aoespam[178173] = 3		-- Gift of the Ox
 		-- Damaging spells
 		T.aoespam[117952] = 3		-- Crackling Jade Lightning
 		T.aoespam[117418] = 3		-- Fists of Fury
@@ -189,6 +192,7 @@ elseif T.class == "MONK" then
 		T.aoespam[158221] = 3		-- Hurricane Strike
 		T.aoespam[152174] = 3		-- Chi Explosion
 		T.merge[157680] = 152174	-- Chi Explosion
+		T.aoespam[157676] = 1		-- Chi Explosion
 	end
 elseif T.class == "PALADIN" then
 	if C.combattext.merge_aoe_spam then
@@ -354,6 +358,7 @@ elseif T.class == "WARLOCK" then
 		T.aoespam[171018] = 1		-- Meteor Strike
 		T.aoespam[85692] = 3		-- Doom Bolt (Doomguard)
 		T.aoespam[54049] = 3		-- Shadow Bite (Felhunter)
+		T.aoespam[6262] = 3			-- Healthstone
 		T.merge[157736] = 348		-- Immolate
 		T.merge[108686] = 348		-- Immolate
 		T.merge[131737] = 980		-- Agony (Drain Soul)

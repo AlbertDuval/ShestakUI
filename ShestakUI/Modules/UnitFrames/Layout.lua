@@ -30,7 +30,6 @@ local function Shared(self, unit)
 		self:SetAttribute("*type2", "togglemenu")
 	end
 
-
 	-- Backdrop for every units
 	self:CreateBackdrop("Default")
 	self:SetFrameStrata("BACKGROUND")
@@ -445,21 +444,29 @@ local function Shared(self, unit)
 
 			self.CPoints.Override = T.UpdateComboPoint
 
+			-- Anticipation bar
 			if T.class == "ROGUE" then
 				self.Anticipation = CreateFrame("Frame", self:GetName().."_Anticipation", self)
+				self.Anticipation:SetFrameLevel(self.Health:GetFrameLevel() + 2)
 				self.Anticipation:SetPoint("BOTTOMLEFT", self, "TOPLEFT", 0, 7)
-				self.Anticipation:SetSize(217, 3)
+				self.Anticipation:SetSize(217, 7)
 
 				for i = 1, 5 do
 					self.Anticipation[i] = CreateFrame("StatusBar", self:GetName().."_Anticipation"..i, self.Anticipation)
-					self.Anticipation[i]:SetSize(213 / 5, 3)
+					self.Anticipation[i]:SetSize(213 / 5, 7)
+
 					if i == 1 then
-						self.Anticipation[i]:SetPoint("LEFT", self.Anticipation)
+						self.Anticipation[i]:SetPoint("BOTTOMLEFT", self, "TOPLEFT", 0, 7)
 					else
 						self.Anticipation[i]:SetPoint("LEFT", self.Anticipation[i-1], "RIGHT", 1, 0)
 					end
 					self.Anticipation[i]:SetStatusBarTexture(C.media.texture)
-					self.Anticipation[i]:SetStatusBarColor(0, 0, 0, 1)
+					self.Anticipation[i]:SetStatusBarColor(0.3, 0.3, 0.8)
+
+					self.Anticipation[i].bg = self.Anticipation[i]:CreateTexture(nil, "BORDER")
+					self.Anticipation[i].bg:SetAllPoints()
+					self.Anticipation[i].bg:SetTexture(C.media.texture)
+					self.Anticipation[i].bg:SetVertexColor(0.3 * 0.2, 0.3 * 0.2, 0.8 * 0.2)
 				end
 			end
 		end
@@ -704,13 +711,6 @@ local function Shared(self, unit)
 			self.Reputation:HookScript("OnLeave", function(self) self:SetAlpha(0) end)
 			self.Reputation.PostUpdate = T.UpdateReputationColor
 			self.Reputation.Tooltip = true
-		end
-
-		-- Monk mana
-		if T.class == "MONK" then
-			CreateFrame("Frame"):SetScript("OnUpdate", function() T.UpdateClassMana(self) end)
-			self.ClassMana = T.SetFontString(self.Power, C.font.unit_frames_font, C.font.unit_frames_font_size, C.font.unit_frames_font_style)
-			self.ClassMana:SetTextColor(0.0, 1, 0.59)
 		end
 
 		-- GCD spark
