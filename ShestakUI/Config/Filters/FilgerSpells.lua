@@ -2082,24 +2082,20 @@ C["filger_spells"] = {
 			{spellID = 527, filter = "CD"},
 			-- Penance [Modif Order FM]
 			{spellID = 47540, filter = "CD"},
+			-- Holy Fire [Modif Order FM]
+			{spellID = 14914, filter = "CD"},
 			-- Archangel
 			{spellID = 81700, filter = "CD"},
+			-- Prayer of Mending [Modif Order FM]
+			{spellID = 33076, filter = "CD"},
 			-- Cascade
 			{spellID = 121135, filter = "CD"},
 			-- Circle of Healing
 			{spellID = 34861, filter = "CD"},
 			-- Desperate Prayer
 			{spellID = 19236, filter = "CD"},
-			-- Dispersion
-			{spellID = 47585, filter = "CD"},
 			-- Divine Star
 			{spellID = 110744, filter = "CD"},
-			-- Guardian Spirit
-			{spellID = 47788, filter = "CD"},
-			-- Halo
-			{spellID = 120517, filter = "CD"},
-			-- Holy Fire
-			{spellID = 14914, filter = "CD"},
 			-- Holy Word: Chastise
 			{spellID = 88625, filter = "CD"},
 			-- Leap of Faith
@@ -2108,26 +2104,14 @@ C["filger_spells"] = {
 			{spellID = 32375, filter = "CD"},
 			-- Mind Blast
 			{spellID = 8092, filter = "CD"},
-			-- (COMMENT FM) Pain Suppression
-			-- {spellID = 33206, filter = "CD"},
-			-- -- Penance
-			-- {spellID = 47540, filter = "CD"},
-			-- Mind Blast
-			{spellID = 8092, filter = "CD"},
-			-- Holy Fire
-			{spellID = 14914, filter = "CD"},
 			-- Shadow Word: Death
 			{spellID = 32379, filter = "CD"},
 			-- Circle of Healing
 			{spellID = 34861, filter = "CD"},
-			-- Prayer of Mending
-			{spellID = 33076, filter = "CD"},
-			-- Divine Star
-			{spellID = 110744, filter = "CD"},
+			-- -- Divine Star [Comment FM]
+			-- {spellID = 110744, filter = "CD"},
 			-- Cascade
 			{spellID = 121135, filter = "CD"},
-			-- Archangel
-			{spellID = 81700, filter = "CD"},
 			-- Holy Word: Chastise
 			{spellID = 88625, filter = "CD"},
 			-- Spectral Guise
@@ -2136,8 +2120,6 @@ C["filger_spells"] = {
 			{spellID = 586, filter = "CD"},
 			-- Void Tendrils
 			{spellID = 108920, filter = "CD"},
-			-- Halo
-			{spellID = 120517, filter = "CD"},
 			-- Psychic Scream
 			{spellID = 8122, filter = "CD"},
 			-- Psychic Horror
@@ -2146,18 +2128,20 @@ C["filger_spells"] = {
 			{spellID = 15487, filter = "CD"},
 			-- Leap of Faith
 			{spellID = 73325, filter = "CD"},
+			-- Halo
+			{spellID = 120517, filter = "CD"},
 			-- Power Infusion
 			{spellID = 10060, filter = "CD"},
 			-- Dispersion
 			{spellID = 47585, filter = "CD"},
 			-- Desperate Prayer
 			{spellID = 19236, filter = "CD"},
-			-- Pain Suppression
-			{spellID = 33206, filter = "CD"},
+			-- -- Pain Suppression [Comment FM]
+			-- {spellID = 33206, filter = "CD"},
 			-- Guardian Spirit
 			{spellID = 47788, filter = "CD"},
-			-- Power Word: Barrier
-			{spellID = 62618, filter = "CD"},
+			-- -- Power Word: Barrier [Comment FM]
+			-- {spellID = 62618, filter = "CD"},
 
 			-- Racial
 			-- Arcane Torrent (Blood Elf)
@@ -2698,16 +2682,10 @@ C["filger_spells"] = {
 			Position = {"TOP", COOLDOWN_Anchor},
 
 			-- Self
-			-- [ADD FM] Liquid Magma
-			{spellID = 152255, filter = "CD"},
-			-- [ADD FM] Unleash Flame
-			{spellID = 165462, filter = "CD"},
 			-- Cleanse Spirit
 			{spellID = 51886, filter = "CD"},
 			-- Wind Shear
 			{spellID = 57994, filter = "CD"},
-			-- Hex
-			{spellID = 51514, filter = "CD"},
 			-- Earth Shock
 			{spellID = 8042, filter = "CD"},
 			-- Lava Burst
@@ -2722,54 +2700,34 @@ C["filger_spells"] = {
 			{spellID = 73920, filter = "CD"},
 			-- Elemental Blast
 			{spellID = 117014, filter = "CD"},
+			-- [ADD FM] Liquid Magma
+			{spellID = 152255, filter = "CD"},
 			-- Unleash Elements
 			{spellID = 73680, filter = "CD"},
 			-- [ADD FM] Unleash Life
 			{spellID = 73685, filter = "CD"},
-			-- Thunderstorm
-			{spellID = 51490, filter = "CD"},
-			-- Earthbind Totem
-			{spellID = 2484, filter = "CD"},
-			-- Tremor Totem
-			{spellID = 8143, filter = "CD"},
-			-- Shamanistic Rage
-			{spellID = 30823, filter = "CD"},
-			-- Stone Bulwark Totem
-			{spellID = 108270, filter = "CD"},
-			-- Astral Shift
-			{spellID = 108271, filter = "CD"},
-			-- Ancestral Swiftness
-			{spellID = 16188, filter = "CD"},
-			-- Feral Spirit
-			{spellID = 51533, filter = "CD"},
-			-- Spiritwalker's Grace
-			--{spellID = 79206, filter = "CD"},
-			-- Ancestral Guidance
-			{spellID = 108281, filter = "CD"},
-			-- Ascendance
-			--{spellID = 114049, filter = "CD"},
-			-- [ADD FM] Windwalk Totem
-			{spellID = 108273, filter = "CD"},
+			-- [ADD FM] Unleash Flame
+			{spellID = 165462, filter = "CD"},
 			-- [ADD FM] Healing Stream Totem
 			{spellID = 5394, filter = "CD"},
-			-- [ADD FM] Capacitor Totem
-			{spellID = 108269, filter = "CD"},
-			-- [ADD FM] Ground Totem
-			{spellID = 8177, filter = "CD"},
-			-- [ADD FM] Call of the Elements
-			{spellID = 108285, filter = "CD"},
-			-- Unleash Elements
-			--{spellID = 73680, filter = "CD"},
-			-- Wind Shear
-			--{spellID = 57994, filter = "CD"},
 			-- Cloudburst Totem
 			{spellID = 157153, filter = "CD"},
-			-- Thunderstorm
-			{spellID = 51490, filter = "CD"},
-			-- Earthbind Totem
-			{spellID = 2484, filter = "CD"},
+			-- [ADD FM] Ground Totem
+			{spellID = 8177, filter = "CD"},
+			-- [ADD FM] Capacitor Totem
+			{spellID = 108269, filter = "CD"},
+			-- [ADD FM] Windwalk Totem
+			{spellID = 108273, filter = "CD"},
+			-- [ADD FM] Call of the Elements
+			{spellID = 108285, filter = "CD"},
+			-- Hex
+			{spellID = 51514, filter = "CD"},
 			-- Tremor Totem
 			{spellID = 8143, filter = "CD"},
+			-- Earthbind Totem
+			{spellID = 2484, filter = "CD"},
+			-- Thunderstorm
+			{spellID = 51490, filter = "CD"},
 			-- Shamanistic Rage
 			{spellID = 30823, filter = "CD"},
 			-- Stone Bulwark Totem
@@ -2780,12 +2738,12 @@ C["filger_spells"] = {
 			{spellID = 16188, filter = "CD"},
 			-- Feral Spirit
 			{spellID = 51533, filter = "CD"},
-			-- Spiritwalker's Grace
-			{spellID = 79206, filter = "CD"},
+			-- -- Spiritwalker's Grace
+			-- {spellID = 79206, filter = "CD"},
 			-- Ancestral Guidance
 			{spellID = 108281, filter = "CD"},
-			-- Ascendance
-			{spellID = 114049, filter = "CD"},
+			-- -- Ascendance [Comment FM]
+			-- {spellID = 114049, filter = "CD"},
 
 			-- Racial
 			-- Berserking (Troll)
@@ -3505,8 +3463,8 @@ C["filger_spells"] = {
 			{spellID = 111264, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Lightwell Renew
 			{spellID = 7001, unitID = "player", caster = "all", filter = "BUFF"},
-			-- Pain Suppression
-			{spellID = 33206, unitID = "player", caster = "all", filter = "BUFF"},
+			-- Pain Suppression [Comment FM]
+			-- {spellID = 33206, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Rallying Cry
 			{spellID = 97462, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Tricks of the Trade
