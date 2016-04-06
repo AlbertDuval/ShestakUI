@@ -133,7 +133,7 @@ if C.enemycooldown.enable == true then
 		[114050] = 180,	-- Ascendance (Elemental)
 		[114051] = 180,	-- Ascendance (Enhancement)
 		[114052] = 180,	-- Ascendance (Restauration)
-		[31884] = 180,	-- Avenging Wrath
+		[31884] = 120,	-- Avenging Wrath
 		[12472] = 180,	-- Icy Veins
 		[102543] = 180,	-- Incarnation (Feral)
 		[102560] = 180,	-- Incarnation (Boomy)
