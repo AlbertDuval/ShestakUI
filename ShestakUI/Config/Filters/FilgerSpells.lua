@@ -2098,8 +2098,8 @@ C["filger_spells"] = {
 			{spellID = 110744, filter = "CD"},
 			-- Holy Word: Chastise
 			{spellID = 88625, filter = "CD"},
-			-- Leap of Faith
-			{spellID = 73325, filter = "CD"},
+			-- -- Leap of Faith [Coment FM]
+			-- {spellID = 73325, filter = "CD"},
 			-- Mass Dispel
 			{spellID = 32375, filter = "CD"},
 			-- Mind Blast
