@@ -2686,6 +2686,8 @@ C["filger_spells"] = {
 			{spellID = 51886, filter = "CD"},
 			-- Wind Shear
 			{spellID = 57994, filter = "CD"},
+			-- [ADD FM] Purge
+			{spellID = 370, filter = "CD"},
 			-- Earth Shock
 			{spellID = 8042, filter = "CD"},
 			-- Lava Burst
