@@ -235,7 +235,7 @@ C["pulsecooldown"] = {
 --	Threat options
 ----------------------------------------------------------------------------------------
 C["threat"] = {
-	["enable"] = true,							-- Enable threat meter
+	["enable"] = false,							-- Enable threat meter
 	["height"] = 12,							-- Bars height
 	["width"] = 217,							-- Bars width
 	["bar_rows"] = 7,							-- Number of bars
@@ -502,7 +502,7 @@ C["unitframe_class_bar"] = {
 ----------------------------------------------------------------------------------------
 C["raidframe"] = {
 	-- Main
-	["by_role"] = true,							-- Sorting players in group by role
+	["by_role"] = false,							-- Sorting players in group by role
 	["aggro_border"] = true,					-- Aggro border
 	["deficit_health"] = true,					-- Raid deficit health
 	["vertical_health"] = false,				-- Vertical orientation of health
