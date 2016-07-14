@@ -442,6 +442,10 @@ local function Shared(self, unit)
 			self.CPoints[4]:SetStatusBarColor(0.9, 0.9, 0.1)
 			self.CPoints[5]:SetStatusBarColor(0.1, 0.9, 0.1)
 
+			if T.class == "DRUID" and C.unitframe_class_bar.combo_always ~= true then
+				self:RegisterEvent("UPDATE_SHAPESHIFT_FORM", T.UpdateComboPoint)
+			end
+
 			self.CPoints.Override = T.UpdateComboPoint
 
 			-- Anticipation bar
@@ -449,24 +453,18 @@ local function Shared(self, unit)
 				self.Anticipation = CreateFrame("Frame", self:GetName().."_Anticipation", self)
 				self.Anticipation:SetFrameLevel(self.Health:GetFrameLevel() + 2)
 				self.Anticipation:SetPoint("BOTTOMLEFT", self, "TOPLEFT", 0, 7)
-				self.Anticipation:SetSize(217, 7)
+				self.Anticipation:SetSize(217, 4)
 
 				for i = 1, 5 do
 					self.Anticipation[i] = CreateFrame("StatusBar", self:GetName().."_Anticipation"..i, self.Anticipation)
-					self.Anticipation[i]:SetSize(213 / 5, 7)
-
+					self.Anticipation[i]:SetSize(213 / 5, 4)
 					if i == 1 then
 						self.Anticipation[i]:SetPoint("BOTTOMLEFT", self, "TOPLEFT", 0, 7)
 					else
 						self.Anticipation[i]:SetPoint("LEFT", self.Anticipation[i-1], "RIGHT", 1, 0)
 					end
 					self.Anticipation[i]:SetStatusBarTexture(C.media.texture)
-					self.Anticipation[i]:SetStatusBarColor(0.3, 0.3, 0.8)
-
-					self.Anticipation[i].bg = self.Anticipation[i]:CreateTexture(nil, "BORDER")
-					self.Anticipation[i].bg:SetAllPoints()
-					self.Anticipation[i].bg:SetTexture(C.media.texture)
-					self.Anticipation[i].bg:SetVertexColor(0.3 * 0.2, 0.3 * 0.2, 0.8 * 0.2)
+					self.Anticipation[i]:SetStatusBarColor(0.2, 0.2, 0.2)
 				end
 			end
 		end
@@ -855,7 +853,7 @@ local function Shared(self, unit)
 			self.Auras.PostUpdateIcon = T.PostUpdateIcon
 
 			-- Rogue/Druid Combo bar
-			if C.unitframe_class_bar.combo == true and C.unitframe_class_bar.combo_old == true and (T.class == "ROGUE" or T.class == "DRUID") then
+			if C.unitframe_class_bar.combo == true and (C.unitframe_class_bar.combo_old == true or (T.class ~= "DRUID" and T.class ~= "ROGUE")) then
 				self.CPoints = CreateFrame("Frame", self:GetName().."_ComboBar", self)
 				self.CPoints:CreateBackdrop("Default")
 				self.CPoints:SetPoint("BOTTOMLEFT", self, "TOPLEFT", 0, 7)
@@ -1262,49 +1260,24 @@ local function Shared(self, unit)
 
 	-- Incoming heal text/bar
 	if C.raidframe.plugins_healcomm == true then
-		local mhpb = CreateFrame("StatusBar", nil, self.Health)
-		mhpb:SetPoint("TOPLEFT", self.Health:GetStatusBarTexture(), "TOPRIGHT", 0, 0)
-		mhpb:SetPoint("BOTTOMLEFT", self.Health:GetStatusBarTexture(), "BOTTOMRIGHT", 0, 0)
-		if unit == "player" or unit == "target" then
-			mhpb:SetWidth(217)
-		elseif unit == "pet" or unit == "focus" or unit == "focustarget" or unit == "targettarget" then
-			mhpb:SetWidth(105)
-		elseif unit == "arenatarget" then
-			mhpb:SetWidth(30)
-		else
-			mhpb:SetWidth(150)
-		end
-		mhpb:SetStatusBarTexture(C.media.texture)
-		mhpb:SetStatusBarColor(0, 1, 0.5, 0.2)
-		mhpb:SetFrameLevel(3)
+		local mhpb = self.Health:CreateTexture(nil, "ARTWORK")
+		mhpb:SetTexture(C.media.texture)
+		mhpb:SetVertexColor(0, 1, 0.5, 0.2)
 
-		local ohpb = CreateFrame("StatusBar", nil, self.Health)
-		ohpb:SetPoint("TOPLEFT", mhpb:GetStatusBarTexture(), "TOPRIGHT", 0, 0)
-		ohpb:SetPoint("BOTTOMLEFT", mhpb:GetStatusBarTexture(), "BOTTOMRIGHT", 0, 0)
-		ohpb:SetWidth(mhpb:GetWidth())
-		ohpb:SetStatusBarTexture(C.media.texture)
-		ohpb:SetStatusBarColor(0, 1, 0, 0.2)
-		ohpb:SetFrameLevel(3)
+		local ohpb = self.Health:CreateTexture(nil, "ARTWORK")
+		ohpb:SetTexture(C.media.texture)
+		ohpb:SetVertexColor(0, 1, 0, 0.2)
 
-		local ahpb = CreateFrame("StatusBar", nil, self.Health)
-		ahpb:SetPoint("TOPLEFT", self.Health:GetStatusBarTexture(), "TOPRIGHT", 0, 0)
-		ahpb:SetPoint("BOTTOMLEFT", self.Health:GetStatusBarTexture(), "BOTTOMRIGHT", 0, 0)
-		ahpb:SetWidth(mhpb:GetWidth())
-		ahpb:SetStatusBarTexture(C.media.texture)
-		ahpb:SetStatusBarColor(1, 1, 0, 0.2)
-		ahpb:SetFrameLevel(3)
+		local ahpb = self.Health:CreateTexture(nil, "ARTWORK")
+		ahpb:SetTexture(C.media.texture)
+		ahpb:SetVertexColor(1, 1, 0, 0.2)
 
 		self.HealPrediction = {
 			myBar = mhpb,
 			otherBar = ohpb,
 			absorbBar = ahpb,
 			maxOverflow = 1,
-			frequentUpdates = true,
-			PostUpdate = function(frame)
-				if frame.myBar:GetValue() == 0 then frame.myBar:SetAlpha(0) else frame.myBar:SetAlpha(1) end
-				if frame.otherBar:GetValue() == 0 then frame.otherBar:SetAlpha(0) else frame.otherBar:SetAlpha(1) end
-				if frame.absorbBar:GetValue() == 0 then frame.absorbBar:SetAlpha(0) else frame.absorbBar:SetAlpha(1) end
-			end
+			frequentUpdates = true
 		}
 	end
 

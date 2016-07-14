@@ -27,10 +27,6 @@ BONUS_OBJECTIVE_TRACKER_MODULE.Header.Background:Hide()
 ObjectiveTrackerFrame.HeaderMenu.Title:SetAlpha(0)
 OBJECTIVE_TRACKER_DOUBLE_LINE_HEIGHT = 30
 
--- Kill reward animation when finished dungeon or bonus objectives
-ObjectiveTrackerScenarioRewardsFrame.Show = T.dummy
-ObjectiveTrackerBonusRewardsFrame.Show = T.dummy
-
 ----------------------------------------------------------------------------------------
 --	Skin ObjectiveTrackerFrame item buttons
 ----------------------------------------------------------------------------------------
@@ -182,4 +178,37 @@ hooksecurefunc(BONUS_OBJECTIVE_TRACKER_MODULE, "AddProgressBar", function(self, 
 	end
 
 	bar.newIconBg:SetShown(icon:IsShown())
+end)
+
+----------------------------------------------------------------------------------------
+--	Set tooltip depending on position
+----------------------------------------------------------------------------------------
+local function IsFramePositionedLeft(frame)
+	local x = frame:GetCenter()
+	local screenWidth = GetScreenWidth()
+	local screenHeight = GetScreenHeight()
+	local positionedLeft = false
+
+	if x and x < (screenWidth / 2) then
+		positionedLeft = true
+	end
+
+	return positionedLeft
+end
+
+hooksecurefunc("BonusObjectiveTracker_ShowRewardsTooltip", function(block)
+	if IsFramePositionedLeft(ObjectiveTrackerFrame) then
+		GameTooltip:ClearAllPoints()
+		GameTooltip:SetPoint("TOPLEFT", block, "TOPRIGHT", 0, 0)
+	end
+end)
+
+----------------------------------------------------------------------------------------
+--	Kill reward animation when finished dungeon or bonus objectives
+----------------------------------------------------------------------------------------
+ObjectiveTrackerScenarioRewardsFrame.Show = T.dummy
+
+hooksecurefunc("BonusObjectiveTracker_AnimateReward", function(block)
+	ObjectiveTrackerBonusRewardsFrame:ClearAllPoints()
+	ObjectiveTrackerBonusRewardsFrame:SetPoint("BOTTOM", UIParent, "TOP", 0, 90)
 end)

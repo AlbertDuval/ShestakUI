@@ -14,6 +14,9 @@
 --		C["position"].tooltip = {"BOTTOMRIGHT", Minimap, "TOPRIGHT", 2, 5}
 --		C["position"].bottom_bars = {"BOTTOM", UIParent, "BOTTOM", 2, 8}
 --		C["position"].unitframes.tank = {"BOTTOMLEFT", UIParent, "BOTTOM", 176, 68}
+--		T.CustomFilgerSpell = {
+--			{"T_DEBUFF_ICON", {spellID = 115767, unitID = "target", caster = "player", filter = "DEBUFF"}},
+--		}
 -- end
 ----------------------------------------------------------------------------------------
 
@@ -179,6 +182,7 @@ or T.name == "Чакернаут" or T.name == "Чаккис" or T.name == "Эз
 	C["nameplate"].combat = true
 	C["aura"].focus_debuffs = true
 	C["unitframe"].enemy_health_color = false
+	C["unitframe"].castbar_latency = false
 	C["raidframe"].raid_groups = 6
 	C["raidframe"].icons_role = true
 	C["toppanel"].enable = false
