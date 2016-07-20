@@ -2111,13 +2111,9 @@ C["filger_spells"] = {
 			-- -- Divine Star [Comment FM]
 			-- {spellID = 110744, filter = "CD"},
 			-- Cascade
-<<<<<<< HEAD
-			{spellID = 121135, filter = "CD"},
-=======
-			--BETA {spellID = 121135, filter = "CD"},
+			-- BETA {spellID = 121135, filter = "CD"},
 			-- Archangel
-			--BETA {spellID = 81700, filter = "CD"},
->>>>>>> refs/remotes/Shestak/master
+			-- BETA {spellID = 81700, filter = "CD"},
 			-- Holy Word: Chastise
 			{spellID = 88625, filter = "CD"},
 			-- Spectral Guise
@@ -2125,13 +2121,9 @@ C["filger_spells"] = {
 			-- Fade
 			{spellID = 586, filter = "CD"},
 			-- Void Tendrils
-<<<<<<< HEAD
-			{spellID = 108920, filter = "CD"},
-=======
 			--BETA {spellID = 108920, filter = "CD"},
 			-- Halo
 			{spellID = 120517, filter = "CD"},
->>>>>>> refs/remotes/Shestak/master
 			-- Psychic Scream
 			{spellID = 8122, filter = "CD"},
 			-- Psychic Horror
@@ -2717,17 +2709,13 @@ C["filger_spells"] = {
 			-- [ADD FM] Liquid Magma
 			{spellID = 152255, filter = "CD"},
 			-- Unleash Elements
-<<<<<<< HEAD
-			{spellID = 73680, filter = "CD"},
+			--BETA {spellID = 73680, filter = "CD"},
 			-- [ADD FM] Unleash Life
 			{spellID = 73685, filter = "CD"},
 			-- [ADD FM] Unleash Flame
 			{spellID = 165462, filter = "CD"},
 			-- [ADD FM] Healing Stream Totem
 			{spellID = 5394, filter = "CD"},
-=======
-			--BETA {spellID = 73680, filter = "CD"},
->>>>>>> refs/remotes/Shestak/master
 			-- Cloudburst Totem
 			{spellID = 157153, filter = "CD"},
 			-- [ADD FM] Ground Totem
@@ -2741,15 +2729,11 @@ C["filger_spells"] = {
 			-- Hex
 			{spellID = 51514, filter = "CD"},
 			-- Tremor Totem
-<<<<<<< HEAD
-			{spellID = 8143, filter = "CD"},
+			--BETA {spellID = 8143, filter = "CD"},
 			-- Earthbind Totem
 			{spellID = 2484, filter = "CD"},
 			-- Thunderstorm
 			{spellID = 51490, filter = "CD"},
-=======
-			--BETA {spellID = 8143, filter = "CD"},
->>>>>>> refs/remotes/Shestak/master
 			-- Shamanistic Rage
 			--BETA {spellID = 30823, filter = "CD"},
 			-- Stone Bulwark Totem
@@ -3482,19 +3466,13 @@ C["filger_spells"] = {
 			-- Hand of Freedom
 			{spellID = 1044, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Ice Ward
-<<<<<<< HEAD
-			{spellID = 111264, unitID = "player", caster = "all", filter = "BUFF"},
-			-- Lightwell Renew
-			{spellID = 7001, unitID = "player", caster = "all", filter = "BUFF"},
+			--BETA {spellID = 111264, unitID = "player", caster = "all", filter = "BUFF"},
+			--BETA Lightwell Renew
+			-- {spellID = 7001, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Pain Suppression [Comment FM]
 			-- {spellID = 33206, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Rallying Cry
 			{spellID = 97462, unitID = "player", caster = "all", filter = "BUFF"},
-=======
-			--BETA {spellID = 111264, unitID = "player", caster = "all", filter = "BUFF"},
-			--BETA Lightwell Renew
-			-- {spellID = 7001, unitID = "player", caster = "all", filter = "BUFF"},
->>>>>>> refs/remotes/Shestak/master
 			-- Tricks of the Trade
 			--BETA {spellID = 57933, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Slow Fall
