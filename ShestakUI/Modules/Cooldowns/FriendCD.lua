@@ -9,7 +9,7 @@ local show = {
 	pvp = C.enemycooldown.show_inpvp,
 	arena = C.enemycooldown.show_inarena,
 }
-local filter = COMBATLOG_OBJECT_AFFILIATION_RAID + COMBATLOG_OBJECT_AFFILIATION_PARTY
+-- local filter = COMBATLOG_OBJECT_AFFILIATION_RAID + COMBATLOG_OBJECT_AFFILIATION_PARTY
 local direction = C.enemycooldown.direction
 local icons = {}
 local band = bit.band
@@ -124,7 +124,7 @@ local StartTimer = function(name, sID)
 	icon:SetScript("OnEnter", OnEnter)
 	icon:SetScript("OnLeave", GameTooltip_Hide)
 	-- CooldownFrame_SetTimer(icon.Cooldown, GetTime(), T.enemy_spells[sID], 1)
-	CooldownFrame_SetTimer(icon.Cooldown, GetTime(), timerID, 1)
+	CooldownFrame_Set(icon.Cooldown, GetTime(), timerID, 1)
 	tinsert(icons, icon)
 	table.sort(icons, sortByExpiration)
 	UpdatePositions()
@@ -134,9 +134,9 @@ local OnEvent = function(self, event, ...)
 	if event == "COMBAT_LOG_EVENT_UNFILTERED" then
 		local _, eventType, _, _, sourceName, sourceFlags, _, _, _, _, _, spellID = ...
 
-		if eventType == "SPELL_CAST_SUCCESS" and band(sourceFlags, filter) ~= 0 then
+		if eventType == "SPELL_CAST_SUCCESS" and band(sourceFlags, COMBATLOG_OBJECT_REACTION_HOSTILE) == COMBATLOG_OBJECT_REACTION_HOSTILE then
 			if sourceName ~= T.name then
-				if (T.enemy_spells[spellID] or spellID == 59752) and select(2, IsInInstance()) == "arena" then
+				if (T.enemy_spells[spellID] or spellID == 59752) and show[select(2, IsInInstance())] then
 					StartTimer(sourceName, spellID)
 				end
 			end
@@ -148,17 +148,24 @@ local OnEvent = function(self, event, ...)
 	end
 end
 
+for spell in pairs(T.enemy_spells) do
+	local name = GetSpellInfo(spell)
+	if not name then
+		print("|cffff0000WARNING: spell ID ["..tostring(spell).."] no longer exists! Report this to Shestak.|r")
+	end
+end
+
 local addon = CreateFrame("Frame")
 addon:SetScript("OnEvent", OnEvent)
 addon:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 addon:RegisterEvent("ZONE_CHANGED_NEW_AREA")
 
 SlashCmdList.FriendCD = function()
-	StartTimer(T.name, 47528)
-	StartTimer(T.name, 19647)
-	StartTimer(T.name, 47476)
+	StartTimer(T.name, 57994)
+	StartTimer(T.name, 78675)
+	StartTimer(T.name, 8122)
 	StartTimer(T.name, 51514)
-	StartTimer(T.name, 59752)
+	-- StartTimer(T.name, 59752)
 end
 SLASH_FriendCD1 = "/friendcd"
 SLASH_FriendCD2 = "/св"
