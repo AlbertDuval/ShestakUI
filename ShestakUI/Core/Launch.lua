@@ -19,7 +19,7 @@ local function InstallUI()
 	SetCVar("autoLootDefault", 1)
 	SetCVar("RotateMinimap", 0)
 	SetCVar("autoQuestProgress", 1)
-	SetCVar("scriptErrors", 0)
+	SetCVar("scriptErrors", 1)
 	SetCVar("taintLog", 0)
 	SetCVar("buffDurations", 1)
 	--BETA SetCVar("enableCombatText", 1)
@@ -214,9 +214,7 @@ OnLogon:SetScript("OnEvent", function(self, event)
 		SetCVar("uiScale", C.general.uiscale)
 
 		-- Hack for 4K and WQHD Resolution
-		local monitorIndex = (tonumber(GetCVar('gxMonitor')) or 0) + 1
-		local resolution = select(GetCurrentResolution(monitorIndex), GetScreenResolutions(monitorIndex))
-		local customScale = min(2, max(0.32, 768 / string.match(resolution, "%d+x(%d+)")))
+		local customScale = min(2, max(0.32, 768 / string.match(T.resolution, "%d+x(%d+)")))
 		if C.general.auto_scale == true and customScale < 0.64 then
 			UIParent:SetScale(customScale)
 		elseif customScale < 0.64 then
