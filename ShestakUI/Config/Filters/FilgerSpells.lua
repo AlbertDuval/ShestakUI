@@ -2964,6 +2964,8 @@ C["filger_spells"] = {
 			{spellID = 108281, filter = "CD"},
 			-- -- Ascendance [Comment FM]
 			-- {spellID = 114049, filter = "CD"},
+			-- FM TesT Earthen Shield Totem
+			-- {spellID = 198838, filter = "CD"},
 
 			-- Racial
 			-- Berserking (Troll)
