@@ -1778,8 +1778,6 @@ C["filger_spells"] = {
 			{spellID = 85499, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Eternal Flame
 			{spellID = 114163, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Sacred Shield
-			--BETA {spellID = 20925, unitID = "player", caster = "player", filter = "BUFF", absID = true},
 		},
 		{
 			Name = "P_PROC_ICON",
@@ -1998,8 +1996,6 @@ C["filger_spells"] = {
 			{spellID = 114165, filter = "CD"},
 			-- Blessing of Freedom
 			{spellID = 1044, filter = "CD"},
-			--BETA Hand of Purity
-			-- {spellID = 114039, filter = "CD"},
 			-- Seraphim
 			{spellID = 152262, filter = "CD"},
 			-- Speed of Light
@@ -2240,10 +2236,10 @@ C["filger_spells"] = {
 			{spellID = 33206, unitID = "target", caster = "player", filter = "BUFF"},
 			-- Void Entropy
 			{spellID = 155361, unitID = "target", caster = "player", filter = "DEBUFF"},
-			-- Shadow Word: Pain
-			{spellID = 589, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Vampiric Touch
 			{spellID = 34914, unitID = "target", caster = "player", filter = "DEBUFF"},
+			-- Shadow Word: Pain
+			{spellID = 589, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Devouring Plague
 			--BETA {spellID = 2944, unitID = "target", caster = "player", filter = "DEBUFF"},
 		},
@@ -3657,8 +3653,8 @@ C["filger_spells"] = {
 			{spellID = 1022, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Blessing of Sacrifice
 			{spellID = 6940, unitID = "player", caster = "all", filter = "BUFF"},
-			--BETA Hand of Purity
-			-- {spellID = 114039, unitID = "player", caster = "all", filter = "BUFF"},
+			-- Blessing of Spellwarding
+			{spellID = 204018, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Vigilance
 			{spellID = 114030, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Rallying Cry
@@ -4158,8 +4154,8 @@ C["filger_spells"] = {
 			{spellID = 31850, unitID = "target", caster = "all", filter = "BUFF"},
 			-- Aura Mastery
 			{spellID = 31821, unitID = "target", caster = "all", filter = "BUFF"},
-			--BETA Hand of Purity
-			-- {spellID = 114039, unitID = "target", caster = "all", filter = "BUFF"},
+			-- Blessing of Spellwarding
+			{spellID = 204018, unitID = "target", caster = "all", filter = "BUFF"},
 			-- Blessing of Sacrifice
 			{spellID = 6940, unitID = "target", caster = "all", filter = "BUFF"},
 			-- Blessing of Freedom
