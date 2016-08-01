@@ -559,7 +559,7 @@ C["filger_spells"] = {
 			{spellID = 187827, filter = "CD"},
 			-- Darkness
 			{spellID = 196718, filter = "CD"},
-			
+
 			-- Racial
 			-- Arcane Torrent (Blood Elf)
 			{spellID = 202719, filter = "CD"},
@@ -2984,8 +2984,8 @@ C["filger_spells"] = {
 			Position = {"TOP", COOLDOWN_Anchor},
 
 			-- Self
-			-- Cleanse Spirit
-			{spellID = 51886, filter = "CD"},
+			-- Purify Spirit [FM add update Cleansing]
+			{spellID = 77130, filter = "CD"},
 			-- Wind Shear
 			{spellID = 57994, filter = "CD"},
 			-- [ADD FM] Purge
