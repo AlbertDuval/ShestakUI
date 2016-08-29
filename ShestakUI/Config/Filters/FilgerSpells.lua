@@ -1418,8 +1418,6 @@ C["filger_spells"] = {
 			Position = {"TOP", COOLDOWN_Anchor},
 
 			-- Self
-			-- Remove Curse
-			--BETA {spellID = 475, filter = "CD"},
 			-- Frostjaw
 			--BETA {spellID = 102051, filter = "CD"},
 			-- Counterspell
@@ -2489,8 +2487,6 @@ C["filger_spells"] = {
 
 			-- Slice and Dice
 			{spellID = 5171, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Recuperate
-			--BETA {spellID = 73651, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Adrenaline Rush
 			{spellID = 13750, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Evasion
@@ -2498,7 +2494,13 @@ C["filger_spells"] = {
 			-- Envenom
 			{spellID = 32645, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Shadow Dance
-			--BETA {spellID = 51713, unitID = "player", caster = "player", filter = "BUFF"},
+			{spellID = 185313, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Symbols of Death
+			{spellID = 212283, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Shadow Blades
+			{spellID = 121471, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Alacrity
+			{spellID = 193539, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Master of Subtlety
 			{spellID = 31665, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Cloak of Shadows
@@ -2635,14 +2637,16 @@ C["filger_spells"] = {
 			{spellID = 703, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Gouge
 			{spellID = 1776, unitID = "target", caster = "player", filter = "DEBUFF"},
-			-- Revealing Strike
-			--BETA {spellID = 84617, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Hemorrhage
 			{spellID = 16511, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Find Weakness
 			{spellID = 91021, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Vendetta
 			{spellID = 79140, unitID = "target", caster = "player", filter = "DEBUFF"},
+			-- Nightblade
+			{spellID = 195452, unitID = "target", caster = "player", filter = "DEBUFF"},
+			-- Ghostly Strike
+			{spellID = 196937, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Deadly Poison
 			{spellID = 2818, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Crippling Poison
@@ -2691,7 +2695,7 @@ C["filger_spells"] = {
 			-- Sprint
 			{spellID = 2983, filter = "CD"},
 			-- Shadow Dance
-			--BETA {spellID = 51713, filter = "CD"},
+			{spellID = 185313, filter = "CD"},
 			-- Marked for Death
 			{spellID = 137619, filter = "CD"},
 			-- Killing Spree
@@ -2706,6 +2710,26 @@ C["filger_spells"] = {
 			{spellID = 1856, filter = "CD"},
 			-- Adrenaline Rush
 			{spellID = 13750, filter = "CD"},
+			-- Between the Eyes
+			{spellID = 199804, filter = "CD"},
+			-- Riposte
+			{spellID = 199754, filter = "CD"},
+			-- Cloak of Shadows
+			{spellID = 31224, filter = "CD"},
+			-- Grappling Hook
+			{spellID = 195457, filter = "CD"},
+			-- Crimson Vial
+			{spellID = 185311, filter = "CD"},
+			-- Cannonball Barrage
+			{spellID = 185767, filter = "CD"},
+			-- Garrote
+			{spellID = 703, filter = "CD"},
+			-- Exsanguinate
+			{spellID = 200806, filter = "CD"},
+			-- Shadowstep
+			{spellID = 36554, filter = "CD"},
+			-- Evasion
+			{spellID = 5277, filter = "CD"},
 
 			-- Racial
 			-- Arcane Torrent (Blood Elf)
@@ -3888,6 +3912,8 @@ C["filger_spells"] = {
 			{spellID = 1833, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Kidney Shot
 			{spellID = 408, unitID = "player", caster = "all", filter = "DEBUFF"},
+			-- Between the Eyes
+			{spellID = 199804, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Gouge
 			{spellID = 1776, unitID = "player", caster = "all", filter = "DEBUFF"},
 
@@ -4325,7 +4351,7 @@ C["filger_spells"] = {
 			-- Combat Insight
 			{spellID = 74002, unitID = "target", caster = "all", filter = "BUFF"},
 			-- Shadow Dance
-			--BETA {spellID = 51713, unitID = "target", caster = "all", filter = "BUFF"},
+			{spellID = 185313, unitID = "target", caster = "all", filter = "BUFF"},
 			-- Debuffs
 			-- Sap
 			{spellID = 6770, unitID = "target", caster = "all", filter = "DEBUFF"},
@@ -4335,6 +4361,8 @@ C["filger_spells"] = {
 			{spellID = 1833, unitID = "target", caster = "all", filter = "DEBUFF"},
 			-- Kidney Shot
 			{spellID = 408, unitID = "target", caster = "all", filter = "DEBUFF"},
+			-- Between the Eyes
+			{spellID = 199804, unitID = "target", caster = "all", filter = "DEBUFF"},
 			-- Garrote
 			{spellID = 1330, unitID = "target", caster = "all", filter = "DEBUFF"},
 			-- Smoke Bomb
