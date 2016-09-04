@@ -2812,6 +2812,8 @@ C["filger_spells"] = {
 			{spellID = 108281, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Astral Shift
 			{spellID = 108271, unitID = "player", caster = "player", filter = "BUFF"},
+			-- [ADD FM] Icefury
+			{spellID = 210714, unitID = "player", caster = "player", filter = "BUFF"},
 		},
 		{
 			Name = "P_PROC_ICON",
@@ -3026,12 +3028,14 @@ C["filger_spells"] = {
 			{spellID = 61295, filter = "CD"},
 			-- Stormstrike
 			{spellID = 17364, filter = "CD"},
+			-- [MOVE FM] Elemental Blast
+			{spellID = 117014, filter = "CD"},
 			-- Lava Lash
 			{spellID = 60103, filter = "CD"},
+			-- [ADD FM] Icefury
+			{spellID = 210714, filter = "CD"},
 			-- Healing Rain
 			{spellID = 73920, filter = "CD"},
-			-- Elemental Blast
-			{spellID = 117014, filter = "CD"},
 			-- [ADD FM] Liquid Magma
 			{spellID = 152255, filter = "CD"},
 			-- Unleash Elements
