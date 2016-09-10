@@ -3050,6 +3050,8 @@ C["filger_spells"] = {
 			{spellID = 57994, filter = "CD"},
 			-- [ADD FM] Purge
 			{spellID = 370, filter = "CD"},
+			-- [ADD FM] Flame Shock
+			{spellID = 188838, filter = "CD"},
 			-- Earth Shock
 			{spellID = 8042, filter = "CD"},
 			-- Lava Burst
@@ -3076,6 +3078,10 @@ C["filger_spells"] = {
 			{spellID = 165462, filter = "CD"},
 			-- [ADD FM] Healing Stream Totem
 			{spellID = 5394, filter = "CD"},
+			-- [ADD FM] Gift of the Queen
+			{spellID = 207778, filter = "CD"},
+			-- [ADD FM] Stormkeeper
+			{spellID = 205495, filter = "CD"},
 			-- Cloudburst Totem
 			{spellID = 157153, filter = "CD"},
 			-- [ADD FM] Ground Totem
@@ -3112,6 +3118,8 @@ C["filger_spells"] = {
 			-- {spellID = 114049, filter = "CD"},
 			-- FM TesT Earthen Shield Totem
 			-- {spellID = 198838, filter = "CD"},
+			-- [ADD FM] Gladiator's Medallion
+			{spellID = 208683, filter = "CD"},
 
 			-- Racial
 			-- Berserking (Troll)

@@ -66,6 +66,7 @@ T.DebuffWhiteList = {
 	[SpellName(2094)] = true,	-- Blind
 	[SpellName(1776)] = true,	-- Gouge
 	-- Shaman
+	[SpellName(118905)] = true,	-- Lightning Surge Totem
 	[SpellName(51514)] = true,	-- Hex
 	[SpellName(3600)] = true,	-- Earthbind
 	[SpellName(196840)] = true,	-- Frost Shock
