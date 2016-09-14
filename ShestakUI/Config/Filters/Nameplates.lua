@@ -72,6 +72,7 @@ T.DebuffWhiteList = {
 	[SpellName(196840)] = true,	-- Frost Shock
 	[SpellName(188389)] = true,	-- Flame Shock
 	[SpellName(197209)] = true,	-- Lightning Rod
+	--BETA [SpellName(63685)] = true,	-- Frozen Power
 	-- Warlock
 	[SpellName(710)] = true,	-- Banish
 	[SpellName(6789)] = true,	-- Mortal Coil
