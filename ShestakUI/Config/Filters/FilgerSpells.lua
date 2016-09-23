@@ -2856,8 +2856,8 @@ C["filger_spells"] = {
 			{spellID = 108281, filter = "CD"},
 			-- -- Ascendance [Comment FM]
 			-- {spellID = 114049, filter = "CD"},
-			-- Honorable Medallion
-			{spellID = 195710, filter = "CD"},
+			-- -- Honorable Medallion [Comment FM]
+			-- {spellID = 195710, filter = "CD"},
 			-- [ADD FM] Gladiator's Medallion
 			{spellID = 208683, filter = "CD"},
 			-- FM TesT Earthen Shield Totem
