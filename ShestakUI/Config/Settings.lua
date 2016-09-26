@@ -142,6 +142,10 @@ C["skins"] = {
 	["weak_auras"] = false,						-- WeakAuras skin
 	["skada"] = false,							-- Skada skin
 	["my_role_play"] = false,					-- MyRolePlay skin
+	["arh"] = false,							-- Archaeology Helper skin
+	["postal"] = false,							-- Postal skin
+	["opie"] = false,							-- OPie skin
+	["rematch"] = false,						-- Rematch skin
 }
 
 ----------------------------------------------------------------------------------------
@@ -473,6 +477,7 @@ C["unitframe"] = {
 	["plugins_reputation_bar"] = true,			-- Reputation bar
 	["plugins_experience_bar"] = true,			-- Experience bar
 	["plugins_friendship_bar"] = false,			-- Friendship bar
+	["plugins_artifact_bar"] = true,			-- Artefact Power bar
 	["plugins_smooth_bar"] = true,				-- Smooth bar
 	["plugins_enemy_spec"] = true,				-- Enemy specialization
 	["plugins_combat_feedback"] = true,		-- Combat text on player/target frame
