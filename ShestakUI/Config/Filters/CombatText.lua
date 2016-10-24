@@ -31,6 +31,8 @@ if C.combattext.merge_aoe_spam then
 	T.aoespam[195222] = 4			-- Stormlash
 	T.aoespam[195256] = 4			-- Stormlash
 	T.aoespam[205729] = 3			-- Greater Blessing of Might
+	T.aoespam[222197] = 0			-- Unstable Horrorslime (Trinket)
+	T.aoespam[214350] = 3			-- Nightmare Essence (Trinket)
 end
 
 -- Class config
@@ -157,6 +159,7 @@ elseif T.class == "MAGE" then
 		T.aoespam[205345] = 4		-- Conflagration Flare Up
 		T.aoespam[226757] = 4		-- Conflagration
 		T.aoespam[198928] = 1.2		-- Cinderstorm
+		T.aoespam[194522] = 3		-- Blast Furnace
 		T.aoespam[194316] = 3		-- Cauterizing Blink
 		T.aoespam[88084] = 3		-- Arcane Blast (Mirror Image)
 		T.aoespam[59638] = 3		-- Frostbolt (Mirror Image)
