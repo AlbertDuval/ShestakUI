@@ -96,6 +96,10 @@ T.DebuffWhiteList = {
 	[SpellName(107079)] = true,	-- Quaking Palm
 }
 
+T.DebuffBlackList = {
+	-- [SpellName(spellID)] = true,	-- Spell Name
+}
+
 T.PlateBlacklist = {
 	-- Army of the Dead
 	["Army of the Dead"] = true,
