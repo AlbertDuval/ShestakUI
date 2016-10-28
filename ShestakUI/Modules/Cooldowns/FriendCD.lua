@@ -136,7 +136,8 @@ local OnEvent = function(self, event, ...)
 
 		if eventType == "SPELL_CAST_SUCCESS" and band(sourceFlags, COMBATLOG_OBJECT_REACTION_HOSTILE) == COMBATLOG_OBJECT_REACTION_HOSTILE then
 			if sourceName ~= T.name then
-				if (T.enemy_spells[spellID] or spellID == 59752) and show[select(2, IsInInstance())] then
+				-- if (T.enemy_spells[spellID] or spellID == 59752) and show[select(2, IsInInstance())] then
+				if (spellID == 59752) and show[select(2, IsInInstance())] then
 					StartTimer(sourceName, spellID)
 				end
 			end
