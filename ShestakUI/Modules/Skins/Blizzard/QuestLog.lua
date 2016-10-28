@@ -13,7 +13,7 @@ local function LoadSkin()
 
 	T.SkinCloseButton(QuestLogPopupDetailFrameCloseButton, QuestLogPopupDetailFrame.backdrop)
 
-	--BETA QuestLogPopupDetailFrameScrollFrame:StripTextures()
+	QuestLogPopupDetailFrameScrollFrame:StripTextures()
 	T.SkinScrollBar(QuestLogPopupDetailFrameScrollFrameScrollBar)
 
 	QuestLogPopupDetailFrame.ShowMapButton:SkinButton(true)
@@ -118,6 +118,8 @@ local function LoadSkin()
 		QuestInfoRewardText:SetShadowOffset(1, -1)
 		QuestInfoSpellObjectiveLearnLabel:SetTextColor(1, 1, 1)
 		QuestInfoSpellObjectiveLearnLabel:SetShadowOffset(1, -1)
+		QuestInfoQuestType:SetTextColor(1, 1, 1)
+		QuestInfoQuestType:SetShadowOffset(1, -1)
 
 		-- Reward frame text
 		QuestInfoRewardsFrame.ItemChooseText:SetTextColor(1, 1, 1)

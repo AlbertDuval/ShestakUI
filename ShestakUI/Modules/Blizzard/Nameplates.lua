@@ -873,8 +873,7 @@ end
 
 local function CreateAuraIcon(parent)
 	local button = CreateFrame("Frame", nil, parent)
-	button:SetWidth(C.nameplate.auras_size)
-	button:SetHeight(C.nameplate.auras_size)
+	button:SetSize(C.nameplate.auras_size, C.nameplate.auras_size)
 
 	button.bg = button:CreateTexture(nil, "BACKGROUND")
 	button.bg:SetColorTexture(unpack(C.media.backdrop_color))
@@ -1321,7 +1320,7 @@ local function UpdateName(unitFrame)
 		if UnitIsUnit(unitFrame.displayedUnit, "player") then
 			unitFrame.name:SetText("")
 		else
-			if C.nameplate.name_abbrev == true and C.nameplate.track_auras ~= true then
+			if C.nameplate.name_abbrev == true then
 				unitFrame.name:SetText(Abbrev(name))
 			else
 				unitFrame.name:SetText(name)
@@ -1436,19 +1435,21 @@ local function UpdateHealthColor(unitFrame)
 		elseif IsTapDenied(unitFrame) then
 			r, g, b = 0.6, 0.6, 0.6
 		else
-			if IsOnThreatList(unitFrame.displayedUnit) then
-				if C.nameplate.enhance_threat ~= true then
-					SetVirtualBorder(unitFrame.healthBar, unpack(IsOnThreatList(unitFrame.displayedUnit)))
-				else
-					r, g, b = IsOnThreatList(unitFrame.displayedUnit)
-					threat = true
-				end
+			if IsOnThreatList(unitFrame.displayedUnit) and C.nameplate.enhance_threat == true then
+				r, g, b = IsOnThreatList(unitFrame.displayedUnit)
+				threat = true
 			else
 				local reaction = T.oUF_colors.reaction[UnitReaction(unit, "player")]
 				if reaction then
 					r, g, b = reaction[1], reaction[2], reaction[3]
 				else
 					r, g, b = UnitSelectionColor(unit, true)
+				end
+				if IsOnThreatList(unitFrame.displayedUnit) then
+					local red, green, blue = IsOnThreatList(unitFrame.displayedUnit)
+					SetVirtualBorder(unitFrame.healthBar, red, green, blue)
+				else
+					SetVirtualBorder(unitFrame.healthBar, unpack(C.media.border_color))
 				end
 			end
 		end
