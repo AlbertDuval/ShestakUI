@@ -9,7 +9,13 @@ T.Round = function(number, decimals)
 end
 
 T.ShortValue = function(value)
-	if value >= 1e8 then
+	if value >= 1e11 then
+		return ("%.0fb"):format(value / 1e9)
+	elseif value >= 1e10 then
+		return ("%.1fb"):format(value / 1e9):gsub("%.?0+([km])$", "%1")
+	elseif value >= 1e9 then
+		return ("%.2fb"):format(value / 1e9):gsub("%.?0+([km])$", "%1")
+	elseif value >= 1e8 then
 		return ("%.0fm"):format(value / 1e6)
 	elseif value >= 1e7 then
 		return ("%.1fm"):format(value / 1e6):gsub("%.?0+([km])$", "%1")
@@ -509,6 +515,49 @@ function T.SkinSlider(f)
 	slider:SetBlendMode("ADD")
 end
 
+function T.SkinIconSelectionFrame(frame, numIcons, buttonNameTemplate, frameNameOverride)
+	local frameName = frameNameOverride or frame:GetName()
+	local scrollFrame = _G[frameName.."ScrollFrame"]
+	local editBox = _G[frameName.."EditBox"]
+	local okayButton = _G[frameName.."OkayButton"] or _G[frameName.."Okay"]
+	local cancelButton = _G[frameName.."CancelButton"] or _G[frameName.."Cancel"]
+
+	frame:StripTextures()
+	frame.BorderBox:StripTextures()
+	scrollFrame:StripTextures()
+	scrollFrame:CreateBackdrop("Overlay")
+	scrollFrame.backdrop:SetPoint("TOPLEFT", 15, 4)
+	scrollFrame.backdrop:SetPoint("BOTTOMRIGHT", 28, -8)
+	editBox:DisableDrawLayer("BACKGROUND")
+
+	frame:SetTemplate("Transparent")
+	frame:SetHeight(frame:GetHeight() + 10)
+	scrollFrame:SetHeight(scrollFrame:GetHeight() + 10)
+
+	okayButton:SkinButton()
+	cancelButton:SkinButton()
+	T.SkinEditBox(editBox)
+
+	cancelButton:ClearAllPoints()
+	cancelButton:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -5, 5)
+
+	if buttonNameTemplate then
+		for i = 1, numIcons do
+			local button = _G[buttonNameTemplate..i]
+			local icon = _G[button:GetName().."Icon"]
+
+			button:StripTextures()
+			button:StyleButton(true)
+			button:SetTemplate("Default")
+
+			icon:ClearAllPoints()
+			icon:SetPoint("TOPLEFT", 2, -2)
+			icon:SetPoint("BOTTOMRIGHT", -2, 2)
+			icon:SetTexCoord(0.1, 0.9, 0.1, 0.9)
+		end
+	end
+end
+
 local LoadBlizzardSkin = CreateFrame("Frame")
 LoadBlizzardSkin:RegisterEvent("ADDON_LOADED")
 LoadBlizzardSkin:SetScript("OnEvent", function(self, event, addon)
@@ -973,45 +1022,6 @@ T.UpdatePvPStatus = function(self, elapsed)
 		self.elapsed = 0
 	else
 		self.elapsed = (self.elapsed or 0) + elapsed
-	end
-end
-
-T.UpdateHoly = function(self, event, unit, powerType)
-	if self.unit ~= unit or (powerType and powerType ~= "HOLY_POWER") then return end
-	local num = UnitPower(unit, SPELL_POWER_HOLY_POWER)
-	local numMax = UnitPowerMax("player", SPELL_POWER_HOLY_POWER)
-	local barWidth = self.HolyPower:GetWidth()
-	local spacing = select(4, self.HolyPower[4]:GetPoint())
-	local lastBar = 0
-
-	if numMax ~= self.HolyPower.maxPower then
-		if numMax == 3 then
-			self.HolyPower[4]:Hide()
-			self.HolyPower[5]:Hide()
-			for i = 1, 3 do
-				if i ~= 3 then
-					self.HolyPower[i]:SetWidth(barWidth / 3)
-					lastBar = lastBar + (barWidth / 3 + spacing)
-				else
-					self.HolyPower[i]:SetWidth(barWidth - lastBar)
-				end
-			end
-		else
-			self.HolyPower[4]:Show()
-			self.HolyPower[5]:Show()
-			for i = 1, 5 do
-				self.HolyPower[i]:SetWidth(self.HolyPower[i].width)
-			end
-		end
-		self.HolyPower.maxPower = numMax
-	end
-
-	for i = 1, 5 do
-		if i <= num then
-			self.HolyPower[i]:SetAlpha(1)
-		else
-			self.HolyPower[i]:SetAlpha(0.2)
-		end
 	end
 end
 

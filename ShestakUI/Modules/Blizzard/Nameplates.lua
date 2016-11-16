@@ -981,10 +981,10 @@ local function UpdateBuffs(unitFrame)
 
 	for index = 1, 40 do
 		if i > C.nameplate.width / C.nameplate.auras_size then return end
-		local dname, _, _, _, _, dduration, _, dcaster, _, _, dspellid, _, _, _, nameplateShowAll = UnitAura(unit, index, "HARMFUL")
+		local dname, _, _, _, _, dduration, _, dcaster, _, nameplateShowPersonal, dspellid, _, _, _, nameplateShowAll = UnitAura(unit, index, "HARMFUL")
 		-- local matchdebuff = AuraFilter(dcaster, dname)
 
-		if dname and dcaster == "player" and ((nameplateShowAll and not T.DebuffBlackList[dname]) or T.DebuffWhiteList[dname]) then
+		if dname and dcaster == "player" and (((nameplateShowAll or nameplateShowPersonal) and not T.DebuffBlackList[dname]) or T.DebuffWhiteList[dname]) then
 			if not unitFrame.icons[i] then
 				unitFrame.icons[i] = CreateAuraIcon(unitFrame)
 			end
@@ -1295,7 +1295,7 @@ local function UpdateName(unitFrame)
 			level = "??"
 			r, g, b = 0.8, 0.05, 0
 		else
-			local color = GetQuestDifficultyColor(level)
+			local color = GetCreatureDifficultyColor(level)
 			r, g, b = color.r, color.g, color.b
 		end
 
@@ -1309,7 +1309,7 @@ local function UpdateName(unitFrame)
 			unitFrame.level:SetText(level)
 		end
 
-		if C.nameplate.class_icons == true and UnitIsPlayer(unitFrame.displayedUnit) then
+		if C.nameplate.class_icons == true and UnitIsPlayer(unitFrame.displayedUnit) and UnitReaction(unitFrame.displayedUnit, 'player') <= 4 then
 			unitFrame.level:SetPoint("RIGHT", unitFrame.name, "LEFT", -2, 0)
 		else
 			unitFrame.level:SetPoint("RIGHT", unitFrame.healthBar, "LEFT", -2, 0)
@@ -1419,6 +1419,8 @@ local function UpdateHealthColor(unitFrame)
 	local unit = unitFrame.displayedUnit
 	local r, g, b
 	local threat
+	local texcoord = {0, 0, 0, 0}
+	unitFrame.isClass = false
 
 	if not UnitIsConnected(unit) then
 		r, g, b = 0.7, 0.7, 0.7
@@ -1432,6 +1434,12 @@ local function UpdateHealthColor(unitFrame)
 			r, g, b = unpack(T.oUF_colors.power["MANA"])
 		elseif UnitIsPlayer(unit) and classColor and UnitReaction(unit, 'player') <= 4 then
 			r, g, b = unpack(T.oUF_colors.class[class])
+			if C.nameplate.class_icons == true then
+				unitFrame.isClass = true
+				texcoord = CLASS_ICON_TCOORDS[class]
+				unitFrame.class.Glow:Show()
+				unitFrame.class:SetTexCoord(texcoord[1], texcoord[2], texcoord[3], texcoord[4])
+			end
 		elseif IsTapDenied(unitFrame) then
 			r, g, b = 0.6, 0.6, 0.6
 		else
@@ -1469,6 +1477,15 @@ local function UpdateHealthColor(unitFrame)
 			unitFrame.name:SetTextColor(red, green, blue)
 		end
 		unitFrame.r, unitFrame.g, unitFrame.b = r, g, b
+	end
+
+	if C.nameplate.class_icons == true then
+		if unitFrame.isClass == true then
+			unitFrame.class.Glow:Show()
+		else
+			unitFrame.class.Glow:Hide()
+		end
+		unitFrame.class:SetTexCoord(texcoord[1], texcoord[2], texcoord[3], texcoord[4])
 	end
 end
 
@@ -1785,6 +1802,20 @@ local function OnNamePlateCreated(namePlate)
 		namePlate.UnitFrame.icons:SetWidth(20 + C.nameplate.width)
 		namePlate.UnitFrame.icons:SetHeight(C.nameplate.auras_size)
 		namePlate.UnitFrame.icons:SetFrameLevel(namePlate.UnitFrame:GetFrameLevel() + 2)
+	end
+
+	if C.nameplate.class_icons == true then
+		namePlate.UnitFrame.class = namePlate.UnitFrame.healthBar:CreateTexture(nil, "OVERLAY")
+		namePlate.UnitFrame.class:SetPoint("TOPRIGHT", namePlate.UnitFrame.healthBar, "TOPLEFT", -8, T.noscalemult * 2)
+		namePlate.UnitFrame.class:SetTexture("Interface\\WorldStateFrame\\Icons-Classes")
+		namePlate.UnitFrame.class:SetSize((C.nameplate.height * 2 * T.noscalemult) + 11, (C.nameplate.height * 2 * T.noscalemult) + 11)
+
+		namePlate.UnitFrame.class.Glow = CreateFrame("Frame", nil, namePlate.UnitFrame.healthBar)
+		namePlate.UnitFrame.class.Glow:SetTemplate("Transparent")
+		namePlate.UnitFrame.class.Glow:SetScale(T.noscalemult)
+		namePlate.UnitFrame.class.Glow:SetAllPoints(namePlate.UnitFrame.class)
+		namePlate.UnitFrame.class.Glow:SetFrameLevel(namePlate.UnitFrame.healthBar:GetFrameLevel() -1 > 0 and namePlate.UnitFrame.healthBar:GetFrameLevel() -1 or 0)
+		namePlate.UnitFrame.class.Glow:Hide()
 	end
 
 	if C.nameplate.healer_icon == true then

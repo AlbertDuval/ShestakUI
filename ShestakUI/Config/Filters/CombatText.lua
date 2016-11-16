@@ -31,8 +31,9 @@ if C.combattext.merge_aoe_spam then
 	T.aoespam[195222] = 4			-- Stormlash
 	T.aoespam[195256] = 4			-- Stormlash
 	T.aoespam[205729] = 3			-- Greater Blessing of Might
-	T.aoespam[222197] = 0			-- Unstable Horrorslime (Trinket)
-	T.aoespam[214350] = 3			-- Nightmare Essence (Trinket)
+	T.aoespam[222197] = 0			-- Volatile Ichor (Unstable Horrorslime Trinket)
+	T.aoespam[214350] = 3			-- Nightmare Essence (Oakheart's Gnarled Root Trinket)
+	T.aoespam[230261] = 0			-- Flame Wreath (Aran's Relaxing Ruby Trinket)
 end
 
 -- Class config
@@ -127,6 +128,7 @@ elseif T.class == "MAGE" then
 		T.aoespam[217694] = 3.5		-- Living Bomb
 		T.aoespam[44461] = 3		-- Living Bomb (AoE)
 		T.aoespam[2120] = 0			-- Flamestrike
+		T.aoespam[194432] = 0		-- Aftershocks
 		T.aoespam[12654] = 3		-- Ignite
 		T.aoespam[31661] = 0		-- Dragon's Breath
 		T.aoespam[190356] = 3		-- Blizzard
@@ -181,11 +183,6 @@ elseif T.class == "MONK" then
 		--BETA T.aoespam[124101] = 3		-- Zen Sphere: Detonate
 		T.aoespam[116670] = 0		-- Uplift
 		--BETA T.aoespam[157590] = 3		-- Breath of the Serpent
-		--BETA T.aoespam[159620] = 3		-- Chi Explosion
-		-- T.merge[157681] = 159620	-- Chi Explosion
-		-- T.merge[173438] = 159620	-- Chi Explosion
-		-- T.merge[182078] = 159620	-- Chi Explosion
-		-- T.merge[173439] = 159620	-- Chi Explosion
 		T.aoespam[178173] = 3		-- Gift of the Ox
 		-- Damaging spells
 		T.aoespam[117952] = 3		-- Crackling Jade Lightning
@@ -201,9 +198,6 @@ elseif T.class == "MONK" then
 		--BETA T.aoespam[124098] = 3		-- Zen Sphere
 		--BETA T.aoespam[125033] = 3		-- Zen Sphere: Detonate
 		T.aoespam[158221] = 3		-- Hurricane Strike
-		--BETA T.aoespam[152174] = 3		-- Chi Explosion
-		-- T.merge[157680] = 152174	-- Chi Explosion
-		--BETA T.aoespam[157676] = 1		-- Chi Explosion
 	end
 elseif T.class == "PALADIN" then
 	if C.combattext.merge_aoe_spam then
@@ -222,7 +216,6 @@ elseif T.class == "PALADIN" then
 		--BETA T.aoespam[159375] = 3		-- Shining Protector
 		-- Damaging spells
 		T.aoespam[81297] = 3		-- Consecration
-		--BETA T.aoespam[119072] = .5		-- Holy Wrath
 		T.aoespam[53385] = 0		-- Divine Storm
 		--BETA T.aoespam[122032] = 0		-- Exorcism (Glyph)
 		--BETA T.aoespam[31803] = 3		-- Censure
@@ -356,7 +349,7 @@ elseif T.class == "WARLOCK" then
 		T.aoespam[689] = 3			-- Drain Life
 		--BETA T.aoespam[5857] = 3			-- Hellfire
 		--BETA T.aoespam[129476] = 3		-- Immolation Aura
-		--BETA T.aoespam[103103] = 3		-- Drain Soul
+		T.aoespam[198590] = 3		-- Drain Soul
 		T.aoespam[86040] = 3		-- Hand of Gul'dan
 		--BETA T.aoespam[124915] = 3		-- Chaos Wave
 		--BETA T.aoespam[47960] = 3		-- Shadowflame
@@ -377,9 +370,6 @@ elseif T.class == "WARLOCK" then
 		T.aoespam[3716] = 3			-- Torment (Voidwalker)
 		T.merge[157736] = 348		-- Immolate
 		--BETA T.merge[108686] = 348		-- Immolate
-		--BETA T.merge[131737] = 980		-- Agony (Drain Soul)
-		--BETA T.merge[131740] = 146739	-- Corruption (Drain Soul)
-		--BETA T.merge[131736] = 30108		-- Unstable Affliction (Drain Soul)
 	end
 	if C.combattext.healing then
 		T.healfilter[63106] = true	-- Siphon Life

@@ -81,7 +81,6 @@ if C.enemycooldown.enable == true then
 		[96231] = 15,	-- Rebuke
 		[1766] = 15,	-- Kick
 		[6552] = 15,	-- Pummel
-		--BETA [102051] = 20,	-- Frostjaw
 		[147362] = 24,	-- Counter Shot
 		[2139] = 24,	-- Counterspell
 		[19647] = 24,	-- Spell Lock
@@ -95,11 +94,8 @@ if C.enemycooldown.enable == true then
 		[5246] = 90,	-- Fear War (Ajout FM)
 		[115078] = 15,	-- Paralysis
 		[20066] = 15,	-- Repentance
-		--BETA [10326] = 15,	-- Turn Evil
 		[108194] = 30,	-- Asphyxiate
 		--BETA [1499] = 30,	-- Freezing Trap
-		--BETA [44572] = 30,	-- Deep Freeze
-		--BETA [105593] = 30,	-- Fist of Justice
 		[8122] = 30,	-- Psychic Scream
 		[30283] = 30,	-- Shadowfury
 		[107570] = 30,	-- Storm Bolt
@@ -111,7 +107,6 @@ if C.enemycooldown.enable == true then
 		[64044] = 45,	-- Psychic Horror
 		[6789] = 45,	-- Mortal Coil
 		[853] = 60,		-- Hammer of Justice
-		--BETA [108200] = 60,	-- Remorseless Winter
 		-- Defense abilities
 		[642] = 300,	-- Divine Shield
 		[48707] = 45,	-- Anti-Magic Shell
