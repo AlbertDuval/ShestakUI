@@ -69,7 +69,7 @@ C["misc"] = {
 C["announcements"] = {
 	["drinking"] = true,						-- Announce when arena enemy is drinking
 	["interrupts"] = true,						-- Announce when you interrupt
-	["spells"] = true,							-- Announce when you cast some spell
+	["spells"] = true,							-- Announce when you cast some spell (from the list)
 	["spells_from_all"] = false,				-- Check spells cast from all members
 	["toys"] = false,							-- Announce some annoying toys
 	["says_thanks"] = true,					-- Says thanks for some spells
@@ -471,7 +471,7 @@ C["unitframe"] = {
 	["portrait_height"] = 92,					-- Portrait height
 	["portrait_width"] = 67,					-- Portrait width
 	-- Plugins
-	["plugins_gcd"] = false,					-- Global cooldown spark
+	["plugins_gcd"] = false,					-- Global cooldown spark on player frame
 	["plugins_swing"] = false,					-- Swing bar
 	["plugins_reputation_bar"] = true,			-- Reputation bar
 	["plugins_experience_bar"] = true,			-- Experience bar
@@ -528,10 +528,17 @@ C["raidframe"] = {
 	["icons_ready_check"] = true,				-- Ready check icons on frames
 	["icons_leader"] = true,					-- Leader icon, assistant icon, master loot icon on frames
 	-- Plugins
+<<<<<<< HEAD
 	["plugins_debuffhighlight_icon"] = true,	-- Debuff highlight texture + icon
 	["plugins_aura_watch"] = true,				-- Raid debuff icons
 	["plugins_aura_watch_timer"] = true,		-- Timer on raid debuff icons
 	["plugins_pvp_debuffs"] = true,			-- Show also PvP debuff icons (from the list)
+=======
+	["plugins_debuffhighlight_icon"] = false,	-- Debuff highlight texture + icon
+	["plugins_aura_watch"] = true,				-- Raid debuff icons (from the list)
+	["plugins_aura_watch_timer"] = false,		-- Timer on raid debuff icons
+	["plugins_pvp_debuffs"] = false,			-- Show also PvP debuff icons (from the list)
+>>>>>>> refs/remotes/Shestak/master
 	["plugins_healcomm"] = true,				-- Incoming heal bar on raid frame
 	["plugins_auto_resurrection"] = false,		-- Auto cast resurrection on middle-click(doesn't work with Clique)
 }
