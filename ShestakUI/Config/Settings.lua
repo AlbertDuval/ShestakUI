@@ -528,17 +528,10 @@ C["raidframe"] = {
 	["icons_ready_check"] = true,				-- Ready check icons on frames
 	["icons_leader"] = true,					-- Leader icon, assistant icon, master loot icon on frames
 	-- Plugins
-<<<<<<< HEAD
 	["plugins_debuffhighlight_icon"] = true,	-- Debuff highlight texture + icon
-	["plugins_aura_watch"] = true,				-- Raid debuff icons
+	["plugins_aura_watch"] = true,				-- Raid debuff icons (from the list)
 	["plugins_aura_watch_timer"] = true,		-- Timer on raid debuff icons
 	["plugins_pvp_debuffs"] = true,			-- Show also PvP debuff icons (from the list)
-=======
-	["plugins_debuffhighlight_icon"] = false,	-- Debuff highlight texture + icon
-	["plugins_aura_watch"] = true,				-- Raid debuff icons (from the list)
-	["plugins_aura_watch_timer"] = false,		-- Timer on raid debuff icons
-	["plugins_pvp_debuffs"] = false,			-- Show also PvP debuff icons (from the list)
->>>>>>> refs/remotes/Shestak/master
 	["plugins_healcomm"] = true,				-- Incoming heal bar on raid frame
 	["plugins_auto_resurrection"] = false,		-- Auto cast resurrection on middle-click(doesn't work with Clique)
 }
