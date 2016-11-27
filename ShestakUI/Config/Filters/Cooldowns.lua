@@ -115,8 +115,9 @@ if C.enemycooldown.enable == true then
 		[213664] = 120,	-- Nimble Brew
 		[47585] = 120,	-- Dispersion
 		[1856] = 120,	-- Vanish
-		[19263] = 180,	-- Deterrence
 		[148467] = 180,	-- Deterrence (ajout FM)
+		[7744] = 120,	-- Will of the Forsaken (Racial)
+		[186265] = 180,	-- Aspect of the Turtle
 		[33206] = 180,	-- Pain Suppression
 		[7744] = 180,	-- Will of the Forsaken (Racial)
 		[61336] = 180,	-- Survival Instincs
