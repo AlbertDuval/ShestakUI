@@ -364,7 +364,7 @@ C["nameplate"] = {
 	["near_color"] = {1, 1, 0},					-- Near threat color
 	["bad_color"] = {1, 0, 0},					-- Bad threat color
 	["track_auras"] = true,					-- Show debuffs (from the list)
-	["auras_size"] = 22,						-- Debuffs size
+	["auras_size"] = 26,						-- Debuffs size
 	["healer_icon"] = true,					-- Show icon above enemy healers nameplate in battlegrounds
 }
 
