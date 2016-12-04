@@ -979,8 +979,6 @@ C["filger_spells"] = {
 			{spellID = 136634, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Entrapment
 			{spellID = 135373, unitID = "target", caster = "player", filter = "DEBUFF"},
-			-- Frozen Wake
-			--BETA {spellID = 61394, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Warp Time (Warp Stalker)
 			{spellID = 35346, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Ankle Crack (Crocolisk)
@@ -1168,10 +1166,10 @@ C["filger_spells"] = {
 			-- Fingers of Frost
 			{spellID = 44544, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Brain Freeze
-			--BETA {spellID = 57761, unitID = "player", caster = "player", filter = "BUFF"},
+			{spellID = 190447, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Arcane Missiles!
 			{spellID = 79683, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Pyroblast!
+			-- Hot Streak!
 			{spellID = 48108, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Chain Reaction (Ebonchill)
 			{spellID = 195418, unitID = "player", caster = "player", filter = "BUFF"},
@@ -1423,20 +1421,8 @@ C["filger_spells"] = {
 			Position = {"TOP", P_PROC_ICON_Anchor},
 
 			-- Buffs
-			-- Tiger Power
-			--BETA {spellID = 125359, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Combo Breaker: Blackout Kick
+			-- Blackout Kick!
 			{spellID = 116768, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Combo Breaker: Tiger Palm
-			--BETA {spellID = 118864, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Shuffle
-			--BETA {spellID = 115307, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Vital Mists
-			--BETA {spellID = 118674, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Serpent's Zeal
-			--BETA {spellID = 127722, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Tiger Strikes
-			--BETA {spellID = 120273, unitID = "player", caster = "player", filter = "BUFF"},
 
 			-- Trinkets
 			-- Alchemy Stones
@@ -1943,28 +1929,14 @@ C["filger_spells"] = {
 			Position = {"TOP", P_PROC_ICON_Anchor},
 
 			-- Buffs
-			-- Divine Insight
-			--BETA {spellID = 123267, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Shadowy Insight
 			{spellID = 124430, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Surge of Light
 			{spellID = 114255, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Surge of Darkness
 			{spellID = 87160, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Serendipity
-			--BETA {spellID = 63735, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Mending
-			--BETA {spellID = 155363, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Mind Spike (Glyph)
-			--BETA {spellID = 81292, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Borrowed Time
-			--BETA {spellID = 59889, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Twist of Fate
 			{spellID = 123254, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Evangelism
-			--BETA {spellID = 81661, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Shadow Word: Insanity
-			--BETA {spellID = 132573, unitID = "player", caster = "player", filter = "BUFF"},
 
 			-- Trinkets
 			-- Alchemy Stones
@@ -2051,8 +2023,6 @@ C["filger_spells"] = {
 			{spellID = 34914, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Shadow Word: Pain
 			{spellID = 589, unitID = "target", caster = "player", filter = "DEBUFF"},
-			-- Devouring Plague
-			--BETA {spellID = 2944, unitID = "target", caster = "player", filter = "DEBUFF"},
 		},
 		{
 			Name = "PVE/PVP_CC",
@@ -2281,17 +2251,6 @@ C["filger_spells"] = {
 			Position = {"TOP", P_PROC_ICON_Anchor},
 
 			-- Buffs
-			-- Anticipation
-			--BETA {spellID = 115189, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Shallow Insight
-			--BETA {spellID = 84745, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Moderate Insight
-			--BETA {spellID = 84746, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Deep Insight
-			--BETA {spellID = 84747, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Blindside
-			--BETA {spellID = 121153, unitID = "player", caster = "player", filter = "BUFF"},
-
 			-- Jolly Roger
 			{spellID = 199603, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Grand Melee
@@ -2813,8 +2772,6 @@ C["filger_spells"] = {
 			{spellID = 196104, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Soul Swap
 			{spellID = 86211, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Kiljaeden's Cunning
-			--BETA {spellID = 137587, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Dark Regeneration
 			{spellID = 108359, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Burning Rush
@@ -2834,8 +2791,6 @@ C["filger_spells"] = {
 			Position = {"TOP", P_PROC_ICON_Anchor},
 
 			-- Buffs
-			-- Molten Core
-			--BETA {spellID = 122355, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Backdraft
 			{spellID = 117828, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Grimore of Synergy
@@ -3072,10 +3027,6 @@ C["filger_spells"] = {
 			{spellID = 52437, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Raging Blow!
 			{spellID = 131116, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Bloodsurge
-			--BETA {spellID = 46916, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Sword and Board
-			--BETA {spellID = 50227, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Ultimatum
 			{spellID = 122510, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Meat Cleaver
@@ -3689,34 +3640,34 @@ C["filger_spells"] = {
 			-- Raids: Legion
 			-- The Emerald Nightmare
 			-- Nythendra
-			-- Infested (dot, stacks)
+			-- Infested
 			{spellID = 204504, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Rot (AoE people around you)
+			-- Rot
 			{spellID = 203096, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Il'gynoth, Heart of Corruption
-			-- Fixate (fixate)
+			-- Fixate
 			{spellID = 210099, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Spew Corruption (dot, drops pools)
+			-- Spew Corruption
 			{spellID = 208929, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Cursed Blood (dot, weak bomb)
+			-- Cursed Blood
 			{spellID = 215128, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Erethe Renferal
-			-- Raking Talons (tank debuff, stacks)
+			-- Raking Talons
 			{spellID = 215582, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Wind Burn (debuff, stacks)
+			-- Wind Burn
 			{spellID = 218519, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Web of Pain (linked with another player)
+			-- Web of Pain
 			{spellID = 215307, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Necrotic Venom (dot)
+			-- Necrotic Venom
 			{spellID = 215449, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Twisting Shadows (dot)
+			-- Twisting Shadows
 			{spellID = 210850, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Shimmering Feather (buff)
+			-- Shimmering Feather
 			{spellID = 212993, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Ursoc
-			-- Focused Gaze (fixate)
+			-- Focused Gaze
 			{spellID = 198006, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Momentum (debuff)
+			-- Momentum
 			{spellID = 198108, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Dragons of Nightmare
 			-- Mark of Ysondre
@@ -3727,67 +3678,36 @@ C["filger_spells"] = {
 			{spellID = 203125, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Mark of Lethon
 			{spellID = 203124, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Nightmare Bloom (standing in, should be at least 1 player)
+			-- Nightmare Bloom
 			{spellID = 207681, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Defiled Vines (root, magic)
+			-- Defiled Vines
 			{spellID = 203770, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Volatile Infection (AoE dot)
+			-- Volatile Infection
 			{spellID = 203787, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Cenarius
-			-- Creeping Nightmares (dot, stacks)
+			-- Creeping Nightmares
 			{spellID = 210279, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Nightmare Javelin (dot)
+			-- Nightmare Javelin
 			{spellID = 211507, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Nightmare Brambles (dot, root, magic)
+			-- Nightmare Brambles
 			{spellID = 210315, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Scorned Touch (spreading dot, slow)
+			-- Scorned Touch
 			{spellID = 211471, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Replenishing Roots
 			{spellID = 211612, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Xavius
-			-- Nightmare Blades (fixate)
+			-- Nightmare Blades
 			{spellID = 211802, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Dream Simulacrum (buff)
+			-- Dream Simulacrum
 			{spellID = 206005, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Tormenting Fixation
 			{spellID = 205771, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Corruption Meteor
 			{spellID = 224508, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Bonds of Terror (linked with another player)
+			-- Bonds of Terror
 			{spellID = 210451, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Corruption: Descent into Madness (buff before mind control)
+			-- Corruption: Descent into Madness 
 			{spellID = 208431, unitID = "player", caster = "all", filter = "DEBUFF"},
-
-			-- Raids: Pandaria
-			-- Heart of Fear
-			-- Corrosive Resin (Wind Lord Mel'jarak)
-			{spellID = 122064, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Kor'thik Strike (Wind Lord Mel'jarak)
-			{spellID = 123963, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Unseen Strike (Blade Lord Ta'yak)
-			{spellID = 123017, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Mogu'shan Vaults
-			-- Arcane Resonance (Feng the Accursed)
-			{spellID = 116417, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Voodoo Doll (Gara'jal the Spiritbinder)
-			{spellID = 122151, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Wildfire Spark (Feng the Accursed)
-			{spellID = 116784, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Throne of Thunder
-			-- Biting Cold (Council of Elders)
-			{spellID = 136992, unitID = "player", caster = "all", filter = "DEBUFF", absID = true},
-			-- Cinder (Megaera)
-			{spellID = 134391, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Focused Lightning (Jin'rokh the Breaker)
-			{spellID = 137422, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Frostbite (Council of Elders)
-			{spellID = 136922, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Marked Soul (Council of Elders)
-			{spellID = 137359, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Static Shock (Lei Shen)
-			{spellID = 135695, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Torrent of Ice (Megaera)
-			{spellID = 139857, unitID = "player", caster = "all", filter = "DEBUFF"},
 		},
 		{
 			Name = "T_BUFF",
