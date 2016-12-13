@@ -86,7 +86,7 @@ oUF.Tags.Methods["NameLongAbbrev"] = function(unit)
 	local newname = (string.len(name) > 18) and string.gsub(name, "%s?(.[\128-\191]*)%S+%s", "%1. ") or name
 	return T.UTF(newname, 18, false)
 end
-oUF.Tags.Events["NameLong"] = "UNIT_NAME_UPDATE"
+oUF.Tags.Events["NameLongAbbrev"] = "UNIT_NAME_UPDATE"
 
 oUF.Tags.Methods["LFD"] = function(unit)
 	local role = UnitGroupRolesAssigned(unit)
@@ -137,7 +137,7 @@ oUF.Tags.Events["NameplateLevel"] = "UNIT_LEVEL PLAYER_LEVEL_UP"
 
 oUF.Tags.Methods["NameplateNameColor"] = function(unit)
 	local reaction = UnitReaction(unit, "player")
-	if not UnitIsUnit("player", unit) and UnitIsPlayer(unit) and reaction >= 5 then
+	if not UnitIsUnit("player", unit) and UnitIsPlayer(unit) and (reaction and reaction >= 5) then
 		local c = T.oUF_colors.power["MANA"]
 		return string.format("|cff%02x%02x%02x", c[1] * 255, c[2] * 255, c[3] * 255)
 	elseif UnitIsPlayer(unit) then
