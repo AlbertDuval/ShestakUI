@@ -2498,8 +2498,8 @@ C["filger_spells"] = {
 			{spellID = 108281, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Astral Shift
 			{spellID = 108271, unitID = "player", caster = "player", filter = "BUFF"},
-			-- [ADD FM] Icefury
-			{spellID = 210714, unitID = "player", caster = "player", filter = "BUFF"},
+			-- [ADD FM] Ghost in the Mist
+			{spellID = 207527, unitID = "player", caster = "player", filter = "BUFF"},
 		},
 		{
 			Name = "P_PROC_ICON",
@@ -2517,6 +2517,8 @@ C["filger_spells"] = {
 			{spellID = 118522, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Tidal Waves
 			{spellID = 53390, unitID = "player", caster = "player", filter = "BUFF"},
+			-- [ADD FM] Icefury
+			{spellID = 210714, unitID = "player", caster = "player", filter = "BUFF"},
 
 			-- Trinkets
 			-- Alchemy Stones
