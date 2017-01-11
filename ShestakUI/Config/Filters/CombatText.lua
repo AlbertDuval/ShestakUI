@@ -19,7 +19,6 @@ if C.combattext.merge_aoe_spam then
 	T.aoespam[6603] = 3				-- Auto Attack
 	T.aoespam[195222] = 4			-- Stormlash
 	T.aoespam[195256] = 4			-- Stormlash
-	T.aoespam[205729] = 3			-- Greater Blessing of Might
 	T.aoespam[222197] = 0			-- Volatile Ichor (Unstable Horrorslime Trinket)
 	T.aoespam[214350] = 3			-- Nightmare Essence (Oakheart's Gnarled Root Trinket)
 	T.aoespam[230261] = 0			-- Flame Wreath (Aran's Relaxing Ruby Trinket)
@@ -128,7 +127,6 @@ elseif T.class == "MAGE" then
 		T.aoespam[148022] = 3		-- Icicle (Mastery)
 		T.aoespam[31707] = 3		-- Waterbolt (Pet)
 		T.aoespam[228598] = 0.5		-- Ice Lance
-		T.aoespam[115611] = 6		-- Temporal Ripples
 		T.aoespam[157981] = 1		-- Blast Wave
 		T.aoespam[157997] = 1		-- Ice Nova
 		T.aoespam[157980] = 1		-- Supernova
@@ -292,7 +290,7 @@ elseif T.class == "WARLOCK" then
 		T.aoespam[205246] = 3		-- Phantom Singularity
 		T.aoespam[80240] = 3		-- Havoc
 		T.aoespam[42223] = 3		-- Rain of Fire
-		T.aoespam[689] = 3			-- Drain Life
+		--BETA T.aoespam[689] = 3			-- Drain Life
 		T.aoespam[198590] = 3		-- Drain Soul
 		T.aoespam[86040] = 3		-- Hand of Gul'dan
 		T.aoespam[205181] = 3		-- Shadowflame
@@ -313,7 +311,7 @@ elseif T.class == "WARLOCK" then
 	end
 	if C.combattext.healing then
 		T.healfilter[63106] = true	-- Siphon Life
-		T.healfilter[689] = true	-- Drain Life
+		--BETA T.healfilter[689] = true	-- Drain Life
 		T.healfilter[108359] = true	-- Dark Regeneration
 	end
 elseif T.class == "WARRIOR" then
