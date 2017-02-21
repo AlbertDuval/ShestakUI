@@ -2516,6 +2516,8 @@ C["filger_spells"] = {
 			{spellID = 108271, unitID = "player", caster = "player", filter = "BUFF"},
 			-- [ADD FM] Ghost in the Mist
 			{spellID = 207527, unitID = "player", caster = "player", filter = "BUFF"},
+			-- [ADD FM] Flamethong
+			{spellID = 193796, unitID = "player", caster = "player", filter = "BUFF"},
 		},
 		{
 			Name = "P_PROC_ICON",
@@ -2722,6 +2724,8 @@ C["filger_spells"] = {
 			{spellID = 108273, filter = "CD"},
 			-- [ADD FM] Call of the Elements
 			{spellID = 108285, filter = "CD"},
+			-- [ADD FM] Crash Lightning
+			{spellID = 187874, filter = "CD"},
 			-- Hex
 			{spellID = 51514, filter = "CD"},
 			-- Tremor Totem
@@ -2738,6 +2742,8 @@ C["filger_spells"] = {
 			{spellID = 51533, filter = "CD"},
 			-- -- Spiritwalker's Grace
 			-- {spellID = 79206, filter = "CD"},
+			-- Doom Winds [FM Add]
+			{spellID = 204945, filter = "CD"},
 			-- Ancestral Guidance
 			{spellID = 108281, filter = "CD"},
 			-- -- Ascendance [Comment FM]
