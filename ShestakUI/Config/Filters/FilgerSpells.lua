@@ -1258,7 +1258,7 @@ C["filger_spells"] = {
 			-- Cone of Cold
 			{spellID = 120, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Flurry
-			{spellID = 228354, unitID = "target", caster = "player", filter = "DEBUFF"},
+			{spellID = 228354, unitID = "target", caster = "player", filter = "DEBUFF", absID = true},
 			-- Ice Nova
 			{spellID = 157997, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Slow
@@ -3311,7 +3311,7 @@ C["filger_spells"] = {
 			-- Brawler's Draenic Strength Potion
 			{spellID = 176109, unitID = "player", caster = "player", filter = "BUFF", absID = true},
 
-			-- Raid Amplifiers: General
+			-- Raid Amplifiers
 			-- Ancient Hysteria
 			{spellID = 90355, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Netherwinds
@@ -3327,8 +3327,8 @@ C["filger_spells"] = {
 			-- Time Warp
 			{spellID = 80353, unitID = "player", caster = "all", filter = "BUFF"},
 
-			-- Legendary Items
-			-- Norgannon's Foresight feet
+			-- Legendaries
+			-- Norgannon's Foresight [Boots]
 			{spellID = 236380, unitID = "player", caster = "all", filter = "BUFF"},
 
 			-- Professions
@@ -3358,6 +3358,8 @@ C["filger_spells"] = {
 			{spellID = 65116, unitID = "player", caster = "player", filter = "BUFF"},
 
 			-- Zone Buffs
+			-- Inactive (Battlegrounds)
+			{spellID = 43681, unitID = "player", caster = "all", filter = "DEBUFF", absID = true},
 			-- Speed (Battlegrounds)
 			{spellID = 23451, unitID = "player", caster = "all", filter = "BUFF", absID = true},
 			-- Fel Sludge (Tanaan Jungle)
@@ -3611,7 +3613,7 @@ C["filger_spells"] = {
 			-- Cone of Cold
 			{spellID = 120, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Flurry
-			{spellID = 228354, unitID = "player", caster = "all", filter = "DEBUFF"},
+			{spellID = 228671, unitID = "player", caster = "all", filter = "DEBUFF", absID = true},
 			-- Slow
 			{spellID = 31589, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Frostbolt
@@ -3650,6 +3652,8 @@ C["filger_spells"] = {
 			{spellID = 116888, unitID = "player", caster = "player", filter = "DEBUFF"},
 			-- Cauterize
 			{spellID = 87023, unitID = "player", caster = "player", filter = "DEBUFF"},
+			-- Nemesis
+			{spellID = 206491, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Touch of Karma
 			{spellID = 125174, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Smoke Bomb
