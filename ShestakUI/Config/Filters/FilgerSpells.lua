@@ -296,6 +296,10 @@ C["filger_spells"] = {
 			{spellID = 203720, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Soul Barrier
 			{spellID = 227225, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Blur
+			{spellID = 212800, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Chaos Blades
+			{spellID = 211048, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Netherwalk
 			{spellID = 196555, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Nether Bond
@@ -406,6 +410,8 @@ C["filger_spells"] = {
 			{spellID = 207744, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Frailty
 			{spellID = 224509, unitID = "target", caster = "player", filter = "DEBUFF"},
+			-- Bloodlet
+			{spellID = 207690, unitID = "target", caster = "player", filter = "DEBUFF"},
 		},
 		{
 			Name = "T_DE/BUFF_BAR",
@@ -493,6 +499,10 @@ C["filger_spells"] = {
 			{spellID = 212084, filter = "CD"},
 			-- Nether Bond
 			{spellID = 207810, filter = "CD"},
+			-- Demonic Infusion
+			{spellID = 236189, filter = "CD"},
+			-- Blur
+			{spellID = 198589, filter = "CD"},
 			-- Fury of the Illidari (Artifact)
 			{spellID = 201467, filter = "CD"},
 			-- Netherwalk
@@ -882,8 +892,6 @@ C["filger_spells"] = {
 			{spellID = 186265, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Bestial Wrath
 			{spellID = 19574, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Beast Cleave
-			{spellID = 118455, unitID = "pet", caster = "player", filter = "BUFF"},
 			-- Trueshot
 			{spellID = 193526, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Aspect of the Wild
@@ -1698,6 +1706,10 @@ C["filger_spells"] = {
 			{spellID = 31850, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Divine Protection
 			{spellID = 498, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Rule of Law
+			{spellID = 214202, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Shield of the Righteous
+			{spellID = 132403, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Speed of Light
 			{spellID = 85499, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Eternal Flame
@@ -1723,6 +1735,8 @@ C["filger_spells"] = {
 			{spellID = 85416, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Final Verdict
 			{spellID = 157048, unitID = "player", caster = "player", filter = "BUFF"},
+			-- The Fires of Justice
+			{spellID = 209785, unitID = "player", caster = "player", filter = "BUFF"},
 
 			-- Trinkets
 			-- Alchemy Stones
@@ -1821,6 +1835,8 @@ C["filger_spells"] = {
 
 			-- Forbearance
 			{spellID = 25771, unitID = "player", caster = "all", filter = "DEBUFF"},
+			-- Judgment
+			{spellID = 197277, unitID = "target", caster = "player", filter = "DEBUFF"},
 
 			-- Trinket Effects
 			-- Fel Burn [Empty Drinking Horn]
@@ -1862,12 +1878,18 @@ C["filger_spells"] = {
 			{spellID = 26573, filter = "CD"},
 			-- Avenger's Shield
 			{spellID = 31935, filter = "CD"},
+			-- Bestow Faith
+			{spellID = 223306, filter = "CD"},
+			-- Light of Dawn
+			{spellID = 85222, filter = "CD"},
 			-- Holy Prism
 			{spellID = 114165, filter = "CD"},
 			-- Blessing of Freedom
 			{spellID = 1044, filter = "CD"},
 			-- Seraphim
 			{spellID = 152262, filter = "CD"},
+			-- Rule of Law
+			{spellID = 214202, filter = "CD"},
 			-- Speed of Light
 			{spellID = 85499, filter = "CD"},
 			-- Divine Protection
@@ -1890,6 +1912,8 @@ C["filger_spells"] = {
 			{spellID = 31884, filter = "CD"},
 			-- Ardent Defender
 			{spellID = 31850, filter = "CD", absID = true},
+			-- Guardian of Ancient Kings
+			{spellID = 86659, filter = "CD"},
 			-- Blessing of Protection
 			{spellID = 1022, filter = "CD"},
 			-- Honorable Medallion
@@ -2528,6 +2552,14 @@ C["filger_spells"] = {
 			{spellID = 79206, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Unleash Life
 			{spellID = 73685, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Healing Stream Totem
+			{spellID = 5394, filter = "ICD", trigger = "NONE", duration = 15},
+			-- Doom Winds
+			{spellID = 204945, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Landslide
+			{spellID = 202004, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Boulderfist
+			{spellID = 218825, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Stone Bulwark
 			{spellID = 114893, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Ancestral Guidance
@@ -2538,6 +2570,10 @@ C["filger_spells"] = {
 			{spellID = 207527, unitID = "player", caster = "player", filter = "BUFF"},
 			-- [ADD FM] Flamethong
 			{spellID = 193796, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Fury of Air
+			{spellID = 197211, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Windsong
+			{spellID = 201898, unitID = "player", caster = "player", filter = "BUFF"},
 		},
 		{
 			Name = "P_PROC_ICON",
@@ -2557,6 +2593,16 @@ C["filger_spells"] = {
 			{spellID = 53390, unitID = "player", caster = "player", filter = "BUFF"},
 			-- [ADD FM] Icefury
 			{spellID = 210714, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Stormlash
+			{spellID = 195222, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Stormbringer
+			{spellID = 201846, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Crash Lightning
+			{spellID = 187878, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Frostbrand
+			{spellID = 196834, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Flametongue
+			{spellID = 194084, unitID = "player", caster = "player", filter = "BUFF"},
 
 			-- Trinkets
 			-- Alchemy Stones
@@ -2649,6 +2695,8 @@ C["filger_spells"] = {
 			{spellID = 196840, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Earthgrab
 			{spellID = 64695, unitID = "target", caster = "player", filter = "DEBUFF"},
+			-- Earthen Spike
+			{spellID = 188089, unitID = "target", caster = "player", filter = "DEBUFF"},
 
 			-- Trinket Effects
 			-- Mark of Doom [Prophecy of Fear]
@@ -2764,14 +2812,24 @@ C["filger_spells"] = {
 			{spellID = 204945, filter = "CD"},
 			-- Ancestral Guidance
 			{spellID = 108281, filter = "CD"},
-			-- -- Ascendance [Comment FM]
+			-- Ascendance [Comment FM]
 			-- {spellID = 114049, filter = "CD"},
-			-- -- Honorable Medallion [Comment FM]
+			-- Feral Lunge
+			{spellID = 196884, filter = "CD"},
+			-- Flametongue
+			{spellID = 193796, filter = "CD"},
+			-- Lightning Surge Totem
+			{spellID = 192058, filter = "CD"},
+			-- Crash Lightning
+			{spellID = 187874, filter = "CD"},
+			-- Doom Winds
+			{spellID = 204945, filter = "CD"},
+			-- Windsong
+			{spellID = 201898, filter = "CD"},
+			-- Honorable Medallion [Comment FM]
 			-- {spellID = 195710, filter = "CD"},
 			-- [ADD FM] Gladiator's Medallion
 			{spellID = 208683, filter = "CD"},
-			-- FM TesT Earthen Shield Totem
-			-- {spellID = 198838, filter = "CD"},
 
 			-- Racial
 			-- Berserking (Troll)
