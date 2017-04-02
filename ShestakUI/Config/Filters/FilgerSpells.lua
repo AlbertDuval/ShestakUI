@@ -2820,8 +2820,6 @@ C["filger_spells"] = {
 			{spellID = 51533, filter = "CD"},
 			-- -- Spiritwalker's Grace
 			-- {spellID = 79206, filter = "CD"},
-			-- Doom Winds [FM Add]
-			{spellID = 204945, filter = "CD"},
 			-- Ancestral Guidance
 			{spellID = 108281, filter = "CD"},
 			-- Ascendance [Comment FM]
