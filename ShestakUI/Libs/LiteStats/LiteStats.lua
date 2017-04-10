@@ -127,6 +127,10 @@ local function formatgold(style, amount)
 	elseif style == 4 then
 		return (gold > 0 and format(GOLD_AMOUNT_TEXTURE, gold, 12, 12) or "") .. (silver > 0 and format(SILVER_AMOUNT_TEXTURE, silver, 12, 12) or "")
 			.. ((copper > 0 or (gold == 0 and silver == 0)) and format(COPPER_AMOUNT_TEXTURE, copper, 12, 12) or "") .. " "
+	elseif style == 5 then
+		return (gold > 0 and format("%s|cffffd700%s|r ", comma_value(gold), GOLD_AMOUNT_SYMBOL) or "")
+			.. (format("%.2d|cffc7c7cf%s|r ", silver, SILVER_AMOUNT_SYMBOL))
+			.. (format("%.2d|cffeda55f%s|r", copper, COPPER_AMOUNT_SYMBOL))
 	end
 end
 
@@ -565,14 +569,26 @@ if gold.enabled then
 			end
 			GameTooltip:AddLine(L_STATS_SERVER_GOLD, ttsubh.r, ttsubh.g, ttsubh.b)
 			local total = 0
+			local goldTable = {}
+			local charIndex = 0
+			wipe(goldTable)
 			for char, conf in pairs(SavedStats[realm]) do
 				if conf.Gold and conf.Gold > 99 then
-					GameTooltip:AddDoubleLine(char, formatgold(1, conf.Gold), 1, 1, 1, 1, 1, 1)
-					total = total + conf.Gold
+					charIndex = charIndex + 1
+					goldTable[charIndex] = {char, formatgold(5, conf.Gold), conf.Gold}
 				end
 			end
+			table.sort(goldTable, function(a, b)
+				if (a and b) then
+					return a[3] > b[3]
+				end
+			end)
+			for i, v in ipairs(goldTable) do
+				GameTooltip:AddDoubleLine(v[1], v[2], 1, 1, 1, 1, 1, 1)
+				total = total + v[3]
+			end
 			GameTooltip:AddDoubleLine(" ", "-----------------", 1, 1, 1, 0.5, 0.5, 0.5)
-			GameTooltip:AddDoubleLine(TOTAL, formatgold(1, total), ttsubh.r, ttsubh.g, ttsubh.b, 1, 1, 1)
+			GameTooltip:AddDoubleLine(TOTAL, formatgold(5, total), ttsubh.r, ttsubh.g, ttsubh.b, 1, 1, 1)
 			GameTooltip:AddLine(" ")
 
 			local currencies = 0
@@ -630,15 +646,17 @@ if gold.enabled then
 
 			if C.stats.currency_pvp then
 				IsSubTitle = 5
-				-- Currency(390, true)		-- Conquest Points
+				-- Currency(390, true)			-- Conquest Points
 				-- Currency(392, false, true)	-- Honor Points
 			end
 
 			if C.stats.currency_misc then
 				IsSubTitle = 6
-				Currency(515)			-- Darkmoon Prize Ticket
-				Currency(1155, false, true)	-- Ancient Mana
-				Currency(1220)			-- Order Resources
+				Currency(515)					-- Darkmoon Prize Ticket
+				Currency(1155, false, true)		-- Ancient Mana
+				Currency(1220)					-- Order Resources
+				Currency(1226)					-- Nethershard
+				Currency(1342, false, true)		-- Legionfall War Supplies
 			end
 
 			GameTooltip:AddLine(" ")
