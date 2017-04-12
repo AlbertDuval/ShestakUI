@@ -2584,8 +2584,6 @@ C["filger_spells"] = {
 			{spellID = 108271, unitID = "player", caster = "player", filter = "BUFF"},
 			-- [ADD FM] Ghost in the Mist
 			{spellID = 207527, unitID = "player", caster = "player", filter = "BUFF"},
-			-- [ADD FM] Flamethong
-			{spellID = 193796, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Fury of Air
 			{spellID = 197211, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Windsong
