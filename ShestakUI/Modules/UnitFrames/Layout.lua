@@ -1563,20 +1563,36 @@ end
 --	Auto reposition heal raid frame
 ----------------------------------------------------------------------------------------
 local function Reposition()
+	-- local a = math.ceil(GetNumGroupMembers() / 5)
+	local a = 1
+	for i = 1, GetNumGroupMembers() do
+		_, _, s, _, _, _, _, _, _, _, _ = GetRaidRosterInfo(i)
+		a = max(a, s)
+	end
 	if SavedOptions and SavedOptions.RaidLayout == "HEAL" and not C.raidframe.raid_groups_vertical then
-		if C.raidframe.raid_groups < 6 then return end
-
+		if a < 4 then a = 4 end
 		if C.unitframe.castbar_icon == true then
-			oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4] + 11, C.position.unitframes.player_castbar[5] + (C.raidframe.raid_groups - 5) * 33)
+			oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4] + 11, C.position.unitframes.player_castbar[5] + (a - 4) * 41)
 		else
-			oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4], C.position.unitframes.player_castbar[5] + (C.raidframe.raid_groups - 5) * 33)
+			oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4], C.position.unitframes.player_castbar[5] + (a - 4) * 41)
 		end
-
-		player:SetPoint(C.position.unitframes.player[1], C.position.unitframes.player[2], C.position.unitframes.player[3], C.position.unitframes.player[4], C.position.unitframes.player[5] + (C.raidframe.raid_groups - 5) * 33)
-		target:SetPoint(C.position.unitframes.target[1], C.position.unitframes.target[2], C.position.unitframes.target[3], C.position.unitframes.target[4], C.position.unitframes.target[5] + (C.raidframe.raid_groups - 5) * 33)
+		player:SetPoint(C.position.unitframes.player[1], C.position.unitframes.player[2], C.position.unitframes.player[3], C.position.unitframes.player[4], C.position.unitframes.player[5] + (a - 4) * 41)
+		target:SetPoint(C.position.unitframes.target[1], C.position.unitframes.target[2], C.position.unitframes.target[3], C.position.unitframes.target[4], C.position.unitframes.target[5] + (a - 4) * 41)
+	end
+	if SavedOptions and SavedOptions.RaidLayout == "VHEAL" and not C.raidframe.raid_groups_vertical then
+		if a < 5 then a = 5 end
+		if C.unitframe.castbar_icon == true then
+			oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4] + 11 - (a - 5) * 33.6, C.position.unitframes.player_castbar[5])
+		else
+			oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4] - (a - 5) * 33.6, C.position.unitframes.player_castbar[5])
+		end
+		player:SetPoint(C.position.unitframes.player[1], C.position.unitframes.player[2], C.position.unitframes.player[3], C.position.unitframes.player[4] - (a - 5) * 33.6, C.position.unitframes.player[5])
+		target:SetPoint(C.position.unitframes.target[1], C.position.unitframes.target[2], C.position.unitframes.target[3], C.position.unitframes.target[4] + (a - 5) * 33.6, C.position.unitframes.target[5])
 	end
 end
 
 local frame = CreateFrame("Frame")
+frame:RegisterEvent("GROUP_ROSTER_UPDATE")
 frame:RegisterEvent("PLAYER_LOGIN")
+frame:RegisterEvent("PLAYER_ENTERING_WORLD")
 frame:SetScript("OnEvent", Reposition)
