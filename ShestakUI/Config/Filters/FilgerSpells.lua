@@ -2677,6 +2677,8 @@ C["filger_spells"] = {
 			{spellID = 53390, unitID = "player", caster = "player", filter = "BUFF"},
 			-- [ADD FM] Icefury
 			{spellID = 210714, unitID = "player", caster = "player", filter = "BUFF"},
+			-- [ADD FM] Undulation
+			{spellID = 216251, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Stormlash
 			{spellID = 195222, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Stormbringer
@@ -2844,6 +2846,8 @@ C["filger_spells"] = {
 			{spellID = 17364, filter = "CD"},
 			-- [MOVE FM] Elemental Blast
 			{spellID = 117014, filter = "CD"},
+			-- [ADD FM] Sundering
+			{spellID = 197214, filter = "CD"},
 			-- Lava Lash
 			{spellID = 60103, filter = "CD"},
 			-- [ADD FM] Icefury
@@ -2866,16 +2870,22 @@ C["filger_spells"] = {
 			{spellID = 205495, filter = "CD"},
 			-- Cloudburst Totem
 			{spellID = 157153, filter = "CD"},
+			-- [ADD FM] Healing Stream Totem
+			{spellID = 5394, filter = "CD"},
 			-- [ADD FM] Ground Totem
 			{spellID = 8177, filter = "CD"},
-			-- [ADD FM] Capacitor Totem
-			{spellID = 108269, filter = "CD"},
+			-- [ADD FM] Earthgrab Totem
+			{spellID = 51485, filter = "CD"},
 			-- [ADD FM] Windwalk Totem
 			{spellID = 108273, filter = "CD"},
+			-- [ADD FM] Skyfury Totem
+			{spellID = 204330, filter = "CD"},
+			-- [ADD FM] Counterstrike Totem
+			{spellID = 204331, filter = "CD"},
+			-- [ADD FM] Windfury Totem
+			{spellID = 204332, filter = "CD"},
 			-- [ADD FM] Call of the Elements
 			{spellID = 108285, filter = "CD"},
-			-- [ADD FM] Crash Lightning
-			{spellID = 187874, filter = "CD"},
 			-- Hex
 			{spellID = 51514, filter = "CD"},
 			-- Tremor Totem
@@ -2886,15 +2896,15 @@ C["filger_spells"] = {
 			{spellID = 51490, filter = "CD"},
 			-- Stone Bulwark Totem
 			{spellID = 108270, filter = "CD"},
-			-- Astral Shift
-			{spellID = 108271, filter = "CD"},
-			-- Feral Spirit
-			{spellID = 51533, filter = "CD"},
-			-- -- Spiritwalker's Grace
+			-- -- [COMMENT FM] Astral Shift
+			-- {spellID = 108271, filter = "CD"},
+			-- -- [COMMENT FM] Feral Spirit
+			-- {spellID = 51533, filter = "CD"},
+			-- -- [COMMENT FM] Spiritwalker's Grace
 			-- {spellID = 79206, filter = "CD"},
 			-- Ancestral Guidance
 			{spellID = 108281, filter = "CD"},
-			-- Ascendance [Comment FM]
+			--  [COMMENT FM] Ascendance
 			-- {spellID = 114049, filter = "CD"},
 			-- Feral Lunge
 			{spellID = 196884, filter = "CD"},
@@ -2908,7 +2918,7 @@ C["filger_spells"] = {
 			{spellID = 204945, filter = "CD"},
 			-- Windsong
 			{spellID = 201898, filter = "CD"},
-			-- Honorable Medallion [Comment FM]
+			-- [COMMENT FM] Honorable Medallion
 			-- {spellID = 195710, filter = "CD"},
 			-- [ADD FM] Gladiator's Medallion
 			{spellID = 208683, filter = "CD"},
@@ -3897,7 +3907,7 @@ C["filger_spells"] = {
 			-- Gul'dan
 			-- Flames of Sargeras
 			{spellID = 221606, unitID = "player", caster = "all", filter = "DEBUFF"},
-			
+
 			-- Trial of Valor
 			-- Odyn
 			-- Storm of Justice
