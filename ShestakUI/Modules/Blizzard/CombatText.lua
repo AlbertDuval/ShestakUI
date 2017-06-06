@@ -316,9 +316,9 @@ local function OnEvent(self, event, subevent, ...)
 				lowMana = nil
 			end
 		end
-	elseif event == "PLAYER_REGEN_ENABLED" and COMBAT_TEXT_SHOW_COMBAT_STATE == "1" then
+	elseif event == "PLAYER_REGEN_ENABLED" and COMBAT_TEXT_SHOW_COMBAT_STATE == "0" then
 			xCT3:AddMessage("-"..LEAVING_COMBAT, 0.1, 1, 0.1)
-	elseif event == "PLAYER_REGEN_DISABLED" and COMBAT_TEXT_SHOW_COMBAT_STATE == "1" then
+	elseif event == "PLAYER_REGEN_DISABLED" and COMBAT_TEXT_SHOW_COMBAT_STATE == "0" then
 			xCT3:AddMessage("+"..ENTERING_COMBAT, 1, 0.1, 0.1)
 	elseif event == "UNIT_COMBO_POINTS" and COMBAT_TEXT_SHOW_COMBO_POINTS == "1" then
 		if subevent == ct.unit then
