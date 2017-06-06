@@ -80,6 +80,7 @@ if C.enemycooldown.enable == true then
 		[96231] = 15,	-- Rebuke
 		[1766] = 15,	-- Kick
 		[6552] = 15,	-- Pummel
+		[183752] = 15,	-- [ADD FM] Manavore (DH kick)
 		[147362] = 24,	-- Counter Shot
 		[2139] = 24,	-- Counterspell
 		[19647] = 24,	-- Spell Lock
@@ -89,7 +90,7 @@ if C.enemycooldown.enable == true then
 		[47476] = 60,	-- Strangulate
 		[78675] = 60,	-- Solar Beam
 		-- Crowd Controls
-		[5246] = 90,	-- Fear War (Ajout FM)
+		[5246] = 90,	-- [ADD FM] Fear War
 		[115078] = 15,	-- Paralysis
 		[20066] = 15,	-- Repentance
 		[108194] = 30,	-- Asphyxiate
@@ -115,7 +116,7 @@ if C.enemycooldown.enable == true then
 		[213664] = 120,	-- Nimble Brew
 		[47585] = 120,	-- Dispersion
 		[1856] = 120,	-- Vanish
-		[148467] = 180,	-- Deterrence (ajout FM)
+		[148467] = 180,	-- [ADD FM] Deterrence
 		[7744] = 120,	-- Will of the Forsaken (Racial)
 		[186265] = 180,	-- Aspect of the Turtle
 		[33206] = 180,	-- Pain Suppression

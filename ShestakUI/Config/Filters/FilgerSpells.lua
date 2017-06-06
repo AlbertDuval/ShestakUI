@@ -2873,7 +2873,7 @@ C["filger_spells"] = {
 			-- [ADD FM] Healing Stream Totem
 			{spellID = 5394, filter = "CD"},
 			-- [ADD FM] Ground Totem
-			{spellID = 8177, filter = "CD"},
+			{spellID = 204336, filter = "CD"},
 			-- [ADD FM] Earthgrab Totem
 			{spellID = 51485, filter = "CD"},
 			-- [ADD FM] Windwalk Totem
