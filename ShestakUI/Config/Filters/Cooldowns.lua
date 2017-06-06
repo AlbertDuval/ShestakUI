@@ -74,7 +74,6 @@ if C.enemycooldown.enable == true then
 		-- Interrupts and Silences
 		[57994] = 12,	-- Wind Shear
 		[47528] = 15,	-- Mind Freeze
-		[80965] = 15,	-- Skull Bash
 		[106839] = 15,	-- Skull Bash
 		[116705] = 15,	-- Spear Hand Strike
 		[96231] = 15,	-- Rebuke
@@ -122,7 +121,6 @@ if C.enemycooldown.enable == true then
 		[33206] = 180,	-- Pain Suppression
 		[7744] = 180,	-- Will of the Forsaken (Racial)
 		[61336] = 180,	-- Survival Instincs
-		[30823] = 60,	-- Shamanistic Rage
 		-- Ofensive abilities
 		[114050] = 180,	-- Ascendance (Elemental)
 		[114051] = 180,	-- Ascendance (Enhancement)
@@ -131,7 +129,6 @@ if C.enemycooldown.enable == true then
 		[12472] = 180,	-- Icy Veins
 		[102543] = 180,	-- Incarnation (Feral)
 		[102560] = 180,	-- Incarnation (Boomy)
-		[77801] = 120,	-- Dark Soul
 	}
 end
 

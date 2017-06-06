@@ -2854,14 +2854,10 @@ C["filger_spells"] = {
 			{spellID = 210714, filter = "CD"},
 			-- Healing Rain
 			{spellID = 73920, filter = "CD"},
-			-- [ADD FM] Liquid Magma
-			{spellID = 152255, filter = "CD"},
 			-- Unleash Elements
 			--BETA {spellID = 73680, filter = "CD"},
 			-- [ADD FM] Unleash Life
 			{spellID = 73685, filter = "CD"},
-			-- [ADD FM] Unleash Flame
-			{spellID = 165462, filter = "CD"},
 			-- [ADD FM] Healing Stream Totem
 			{spellID = 5394, filter = "CD"},
 			-- [ADD FM] Gift of the Queen
