@@ -30,7 +30,7 @@ local function UpdateBar()
 	local obj = PVPReadyDialog
 	local oldTime = GetTime()
 	local flag = 0
-	local duration = 90
+	local duration = 30
 	local interval = 0.1
 	obj:SetScript("OnUpdate", function(self, elapsed)
 		obj.nextUpdate = obj.nextUpdate + elapsed
