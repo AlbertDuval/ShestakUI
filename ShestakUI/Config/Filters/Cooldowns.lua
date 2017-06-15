@@ -71,6 +71,7 @@ if C.enemycooldown.enable == true then
 		[126152] = 120,
 	}
 	T.enemy_spells = {
+		[2782] = 8,	-- [ADD FM] Drood Dispell
 		-- Interrupts and Silences
 		[57994] = 12,	-- Wind Shear
 		[47528] = 15,	-- Mind Freeze

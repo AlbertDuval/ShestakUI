@@ -2083,6 +2083,8 @@ C["filger_spells"] = {
 			{spellID = 87160, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Twist of Fate
 			{spellID = 123254, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Voidform [ADD FM]
+			{spellID = 194249, unitID = "player", caster = "player", filter = "BUFF"},
 
 			-- Trinkets
 			-- Alchemy Stones
@@ -2866,8 +2868,6 @@ C["filger_spells"] = {
 			{spellID = 205495, filter = "CD"},
 			-- Cloudburst Totem
 			{spellID = 157153, filter = "CD"},
-			-- [ADD FM] Healing Stream Totem
-			{spellID = 5394, filter = "CD"},
 			-- [ADD FM] Ground Totem
 			{spellID = 204336, filter = "CD"},
 			-- [ADD FM] Earthgrab Totem
