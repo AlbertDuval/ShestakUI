@@ -27,6 +27,7 @@ if C.combattext.merge_aoe_spam then
 	T.aoespam[229737] = 0			-- Solar Collapse (Fury of the Burning Sky Trinket)
 	T.aoespam[229700] = 0			-- Orb of Destruction (Pharamere's Forbidden Grimoire Trinket)
 	T.aoespam[225764] = 1			-- Nether Meteor (Star Gate Trinket)
+	T.aoespam[242525] = 0.5			-- Terror From Below (Terror From Below Trinket)
 	T.aoespam[188091] = 4			-- Deadly Grace (Potion of Deadly Grace)
 	T.aoespam[210380] = 4			-- Aura of Sacrifice
 end
@@ -240,6 +241,8 @@ elseif T.class == "MONK" then
 		T.aoespam[124081] = 3		-- Zen Pulse
 		T.aoespam[116670] = 0		-- Uplift
 		T.aoespam[178173] = 3		-- Gift of the Ox
+		T.aoespam[191840] = 3		-- Essence Font
+		T.aoespam[162530] = 3		-- Refreshing Jade Wind
 		-- Damaging spells
 		T.aoespam[117952] = 3		-- Crackling Jade Lightning
 		T.aoespam[117418] = 3		-- Fists of Fury
