@@ -90,6 +90,8 @@ C["filger_spells"] = {
 			-- Rapid Adaptation (Versatility, Use)
 			{spellID = 170397, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Tanking
+			-- Cunning of the Deceiver (Special, Proc) [Shifting Cosmic Sliver]
+			{spellID = 242628, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Living Carapace (Damage Reduction, Use) [Animated Exoskeleton]
 			{spellID = 225033, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Vampiric Aura (Leech, Use) [Fang of Tichcondrius]
@@ -339,6 +341,8 @@ C["filger_spells"] = {
 			-- Rapid Adaptation (Versatility, Use)
 			{spellID = 170397, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Tanking
+			-- Cunning of the Deceiver (Special, Proc) [Shifting Cosmic Sliver]
+			{spellID = 242628, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Living Carapace (Damage Reduction, Use) [Animated Exoskeleton]
 			{spellID = 225033, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Vampiric Aura (Leech, Use) [Fang of Tichcondrius]
@@ -638,6 +642,8 @@ C["filger_spells"] = {
 			-- Rapid Adaptation (Versatility, Use)
 			{spellID = 170397, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Tanking
+			-- Cunning of the Deceiver (Special, Proc) [Shifting Cosmic Sliver]
+			{spellID = 242628, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Living Carapace (Damage Reduction, Use) [Animated Exoskeleton]
 			{spellID = 225033, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Vampiric Aura (Leech, Use) [Fang of Tichcondrius]
@@ -912,8 +918,6 @@ C["filger_spells"] = {
 			{spellID = 35079, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Survivalist
 			{spellID = 164857, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Volley
-			{spellID = 194386, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Trick Shot
 			{spellID = 227272, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Bombardment
@@ -1551,6 +1555,8 @@ C["filger_spells"] = {
 			-- Rapid Adaptation (Versatility, Use)
 			{spellID = 170397, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Tanking
+			-- Cunning of the Deceiver (Special, Proc) [Shifting Cosmic Sliver]
+			{spellID = 242628, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Living Carapace (Damage Reduction, Use) [Animated Exoskeleton]
 			{spellID = 225033, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Vampiric Aura (Leech, Use) [Fang of Tichcondrius]
@@ -1835,6 +1841,8 @@ C["filger_spells"] = {
 			-- Rapid Adaptation (Versatility, Use)
 			{spellID = 170397, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Tanking
+			-- Cunning of the Deceiver (Special, Proc) [Shifting Cosmic Sliver]
+			{spellID = 242628, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Living Carapace (Damage Reduction, Use) [Animated Exoskeleton]
 			{spellID = 225033, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Vampiric Aura (Leech, Use) [Fang of Tichcondrius]
@@ -3247,6 +3255,8 @@ C["filger_spells"] = {
 			-- Rapid Adaptation (Versatility, Use)
 			{spellID = 170397, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Tanking
+			-- Cunning of the Deceiver (Special, Proc) [Shifting Cosmic Sliver]
+			{spellID = 242628, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Living Carapace (Damage Reduction, Use) [Animated Exoskeleton]
 			{spellID = 225033, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Vampiric Aura (Leech, Use) [Fang of Tichcondrius]
