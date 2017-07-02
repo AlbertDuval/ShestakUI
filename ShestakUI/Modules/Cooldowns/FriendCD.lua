@@ -136,7 +136,7 @@ local OnEvent = function(self, event, ...)
 
 		if eventType == "SPELL_CAST_SUCCESS" then
 			if sourceName ~= T.name then
-				if (T.enemy_spells[spellID] or spellID == 208683) and (UnitInParty(sourceName) or UnitInRaid(sourceName)) then
+				if (T.enemy_spells[spellID] or spellID == 208683) and (UnitInParty(sourceName) or UnitInRaid(sourceName)) and UnitInBattleground("player") then
 					StartTimer(sourceName, spellID)
 				end
 			end

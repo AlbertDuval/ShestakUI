@@ -228,6 +228,8 @@ C["filger_spells"] = {
 			{spellID = 48792, filter = "CD"},
 			-- Summon Gargoyle
 			{spellID = 49206, filter = "CD"},
+
+			-- PvP
 			-- Honorable Medallion
 			{spellID = 195710, filter = "CD"},
 
@@ -519,6 +521,8 @@ C["filger_spells"] = {
 			{spellID = 187827, filter = "CD"},
 			-- Darkness
 			{spellID = 196718, filter = "CD"},
+
+			-- PvP
 			-- Honorable Medallion
 			{spellID = 195710, filter = "CD"},
 
@@ -614,6 +618,8 @@ C["filger_spells"] = {
 			{spellID = 69369, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Guardian of Elune
 			{spellID = 213680, unitID = "player", caster = "player", filter = "BUFF"},
+
+			-- Item Sets
 			-- Natural Defenses (T19)
 			{spellID = 211160, unitID = "player", caster = "player", filter = "BUFF"},
 
@@ -852,6 +858,8 @@ C["filger_spells"] = {
 			{spellID = 102558, filter = "CD"},
 			-- Incarnation: Tree of Life
 			{spellID = 33891, filter = "CD"},
+
+			-- PvP
 			-- Honorable Medallion
 			{spellID = 195710, filter = "CD"},
 
@@ -1132,6 +1140,8 @@ C["filger_spells"] = {
 			{spellID = 186257, filter = "CD"},
 			-- Spirit Mend (Pet)
 			{spellID = 90361, filter = "CD"},
+
+			-- PvP
 			-- Honorable Medallion
 			{spellID = 195710, filter = "CD"},
 
@@ -1416,6 +1426,8 @@ C["filger_spells"] = {
 			{spellID = 45438, filter = "CD"},
 			-- Invisibility
 			{spellID = 66, filter = "CD"},
+
+			-- PvP
 			-- Honorable Medallion
 			{spellID = 195710, filter = "CD"},
 
@@ -1492,32 +1504,18 @@ C["filger_spells"] = {
 			{spellID = 137639, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Mana Tea
 			{spellID = 197908, unitID = "player", caster = "player", filter = "BUFF"},
-			-- The Mists of Sheilun
-			{spellID = 199888, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Thunder Focus Tea
 			{spellID = 116680, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Momentum
-			{spellID = 119085, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Combo Master (Tier 19 4/4)
-			{spellID = 211432, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Fortifying Brew
-			{spellID = 243435, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Brew-Stache
-			{spellID = 214373, unitID = "player", caster = "player", filter = "BUFF"},
+			{spellID = 214372, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Lifecycles (Vivify)
 			{spellID = 197916, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Lifecycles (Enveloping Mist)
 			{spellID = 197919, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Teachings of the Monastery
-			{spellID = 202090, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Storm, Earth, and Fire
-			{spellID = 137639, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Transfer the Power
-			{spellID = 195321, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Power Strikes
-			{spellID = 129914, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Hit Combo
-			{spellID = 196741, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Fortification
+			{spellID = 213341, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Chi Torpedo
+			{spellID = 119085, unitID = "player", caster = "player", filter = "BUFF"},
 		},
 		{
 			Name = "P_PROC_ICON",
@@ -1531,6 +1529,22 @@ C["filger_spells"] = {
 			-- Buffs
 			-- Blackout Kick!
 			{spellID = 116768, unitID = "player", caster = "player", filter = "BUFF"},
+			-- The Mists of Sheilun
+			{spellID = 199888, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Surge of Mists
+			{spellID = 246328, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Power Strikes
+			{spellID = 129914, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Teachings of the Monastery
+			{spellID = 202090, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Transfer the Power
+			{spellID = 195321, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Hit Combo
+			{spellID = 196741, unitID = "player", caster = "player", filter = "BUFF"},
+
+			-- Item Sets
+			-- Combo Master (T19)
+			{spellID = 211432, unitID = "player", caster = "player", filter = "BUFF"},
 
 			-- Trinkets
 			-- Alchemy Stones
@@ -1712,12 +1726,16 @@ C["filger_spells"] = {
 			{spellID = 116849, filter = "CD"},
 			-- Invoke Xuen, the White Tiger
 			{spellID = 123904, filter = "CD"},
-			-- Honorable Medallion
-			{spellID = 195710, filter = "CD"},
 			-- Essence Font
 			{spellID = 191837, filter = "CD"},
 			-- Refreshing Jade Wind
 			{spellID = 162530, filter = "CD"},
+			-- Fortifying Brew
+			{spellID = 115203, filter = "CD"},
+
+			-- PvP
+			-- Honorable Medallion
+			{spellID = 195710, filter = "CD"},
 
 			-- Racial
 			-- Arcane Torrent (Blood Elf)
@@ -2000,6 +2018,8 @@ C["filger_spells"] = {
 			{spellID = 86659, filter = "CD"},
 			-- Blessing of Protection
 			{spellID = 1022, filter = "CD"},
+
+			-- PvP
 			-- Honorable Medallion
 			{spellID = 195710, filter = "CD"},
 
@@ -2302,12 +2322,14 @@ C["filger_spells"] = {
 			{spellID = 34433, filter = "CD"},
 			-- Void Eruption
 			{spellID = 228260, filter = "CD"},
-			-- Honorable Medallion
-			{spellID = 195710, filter = "CD"},
 			-- Light of T'uure
 			{spellID = 208065, filter = "CD"},
 			-- Light's Wrath
 			{spellID = 207946, filter = "CD"},
+
+			-- PvP
+			-- Honorable Medallion
+			{spellID = 195710, filter = "CD"},
 
 			-- Racial
 			-- Arcane Torrent (Blood Elf)
@@ -2584,6 +2606,8 @@ C["filger_spells"] = {
 			{spellID = 36554, filter = "CD"},
 			-- Evasion
 			{spellID = 5277, filter = "CD"},
+
+			-- PvP
 			-- Honorable Medallion
 			{spellID = 195710, filter = "CD"},
 
@@ -2920,11 +2944,13 @@ C["filger_spells"] = {
 			{spellID = 204945, filter = "CD"},
 			-- Windsong
 			{spellID = 201898, filter = "CD"},
-			-- [COMMENT FM] Honorable Medallion
-			-- {spellID = 195710, filter = "CD"},
+
+			-- PvP
+			-- Honorable Medallion
+			{spellID = 195710, filter = "CD"},
 			-- [ADD FM] Gladiator's Medallion
 			{spellID = 208683, filter = "CD"},
-
+			
 			-- Racial
 			-- Berserking (Troll)
 			{spellID = 26297, filter = "CD"},
@@ -3139,6 +3165,8 @@ C["filger_spells"] = {
 			{spellID = 205181, filter = "CD"},
 			-- Summon Darkglare
 			{spellID = 205180, filter = "CD"},
+
+			-- PvP
 			-- Honorable Medallion
 			{spellID = 195710, filter = "CD"},
 
@@ -3381,6 +3409,8 @@ C["filger_spells"] = {
 			{spellID = 97462, filter = "CD"},
 			-- Shield Wall
 			{spellID = 871, filter = "CD"},
+
+			-- PvP
 			-- Honorable Medallion
 			{spellID = 195710, filter = "CD"},
 
@@ -3850,7 +3880,7 @@ C["filger_spells"] = {
 			{spellID = 94794, unitID = "player", caster = "player", filter = "DEBUFF"},
 
 			-- Raids: Legion
-			-- BETA:Tomb of Sargeras
+			-- BETA: Tomb of Sargeras
 			-- Goroth
 			-- Shattering Star
 			{spellID = 233279, unitID = "player", caster = "all", filter = "DEBUFF"},
@@ -4007,8 +4037,6 @@ C["filger_spells"] = {
 			-- Odyn
 			-- Storm of Justice
 			{spellID = 227807, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Guarm
-			-- Helya
 
 			-- The Emerald Nightmare
 			-- Unstable Decay
