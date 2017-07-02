@@ -2948,9 +2948,7 @@ C["filger_spells"] = {
 			-- PvP
 			-- Honorable Medallion
 			{spellID = 195710, filter = "CD"},
-			-- [ADD FM] Gladiator's Medallion
-			{spellID = 208683, filter = "CD"},
-			
+
 			-- Racial
 			-- Berserking (Troll)
 			{spellID = 26297, filter = "CD"},
