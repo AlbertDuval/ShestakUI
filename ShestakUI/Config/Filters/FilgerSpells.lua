@@ -2092,6 +2092,8 @@ C["filger_spells"] = {
 			{spellID = 139, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Power of the Dark Side
 			{spellID = 198069, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Rapture [FM ADD]
+			{spellID = 47536, unitID = "player", caster = "player", filter = "BUFF"},
 		},
 		{
 			Name = "P_PROC_ICON",
