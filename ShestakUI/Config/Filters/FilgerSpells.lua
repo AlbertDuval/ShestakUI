@@ -2278,6 +2278,8 @@ C["filger_spells"] = {
 			{spellID = 110744, filter = "CD"},
 			-- Archangel
 			{spellID = 197862, filter = "CD"},
+			-- Power Word: Radiance [FM ADD]
+			{spellID = 194509, filter = "CD"},
 			-- Holy Word: Sanctify
 			{spellID = 34861, filter = "CD"},
 			-- Holy Word: Chastise
@@ -2692,6 +2694,12 @@ C["filger_spells"] = {
 			{spellID = 197211, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Windsong
 			{spellID = 201898, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Elemental Focus [FM ADD]
+			{spellID = 16246, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Power of the Maelstorm [FM ADD]
+			{spellID = 191877, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Control of Lava [FM ADD]
+			{spellID = 236746, unitID = "player", caster = "player", filter = "BUFF"},
 		},
 		{
 			Name = "P_PROC_ICON",
@@ -2723,6 +2731,8 @@ C["filger_spells"] = {
 			{spellID = 196834, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Flametongue
 			{spellID = 194084, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Stormkeeper [FM ADD]
+			{spellID = 205495, unitID = "player", caster = "player", filter = "BUFF"},
 
 			-- Trinkets
 			-- Alchemy Stones
