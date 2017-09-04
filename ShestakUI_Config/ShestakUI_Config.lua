@@ -275,7 +275,6 @@ local function Local(o)
 	if o == "UIConfigbagbutton_space" then o = L_GUI_BAGS_BUTTON_SPACE end
 	if o == "UIConfigbagbank_columns" then o = L_GUI_BAGS_BANK end
 	if o == "UIConfigbagbag_columns" then o = L_GUI_BAGS_BAG end
-	if o == "UIConfigbagbag_buttons" then o = L_GUI_BAGS_BUTTONS end
 
 	-- Minimap options
 	if o == "UIConfigminimap" then o = MINIMAP_LABEL end
@@ -1031,7 +1030,7 @@ function CreateUIConfig()
 
 	local close = NormalButton(CLOSE, UIConfigMain)
 	close:SetPoint("TOPRIGHT", UIConfig, "BOTTOMRIGHT", 10, -25)
-	close:SetScript("OnClick", function(self) PlaySound(PlaySoundKitID and "igMainMenuOption" or SOUNDKIT.IG_MAINMENU_OPTION) UIConfigMain:Hide() end)
+	close:SetScript("OnClick", function(self) PlaySound(SOUNDKIT.IG_MAINMENU_OPTION) UIConfigMain:Hide() end)
 
 	local load = NormalButton(APPLY, UIConfigMain)
 	load:SetPoint("RIGHT", close, "LEFT", -4, 0)
@@ -1089,11 +1088,11 @@ end
 do
 	function SlashCmdList.CONFIG()
 		if not UIConfigMain or not UIConfigMain:IsShown() then
-			PlaySound(PlaySoundKitID and "igMainMenuOption" or SOUNDKIT.IG_MAINMENU_OPTION)
+			PlaySound(SOUNDKIT.IG_MAINMENU_OPTION)
 			CreateUIConfig()
 			HideUIPanel(GameMenuFrame)
 		else
-			PlaySound(PlaySoundKitID and "igMainMenuOption" or SOUNDKIT.IG_MAINMENU_OPTION)
+			PlaySound(SOUNDKIT.IG_MAINMENU_OPTION)
 			UIConfigMain:Hide()
 		end
 	end
@@ -1184,7 +1183,7 @@ GameMenuFrame:HookScript("OnShow", function()
 end)
 
 button:SetScript("OnClick", function()
-	PlaySound(PlaySoundKitID and "igMainMenuOption" or SOUNDKIT.IG_MAINMENU_OPTION)
+	PlaySound(SOUNDKIT.IG_MAINMENU_OPTION)
 	HideUIPanel(GameMenuFrame)
 	if not UIConfigMain or not UIConfigMain:IsShown() then
 		CreateUIConfig()
