@@ -480,7 +480,6 @@ C["unitframe"] = {
 	["plugins_swing"] = false,					-- Swing bar
 	["plugins_reputation_bar"] = true,			-- Reputation bar
 	["plugins_experience_bar"] = true,			-- Experience bar
-	["plugins_friendship_bar"] = false,			-- Friendship bar
 	["plugins_artifact_bar"] = true,			-- Artefact Power bar
 	["plugins_smooth_bar"] = true,				-- Smooth bar
 	["plugins_enemy_spec"] = true,				-- Enemy specialization

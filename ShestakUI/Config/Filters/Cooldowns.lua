@@ -93,13 +93,13 @@ if C.enemycooldown.enable == true then
 		[5246] = 90,	-- [ADD FM] Fear War
 		[115078] = 15,	-- Paralysis
 		[20066] = 15,	-- Repentance
-		[108194] = 30,	-- Asphyxiate
 		[187650] = 30,	-- Freezing Trap
 		[8122] = 30,	-- Psychic Scream
 		[30283] = 30,	-- Shadowfury
 		[107570] = 30,	-- Storm Bolt
 		[51514] = 30,	-- Hex
 		[5484] = 40,	-- Howl of Terror
+		[108194] = 45,	-- Asphyxiate
 		[19386] = 45,	-- Wyvern Sting
 		[113724] = 45,	-- Ring of Frost
 		[119381] = 45,	-- Leg Sweep
@@ -107,7 +107,7 @@ if C.enemycooldown.enable == true then
 		[6789] = 45,	-- Mortal Coil
 		[853] = 60,		-- Hammer of Justice
 		-- Defense abilities
-		[642] = 300,	-- Divine Shield
+		[642] = 300, -- Divine Shield [FM ADD]
 		[48707] = 45,	-- Anti-Magic Shell
 		[31224] = 60,	-- Cloak of Shadows
 		[46924] = 60,	-- Bladestorm
