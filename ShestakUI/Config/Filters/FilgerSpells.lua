@@ -754,6 +754,8 @@ C["filger_spells"] = {
 			{spellID = 215198, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Solemnity (Haste, Proc) [Flask of the Solemn Night]
 			{spellID = 224347, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Ocean's Embrace (Healing, Proc) [Sea Star of the Depthmother]
+			{spellID = 242467, unitID = "player", caster = "player", filter = "BUFF"},
 
 			-- Enchants
 			-- Mark of the Claw (Crit and Haste)
@@ -1666,6 +1668,8 @@ C["filger_spells"] = {
 			{spellID = 215198, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Solemnity (Haste, Proc) [Flask of the Solemn Night]
 			{spellID = 224347, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Ocean's Embrace (Healing, Proc) [Sea Star of the Depthmother]
+			{spellID = 242467, unitID = "player", caster = "player", filter = "BUFF"},
 
 			-- Enchants
 			-- Mark of the Claw (Crit and Haste)
@@ -1960,6 +1964,8 @@ C["filger_spells"] = {
 			{spellID = 215198, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Solemnity (Haste, Proc) [Flask of the Solemn Night]
 			{spellID = 224347, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Ocean's Embrace (Healing, Proc) [Sea Star of the Depthmother]
+			{spellID = 242467, unitID = "player", caster = "player", filter = "BUFF"},
 
 			-- Enchants
 			-- Mark of the Claw (Crit and Haste)
@@ -2113,6 +2119,8 @@ C["filger_spells"] = {
 			{spellID = 20711, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Divinity
 			{spellID = 197030, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Power of the Naaru
+			{spellID = 196490, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Archangel
 			{spellID = 197862, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Vampiric Embrace
@@ -2197,6 +2205,8 @@ C["filger_spells"] = {
 			{spellID = 215198, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Solemnity (Haste, Proc) [Flask of the Solemn Night]
 			{spellID = 224347, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Ocean's Embrace (Healing, Proc) [Sea Star of the Depthmother]
+			{spellID = 242467, unitID = "player", caster = "player", filter = "BUFF"},
 
 			-- Enchants
 			-- Mark of the Claw (Crit and Haste)
@@ -2775,6 +2785,12 @@ C["filger_spells"] = {
 			-- Stormkeeper [FM ADD]
 			{spellID = 205495, unitID = "player", caster = "player", filter = "BUFF"},
 
+			-- Item Sets
+			-- Tidal Force (T20 2p Proc)
+			{spellID = 246729, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Spirit Rain (T20 4p Proc)
+			{spellID = 246771, unitID = "player", caster = "player", filter = "BUFF"},
+
 			-- Trinkets
 			-- Alchemy Stones
 			-- Agility
@@ -2844,10 +2860,8 @@ C["filger_spells"] = {
 			{spellID = 215198, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Solemnity (Haste, Proc) [Flask of the Solemn Night]
 			{spellID = 224347, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Tidal Force (T20 2p Proc)
-			{spellID = 246729, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Spirit Rain (T20 4p Proc)
-			{spellID = 246771, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Ocean's Embrace (Healing, Proc) [Sea Star of the Depthmother]
+			{spellID = 242467, unitID = "player", caster = "player", filter = "BUFF"},
 
 			-- Enchants
 			-- Mark of the Claw (Crit and Haste)
@@ -4497,7 +4511,7 @@ C["filger_spells"] = {
 			{spellID = 167152, unitID = "target", caster = "all", filter = "BUFF"},
 
 			-- Mythic
-			--Sanguine Ichor
+			-- Sanguine Ichor
 			{spellID = 226510, unitID = "target", caster = "all", filter = "BUFF"},
 		},
 	},
