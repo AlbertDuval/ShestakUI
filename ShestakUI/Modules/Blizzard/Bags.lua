@@ -188,6 +188,17 @@ function Stuffing:SlotUpdate(b)
 		b.frame.text:SetText("")
 	end
 
+	if b.frame.UpgradeIcon then
+		b.frame.UpgradeIcon:SetPoint("TOPLEFT", C.bag.button_size/2.7, -C.bag.button_size/2.7)
+		b.frame.UpgradeIcon:SetSize(C.bag.button_size/1.7, C.bag.button_size/1.7)
+		local itemIsUpgrade = IsContainerItemAnUpgrade(b.frame:GetParent():GetID(), b.frame:GetID())
+		if itemIsUpgrade and itemIsUpgrade == true then
+			b.frame.UpgradeIcon:SetShown(true)
+		else
+			b.frame.UpgradeIcon:SetShown(false)
+		end
+	end
+
 	if clink then
 		b.name, _, _, b.itemlevel, b.level, _, _, _, _, _, _, b.itemClassID, b.itemSubClassID = GetItemInfo(clink)
 
@@ -395,6 +406,17 @@ function Stuffing:BagFrameSlotNew(p, slot)
 		ret.frame = CreateFrame("CheckButton", "StuffingBBag"..slot.."Slot", p, "BankItemButtonBagTemplate")
 		ret.frame:StripTextures()
 		ret.frame:SetID(slot)
+		hooksecurefunc(ret.frame.IconBorder, "SetVertexColor", function(self, r, g, b)
+			if r ~= 0.65882 and g ~= 0.65882 and b ~= 0.65882 then
+				self:GetParent():SetBackdropBorderColor(r, g, b)
+			end
+			self:SetTexture("")
+		end)
+
+		hooksecurefunc(ret.frame.IconBorder, "Hide", function(self)
+			self:GetParent():SetBackdropBorderColor(unpack(C.media.border_color))
+		end)
+
 		table.insert(self.bagframe_buttons, ret)
 
 		BankFrameItemButton_Update(ret.frame)
@@ -1061,7 +1083,7 @@ function Stuffing:ADDON_LOADED(addon)
 	CloseAllBags = Stuffing_Close
 	CloseBackpack = Stuffing_Close
 
-	--BankFrame:UnregisterAllEvents()
+	BankFrame:UnregisterAllEvents()
 	BankFrame:SetScale(0.00001)
 	BankFrame:SetAlpha(0)
 	BankFrame:SetPoint("TOPLEFT")
