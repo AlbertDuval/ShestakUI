@@ -109,9 +109,6 @@ C["toggleaddons"] = {
 	["DBM-Core"] = function()
 		DBM:LoadGUI()
 	end,
-	["DXE"] = function()
-		_G.DXE:ToggleConfig()
-	end,
 	["PhoenixStyle"] = function()
 		PS_MinimapButton:Click()
 	end,
@@ -122,15 +119,6 @@ C["toggleaddons"] = {
 	["Archy"] = function()
 		ToggleFrame(ArchyDigSiteFrame)
 		ToggleFrame(ArchyArtifactFrame)
-	end,
-	["stArchaeologist"] = function()
-		SlashCmdList.STARCHAEOLOGIST()
-		if _G["TTMenuAddOnBackground"]:IsShown() then
-			_G["TTMenuAddOnBackground"]:Hide()
-		end
-		if _G["TTMenuBackground"]:IsShown() then
-			_G["TTMenuBackground"]:Hide()
-		end
 	end,
 	["AtlasLoot"] = function()
 		ToggleFrame(AtlasLootDefaultFrame)
@@ -143,17 +131,8 @@ C["toggleaddons"] = {
 	["ShestakUI_Config"] = function()
 		SlashCmdList.CONFIG()
 	end,
-	["Panda"] = function()
-		ToggleFrame(PandaPanel)
-	end,
-	["PallyPower"] = function()
-		ToggleFrame(PallyPowerFrame)
-	end,
 	["ACP"] = function()
 		ToggleFrame(ACP_AddonList)
-	end,
-	["ScrollMaster"] = function()
-		LibStub("AceAddon-3.0"):GetAddon("ScrollMaster").GUI:OpenFrame(1)
 	end,
 	["epgp"] = function()
 		EPGP:ToggleUI()
@@ -163,12 +142,6 @@ C["toggleaddons"] = {
 	end,
 	["!BaudErrorFrame"] = function()
 		SlashCmdList.BaudErrorFrame()
-	end,
-	["CoolLine"] = function()
-		SlashCmdList.COOLLINE()
-	end,
-	["PreformAVEnabler"] = function()
-		SlashCmdList.PREFORMAV()
 	end,
 }
 

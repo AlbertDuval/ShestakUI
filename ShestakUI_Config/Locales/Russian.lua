@@ -99,7 +99,6 @@ L_GUI_SKINS_NUG_RUNNING = "Стилизация NugRunning"
 L_GUI_SKINS_OVALE = "Стилизация OvaleSpellPriority"
 L_GUI_SKINS_CLIQUE = "Стилизация Clique"
 L_GUI_SKINS_ACE3 = "Стилизация элементов настроек Ace3"
-L_GUI_SKINS_PP = "Стилизация PallyPower"
 L_GUI_SKINS_CAPPING = "Стилизация Capping"
 L_GUI_SKINS_COOL_LINE = "Стилизация CoolLine"
 L_GUI_SKINS_ATLASLOOT = "Стилизация AtlasLoot"
@@ -218,7 +217,6 @@ L_GUI_TOOLTIP_WHO_TARGETTING = "Показать, кто выбрал целью
 L_GUI_TOOLTIP_ITEM_COUNT = "Количество предметов"
 L_GUI_TOOLTIP_UNIT_ROLE = "Роль игрока"
 L_GUI_TOOLTIP_INSTANCE_LOCK = "Ваш статус прохождения подземелий в подсказке"
-L_GUI_TOOLTIP_ITEM_TRANSMOGRIFY = "Отображать, если предмет нельзя трансмогрифицировать"
 
 -- Chat options
 L_GUI_CHAT_ENABLE = "Включить чат"

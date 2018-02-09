@@ -99,7 +99,6 @@ L_GUI_SKINS_NUG_RUNNING = "NugRunning Design aktivieren"
 L_GUI_SKINS_OVALE = "OvaleSpellPriority Design aktivieren"
 L_GUI_SKINS_CLIQUE = "Clique Design aktivieren"
 L_GUI_SKINS_ACE3 = "Ace3-Optionen skin"
-L_GUI_SKINS_PP = "PallyPower Design aktivieren"
 L_GUI_SKINS_CAPPING = "Capping Design aktivieren"
 L_GUI_SKINS_COOL_LINE = "CoolLine Design aktivieren"
 L_GUI_SKINS_ATLASLOOT = "AtlasLoot Design aktivieren"
@@ -218,7 +217,6 @@ L_GUI_TOOLTIP_WHO_TARGETTING = "Zeige an, wer die Eihneit, die in deiner Gruppe/
 L_GUI_TOOLTIP_ITEM_COUNT = "Gegenstandsanzahl"
 L_GUI_TOOLTIP_UNIT_ROLE = "Klassenrolle (Tank/Schaden/Heiler)"
 L_GUI_TOOLTIP_INSTANCE_LOCK = "Deine abgeschlossenen Instanzen im Tooltip"
-L_GUI_TOOLTIP_ITEM_TRANSMOGRIFY = "Zeige an wenn Gegenstände nicht Transmorgifiziert werden können"
 
 -- Chat options
 L_GUI_CHAT_ENABLE = "Chat aktivieren"

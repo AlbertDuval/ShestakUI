@@ -126,7 +126,6 @@ local function Local(o)
 	if o == "UIConfigskinsovale" then o = L_GUI_SKINS_OVALE end
 	if o == "UIConfigskinsclique" then o = L_GUI_SKINS_CLIQUE end
 	if o == "UIConfigskinsace3" then o = L_GUI_SKINS_ACE3 end
-	if o == "UIConfigskinspallypower" then o = L_GUI_SKINS_PP end
 	if o == "UIConfigskinscapping" then o = L_GUI_SKINS_CAPPING end
 	if o == "UIConfigskinscool_line" then o = L_GUI_SKINS_COOL_LINE end
 	if o == "UIConfigskinsatlasloot" then o = L_GUI_SKINS_ATLASLOOT end
@@ -246,7 +245,6 @@ local function Local(o)
 	if o == "UIConfigtooltipitem_count" then o = L_GUI_TOOLTIP_ITEM_COUNT end
 	if o == "UIConfigtooltipunit_role" then o = L_GUI_TOOLTIP_UNIT_ROLE end
 	if o == "UIConfigtooltipinstance_lock" then o = L_GUI_TOOLTIP_INSTANCE_LOCK end
-	if o == "UIConfigtooltipitem_transmogrify" then o = L_GUI_TOOLTIP_ITEM_TRANSMOGRIFY end
 
 	-- Chat options
 	if o == "UIConfigchat" then o = SOCIALS end

@@ -99,7 +99,6 @@ L_GUI_SKINS_NUG_RUNNING = "NugRunning"
 L_GUI_SKINS_OVALE = "OvaleSpellPriority"
 L_GUI_SKINS_CLIQUE = "Clique"
 L_GUI_SKINS_ACE3 = "Ace3"
-L_GUI_SKINS_PP = "PallyPower"
 L_GUI_SKINS_CAPPING = "Capping"
 L_GUI_SKINS_COOL_LINE = "CoolLine"
 L_GUI_SKINS_ATLASLOOT = "AtlasLoot"
@@ -218,7 +217,6 @@ L_GUI_TOOLTIP_WHO_TARGETTING = "队伍/团队时,显示关注成员(谁以目标
 L_GUI_TOOLTIP_ITEM_COUNT = "叠堆数量"
 L_GUI_TOOLTIP_UNIT_ROLE = "角色类型"
 L_GUI_TOOLTIP_INSTANCE_LOCK = "自身信息提示"
-L_GUI_TOOLTIP_ITEM_TRANSMOGRIFY = "非幻化装备提示"
 
 -- Chat options
 L_GUI_CHAT_ENABLE = "开启聊天框增强"

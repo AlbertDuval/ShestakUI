@@ -99,7 +99,6 @@ L_GUI_SKINS_NUG_RUNNING = "Activer la personnalisation pour NugRunning"
 L_GUI_SKINS_OVALE = "Activer la personnalisation pour OvaleSpellPriority"
 L_GUI_SKINS_CLIQUE = "Activer la personnalisation pour Clique"
 L_GUI_SKINS_ACE3 = "Activer la personnalisation des éléments pour Ace3"
-L_GUI_SKINS_PP = "Activer la personnalisation pour PallyPower"
 L_GUI_SKINS_CAPPING = "Activer la personnalisation pour Capping"
 L_GUI_SKINS_COOL_LINE = "Activer la personnalisation pour CoolLine"
 L_GUI_SKINS_ATLASLOOT = "Activer la personnalisation pour AtlasLoot"
@@ -218,7 +217,6 @@ L_GUI_TOOLTIP_WHO_TARGETTING = "Afficher qui cible actuellement l'unité qui est
 L_GUI_TOOLTIP_ITEM_COUNT = "Afficher le nombre d'objets possédés"
 L_GUI_TOOLTIP_UNIT_ROLE = "Afficher les rôles"
 L_GUI_TOOLTIP_INSTANCE_LOCK = "Afficher le verrouillage de votre instance"
-L_GUI_TOOLTIP_ITEM_TRANSMOGRIFY = "Affiche les objets qui ne peuvent pas être transmogrifés"
 
 -- Chat options
 L_GUI_CHAT_ENABLE = "Activer la fenêtre de dialogue"

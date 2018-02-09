@@ -99,7 +99,6 @@ L_GUI_SKINS_NUG_RUNNING = "Attiva il restyling di NugRunning"
 L_GUI_SKINS_OVALE = "Attiva il restyling di OvaleSpellPriority"
 L_GUI_SKINS_CLIQUE = "Attiva il restyling di Clique"
 L_GUI_SKINS_ACE3 = "Attiva il restyling degli elementi per le opzioni di Ace3"
-L_GUI_SKINS_PP = "Attiva il restyling di PallyPower"
 L_GUI_SKINS_CAPPING = "Attiva il restyling di Capping"
 L_GUI_SKINS_COOL_LINE = "Attiva il restyling di CoolLine"
 L_GUI_SKINS_ATLASLOOT = "Attiva il restyling di AtlasLoot"
@@ -218,7 +217,6 @@ L_GUI_TOOLTIP_WHO_TARGETTING = "Visualizza chi ha in bersaglio l'unità che è n
 L_GUI_TOOLTIP_ITEM_COUNT = "Conteggio oggetti"
 L_GUI_TOOLTIP_UNIT_ROLE = "Ruolo dell'unità"
 L_GUI_TOOLTIP_INSTANCE_LOCK = "Info incursione nei suggerimenti"
-L_GUI_TOOLTIP_ITEM_TRANSMOGRIFY = "Mostra gli oggetti che non possono essere transmogrifati"
 
 -- Chat options
 L_GUI_CHAT_ENABLE = "Attiva chat"

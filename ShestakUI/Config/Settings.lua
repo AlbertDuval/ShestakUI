@@ -129,7 +129,6 @@ C["skins"] = {
 	["ovale"] = false,							-- OvaleSpellPriority skin
 	["clique"] = false,							-- Clique skin
 	["ace3"] = false,							-- Ace3 options elements skin
-	["pallypower"] = false,						-- PallyPower skin
 	["capping"] = false,						-- Capping skin
 	["cool_line"] = false,						-- CoolLine skin
 	["atlasloot"] = false,						-- AtlasLoot skin
@@ -273,7 +272,6 @@ C["tooltip"] = {
 	["item_count"] = false,						-- Item count in tooltip
 	["unit_role"] = true,						-- Unit role in tooltip
 	["instance_lock"] = false,					-- Your instance lock status in tooltip
-	["item_transmogrify"] = false,				-- Displays items can not be transmogrified
 }
 
 ----------------------------------------------------------------------------------------
