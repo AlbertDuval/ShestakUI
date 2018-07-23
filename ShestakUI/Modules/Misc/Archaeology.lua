@@ -464,9 +464,9 @@ function stArch:updateFramePosition(self)
 end
 
 local stArchFrame = CreateFrame("Frame", "stArchaeologyFrame", UIParent)
-stArchFrame:RegisterEvent("ARTIFACT_HISTORY_READY")
-stArchFrame:RegisterEvent("ARTIFACT_COMPLETE")
-stArchFrame:RegisterEvent("ARTIFACT_DIG_SITE_UPDATED")
+stArchFrame:RegisterEvent("RESEARCH_ARTIFACT_HISTORY_READY")
+stArchFrame:RegisterEvent("RESEARCH_ARTIFACT_COMPLETE")
+stArchFrame:RegisterEvent("RESEARCH_ARTIFACT_DIG_SITE_UPDATED")
 stArchFrame:RegisterEvent("CURRENCY_DISPLAY_UPDATE")
 stArchFrame:RegisterEvent("SKILL_LINES_CHANGED")
 stArchFrame:RegisterEvent("BAG_UPDATE")
@@ -574,7 +574,7 @@ local time = 3
 
 f:RegisterEvent("UNIT_SPELLCAST_STOP")
 f:SetScript("OnEvent", function(self, event, unit, _, _, _, spellid)
-	if not unit == "player" or T.race == "Dwarf" then return end
+	if not unit == "player" or select(2, UnitRace("player")) == "Dwarf" then return end
 	if spellid == 80451 then
 		text:SetText("3")
 		f:SetScript("OnUpdate", function(self, elapsed)

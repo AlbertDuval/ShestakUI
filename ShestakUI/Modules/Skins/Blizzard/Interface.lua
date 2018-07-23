@@ -87,6 +87,7 @@ local function LoadSkin()
 		"ActionBarsPanelRight",
 		"ActionBarsPanelRightTwo",
 		"ActionBarsPanelAlwaysShowActionBars",
+		"ActionBarsPanelStackRightBars",
 		"ActionBarsPanelLockActionBars",
 		"ActionBarsPanelCountdownCooldowns",
 		-- Names
@@ -112,6 +113,7 @@ local function LoadSkin()
 		"MousePanelInvertMouse",
 		"MousePanelClickToMove",
 		"MousePanelEnableMouseSpeed",
+		"MousePanelLockCursorToScreen",
 		-- Assessability
 		"AccessibilityPanelMovePad",
 		"AccessibilityPanelCinematicSubtitles",
@@ -206,7 +208,7 @@ local function LoadSkin()
 		"InterfaceOptionsCombatPanelSpellAlertOpacitySlider",
 		"CompactUnitFrameProfilesGeneralOptionsFrameHeightSlider",
 		"CompactUnitFrameProfilesGeneralOptionsFrameWidthSlider",
-		"InterfaceOptionsBattlenetPanelToastDurationSlider",
+		--BETA "InterfaceOptionsBattlenetPanelToastDurationSlider",
 		"InterfaceOptionsCameraPanelMaxDistanceSlider",
 		"InterfaceOptionsCameraPanelFollowSpeedSlider",
 		"InterfaceOptionsMousePanelMouseSensitivitySlider",
@@ -215,7 +217,7 @@ local function LoadSkin()
 		"OpacityFrameSlider"
 	}
 
-	for i = 1, getn(sliders) do
+	for i = 1, #sliders do
 		local slider = _G[sliders[i]]
 		if slider then
 			T.SkinSlider(slider)

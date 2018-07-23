@@ -569,7 +569,7 @@ local function style(self, unit)
 		self.Auras.spacing = 2
 		self.Auras.size = C.nameplate.auras_size
 
-		self.Auras.CustomFilter = function(icons, unit, icon, name, rank, texture, count, dispelType, duration, expiration, caster, isStealable, nameplateShowSelf, spellID, canApply, isBossDebuff, casterIsPlayer, nameplateShowAll)
+		self.Auras.CustomFilter = function(icons, unit, icon, name, texture, count, dispelType, duration, expiration, caster, isStealable, nameplateShowSelf, spellID, canApply, isBossDebuff, casterIsPlayer, nameplateShowAll)
 			local allow = false
 
 			if caster == "player" then
@@ -628,7 +628,7 @@ local function style(self, unit)
 		end
 
 		self.Auras.PostUpdateIcon = function(icons, unit, icon, index, offset, filter, isDebuff, duration, timeLeft)
-			local _, _, _, _, dtype, duration, expirationTime, _, isStealable = UnitAura(unit, index, icon.filter)
+			local _, _, _, dtype, duration, expirationTime, _, isStealable = UnitAura(unit, index, icon.filter)
 
 			if duration and duration > 0 and C.aura.show_timer == true then
 				icon.remaining:Show()

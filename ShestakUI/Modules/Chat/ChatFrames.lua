@@ -89,11 +89,6 @@ local function SetChatStyle(frame)
 	_G[format("ChatFrame%sTabSelectedMiddle", id)]:Kill()
 	_G[format("ChatFrame%sTabSelectedRight", id)]:Kill()
 
-	-- Kills off the new method of handling the Chat Frame scroll buttons as well as the resize button
-	-- Note: This also needs to include the actual frame textures for the ButtonFrame onHover
-	_G[format("ChatFrame%sButtonFrameUpButton", id)]:Kill()
-	_G[format("ChatFrame%sButtonFrameDownButton", id)]:Kill()
-	_G[format("ChatFrame%sButtonFrameBottomButton", id)]:Kill()
 	_G[format("ChatFrame%sButtonFrameMinimizeButton", id)]:Kill()
 	_G[format("ChatFrame%sButtonFrame", id)]:Kill()
 
@@ -103,6 +98,15 @@ local function SetChatStyle(frame)
 	_G[format("ChatFrame%sEditBoxRight", id)]:Kill()
 
 	_G[format("ChatFrame%sTabGlow", id)]:Kill()
+
+	-- Kill scroll bar
+	frame.ScrollBar:Kill()
+	frame.ScrollToBottomButton:Kill()
+
+	-- Kill channel and voice buttons
+	ChatFrameChannelButton:Kill()
+	ChatFrameToggleVoiceDeafenButton:Kill()
+	ChatFrameToggleVoiceMuteButton:Kill()
 
 	-- Kill off editbox artwork
 	local a, b, c = select(6, _G[chat.."EditBox"]:GetRegions()) a:Kill() b:Kill() c:Kill()
@@ -139,16 +143,19 @@ local function SetChatStyle(frame)
 
 		-- Update border color according where we talk
 		hooksecurefunc("ChatEdit_UpdateHeader", function()
-			local type = _G[chat.."EditBox"]:GetAttribute("chatType")
-			if type == "CHANNEL" then
-				local id = GetChannelName(_G[chat.."EditBox"]:GetAttribute("channelTarget"))
-				if id == 0 then
+			local chatType = _G[chat.."EditBox"]:GetAttribute("chatType")
+			if not chatType then return end
+
+			local chanTarget = _G[chat.."EditBox"]:GetAttribute("channelTarget")
+			local chanName = chanTarget and GetChannelName(chanTarget)
+			if chanName and chatType == "CHANNEL" then
+				if chanName == 0 then
 					colorize(unpack(C.media.border_color))
 				else
-					colorize(ChatTypeInfo[type..id].r, ChatTypeInfo[type..id].g, ChatTypeInfo[type..id].b)
+					colorize(ChatTypeInfo[chatType..chanName].r, ChatTypeInfo[chatType..chanName].g, ChatTypeInfo[chatType..chanName].b)
 				end
 			else
-				colorize(ChatTypeInfo[type].r, ChatTypeInfo[type].g, ChatTypeInfo[type].b)
+				colorize(ChatTypeInfo[chatType].r, ChatTypeInfo[chatType].g, ChatTypeInfo[chatType].b)
 			end
 		end)
 	end
@@ -243,8 +250,7 @@ local function SetupChatPosAndFont(self)
 			if C.chat.combatlog ~= true then
 				FCF_DockFrame(chat)
 				ChatFrame2Tab:EnableMouse(false)
-				ChatFrame2Tab:SetText("")
-				ChatFrame2Tab.SetText = T.dummy
+				ChatFrame2TabText:Hide()
 				ChatFrame2Tab:SetWidth(0.001)
 				ChatFrame2Tab.SetWidth = T.dummy
 			end

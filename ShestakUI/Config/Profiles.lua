@@ -46,6 +46,14 @@ end
 ----------------------------------------------------------------------------------------
 --	Oz@Pozzo dell'Eternità Config
 ----------------------------------------------------------------------------------------
+if T.name == "Niketamere" and T.realm == "Outland" then
+	C["unitframe"].plugins_swing = true
+	C["position"].filger.cooldown = {"BOTTOMRIGHT", "oUF_Player", "TOPRIGHT", 63, C.unitframe.plugins_swing and 29 or 17}
+	C["automation"].decline_duel = false
+end
+----------------------------------------------------------------------------------------
+--	Oz@Pozzo dell'Eternità Config
+----------------------------------------------------------------------------------------
 if T.name == "Oz" and T.realm == "Pozzo dell'Eternità" then
 	C["position"].bank = {"RIGHT", ChatFrame1, "BOTTOM", 349, 371}
 	C["position"].bn_popup = {"BOTTOMRIGHT", Minimap, "TOPRIGHT", 2, 5}
