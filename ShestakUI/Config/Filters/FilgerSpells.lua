@@ -27,6 +27,10 @@ C["filger_spells"] = {
 			IconSize = C.filger.buffs_size,
 			Position = {"TOP", P_BUFF_ICON_Anchor},
 
+			-- Empower Rune Weapon
+			{spellID = 47568, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Death's Advance
+			{spellID = 48265, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Remorseless Winter
 			{spellID = 196770, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Hungering Rune Weapon
@@ -52,7 +56,7 @@ C["filger_spells"] = {
 			-- Unholy Blight
 			{spellID = 115989, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Summon Gargoyle
-			{spellID = 49206, filter = "ICD", trigger = "NONE", duration = 40},
+			{spellID = 49206, filter = "ICD", trigger = "NONE", duration = 30},
 		},
 		{
 			Name = "P_PROC_ICON",
@@ -64,6 +68,8 @@ C["filger_spells"] = {
 			Position = {"TOP", P_PROC_ICON_Anchor},
 
 			-- Buffs
+			-- Icy Talons
+			{spellID = 194879, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Crimson Scourge
 			{spellID = 81141, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Freezing Fog
@@ -435,6 +441,8 @@ C["filger_spells"] = {
 			IconSize = C.filger.buffs_size,
 			Position = {"TOP", T_DEBUFF_ICON_Anchor},
 
+			-- Dark Slash
+			{spellID = 258860, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Nemesis
 			{spellID = 206491, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Sigil of Flame
@@ -641,6 +649,10 @@ C["filger_spells"] = {
 			Position = {"TOP", P_PROC_ICON_Anchor},
 
 			-- Buffs
+			-- Warrior of Elune
+			{spellID = 202425, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Starlord
+			{spellID = 279709, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Bloodtalons
 			{spellID = 145152, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Clearcasting
@@ -941,6 +953,8 @@ C["filger_spells"] = {
 			IconSize = C.filger.buffs_size,
 			Position = {"TOP", P_BUFF_ICON_Anchor},
 
+			-- Coordinated Assault
+			{spellID = 266779, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Aspect of the Turtle
 			{spellID = 186265, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Bestial Wrath
@@ -984,6 +998,16 @@ C["filger_spells"] = {
 			Position = {"TOP", P_PROC_ICON_Anchor},
 
 			-- Buffs
+			-- Viper's Venom
+			{spellID = 268552, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Trick Shots
+			{spellID = 257622, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Lethal Shots
+			{spellID = 260395, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Precise Shots
+			{spellID = 260242, unitID = "player", caster = "player", filter = "BUFF"},			
+			-- Frenzy
+			{spellID = 272790, unitID = "pet", caster = "player", filter = "BUFF"},			
 			-- Steady Focus
 			{spellID = 193533, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Lock and Load
@@ -1074,6 +1098,8 @@ C["filger_spells"] = {
 			{spellID = 185855, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- A Murder of Crows
 			{spellID = 131894, unitID = "target", caster = "player", filter = "DEBUFF"},
+			-- Hunter's Mark
+			{spellID = 257284, unitID = "target", caster = "player", filter = "DEBUFF"},			
 			-- Vulnerable
 			--BETA {spellID = 187131, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Hunter's Mark
@@ -1255,8 +1281,6 @@ C["filger_spells"] = {
 			{spellID = 12042, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Combustion
 			{spellID = 190319, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Rune of Power
-			{spellID = 116014, filter = "ICD", trigger = "NONE", duration = 10},
 			-- Pyretic Incantation
 			{spellID = 194329, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Blazing Barrier
@@ -1289,7 +1313,7 @@ C["filger_spells"] = {
 			-- Fingers of Frost
 			{spellID = 44544, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Brain Freeze
-			{spellID = 190447, unitID = "player", caster = "player", filter = "BUFF"},
+			{spellID = 190446, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Glacial Spike!
 			{spellID = 199844, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Arcane Missiles!
@@ -1300,6 +1324,10 @@ C["filger_spells"] = {
 			{spellID = 209455, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Freezing Rain
 			{spellID = 240555, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Pyroclasm
+			{spellID = 269651, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Clearcasting
+			{spellID = 79684, unitID = "player", caster = "player", filter = "BUFF"},
 
 			-- Trinkets
 			-- Alchemy Stones
@@ -1688,6 +1716,8 @@ C["filger_spells"] = {
 			IconSize = C.filger.buffs_size,
 			Position = {"TOP", T_DEBUFF_ICON_Anchor},
 
+			-- Touch of Death
+			{spellID = 115080, unitID = "target", caster = "player", filter = "DEBUFF"},			
 			-- Heavy Stagger
 			{spellID = 124273, unitID = "player", caster = "player", filter = "DEBUFF"},
 			-- Keg Smash
@@ -1833,6 +1863,8 @@ C["filger_spells"] = {
 			IconSize = C.filger.buffs_size,
 			Position = {"TOP", P_BUFF_ICON_Anchor},
 
+			-- Inquisition
+			{spellID = 84963, unitID = "player", caster = "player", filter = "BUFF"},			
 			-- Shield of Vengeance
 			{spellID = 184662, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Eye for an Eye
@@ -1872,6 +1904,8 @@ C["filger_spells"] = {
 			Position = {"TOP", P_PROC_ICON_Anchor},
 
 			-- Buffs
+			-- Righteous Verdict
+			{spellID = 267611, unitID = "player", caster = "player", filter = "BUFF"},			
 			-- Infusion of Light
 			{spellID = 54149, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Selfless Healer
@@ -1984,6 +2018,8 @@ C["filger_spells"] = {
 			IconSize = C.filger.buffs_size,
 			Position = {"TOP", T_DEBUFF_ICON_Anchor},
 
+			-- Execution Sentence
+			{spellID = 267799, unitID = "target", caster = "player", filter = "DEBUFF"},			
 			-- Eye of Tyr
 			{spellID = 209202, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Forbearance
@@ -2107,6 +2143,10 @@ C["filger_spells"] = {
 			IconSize = C.filger.buffs_size,
 			Position = {"TOP", P_BUFF_ICON_Anchor},
 
+			-- Rapture
+			{spellID = 47536, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Desperate Prayer
+			{spellID = 19236, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Voidform
 			{spellID = 194249, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Dispersion
@@ -2223,6 +2263,9 @@ C["filger_spells"] = {
 			IconSize = C.filger.buffs_size,
 			Position = {"TOP", T_DEBUFF_ICON_Anchor},
 
+			-- Schism
+			{spellID = 214621, unitID = "target", caster = "player", filter = "DEBUFF"},			
+			
 			-- Trinket Effects
 			-- Mark of Doom [Prophecy of Fear]
 			{spellID = 184073, unitID = "target", caster = "player", filter = "DEBUFF"},
@@ -2496,6 +2539,8 @@ C["filger_spells"] = {
 			Position = {"TOP", P_PROC_ICON_Anchor},
 
 			-- Buffs
+			-- Shuriken Combo
+			{spellID = 245640, unitID = "player", caster = "player", filter = "BUFF"},			
 			-- Jolly Roger
 			{spellID = 199603, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Grand Melee
@@ -2729,8 +2774,6 @@ C["filger_spells"] = {
 			{spellID = 79206, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Unleash Life
 			{spellID = 73685, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Healing Stream Totem
-			{spellID = 5394, filter = "ICD", trigger = "NONE", duration = 15},
 			-- Doom Winds
 			{spellID = 204945, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Landslide
@@ -3065,6 +3108,10 @@ C["filger_spells"] = {
 			IconSize = C.filger.buffs_size,
 			Position = {"TOP", P_BUFF_ICON_Anchor},
 
+			-- Dark Soul: Misery
+			{spellID = 113860, unitID = "player", caster = "player", filter = "BUFF"},			
+			-- Dark Soul: Instability
+			{spellID = 113858, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Deadwind Harvester
 			{spellID = 216708, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Unending Resolve
@@ -3300,6 +3347,12 @@ C["filger_spells"] = {
 			IconSize = C.filger.buffs_size,
 			Position = {"TOP", P_BUFF_ICON_Anchor},
 
+			-- In For The Kill
+			{spellID = 248622, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Deadly Calm
+			{spellID = 262228, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Sweeping Strikes
+			{spellID = 260708, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Ignore Pain
 			{spellID = 190456, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Shield Wall
@@ -3336,6 +3389,12 @@ C["filger_spells"] = {
 			IconSize = C.filger.buffs_size,
 			Position = {"TOP", P_PROC_ICON_Anchor},
 
+			-- Overpower
+			{spellID = 7384, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Frothing Berserker
+			{spellID = 215572, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Furious Slash
+			{spellID = 202539, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Vengeance: Ignore Pain
 			{spellID = 202574, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Sudden Death
@@ -3433,6 +3492,8 @@ C["filger_spells"] = {
 			IconSize = C.filger.buffs_size,
 			Position = {"TOP", T_DEBUFF_ICON_Anchor},
 
+			-- Siegebreaker
+			{spellID = 280773, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Rend
 			{spellID = 772, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Colossus Smash
