@@ -3,28 +3,15 @@ local T, C, L, _ = unpack(select(2, ...))
 ----------------------------------------------------------------------------------------
 --	Font replacement
 ----------------------------------------------------------------------------------------
---BETA WorldMapFrameAreaLabel:SetFont(C.media.normal_font, 30)
--- WorldMapFrameAreaLabel:SetShadowOffset(2, -2)
--- WorldMapFrameAreaLabel:SetTextColor(0.9, 0.83, 0.64)
-
--- WorldMapFrameAreaPetLevels:SetFont(C.media.normal_font, 30)
--- WorldMapFrameAreaPetLevels:SetShadowOffset(2, -2)
-
--- WorldMapFrameAreaDescription:SetFont(C.media.normal_font, 30)
--- WorldMapFrameAreaDescription:SetShadowOffset(2, -2)
-
--- MapQuestInfoRewardsFrame.XPFrame.Name:SetFont(C.media.normal_font, 13)
-
--- WorldMapFrame.UIElementsFrame.BountyBoard.BountyName:SetFont(C.media.normal_font, 16)
--- WorldMapFrame.UIElementsFrame.BountyBoard.BountyName:SetShadowOffset(1, -1)
+MapQuestInfoRewardsFrame.XPFrame.Name:SetFont(C.media.normal_font, 13)
 
 ----------------------------------------------------------------------------------------
 --	Change position
 ----------------------------------------------------------------------------------------
--- hooksecurefunc("WorldMap_ToggleSizeDown", function()
-	-- WorldMapFrame:ClearAllPoints()
-	-- WorldMapFrame:SetPoint(unpack(C.position.map))
--- end)
+hooksecurefunc(WorldMapFrame, "SynchronizeDisplayState", function()
+	WorldMapFrame:ClearAllPoints()
+	WorldMapFrame:SetPoint(unpack(C.position.map))
+end)
 
 ----------------------------------------------------------------------------------------
 --	Creating coordinate
