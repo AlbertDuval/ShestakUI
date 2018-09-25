@@ -15,6 +15,8 @@ if C.combattext.healing then
 	T.healfilter[207694] = true		-- Symbiote Strike
 	T.healfilter[242597] = true		-- Rethu's Incessant Courage
 	T.healfilter[241835] = true		-- Starlight of Celumbra
+	T.healfilter[273836] = true		-- Filthy Transfusion [Azerite trait]
+	T.healfilter[280707] = true		-- Laser Matrix [Azerite trait]
 end
 
 -- General merge outgoing damage
@@ -24,30 +26,22 @@ if C.combattext.merge_aoe_spam then
 	T.aoespam[6603] = 3				-- Auto Attack
 	T.aoespam[195222] = 4			-- Stormlash
 	T.aoespam[195256] = 4			-- Stormlash
-	T.aoespam[222197] = 0			-- Volatile Ichor (Unstable Horrorslime Trinket)
-	T.aoespam[214350] = 3			-- Nightmare Essence (Oakheart's Gnarled Root Trinket)
-	T.aoespam[230261] = 0			-- Flame Wreath (Aran's Relaxing Ruby Trinket)
-	T.aoespam[221812] = 5			-- Plague Swarm (Swarming Plaguehive Trinket)
-	T.aoespam[222711] = 4			-- Poisoned Dreams (Bough of Corruption Trinket)
-	T.aoespam[229737] = 0			-- Solar Collapse (Fury of the Burning Sky Trinket)
-	T.aoespam[229700] = 0			-- Orb of Destruction (Pharamere's Forbidden Grimoire Trinket)
-	T.aoespam[225764] = 1			-- Nether Meteor (Star Gate Trinket)
-	T.aoespam[242525] = 0.5			-- Terror From Below (Terror From Below Trinket)
-	T.aoespam[242571] = 4			-- Spectral Bolt (Tarnished Sentinel Medallion Trinket)
-	T.aoespam[246442] = 4			-- Spectral Blast (Tarnished Sentinel Medallion Trinket)
-	T.aoespam[188091] = 4			-- Deadly Grace (Potion of Deadly Grace)
-	T.aoespam[235999] = 1			-- Kil'jaeden's Burning Wish (Trinket)
-	T.aoespam[257244] = 4			-- Worldforger's Flame (Khaz'goroth's Courage Trinket)
+	T.aoespam[270827] = 0.5			-- Webweaver's Soul Gem (Vessel of Skittering Shadows Trinket)
 	T.aoespam[207694] = 3			-- Symbiote Strike
 	T.aoespam[210380] = 4			-- Aura of Sacrifice
 	T.aoespam[252907] = 5			-- Torment the Weak
 	T.aoespam[252896] = 0.5			-- Chaotic Darkness
 	T.aoespam[253022] = 0.5			-- Sorrow
+	T.aoespam[273836] = 3			-- Filthy Transfusion [Azerite trait]
+	T.aoespam[280705] = 3			-- Laser Matrix [Azerite trait]
+	T.aoespam[282724] = 5			-- Battlefield Focus [Azerite trait]
 end
 
 -- Class config
 if T.class == "DEATHKNIGHT" then
 	if C.combattext.merge_aoe_spam then
+		T.aoespam[91778] = 0		-- Sweeping Claws
+		T.aoespam[207311] = 0		-- Clawing Shadows
 		T.aoespam[115994] = 4		-- Unholy Blight
 		T.aoespam[206931] = 2.5		-- Blooddrinker
 		T.aoespam[279303] = 1		-- Frost Breath

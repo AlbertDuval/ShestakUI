@@ -40,6 +40,9 @@ do
 			["Curse"] = true,
 			["Poison"] = true,
 		},
+		["MAGE"] = {
+			["Curse"] = true,
+		},
 		["MONK"] = {
 			["Magic"] = false,
 			["Poison"] = true,
@@ -52,7 +55,7 @@ do
 		},
 		["PRIEST"] = {
 			["Magic"] = false,
-			["Disease"] = false,
+			["Disease"] = true,
 		},
 		["SHAMAN"] = {
 			["Magic"] = false,
@@ -87,10 +90,8 @@ local function CheckSpec()
 	elseif T.class == "PRIEST" then
 		if spec == 3 then
 			DispellFilter.Magic = false
-			DispellFilter.Disease = false
 		else
 			DispellFilter.Magic = true
-			DispellFilter.Disease = true
 		end
 	elseif T.class == "SHAMAN" then
 		if spec == 3 then
