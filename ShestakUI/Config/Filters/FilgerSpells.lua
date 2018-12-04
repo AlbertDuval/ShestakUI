@@ -2858,36 +2858,38 @@ C["filger_spells"] = {
 			Position = {"TOP", SPECIAL_P_BUFF_ICON_Anchor},
 
 			-- Potions: Miscellaneous
-			-- Skaggldrynk [Legion invisibility potion]
-			{spellID = 188023, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Invisibility Potion
+			-- Invisibility [Invisibility Potion]
 			{spellID = 11392, unitID = "player", caster = "player", filter = "BUFF", absID = true},
-			-- Darkwater Potion
-			{spellID = 105707, unitID = "player", caster = "player", filter = "BUFF", absID = true},
-			-- Draenic Invisibility Potion
+			-- Invisibility [Draenic Invisibility Potion]
 			{spellID = 175833, unitID = "player", caster = "player", filter = "BUFF", absID = true},
+			-- Spirit Realm [Skaggldrynk]
+			{spellID = 188023, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Draenic Swiftness Potion
-			{spellID = 175790, unitID = "player", caster = "player", filter = "BUFF", absID = true},
+			{spellID = 175790, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Darkwater Potion
+			{spellID = 105707, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Speed [Swiftness Potion]
 			{spellID = 2379, unitID = "player", caster = "player", filter = "BUFF", absID = true},
 
 			-- Raid Amplifiers
-			-- Ancient Hysteria
-			{spellID = 90355, unitID = "player", caster = "all", filter = "BUFF"},
-			-- Netherwinds
-			{spellID = 160452, unitID = "player", caster = "all", filter = "BUFF"},
-			-- Drums of Fury
-			{spellID = 178207, unitID = "player", caster = "all", filter = "BUFF"},
-			-- Drums of Rage
-			{spellID = 146555, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Bloodlust
 			{spellID = 2825, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Heroism
 			{spellID = 32182, unitID = "player", caster = "all", filter = "BUFF"},
+			-- Ancient Hysteria
+			{spellID = 90355, unitID = "player", caster = "all", filter = "BUFF"},
+			-- Netherwinds
+			{spellID = 160452, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Time Warp
 			{spellID = 80353, unitID = "player", caster = "all", filter = "BUFF"},
+			-- Drums of Fury
+			{spellID = 178207, unitID = "player", caster = "all", filter = "BUFF"},
+			-- Drums of Rage
+			{spellID = 146555, unitID = "player", caster = "all", filter = "BUFF"},
+			-- Drums of the Maelstrom
+			{spellID = 256740, unitID = "player", caster = "all", filter = "BUFF"},
 
-			-- Professions
+			-- Engineering
 			-- Goblin Glider [Goblin Glider Kit]
 			{spellID = 126389, unitID = "player", caster = "all", filter = "BUFF", absID = true},
 			-- Nitro Boosts
