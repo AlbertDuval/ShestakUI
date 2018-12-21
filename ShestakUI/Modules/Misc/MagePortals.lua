@@ -38,6 +38,8 @@ local spells = (UnitFactionGroup("player") == "Horde") and {
 
 local frame = CreateFrame("Frame", "TeleportMenu", UIParent)
 frame:CreatePanel("Invisible", C.minimap.size, (#spells) * 20 + 4, "BOTTOMLEFT", Minimap, "TOPLEFT", -2, 3)
+frame:SetFrameStrata("MEDIUM")
+frame:EnableMouse(true)
 frame:RegisterEvent("UNIT_SPELLCAST_START")
 frame:SetScript("OnEvent", function(self)
 	if self:IsShown() then
@@ -60,7 +62,7 @@ for i, spell in pairs(spells) do
 	if i == 9 then
 		l:SetText(L_ZONE_ANCIENTDALARAN)
 	else
-		l:SetText(string.sub(teleport, string.find(teleport, ":") + 1))
+		l:SetText(string.sub(teleport, (string.find(teleport, ":") and string.find(teleport, ":") + 1) or 0))
 	end
 
 	l:SetPoint("LEFT", b, "LEFT", 2, 0)

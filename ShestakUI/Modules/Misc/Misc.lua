@@ -15,7 +15,6 @@ hooksecurefunc("ShowReadyCheck", ShowReadyCheckHook)
 ----------------------------------------------------------------------------------------
 local ForceWarning = CreateFrame("Frame")
 ForceWarning:RegisterEvent("UPDATE_BATTLEFIELD_STATUS")
---BETA ForceWarning:RegisterEvent("BATTLEFIELD_MGR_ENTRY_INVITE")
 ForceWarning:RegisterEvent("PET_BATTLE_QUEUE_PROPOSE_MATCH")
 ForceWarning:RegisterEvent("LFG_PROPOSAL_SHOW")
 ForceWarning:RegisterEvent("RESURRECT_REQUEST")
@@ -29,8 +28,6 @@ ForceWarning:SetScript("OnEvent", function(self, event)
 			end
 			i = i + 1
 		end
-	elseif event == "BATTLEFIELD_MGR_ENTRY_INVITE" then
-		PlaySound(SOUNDKIT.PVP_THROUGH_QUEUE, "Master")
 	elseif event == "PET_BATTLE_QUEUE_PROPOSE_MATCH" then
 		PlaySound(SOUNDKIT.PVP_THROUGH_QUEUE, "Master")
 	elseif event == "LFG_PROPOSAL_SHOW" then
@@ -58,38 +55,35 @@ PVPReadyDialog.enterButton:SetPoint("BOTTOM", PVPReadyDialog, "BOTTOM", 0, 25)
 --	Spin camera while afk(by Telroth and Eclipse)
 ----------------------------------------------------------------------------------------
 if C.misc.afk_spin_camera == true then
-	local SpinCam = CreateFrame("Frame")
-
-	local OnEvent = function(self, event, unit)
-		if event == "PLAYER_FLAGS_CHANGED" then
-			if unit == "player" then
-				if UnitIsAFK(unit) then
-					SpinStart()
-				else
-					SpinStop()
-				end
-			end
-		elseif event == "PLAYER_LEAVING_WORLD" then
-			SpinStop()
-		end
-	end
-	SpinCam:RegisterEvent("PLAYER_ENTERING_WORLD")
-	SpinCam:RegisterEvent("PLAYER_LEAVING_WORLD")
-	SpinCam:RegisterEvent("PLAYER_FLAGS_CHANGED")
-	SpinCam:SetScript("OnEvent", OnEvent)
-
-	function SpinStart()
+	local spinning
+	local function SpinStart()
 		spinning = true
 		MoveViewRightStart(0.1)
 		UIParent:Hide()
 	end
 
-	function SpinStop()
+	local function SpinStop()
 		if not spinning then return end
 		spinning = nil
 		MoveViewRightStop()
+		if InCombatLockdown() then return end
 		UIParent:Show()
 	end
+
+	local SpinCam = CreateFrame("Frame")
+	SpinCam:RegisterEvent("PLAYER_LEAVING_WORLD")
+	SpinCam:RegisterEvent("PLAYER_FLAGS_CHANGED")
+	SpinCam:SetScript("OnEvent", function(self, event, unit)
+		if event == "PLAYER_LEAVING_WORLD" then
+			SpinStop()
+		else
+			if UnitIsAFK("player") and not InCombatLockdown() then
+				SpinStart()
+			else
+				SpinStop()
+			end
+		end
+	end)
 end
 
 ----------------------------------------------------------------------------------------

@@ -7,12 +7,11 @@ if C.skins.blizzard_frames ~= true then return end
 local function LoadSkin()
 	if IsAddOnLoaded("Mapster") then return end
 
-	local SmallerMap = GetCVarBool("miniWorldMap")
-	if not SmallerMap then
-		ToggleWorldMap()
-		WorldMapFrame.BorderFrame.MaximizeMinimizeFrame.MinimizeButton:Click()
-		ToggleWorldMap()
-	end
+	local frame = CreateFrame("Frame")
+	frame:RegisterEvent("VARIABLES_LOADED")
+	frame:SetScript("OnEvent", function()
+		SetCVar("miniWorldMap", 1)
+	end)
 
 	WorldMapFrame:StripTextures()
 	WorldMapFrame:CreateBackdrop("Default")
@@ -25,10 +24,9 @@ local function LoadSkin()
 	WorldMapFrame.Header:SetTemplate("Overlay")
 
 	WorldMapFrame.BorderFrame:StripTextures()
-	--BETA WorldMapFrame.BorderFrame.Inset:StripTextures()
+	WorldMapFrame.BorderFrame.NineSlice:Hide()
 	QuestMapFrame.DetailsFrame:StripTextures()
 	QuestMapFrame.DetailsFrame.RewardsFrame:StripTextures()
-	--BETA QuestScrollFrame.Contents.StoryHeader.Shadow:Hide()
 	QuestMapFrame:StripTextures()
 
 	QuestMapFrame:CreateBackdrop("Overlay")

@@ -46,7 +46,7 @@ C["filger_spells"] = {
 			-- Dancing Rune Weapon
 			{spellID = 81256, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Lichborne
-			--BETA {spellID = 49039, unitID = "player", caster = "player", filter = "BUFF"},
+			{spellID = 287081, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Rune Tap
 			{spellID = 194679, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Pillar of Frost
@@ -187,7 +187,7 @@ C["filger_spells"] = {
 			-- Breath of Sindragosa
 			{spellID = 152279, filter = "CD"},
 			-- Lichborne
-			--BETA {spellID = 49039, filter = "CD"},
+			{spellID = 287081, filter = "CD"},
 			-- Desecrated Ground
 			{spellID = 108201, filter = "CD"},
 			-- Death Pact
@@ -260,8 +260,6 @@ C["filger_spells"] = {
 
 			-- Metamorphosis
 			{spellID = 187827, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Empower Wards
-			--BETA {spellID = 218256, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Darkness
 			{spellID = 196718, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Immolation Aura
@@ -269,11 +267,9 @@ C["filger_spells"] = {
 			-- Demon Spikes
 			{spellID = 203720, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Soul Barrier
-			{spellID = 227225, unitID = "player", caster = "player", filter = "BUFF"},
+			{spellID = 263648, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Blur
 			{spellID = 212800, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Chaos Blades
-			--BETA {spellID = 211048, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Netherwalk
 			{spellID = 196555, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Nether Bond
@@ -384,7 +380,7 @@ C["filger_spells"] = {
 			-- Throw Glaive
 			{spellID = 185123, filter = "CD"},
 			-- Soul Barrier
-			{spellID = 227225, filter = "CD"},
+			{spellID = 263648, filter = "CD"},
 			-- Blade Dance
 			{spellID = 188499, filter = "CD"},
 			-- Fel Barrage
@@ -397,8 +393,6 @@ C["filger_spells"] = {
 			{spellID = 202137, filter = "CD"},
 			-- Sigil of Misery
 			{spellID = 207684, filter = "CD"},
-			-- Empower Wards
-			--BETA {spellID = 218256, filter = "CD"},
 			-- Spectral Sight
 			{spellID = 188501, filter = "CD"},
 			-- Fiery Brand
@@ -423,8 +417,6 @@ C["filger_spells"] = {
 			{spellID = 201467, filter = "CD"},
 			-- Netherwalk
 			{spellID = 196555, filter = "CD"},
-			-- Chaos Blades
-			--BETA {spellID = 211048, filter = "CD"},
 			-- Nemesis
 			{spellID = 206491, filter = "CD"},
 			-- Metamorphosis
@@ -782,8 +774,6 @@ C["filger_spells"] = {
 			{spellID = 190931, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Beast Cleave
 			{spellID = 118455, unitID = "pet", caster = "player", filter = "BUFF"},
-			-- Marking Targets
-			--BETA {spellID = 223138, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Frenzy
 			{spellID = 19615, unitID = "player", caster = "player", filter = "BUFF", absID = true},
 			-- Mend Pet
@@ -813,10 +803,6 @@ C["filger_spells"] = {
 			{spellID = 131894, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Hunter's Mark
 			{spellID = 257284, unitID = "target", caster = "player", filter = "DEBUFF"},
-			-- Vulnerable
-			--BETA {spellID = 187131, unitID = "target", caster = "player", filter = "DEBUFF"},
-			-- Hunter's Mark
-			--BETA {spellID = 185365, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Narrow Escape
 			{spellID = 136634, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Entrapment
@@ -1009,7 +995,7 @@ C["filger_spells"] = {
 			-- Mirror Image
 			{spellID = 55342, filter = "ICD", trigger = "NONE", duration = 40},
 			-- Icicles
-			{spellID = 205473, unitID = "player", caster = "player", filter = "BUFF"},
+			{spellID = 205473, unitID = "player", caster = "player", filter = "BUFF", talentID = 21634},
 		},
 		{
 			Name = "P_PROC_ICON",
@@ -1027,8 +1013,6 @@ C["filger_spells"] = {
 			{spellID = 190446, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Glacial Spike!
 			{spellID = 199844, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Arcane Missiles!
-			--BETA {spellID = 79683, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Hot Streak!
 			{spellID = 48108, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Pyroclasm
@@ -1473,8 +1457,6 @@ C["filger_spells"] = {
 			{spellID = 132403, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Speed of Light
 			{spellID = 85499, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Eternal Flame
-			--BETA {spellID = 114163, unitID = "player", caster = "player", filter = "BUFF"},
 		},
 		{
 			Name = "P_PROC_ICON",
@@ -1574,7 +1556,7 @@ C["filger_spells"] = {
 			-- Divine Protection
 			{spellID = 498, filter = "CD", absID = true},
 			-- Execution Sentence
-			--BETA {spellID = 213757, filter = "CD"},
+			{spellID = 267798, filter = "CD"},
 			-- Light's Hammer
 			{spellID = 114158, filter = "CD"},
 			-- Blinding Light
@@ -1741,8 +1723,6 @@ C["filger_spells"] = {
 			{spellID = 47788, unitID = "target", caster = "player", filter = "BUFF"},
 			-- Pain Suppression
 			{spellID = 33206, unitID = "target", caster = "player", filter = "BUFF"},
-			-- Void Entropy
-			--BETA {spellID = 155361, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Vampiric Touch
 			{spellID = 34914, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Shadow Word: Pain
@@ -2109,8 +2089,6 @@ C["filger_spells"] = {
 			{spellID = 195457, filter = "CD"},
 			-- Crimson Vial
 			{spellID = 185311, filter = "CD"},
-			-- Cannonball Barrage
-			--BETA {spellID = 185767, filter = "CD"},
 			-- Garrote
 			{spellID = 703, filter = "CD"},
 			-- Exsanguinate
@@ -2465,6 +2443,8 @@ C["filger_spells"] = {
 			{spellID = 108416, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Healthstone
 			{spellID = 6262, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Nether Ward
+			{spellID = 212295, unitID = "player", caster = "player", filter = "BUFF"},
 		},
 		{
 			Name = "P_PROC_ICON",
@@ -2706,12 +2686,8 @@ C["filger_spells"] = {
 			{spellID = 52437, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Raging Blow!
 			{spellID = 131116, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Ultimatum
-			--BETA {spellID = 122510, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Meat Cleaver
 			{spellID = 85739, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Unyielding Strikes
-			--BETA {spellID = 169686, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Enrage
 			{spellID = 184362, unitID = "player", caster = "player", filter = "BUFF"},
 
@@ -2876,10 +2852,8 @@ C["filger_spells"] = {
 			{spellID = 2825, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Heroism
 			{spellID = 32182, unitID = "player", caster = "all", filter = "BUFF"},
-			-- Ancient Hysteria
-			{spellID = 90355, unitID = "player", caster = "all", filter = "BUFF"},
-			-- Netherwinds
-			{spellID = 160452, unitID = "player", caster = "all", filter = "BUFF"},
+			-- Primal Rage [Hunter's pet]
+			{spellID = 264667, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Time Warp
 			{spellID = 80353, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Drums of Fury
@@ -2953,7 +2927,7 @@ C["filger_spells"] = {
 			-- Grounding Totem
 			{spellID = 8178, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Mass Spell Reflection
-			--BETA {spellID = 114028, unitID = "player", caster = "all", filter = "BUFF"},
+			{spellID = 213915, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Tiger's Lust
 			{spellID = 116841, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Body and Soul
@@ -2988,6 +2962,16 @@ C["filger_spells"] = {
 			{spellID = 91797, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Gnaw (Ghoul)
 			{spellID = 91800, unitID = "player", caster = "all", filter = "DEBUFF"},
+
+			-- Demon Hunter
+			-- Imprison
+			{spellID = 217832, unitID = "player", caster = "all", filter = "DEBUFF"},
+			-- Fel Eruption
+			{spellID = 211881, unitID = "player", caster = "all", filter = "DEBUFF"},
+			-- Chaos Nova
+			{spellID = 179057, unitID = "player", caster = "all", filter = "DEBUFF"},
+			-- Illidan's Grasp
+			{spellID = 205630, unitID = "player", caster = "all", filter = "DEBUFF"},
 
 			-- Druid
 			-- Cyclone
@@ -3066,6 +3050,12 @@ C["filger_spells"] = {
 			{spellID = 118905, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Pulverize (Earth Elemental)
 			{spellID = 118345, unitID = "player", caster = "all", filter = "DEBUFF"},
+			-- Sundering
+			{spellID = 197214, unitID = "player", caster = "all", filter = "DEBUFF"},
+			-- Lightning Lasso
+			{spellID = 204437, unitID = "player", caster = "all", filter = "DEBUFF"},
+			-- Earthfury
+			{spellID = 204399, unitID = "player", caster = "all", filter = "DEBUFF"},
 
 			-- Warlock
 			-- Fear
@@ -3094,9 +3084,9 @@ C["filger_spells"] = {
 			{spellID = 132168, unitID = "player", caster = "all", filter = "DEBUFF"},
 
 			-- Racial
-			-- Quaking Palm
+			-- Quaking Palm (Pandaren)
 			{spellID = 107079, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- War Stomp
+			-- War Stomp (Tauren)
 			{spellID = 20549, unitID = "player", caster = "all", filter = "DEBUFF"},
 
 			-- Silences
@@ -3112,8 +3102,6 @@ C["filger_spells"] = {
 			{spellID = 1330, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Unstable Affliction
 			{spellID = 31117, unitID = "player", caster = "all", filter = "DEBUFF", absID = true},
-			-- Arcane Torrent
-			{spellID = 28730, unitID = "player", caster = "all", filter = "DEBUFF"},
 
 			-- Roots
 			-- Chains of Ice
@@ -3144,8 +3132,8 @@ C["filger_spells"] = {
 			{spellID = 64695, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Debilitate (Terrorguard)
 			{spellID = 170996, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Staggering Shout
-			--BETA {spellID = 107566, unitID = "player", caster = "all", filter = "DEBUFF"},
+			-- Entrenched in Flame
+			{spellID = 233582, unitID = "player", caster = "all", filter = "DEBUFF"},
 
 			-- Slows
 			-- Infected Wounds
@@ -3162,6 +3150,8 @@ C["filger_spells"] = {
 			{spellID = 162546, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Caltrops
 			{spellID = 194279, unitID = "player", caster = "all", filter = "DEBUFF"},
+			-- Pistol Shot
+			{spellID = 185763, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Warp Time (Warp Stalker)
 			{spellID = 35346, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Ankle Crack (Crocolisk)
@@ -3220,9 +3210,6 @@ C["filger_spells"] = {
 			{spellID = 76577, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Rocket Fuel Leak
 			{spellID = 94794, unitID = "player", caster = "player", filter = "DEBUFF"},
-
-			-- Raids: Battle for Azeroth
-
 		},
 		{
 			Name = "T_BUFF",
@@ -3239,7 +3226,7 @@ C["filger_spells"] = {
 			-- Desecrated Ground
 			{spellID = 115018, unitID = "target", caster = "all", filter = "BUFF"},
 			-- Lichborne
-			--BETA {spellID = 49039, unitID = "target", caster = "all", filter = "BUFF"},
+			{spellID = 287081, unitID = "target", caster = "all", filter = "BUFF"},
 			-- Icebound Fortitude
 			{spellID = 48792, unitID = "target", caster = "all", filter = "BUFF"},
 			-- Pillar of Frost
@@ -3264,7 +3251,16 @@ C["filger_spells"] = {
 			-- Nether Bond
 			{spellID = 207810, unitID = "target", caster = "all", filter = "BUFF"},
 			-- Soul Barrier
-			{spellID = 227225, unitID = "target", caster = "all", filter = "BUFF"},
+			{spellID = 263648, unitID = "target", caster = "all", filter = "BUFF"},
+			-- Debuffs
+			-- Imprison
+			{spellID = 217832, unitID = "target", caster = "all", filter = "DEBUFF"},
+			-- Fel Eruption
+			{spellID = 211881, unitID = "target", caster = "all", filter = "DEBUFF"},
+			-- Chaos Nova
+			{spellID = 179057, unitID = "target", caster = "all", filter = "DEBUFF"},
+			-- Illidan's Grasp
+			{spellID = 205630, unitID = "target", caster = "all", filter = "DEBUFF"},
 
 			-- Druid
 			-- Survival Instincts
@@ -3375,6 +3371,8 @@ C["filger_spells"] = {
 			{spellID = 6940, unitID = "target", caster = "all", filter = "BUFF"},
 			-- Blessing of Freedom
 			{spellID = 1044, unitID = "target", caster = "all", filter = "BUFF"},
+			-- Blessing of Sanctuary
+			{spellID = 210256, unitID = "target", caster = "all", filter = "BUFF"},
 			-- Debuffs
 			-- Repentance
 			{spellID = 20066, unitID = "target", caster = "all", filter = "DEBUFF"},
@@ -3396,6 +3394,10 @@ C["filger_spells"] = {
 			{spellID = 119030, unitID = "target", caster = "all", filter = "BUFF"},
 			-- Phantasm
 			{spellID = 114239, unitID = "target", caster = "all", filter = "BUFF"},
+			-- Greater Fade
+			{spellID = 213602, unitID = "target", caster = "all", filter = "BUFF"},
+			-- Holy Ward
+			{spellID = 213610, unitID = "target", caster = "all", filter = "BUFF"},
 			-- Debuffs
 			-- Dominate Mind
 			{spellID = 605, unitID = "target", caster = "all", filter = "DEBUFF"},
@@ -3438,6 +3440,14 @@ C["filger_spells"] = {
 			{spellID = 8178, unitID = "target", caster = "all", filter = "BUFF"},
 			-- Spiritwalker's Grace
 			{spellID = 79206, unitID = "target", caster = "all", filter = "BUFF"},
+			-- Astral Shift
+			{spellID = 108271, unitID = "target", caster = "all", filter = "BUFF"},
+			-- Ascendance
+			{spellID = 114052, unitID = "target", caster = "all", filter = "BUFF"},
+			-- Ethereal Form
+			{spellID = 210918, unitID = "target", caster = "all", filter = "BUFF"},
+			-- Spirit Link
+			{spellID = 204293, unitID = "target", caster = "all", filter = "BUFF"},
 			-- Debuffs
 			-- Hex
 			{spellID = 51514, unitID = "target", caster = "all", filter = "DEBUFF"},
@@ -3445,12 +3455,20 @@ C["filger_spells"] = {
 			{spellID = 118905, unitID = "target", caster = "all", filter = "DEBUFF"},
 			-- Pulverize (Earth Elemental)
 			{spellID = 118345, unitID = "target", caster = "all", filter = "DEBUFF"},
+			-- Sundering
+			{spellID = 197214, unitID = "target", caster = "all", filter = "DEBUFF"},
+			-- Lightning Lasso
+			{spellID = 204437, unitID = "target", caster = "all", filter = "DEBUFF"},
+			-- Earthfury
+			{spellID = 204399, unitID = "target", caster = "all", filter = "DEBUFF"},
 
 			-- Warlock
 			-- Soulstone
 			{spellID = 20707, unitID = "target", caster = "all", filter = "BUFF"},
 			-- Unending Resolve
 			{spellID = 104773, unitID = "target", caster = "all", filter = "BUFF"},
+			-- Nether Ward
+			{spellID = 212295, unitID = "target", caster = "all", filter = "BUFF"},
 			-- Debuffs
 			-- Banish
 			{spellID = 710, unitID = "target", caster = "all", filter = "DEBUFF"},
@@ -3481,7 +3499,7 @@ C["filger_spells"] = {
 			-- Spell Reflection
 			{spellID = 23920, unitID = "target", caster = "all", filter = "BUFF"},
 			-- Mass Spell Reflection
-			--BETA {spellID = 114028, unitID = "target", caster = "all", filter = "BUFF"},
+			{spellID = 213915, unitID = "target", caster = "all", filter = "BUFF"},
 			-- Shield Wall
 			{spellID = 871, unitID = "target", caster = "all", filter = "BUFF"},
 			-- Die by the Sword
@@ -3490,6 +3508,10 @@ C["filger_spells"] = {
 			{spellID = 12975, unitID = "target", caster = "all", filter = "BUFF"},
 			-- Berserker Rage
 			{spellID = 18499, unitID = "target", caster = "all", filter = "BUFF"},
+			-- Enraged Regeneration
+			{spellID = 184364, unitID = "target", caster = "all", filter = "BUFF"},
+			-- War Banner
+			{spellID = 236321, unitID = "target", caster = "all", filter = "BUFF"},
 			-- Debuffs
 			-- Intimidating Shout
 			{spellID = 5246, unitID = "target", caster = "all", filter = "DEBUFF"},
@@ -3499,11 +3521,9 @@ C["filger_spells"] = {
 			{spellID = 132168, unitID = "target", caster = "all", filter = "DEBUFF"},
 
 			-- Racial
-			-- Arcane Torrent
-			{spellID = 28730, unitID = "target", caster = "all", filter = "DEBUFF"},
-			-- Quaking Palm
+			-- Quaking Palm (Pandaren)
 			{spellID = 107079, unitID = "target", caster = "all", filter = "DEBUFF"},
-			-- War Stomp
+			-- War Stomp (Tauren)
 			{spellID = 20549, unitID = "target", caster = "all", filter = "DEBUFF"},
 
 			-- Professions

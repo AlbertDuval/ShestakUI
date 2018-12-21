@@ -10,6 +10,8 @@ local function LoadSkin()
 	TradeSkillFrame.DetailsInset:StripTextures()
 	TradeSkillFrame.DetailsFrame.Background:Hide()
 
+	TradeSkillFramePortrait:SetAlpha(0)
+
 	TradeSkillFrame.RecipeList.LearnedTab:StripTextures()
 	TradeSkillFrame.RecipeList.UnlearnedTab:StripTextures()
 
@@ -48,7 +50,7 @@ local function LoadSkin()
 
 	T.SkinCloseButton(TradeSkillFrameCloseButton)
 
-	T.SkinScrollBar(TradeSkillFrame.RecipeList.scrollBar, "TradeSkillFrame")
+	T.SkinScrollBar(TradeSkillFrame.RecipeList.scrollBar)
 	T.SkinScrollBar(TradeSkillFrame.DetailsFrame.ScrollBar)
 
 	hooksecurefunc(TradeSkillFrame.DetailsFrame, "RefreshDisplay", function()
@@ -113,15 +115,13 @@ local function LoadSkin()
 	end)
 
 	-- Guild Crafters
-	TradeSkillFrame.DetailsFrame.ViewGuildCraftersButton.LeftSeparator:SetTexture(nil)
-	TradeSkillFrame.DetailsFrame.ViewGuildCraftersButton.RightSeparator:SetTexture(nil)
 	TradeSkillFrame.DetailsFrame.GuildFrame:StripTextures()
 	TradeSkillFrame.DetailsFrame.GuildFrame:SetTemplate("Transparent")
 	TradeSkillFrame.DetailsFrame.GuildFrame.Container:StripTextures()
 	TradeSkillFrame.DetailsFrame.GuildFrame.Container:SetTemplate("Transparent")
 	TradeSkillFrame.DetailsFrame.ViewGuildCraftersButton:SkinButton(true)
 	T.SkinCloseButton(TradeSkillFrame.DetailsFrame.GuildFrame.CloseButton)
-	T.SkinScrollBar(TradeSkillFrameScrollFrame.scrollBar, "TradeSkillFrameScrollFrame")
+	T.SkinScrollBar(TradeSkillFrameScrollFrame.scrollBar)
 
 	if Auctionator_Search then
 		Auctionator_Search:SkinButton(true)

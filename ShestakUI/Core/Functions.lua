@@ -154,7 +154,7 @@ end
 T.SkinFuncs = {}
 T.SkinFuncs["ShestakUI"] = {}
 
-function T.SkinScrollBar(frame, parent)
+function T.SkinScrollBar(frame)
 	if frame:GetName() then
 		if _G[frame:GetName().."BG"] then
 			_G[frame:GetName().."BG"]:SetTexture(nil)
@@ -182,9 +182,9 @@ function T.SkinScrollBar(frame, parent)
 	if frame.ScrollBarBottom then frame.ScrollBarBottom:SetTexture(nil) end
 	if frame.ScrollBarMiddle then frame.ScrollBarMiddle:SetTexture(nil) end
 
-	local UpButton = frame.ScrollUpButton or frame.UpButton or _G[(frame:GetName() or parent).."ScrollUpButton"]
-	local DownButton = frame.ScrollDownButton or frame.DownButton or _G[(frame:GetName() or parent).."ScrollDownButton"]
-	local ThumbTexture = frame.ThumbTexture or frame.thumbTexture or _G[frame:GetName().."ThumbTexture"]
+	local UpButton = frame.ScrollUpButton or frame.UpButton or _G[frame:GetName() and frame:GetName().."ScrollUpButton"] or frame:GetParent().scrollUp
+	local DownButton = frame.ScrollDownButton or frame.DownButton or _G[frame:GetName() and frame:GetName().."ScrollDownButton"] or frame:GetParent().scrollDown
+	local ThumbTexture = frame.ThumbTexture or frame.thumbTexture or _G[frame:GetName() and frame:GetName().."ThumbTexture"]
 
 	if UpButton and DownButton then
 		if not UpButton.icon then
@@ -699,7 +699,7 @@ T.PostUpdateHealth = function(health, unit, min, max)
 			else
 				r, g, b = health:GetStatusBarColor()
 			end
-			local newr, newg, newb = oUF.ColorGradient(min, max, 1, 0, 0, 1, 1, 0, r, g, b)
+			local newr, newg, newb = oUF:ColorGradient(min, max, 1, 0, 0, 1, 1, 0, r, g, b)
 
 			health:SetStatusBarColor(newr, newg, newb)
 			if health.bg and health.bg.multiplier then
@@ -708,7 +708,7 @@ T.PostUpdateHealth = function(health, unit, min, max)
 			end
 		end
 		if min ~= max then
-			r, g, b = oUF.ColorGradient(min, max, 0.69, 0.31, 0.31, 0.65, 0.63, 0.35, 0.33, 0.59, 0.33)
+			r, g, b = oUF:ColorGradient(min, max, 0.69, 0.31, 0.31, 0.65, 0.63, 0.35, 0.33, 0.59, 0.33)
 			if unit == "player" and health:GetAttribute("normalUnit") ~= "pet" then
 				if C.unitframe.show_total_value == true then
 					if C.unitframe.color_value == true then
@@ -798,7 +798,7 @@ T.PostUpdateRaidHealth = function(health, unit, min, max)
 			else
 				r, g, b = health:GetStatusBarColor()
 			end
-			local newr, newg, newb = oUF.ColorGradient(min, max, 1, 0, 0, 1, 1, 0, r, g, b)
+			local newr, newg, newb = oUF:ColorGradient(min, max, 1, 0, 0, 1, 1, 0, r, g, b)
 
 			health:SetStatusBarColor(newr, newg, newb)
 			if health.bg and health.bg.multiplier then
@@ -807,7 +807,7 @@ T.PostUpdateRaidHealth = function(health, unit, min, max)
 			end
 		end
 		if min ~= max then
-			r, g, b = oUF.ColorGradient(min, max, 0.69, 0.31, 0.31, 0.65, 0.63, 0.35, 0.33, 0.59, 0.33)
+			r, g, b = oUF:ColorGradient(min, max, 0.69, 0.31, 0.31, 0.65, 0.63, 0.35, 0.33, 0.59, 0.33)
 			if self:GetParent():GetName():match("oUF_PartyDPS") then
 				if C.unitframe.color_value == true then
 					health.value:SetFormattedText("|cffAF5050%s|r |cffD7BEA5-|r |cff%02x%02x%02x%d%%|r", T.ShortValue(min), r * 255, g * 255, b * 255, floor(min / max * 100))

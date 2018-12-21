@@ -427,7 +427,11 @@ C["aura"] = {
 --	Filger options
 ----------------------------------------------------------------------------------------
 C["filger"] = {
+<<<<<<< HEAD
 	["enable"] = true,							-- Enable Filger (fps isssue)
+=======
+	["enable"] = true,							-- Enable Filger
+>>>>>>> heads/Shestak/master
 	["test_mode"] = false,						-- Test icon mode
 	["max_test_icon"] = 5,						-- The number of icons to the test
 	["show_tooltip"] = false,					-- Show tooltip
