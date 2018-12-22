@@ -382,6 +382,7 @@ L_GUI_UF_PLUGINS_ENEMY_SPEC = "Afficher les talent de l'ennemi"
 L_GUI_UF_PLUGINS_COMBAT_FEEDBACK = "Texte de combat sur les barres du joueur et de la cible"
 L_GUI_UF_PLUGINS_FADER = "Barres de unités"
 L_GUI_UF_PLUGINS_DIMINISHING = "Icones de rendement décroissants sur les fenêtre d'arène"
+L_GUI_UF_PLUGINS_POWER_PREDICTION = "Power cost prediction bar on player frame" -- Need review
 
 -- Unit Frames Class bar options
 L_GUI_UF_PLUGINS_CLASS_BAR = "Barres de classe"
@@ -413,10 +414,11 @@ L_GUI_UF_SHOW_TANK = "Afficher les tanks de raid"
 L_GUI_UF_SHOW_TANK_TT = "Afficher la cible de la cible des tanks"
 L_GUI_UF_RAID_GROUP = "Nombre de groupe dans le raid"
 L_GUI_UF_RAID_VERTICAL_GROUP = "Groupe de raid verticaux(pour l'interface Heal)"
-L_GUI_UF_ICONS_LEADER = "Icone du Chef de raid, icone de l'assistant, icone du maître du butin"
 L_GUI_UF_ICONS_ROLE = "Icone de rôle sur les barres de vie"
 L_GUI_UF_ICONS_RAID_MARK = "Signe de raid"
 L_GUI_UF_ICONS_READY_CHECK = "Icone d'appel"
+L_GUI_UF_ICONS_LEADER = "Icone du Chef de raid, icone de l'assistant, icone du maître du butin"
+L_GUI_UF_ICONS_SUMON = "Sumon icons on frames" -- Need review
 L_GUI_UF_PLUGINS_DEBUFFHIGHLIGHT_ICON = "Mise en évidence des debuffs texture + îcone"
 L_GUI_UF_PLUGINS_AURA_WATCH = "Aura/debuff de raid"
 L_GUI_UF_PLUGINS_AURA_WATCH_TIMER = "Durée sur les icônes de débuff du raid"

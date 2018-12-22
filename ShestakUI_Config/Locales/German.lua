@@ -382,6 +382,7 @@ L_GUI_UF_PLUGINS_ENEMY_SPEC = "Zeige gegnerische Talente"
 L_GUI_UF_PLUGINS_COMBAT_FEEDBACK = "Kampftexts auf Spieler/Zielfenster"
 L_GUI_UF_PLUGINS_FADER = "Blende Einheitenfenster aus"
 L_GUI_UF_PLUGINS_DIMINISHING = "Diminishing Returns Symbole auf Arena Fenstern"
+L_GUI_UF_PLUGINS_POWER_PREDICTION = "Power cost prediction bar on player frame" -- Need review
 
 -- Unit Frames Class bar options
 L_GUI_UF_PLUGINS_CLASS_BAR = "Unit Frames Klassenleisten"
@@ -413,10 +414,11 @@ L_GUI_UF_SHOW_TANK = "Zeige Raid Tanks an"
 L_GUI_UF_SHOW_TANK_TT = "Zeige Ziel des Raid Tank Ziels (Ziel des Ziels)"
 L_GUI_UF_RAID_GROUP = "Anzahl der Gruppen im Raid"
 L_GUI_UF_RAID_VERTICAL_GROUP = "Vertikale Raidgruppen(Heiler Layout)"
-L_GUI_UF_ICONS_LEADER = "Anführer/Assistent/Plündermeister-Symbole an den Fenstern anzeigen"
 L_GUI_UF_ICONS_ROLE = "Rollensymbol auf den Unit Frames"
 L_GUI_UF_ICONS_RAID_MARK = "Raidsymbole"
 L_GUI_UF_ICONS_READY_CHECK = "Bereitschaftschecksymbole"
+L_GUI_UF_ICONS_LEADER = "Anführer/Assistent/Plündermeister-Symbole an den Fenstern anzeigen"
+L_GUI_UF_ICONS_SUMON = "Sumon icons on frames" -- Need review
 L_GUI_UF_PLUGINS_DEBUFFHIGHLIGHT_ICON = "Debufftextur und Symbol hervorheben"
 L_GUI_UF_PLUGINS_AURA_WATCH = "'RAID' Buffüberwachung"
 L_GUI_UF_PLUGINS_AURA_WATCH_TIMER = "Timer auf Schlachtzugsdebuff Icons"

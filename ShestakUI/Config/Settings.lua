@@ -485,6 +485,7 @@ C["unitframe"] = {
 	["plugins_combat_feedback"] = true,		-- Combat text on player/target frame
 	["plugins_fader"] = true,					-- Fade unit frames
 	["plugins_diminishing"] = true,			-- Diminishing Returns icons on arena frames
+	["plugins_power_prediction"] = false,		-- Power cost prediction bar on player frame
 }
 
 ----------------------------------------------------------------------------------------
@@ -530,6 +531,7 @@ C["raidframe"] = {
 	["icons_raid_mark"] = true,					-- Raid mark icons on frames
 	["icons_ready_check"] = true,				-- Ready check icons on frames
 	["icons_leader"] = true,					-- Leader icon and assistant icon on frames
+	["icons_sumon"] = true,						-- Sumon icons on frames
 	-- Plugins
 	["plugins_debuffhighlight_icon"] = true,	-- Debuff highlight texture + icon
 	["plugins_aura_watch"] = true,				-- Raid debuff icons (from the list)

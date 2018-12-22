@@ -382,6 +382,7 @@ L_GUI_UF_PLUGINS_ENEMY_SPEC = "敵對玩家天賦"
 L_GUI_UF_PLUGINS_COMBAT_FEEDBACK = "玩家/目標框架顯示戰鬥文字"
 L_GUI_UF_PLUGINS_FADER = "自動隱藏玩家框架"
 L_GUI_UF_PLUGINS_DIMINISHING = "競技場框架顯示技能遞減"
+L_GUI_UF_PLUGINS_POWER_PREDICTION = "Power cost prediction bar on player frame" -- Need review
 
 -- Unit Frames Class bar options
 L_GUI_UF_PLUGINS_CLASS_BAR = "職業欄"
@@ -413,10 +414,11 @@ L_GUI_UF_SHOW_TANK = "團隊主坦克框架"
 L_GUI_UF_SHOW_TANK_TT = "坦克目標的目標"
 L_GUI_UF_RAID_GROUP = "小隊數目"
 L_GUI_UF_RAID_VERTICAL_GROUP = "竪向排列團隊隊伍(僅在治療佈局中啟用)"
-L_GUI_UF_ICONS_LEADER = "團隊隊長標記/助手標記/分配者標記"
 L_GUI_UF_ICONS_ROLE = "團隊中顯示角色類型"
 L_GUI_UF_ICONS_RAID_MARK = "團隊標記"
 L_GUI_UF_ICONS_READY_CHECK = "就緒確認標記"
+L_GUI_UF_ICONS_LEADER = "團隊隊長標記/助手標記/分配者標記"
+L_GUI_UF_ICONS_SUMON = "Sumon icons on frames" -- Need review
 L_GUI_UF_PLUGINS_DEBUFFHIGHLIGHT_ICON = "高亮DeBuffs圖示"
 L_GUI_UF_PLUGINS_AURA_WATCH = "團隊法術監視"
 L_GUI_UF_PLUGINS_AURA_WATCH_TIMER = "團隊減益時間"
