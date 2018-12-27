@@ -182,8 +182,8 @@ function T.SkinScrollBar(frame)
 	if frame.ScrollBarBottom then frame.ScrollBarBottom:SetTexture(nil) end
 	if frame.ScrollBarMiddle then frame.ScrollBarMiddle:SetTexture(nil) end
 
-	local UpButton = frame.ScrollUpButton or frame.UpButton or _G[frame:GetName() and frame:GetName().."ScrollUpButton"] or frame:GetParent().scrollUp
-	local DownButton = frame.ScrollDownButton or frame.DownButton or _G[frame:GetName() and frame:GetName().."ScrollDownButton"] or frame:GetParent().scrollDown
+	local UpButton = frame.ScrollUpButton or frame.ScrollUp or frame.UpButton or _G[frame:GetName() and frame:GetName().."ScrollUpButton"] or frame:GetParent().scrollUp
+	local DownButton = frame.ScrollDownButton or frame.ScrollDown or frame.DownButton or _G[frame:GetName() and frame:GetName().."ScrollDownButton"] or frame:GetParent().scrollDown
 	local ThumbTexture = frame.ThumbTexture or frame.thumbTexture or _G[frame:GetName() and frame:GetName().."ThumbTexture"]
 
 	if UpButton and DownButton then
@@ -397,6 +397,8 @@ function T.SkinEditBox(frame, width, height)
 	if frame.RightTexture then frame.RightTexture:Kill() end
 	if frame.MiddleTexture then frame.MiddleTexture:Kill() end
 
+	if frame.Mid then frame.Mid:Kill() end
+
 	frame:CreateBackdrop("Overlay")
 
 	if frame:GetName() and (frame:GetName():find("Gold") or frame:GetName():find("Silver") or frame:GetName():find("Copper")) then
@@ -577,6 +579,39 @@ function T.SkinIconSelectionFrame(frame, numIcons, buttonNameTemplate, frameName
 			icon:SetPoint("TOPLEFT", 2, -2)
 			icon:SetPoint("BOTTOMRIGHT", -2, 2)
 			icon:SetTexCoord(0.1, 0.9, 0.1, 0.9)
+		end
+	end
+end
+
+function T.SkinMaxMinFrame(frame, point)
+	frame:SetSize(18, 18)
+
+	if point then
+		frame:SetPoint("RIGHT", point, "LEFT", -2, 0)
+	end
+
+	for name, direction in pairs({ ["MaximizeButton"] = "up", ["MinimizeButton"] = "down"}) do
+		local button = frame[name]
+		if button then
+			button:StripTextures()
+			button:SetTemplate("Overlay")
+			button:SetPoint("CENTER")
+			button:SetHitRectInsets(1, 1, 1, 1)
+
+			button.minus = button:CreateTexture(nil, "OVERLAY")
+			button.minus:SetSize(7, 1)
+			button.minus:SetPoint("CENTER")
+			button.minus:SetTexture(C.media.blank)
+
+			if direction == "up" then
+				button.plus = button:CreateTexture(nil, "OVERLAY")
+				button.plus:SetSize(1, 7)
+				button.plus:SetPoint("CENTER")
+				button.plus:SetTexture(C.media.blank)
+			end
+
+			button:HookScript("OnEnter", T.SetModifiedBackdrop)
+			button:HookScript("OnLeave", T.SetOriginalBackdrop)
 		end
 	end
 end

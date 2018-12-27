@@ -774,8 +774,6 @@ C["filger_spells"] = {
 			{spellID = 190931, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Beast Cleave
 			{spellID = 118455, unitID = "pet", caster = "player", filter = "BUFF"},
-			-- Frenzy
-			{spellID = 19615, unitID = "player", caster = "player", filter = "BUFF", absID = true},
 			-- Mend Pet
 			{spellID = 136, unitID = "pet", caster = "player", filter = "BUFF"},
 
@@ -1251,6 +1249,8 @@ C["filger_spells"] = {
 			Position = {"TOP", P_PROC_ICON_Anchor},
 
 			-- Buffs
+			-- Rushing Jade Wind
+			{spellID = 116847, unitID = "player", caster = "player", filter = "BUFF"},			
 			-- Blackout Kick!
 			{spellID = 116768, unitID = "player", caster = "player", filter = "BUFF"},
 			-- The Mists of Sheilun
@@ -1621,6 +1621,8 @@ C["filger_spells"] = {
 			IconSize = C.filger.buffs_size,
 			Position = {"TOP", P_BUFF_ICON_Anchor},
 
+			-- Atonement
+			{spellID = 194384, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Rapture
 			{spellID = 47536, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Desperate Prayer
