@@ -373,6 +373,8 @@ local function Local(o)
 	if o == "UIConfigfilgermax_test_icon" then o = L_GUI_FILGER_MAX_TEST_ICON end
 	if o == "UIConfigfilgershow_tooltip" then o = L_GUI_FILGER_SHOW_TOOLTIP end
 	if o == "UIConfigfilgerdisable_cd" then o = L_GUI_FILGER_DISABLE_CD end
+	if o == "UIConfigfilgerdisable_pvp" then o = L_GUI_FILGER_DISABLE_PVP end
+	if o == "UIConfigfilgerexpiration" then o = L_GUI_FILGER_EXPIRATION end
 	if o == "UIConfigfilgerbuffs_size" then o = L_GUI_FILGER_BUFFS_SIZE end
 	if o == "UIConfigfilgercooldown_size" then o = L_GUI_FILGER_COOLDOWN_SIZE end
 	if o == "UIConfigfilgerpvp_size" then o = L_GUI_FILGER_PVP_SIZE end
@@ -480,6 +482,7 @@ local function Local(o)
 	if o == "UIConfigstatsguild" then o = GUILD end
 	if o == "UIConfigstatsdurability" then o = DURABILITY end
 	if o == "UIConfigstatsexperience" then o = L_GUI_STATS_EXPERIENCE end
+	if o == "UIConfigstatstalents" then o = SPECIALIZATION end
 	if o == "UIConfigstatscoords" then o = L_GUI_STATS_COORDS end
 	if o == "UIConfigstatslocation" then o = L_GUI_STATS_LOCATION end
 	if o == "UIConfigstatscurrency_archaeology" then o = L_GUI_STATS_CURRENCY_ARCHAEOLOGY end

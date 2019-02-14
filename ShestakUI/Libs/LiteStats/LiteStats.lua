@@ -28,7 +28,6 @@ local pairs = pairs
 local ipairs = ipairs
 local floor = math.floor
 local select = select
-local max = max
 local gsub = gsub
 
 -- Config
@@ -275,10 +274,11 @@ end
 ----------------------------------------------------------------------------------------
 if memory.enabled then
 	local function sortdesc(a, b) return a[2] > b[2] end
-	local function formatmem(val,dec)
+	local function formatmem(val, dec)
 		return format(format("%%.%df %s", dec or 1, val > 1024 and "MB" or "KB"), val / (val > 1024 and 1024 or 1))
 	end
 	local memoryt = {}
+	local isCPU = GetCVar("scriptProfile") == "1"
 	Inject("Memory", {
 		text = {
 			string = function(self)
@@ -299,19 +299,32 @@ if memory.enabled then
 			GameTooltip:ClearLines()
 			local lat, r = select(4, GetNetStats()), 750
 			GameTooltip:AddDoubleLine(
-				format("|cffffffff%s|r %s, %s%s|r %s", floor(GetFramerate()), FPS_ABBR, gradient(1 - lat / r), lat,MILLISECONDS_ABBR),
-				format("%s: |cffffffff%s", ADDONS, formatmem(self.text.total)), tthead.r, tthead.g, tthead.b, tthead.r, tthead.g,tthead.b)
+				format("|cffffffff%s|r %s, %s%s|r %s", floor(GetFramerate()), FPS_ABBR, gradient(1 - lat / r), lat, MILLISECONDS_ABBR),
+				format("%s: |cffffffff%s", ADDONS, formatmem(self.text.total)), tthead.r, tthead.g, tthead.b, tthead.r, tthead.g, tthead.b)
 			GameTooltip:AddLine(" ")
 			if memory.max_addons ~= 0 or IsAltKeyDown() then
+				if isCPU and IsControlKeyDown() then
+					self.timer = 5
+				end
 				if not self.timer or self.timer + 5 < time() then
-					self.timer = time()
-					UpdateMemUse()
-					for i = 1, #memoryt do memoryt[i] = nil end
-					for i = 1, GetNumAddOns() do
-						local addon, name = GetAddOnInfo(i)
-						if IsAddOnLoaded(i) then tinsert(memoryt, {name or addon, GetAddOnMemoryUsage(i)}) end
+					if isCPU and IsControlKeyDown() then
+						UpdateAddOnCPUUsage()
+						for i = 1, #memoryt do memoryt[i] = nil end
+						for i = 1, GetNumAddOns() do
+							local addon, name = GetAddOnInfo(i)
+							if IsAddOnLoaded(i) then tinsert(memoryt, {name or addon, GetAddOnCPUUsage(i)}) end
+						end
+						table.sort(memoryt, sortdesc)
+					else
+						self.timer = time()
+						UpdateMemUse()
+						for i = 1, #memoryt do memoryt[i] = nil end
+						for i = 1, GetNumAddOns() do
+							local addon, name = GetAddOnInfo(i)
+							if IsAddOnLoaded(i) then tinsert(memoryt, {name or addon, GetAddOnMemoryUsage(i)}) end
+						end
+						table.sort(memoryt, sortdesc)
 					end
-					table.sort(memoryt, sortdesc)
 				end
 				local exmem = 0
 				for i,t in ipairs(memoryt) do
@@ -319,12 +332,17 @@ if memory.enabled then
 						exmem = exmem + t[2]
 					else
 						local color = t[2] <= 102.4 and {0,1} -- 0 - 100
-							or t[2] <= 512 and {0.75,1} -- 100 - 512
-							or t[2] <= 1024 and {1,1} -- 512 - 1mb
-							or t[2] <= 2560 and {1,0.75} -- 1mb - 2.5mb
-							or t[2] <= 5120 and {1,0.5} -- 2.5mb - 5mb
-							or {1,0.1} -- 5mb +
-						GameTooltip:AddDoubleLine(t[1], formatmem(t[2]), 1, 1, 1, color[1], color[2], 0)
+							or t[2] <= 512 and {0.5,1} -- 100 - 512
+							or t[2] <= 1024 and {0.75,1} -- 512 - 1mb
+							or t[2] <= 2560 and {1,1} -- 1mb - 2.5mb
+							or t[2] <= 5120 and {1,0.75} -- 2.5mb - 5mb
+							or t[2] <= 8192 and {1,0.5} -- 5mb - 8mb
+							or {1,0.1} -- 8mb +
+						if isCPU and IsControlKeyDown() then
+							GameTooltip:AddDoubleLine(t[1], format("%d ms", t[2]), 1, 1, 1, color[1], color[2], 0)
+						else
+							GameTooltip:AddDoubleLine(t[1], formatmem(t[2]), 1, 1, 1, color[1], color[2], 0)
+						end
 					end
 				end
 				if exmem > 0 and not IsAltKeyDown() then
@@ -341,6 +359,12 @@ if memory.enabled then
 			end
 			GameTooltip:AddDoubleLine(L_STATS_MEMORY_USAGE, formatmem(gcinfo() - self.text.total), ttsubh.r, ttsubh.g, ttsubh.b, 1, 1, 1)
 			GameTooltip:AddDoubleLine(L_STATS_TOTAL_MEMORY_USAGE, formatmem(collectgarbage"count"), ttsubh.r, ttsubh.g, ttsubh.b, 1, 1, 1)
+			if isCPU then
+				self.totalCPU = 0
+				UpdateAddOnCPUUsage()
+				for i = 1, GetNumAddOns() do self.totalCPU = self.totalCPU + GetAddOnCPUUsage(i) end
+				GameTooltip:AddDoubleLine(L_STATS_TOTAL_CPU_USAGE, format("%d ms", self.totalCPU), ttsubh.r, ttsubh.g, ttsubh.b, 1, 1, 1)
+			end
 			GameTooltip:Show()
 		end,
 		--OnUpdate = AltUpdate,
@@ -377,7 +401,7 @@ if durability.enabled then
 			if durability.man then DurabilityFrame.Show = DurabilityFrame.Hide end
 			RegEvents(self, "UPDATE_INVENTORY_DURABILITY MERCHANT_SHOW PLAYER_LOGIN")
 		end,
-		OnEvent = function(self, event, ...)
+		OnEvent = function(self, event)
 			if event == "UPDATE_INVENTORY_DURABILITY" or event == "PLAYER_LOGIN" then
 				local dmin = 100
 				for id = 1, 18 do
@@ -855,7 +879,7 @@ if location.enabled then
 			GameTooltip:ClearAllPoints()
 			GameTooltip:SetPoint(modules.Location.tip_anchor, modules.Location.tip_frame, modules.Location.tip_x, modules.Location.tip_y)
 		end,
-		OnClick = function(self,button)
+		OnClick = function(self)
 			if IsShiftKeyDown() then
 				ChatEdit_ActivateChat(ChatEdit_ChooseBoxForSend())
 				ChatEdit_ChooseBoxForSend():Insert(format(" (%s: %s)", self.zone, Coords()))
@@ -898,7 +922,7 @@ if ping.enabled then
 			self.anim:SetDuration(2.8)
 			self.anim:SetStartDelay(5)
 			end,
-		OnEvent = function(self, event, unit)
+		OnEvent = function(self, _, unit)
 			if unit == P and ping.hide_self then return end
 				local class = (CUSTOM_CLASS_COLORS or RAID_CLASS_COLORS)[select(2, UnitClass(unit))]
 				self.text:SetText(format(ping.fmt, UnitName(unit)))
@@ -949,7 +973,7 @@ if guild.enabled then
 			self:RegisterEvent("GROUP_ROSTER_UPDATE")
 			self:RegisterEvent("GUILD_ROSTER_UPDATE")
 		end,
-		OnEvent = function(self, event)
+		OnEvent = function(self)
 			if self.hovered then
 				self:GetScript("OnEnter")(self)
 			end
@@ -977,7 +1001,7 @@ if guild.enabled then
 			elseif b == "RightButton" and IsInGuild() then
 				HideTT(self)
 
-				local classc, levelc, grouped
+				local grouped
 				local menuCountWhispers = 0
 				local menuCountInvites = 0
 
@@ -1090,7 +1114,7 @@ if friends.enabled then
 	local totalFriendsOnline = 0
 	local totalBattleNetOnline = 0
 	local BNTable = {}
-	local friendTable  = {}
+	local friendTable = {}
 	local function BuildFriendTable(total)
 		totalFriendsOnline = 0
 		wipe(friendTable)
@@ -1406,6 +1430,7 @@ end
 --	Talents
 ----------------------------------------------------------------------------------------
 if talents.enabled then
+	local lootSpecName, specName
 	local specList = {
 		{text = SPECIALIZATION, isTitle = true, notCheckable = true},
 		{notCheckable = true},
@@ -1413,70 +1438,120 @@ if talents.enabled then
 		{notCheckable = true},
 		{notCheckable = true}
 	}
+	local lootList = {
+		{text = SELECT_LOOT_SPECIALIZATION, isTitle = true, notCheckable = true},
+		{notCheckable = true, func = function() SetLootSpecialization(0) end},
+		{notCheckable = true},
+		{notCheckable = true},
+		{notCheckable = true},
+		{notCheckable = true}
+	}
 	Inject("Talents", {
 		OnLoad = function(self)
-			RegEvents(self, "PLAYER_LOGIN PLAYER_TALENT_UPDATE PLAYER_ENTERING_WORLD PLAYER_LEAVING_WORLD")
+			RegEvents(self, "PLAYER_ENTERING_WORLD PLAYER_TALENT_UPDATE PLAYER_LOOT_SPEC_UPDATED")
 		end,
-		OnEvent = function(self, event, ...)
-			if event == "PLAYER_ENTERING_WORLD" then
-				self:RegisterEvent("PLAYER_TALENT_UPDATE")
-			elseif event == "PLAYER_LEAVING_WORLD" then
-				self:UnregisterEvent("PLAYER_TALENT_UPDATE")
+		OnEvent = function(self)
+			if UnitLevel(P) < SHOW_SPEC_LEVEL then
+				self.text:SetText(format("%s %s", NO, SPECIALIZATION))
+				return
+			end
+
+			local lootSpec = GetLootSpecialization()
+			local spec = GetSpecialization()
+
+			lootSpecName = lootSpec and select(2, GetSpecializationInfoByID(lootSpec))
+			specName = spec and select(2, GetSpecializationInfo(spec))
+
+			local specIcon, lootIcon = "", ""
+			local lootText = LOOT
+
+			local _, _, _, specTex = GetSpecializationInfo(spec)
+			if specTex then
+				specIcon = format("|T%s:14:14:0:0:64:64:5:59:5:59|t", specTex)
+			end
+
+			if lootSpec == 0 then
+				lootIcon = specIcon
+				lootText = "|cff55ff55"..lootText.."|r"
+				lootSpecName = "|cff55ff55"..specName.."|r"
 			else
-				if UnitLevel(P) < 10 then
-					self.text:SetText(format("%s %s", NO, SPECIALIZATION))
-				else
-					local active = GetSpecialization()
-					if active then
-						self.text:SetText(select(2, GetSpecializationInfo(active)))
-					else
-						self.text:SetText(format("%s %s", NO, SPECIALIZATION))
-					end
-					if self.hovered then self:GetScript("OnEnter")(self) end
+				local _, _, _, texture = GetSpecializationInfoByID(lootSpec)
+				if texture then
+					lootIcon = format("|T%s:14:14:0:0:64:64:5:59:5:59|t", texture)
 				end
 			end
+
+			self.text:SetText(format("%s:%s  %s:%s", L_STATS_SPEC, specIcon, lootText, lootIcon))
+			if specIcon and C.font.stats_font_size ~= 15 and C.font.stats_font_size ~= 17 then
+				local point, relativeTo, relativePoint, xOfs = self.text:GetPoint()
+				self.text:SetPoint(point, relativeTo, relativePoint, xOfs, -1)
+			end
+			if self.hovered then self:GetScript("OnEnter")(self) end
 		end,
 		OnEnter = function(self)
 			self.hovered = true
-			if UnitLevel(P) >= 10 then
-				GameTooltip:SetOwner(self, talents.tip_anchor, talents.tip_x, talents.tip_y)
+			if UnitLevel(P) >= SHOW_SPEC_LEVEL then
+				GameTooltip:SetOwner(self, "ANCHOR_NONE")
+				GameTooltip:ClearAllPoints()
+				GameTooltip:SetPoint(modules.Talents.tip_anchor, modules.Talents.tip_frame, modules.Talents.tip_x, modules.Talents.tip_y)
 				GameTooltip:ClearLines()
-				GameTooltip:AddLine(SPECIALIZATION, tthead.r, tthead.g, tthead.b)
+				GameTooltip:AddLine(SPECIALIZATION.."/"..LOOT, tthead.r, tthead.g, tthead.b)
 				GameTooltip:AddLine(" ")
-				GameTooltip:AddLine(CHOOSE_SPECIALIZATION_NOW, 1, 1, 1, 1)
+				GameTooltip:AddDoubleLine(SPECIALIZATION, specName, ttsubh.r, ttsubh.g, ttsubh.b, 1, 1, 1)
+				GameTooltip:AddDoubleLine(LOOT, lootSpecName, ttsubh.r, ttsubh.g, ttsubh.b, 1, 1, 1)
 				GameTooltip:Show()
-			end
-			if C.toppanel.enable == true and C.toppanel.mouseover == true then
-				TopPanel:SetAlpha(1)
 			end
 		end,
 		OnLeave = function(self)
 			self.hovered = false
-			if C.toppanel.enable == true and C.toppanel.mouseover == true then
-				TopPanel:SetAlpha(0)
-			end
 		end,
-		OnClick = function(_, b)
-			if b == "RightButton" and GetSpecialization() then
-				for index = 1, 4 do
-					local id, name, _, texture = GetSpecializationInfo(index)
-					if id then
-						specList[index + 1].text = format('|T%s:14:14:0:0:64:64:4:60:4:60|t  %s', texture, name)
-						specList[index + 1].func = function() SetSpecialization(index) end
-					else
-						specList[index + 1] = nil
-					end
-				end
-				EasyMenu(specList, menuFrame, "cursor", -15, -7, "MENU", 2)
-			elseif b == "LeftButton" then
+		OnClick = function(self, b)
+			if UnitLevel(P) < SHOW_SPEC_LEVEL then
+				print("|cffffff00"..format(FEATURE_BECOMES_AVAILABLE_AT_LEVEL, SHOW_SPEC_LEVEL).."|r")
+				return
+			end
+			if b == "LeftButton" then
 				if not PlayerTalentFrame then
 					LoadAddOn("Blizzard_TalentUI")
 				end
-				if T.level >= SHOW_TALENT_LEVEL then
+				if IsShiftKeyDown() then
 					PlayerTalentFrame_Toggle()
 				else
-					print("|cffffff00"..format(FEATURE_BECOMES_AVAILABLE_AT_LEVEL, SHOW_TALENT_LEVEL).."|r")
+					for index = 1, 4 do
+						local id, name, _, texture = GetSpecializationInfo(index)
+						if id then
+							if GetSpecializationInfo(GetSpecialization()) == id then
+								name = "|cff55ff55"..name.."|r"
+							end
+							specList[index + 1].text = format("|T%s:"..t_icon..":"..t_icon..":0:0:64:64:5:59:5:59|t  %s", texture, name)
+							specList[index + 1].func = function() SetSpecialization(index) end
+						else
+							specList[index + 1] = nil
+						end
+					end
+					EasyMenu(specList, LSMenus, self, 0, 24, "MENU")
 				end
+			elseif b == "RightButton" and GetSpecialization() then
+				local lootSpec = GetLootSpecialization()
+				local _, specName = GetSpecializationInfo(GetSpecialization())
+				local specDefault = format(LOOT_SPECIALIZATION_DEFAULT, specName)
+				if lootSpec == 0 then
+					specDefault = "|cff55ff55"..format(LOOT_SPECIALIZATION_DEFAULT, specName).."|r"
+				end
+				lootList[2].text = specDefault
+				for index = 1, 4 do
+					local id, name, _, texture = GetSpecializationInfo(index)
+					if id then
+						if lootSpec == id then
+							name = "|cff55ff55"..name.."|r"
+						end
+						lootList[index + 2].text = format("|T%s:"..t_icon..":"..t_icon..":0:0:64:64:5:59:5:59|t  %s", texture, name)
+						lootList[index + 2].func = function() SetLootSpecialization(id) end
+					else
+						lootList[index + 2] = nil
+					end
+				end
+				EasyMenu(lootList, LSMenus, self, 0, 40, "MENU")
 			end
 		end
 	})
@@ -1620,9 +1695,9 @@ if experience.enabled then
 			or sub == "repname" and (t.faction_subs[repname] or repname)
 			or sub == "repcolor" and "|cff"..repcolor
 			or sub == "standing" and standingname
-			or sub == "currep" and abs(currep - minrep)
+			or sub == "currep" and (currep ~= maxrep and abs(currep - minrep) or currep > 0 and 1 or 0)
 			or sub == "repleft" and abs(maxrep - currep)
-			or sub == "maxrep" and abs(maxrep - minrep)
+			or sub == "maxrep" and (currep ~= maxrep and abs(maxrep - minrep) or maxrep > 0 and 1 or 0)
 			or sub == "rep%" and (currep ~= 0 and floor(abs(currep - minrep) / abs(maxrep - minrep) * 100) or 0)
 			-- artifact tags
 			or sub == "curart" and short(AzeritXP, tt)
@@ -1674,8 +1749,23 @@ if experience.enabled then
 				playedtotal, playedlevel = ...
 				playedmsg = GetTime()
 			elseif (event == "UPDATE_FACTION" or event == "PLAYER_LOGIN") and conf.ExpMode == "rep" then
-				local standing
-				repname, standing, minrep, maxrep, currep = GetWatchedFactionInfo()
+				local standing, factionID
+				repname, standing, minrep, maxrep, currep, factionID = GetWatchedFactionInfo()
+				local friendID, _, _, _, _, _, standingText, _, nextThreshold = GetFriendshipReputation(factionID)
+				if friendID then
+					if not nextThreshold then
+						minrep, maxrep, currep = 0, 1, 1
+					end
+					standing = 5
+				else
+					local value, nextThreshold = C_Reputation.GetFactionParagonInfo(factionID)
+					if value then
+						currep = value % nextThreshold
+						minrep = 0
+						maxrep = nextThreshold
+						standing = 8
+					end
+				end
 				if not repname then repname = NONE end
 				local color = {}
 				if standing == 0 then
@@ -1687,7 +1777,7 @@ if experience.enabled then
 				else
 					color = FACTION_BAR_COLORS[standing]
 				end
-				standingname = _G[format("FACTION_STANDING_LABEL%s%s", standing, UnitSex(P) == 3 and "_FEMALE" or "")]
+				standingname = standingText or _G[format("FACTION_STANDING_LABEL%s%s", standing, UnitSex(P) == 3 and "_FEMALE" or "")]
 				if not standingname then standingname = UNKNOWN end
 				repcolor = format("%02x%02x%02x", min(color.r * 255 + 40, 255), min(color.g * 255 + 40, 255), min(color.b * 255 + 40, 255))
 				self.text:SetText(gsub(experience.faction_fmt, "%[([%w%%]-)%]", tags))
@@ -1761,6 +1851,7 @@ if experience.enabled then
 				GameTooltip:AddDoubleLine(L_STATS_PLAYED_LEVEL, tags"playedlevel", ttsubh.r, ttsubh.g, ttsubh.b, 1, 1, 1)
 				GameTooltip:AddDoubleLine(L_STATS_PLAYED_TOTAL, tags"playedtotal", ttsubh.r, ttsubh.g, ttsubh.b, 1, 1, 1)
 			elseif conf.ExpMode == "rep" then
+				if repname == NONE then GameTooltip:Hide() return end
 				local desc, war, watched
 				for i = 1, GetNumFactions() do
 					_, desc, _, _, _, _, war, _, _, _, _, watched = GetFactionInfo(i)
@@ -1770,7 +1861,9 @@ if experience.enabled then
 				GameTooltip:AddLine(desc, ttsubh.r, ttsubh.g, ttsubh.b, 1)
 				GameTooltip:AddLine(" ")
 				GameTooltip:AddDoubleLine(format("%s%s", tags"repcolor", tags"standing"), war and format("|cffff5555%s", AT_WAR))
-				GameTooltip:AddDoubleLine(format("%s%% | %s/%s", tags"rep%", tags"currep", tags"maxrep"), -tags"repleft", ttsubh.r, ttsubh.g, ttsubh.b, 1, 0.33, 0.33)
+				if currep ~= maxrep then
+					GameTooltip:AddDoubleLine(format("%s%% | %s/%s", tags"rep%", tags"currep", tags"maxrep"), -tags"repleft", ttsubh.r, ttsubh.g, ttsubh.b, 1, 0.33, 0.33)
+				end
 			elseif conf.ExpMode == "art" then
 				local azeriteItemLocation = C_AzeriteItem and C_AzeriteItem.FindActiveAzeriteItem()
 				if azeriteItemLocation then
