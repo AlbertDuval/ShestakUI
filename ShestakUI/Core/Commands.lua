@@ -7,6 +7,7 @@ SlashCmdList.RELOADUI = function() ReloadUI() end
 SLASH_RELOADUI1 = "/rl"
 SLASH_RELOADUI2 = "/кд"
 SLASH_RELOADUI3 = "//"
+SLASH_RELOADUI4 = "/."
 
 SlashCmdList.RCSLASH = function() DoReadyCheck() end
 SLASH_RCSLASH1 = "/rc"
@@ -268,7 +269,9 @@ SlashCmdList["FRAMELIST"] = function(msg)
 	for i = 2, FrameStackTooltip:NumLines() do
 		local text = _G["FrameStackTooltipTextLeft"..i]:GetText()
 		if text and text ~= "" then
-			print("|cffFFD100"..text)
+			local r, g, b = _G["FrameStackTooltipTextLeft"..i]:GetTextColor()
+			text = format("|cff%02x%02x%02x%s|r", r * 255, g * 255, b * 255, text)
+			print(text)
 		end
 	end
 	print("|cffCC0000--------------------------------------------------------------------|r")
