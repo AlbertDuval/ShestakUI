@@ -11,7 +11,7 @@ local tthead = {r = 0.40, g = 0.78, b = 1}	-- Headers
 local ttsubh = {r = 0.75, g = 0.90, b = 1}	-- Subheaders
 
 -- Strata/Level for text objects
-local strata, level = "DIALOG", 20
+local strata, level = "MEDIUM", 20
 
 -- Globals
 local profiles = LPSTAT_PROFILES
@@ -651,7 +651,7 @@ if gold.enabled then
 				Currency(1020)	-- Secret of Draenor Blacksmithing
 			end
 
-			if C.stats.currency_raid and T.level >= 110 then
+			if C.stats.currency_raid and T.level == MAX_PLAYER_LEVEL then
 				IsSubTitle = 4
 				Currency(1580, false, true)	-- Seal of Wartorn Fate
 			end
@@ -817,16 +817,23 @@ if clock.enabled then
 					GameTooltip:AddDoubleLine(name, fmttime(reset), 1, 1, 1, 1, 1, 1)
 				end
 			end
-			if T.level >= 110 then
+			if T.level == MAX_PLAYER_LEVEL then
 				local c = 0
-				for _, q in ipairs({43892, 43893, 43894, 43895, 43896, 43897}) do
+				for _, q in ipairs({52834, 52835, 52837, 52838, 52839, 52840}) do
 					if IsQuestFlaggedCompleted(q) then
 						c = c + 1
 					end
 				end
+				local max = 2
+				local r, g, b = 1, 1, 1
+				if c == 0 then
+					r, g, b = 1, 0, 0
+				elseif c == 1 then
+					r, g, b = 1, 1, 0
+				end
 				GameTooltip:AddLine(" ")
 				GameTooltip:AddLine(MISCELLANEOUS, ttsubh.r, ttsubh.g, ttsubh.b)
-				GameTooltip:AddDoubleLine(L_STATS_SEALS..": ", c, 1, 1, 1, 1, 1, 1)
+				GameTooltip:AddDoubleLine(L_STATS_SEALS, format("%s/%s", c, max), 1, 1, 1, r, g, b)
 			end
 			GameTooltip:Show()
 		end,
@@ -1459,8 +1466,8 @@ if talents.enabled then
 			local lootSpec = GetLootSpecialization()
 			local spec = GetSpecialization()
 
-			lootSpecName = lootSpec and select(2, GetSpecializationInfoByID(lootSpec))
-			specName = spec and select(2, GetSpecializationInfo(spec))
+			lootSpecName = lootSpec and select(2, GetSpecializationInfoByID(lootSpec)) or NO
+			specName = spec and select(2, GetSpecializationInfo(spec)) or NO
 
 			local specIcon, lootIcon = "", ""
 			local lootText = LOOT
