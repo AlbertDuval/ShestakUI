@@ -76,7 +76,6 @@ L_GUI_AUTOMATION_AUTO_ROLE = "Active automatiquement l'affichage de votre rôle"
 L_GUI_AUTOMATION_CANCEL_BAD_BUFFS = "Annule automatiquement certains buffs"
 L_GUI_AUTOMATION_TAB_BINDER = "Active la touche Tab pour ne cibler que les personnages joueurs ennemis"
 L_GUI_AUTOMATION_LOGGING_COMBAT = "Active automatiquement l'enregistrement du journal de combat en raid"
-L_GUI_AUTOMATION_CURRENCY_CAP = "Active automatiquement une fenêtre d'alerte quand une monnaie/jeton atteint sa valeur maximale"
 L_GUI_AUTOMATION_BUFF_ON_SCROLL = "Lancement de sort via la molette souris"
 L_GUI_AUTOMATION_OPEN_ITEMS = "Ouverture automatique des objets dans les sacs"
 
@@ -86,7 +85,6 @@ L_GUI_SKINS_BLIZZARD = "Activer la personnalisation des fenêtres Blizzard"
 L_GUI_SKINS_MINIMAP_BUTTONS = "Activer la personnalisation des icônes de la minimap"
 L_GUI_SKINS_CLCR = "Activer la personnalisation pour CLCRet"
 L_GUI_SKINS_CLCP = "Activer la personnalisation pour CLCProt"
-L_GUI_SKINS_COMBUSTION_HELPER = "Activer la personnalisation pour CombustionHelper"
 L_GUI_SKINS_BW = "Activer la personnalisation pour BigWigs"
 L_GUI_SKINS_DBM = "Activer la personnalisation pour DBM"
 L_GUI_SKINS_DBM_MOVABLE = "Autoriser le déplacement des barres DBM"
@@ -144,7 +142,7 @@ L_GUI_COMBATTEXT_MERGE_AOE_SPAM = "Rassembler tous les dégâts d'un aoe en un s
 L_GUI_COMBATTEXT_MERGE_MELEE = "Rassemble les dégâts multiples en auto attaque"
 L_GUI_COMBATTEXT_DISPEL = "Affiche les sorts que vous avez dissipé"
 L_GUI_COMBATTEXT_INTERRUPT = "Affiche les sorts que vous avez interrompu"
-L_GUI_COMBATTEXT_DIRECTION = "Sens de défilement('haut'(vers le bas) ou 'bas'(vers le haut))"
+L_GUI_COMBATTEXT_DIRECTION = "Change scrolling direction from bottom to top" -- Need review
 L_GUI_COMBATTEXT_SHORT_NUMBERS = "Rendre plus lisible les nombres ('25.3k' au lieu de '25342')"
 
 -- Buffs reminder options
@@ -270,7 +268,6 @@ L_GUI_LOOT_AUTODE = "Confirmation automatique pour le désenchantement"
 L_GUI_NAMEPLATE_ENABLE = "Activer les barres de nom"
 L_GUI_NAMEPLATE_COMBAT = "Afficher automatiquement les barres de nom en combat"
 L_GUI_NAMEPLATE_HEALTH = "Valeur de points de vie"
-L_GUI_NAMEPLATE_CASTBAR = "Afficher la barre de sort"
 L_GUI_NAMEPLATE_HEIGHT = "Hauteur des barres de nom"
 L_GUI_NAMEPLATE_WIDTH = "Largeur des barres de nom"
 L_GUI_NAMEPLATE_DISTANCE = "Afficher les barres de vie pour des unités dans la portée spécifiée"
@@ -448,7 +445,6 @@ L_GUI_STATS_CURRENCY_ARCHAEOLOGY = "Afficher les fragments d'Archéologie dans l
 L_GUI_STATS_CURRENCY_COOKING = "Afficher les marques de Cuisine dans l'onglet des devises"
 L_GUI_STATS_CURRENCY_PROFESSIONS = "Afficher les marques de métiers dans l'onglet des devises"
 L_GUI_STATS_CURRENCY_RAID = "Afficher les sceaux de raid dans l'onglet des devises"
-L_GUI_STATS_CURRENCY_PVP = "Afficher les marques PvP dans l'onglet des devises"
 L_GUI_STATS_CURRENCY_MISCELLANEOUS = "Afficher les jetons/monnaie divers dans l'onglet des devises"
 
 -- Error options

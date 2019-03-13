@@ -185,7 +185,6 @@ local function LoadSkin()
 	PaperDollEquipmentManagerPaneSaveSet:SetWidth(PaperDollEquipmentManagerPaneSaveSet:GetWidth() - 8)
 	PaperDollEquipmentManagerPaneEquipSet:SetPoint("TOPLEFT", PaperDollEquipmentManagerPane, "TOPLEFT", 8, 0)
 	PaperDollEquipmentManagerPaneSaveSet:SetPoint("LEFT", PaperDollEquipmentManagerPaneEquipSet, "RIGHT", 4, 0)
-	PaperDollEquipmentManagerPaneEquipSet.ButtonBackground:SetTexture(nil)
 	PaperDollEquipmentManagerPane:HookScript("OnShow", function(self)
 		for x, object in pairs(PaperDollEquipmentManagerPane.buttons) do
 			object.BgTop:SetTexture(nil)
@@ -300,9 +299,11 @@ local function LoadSkin()
 
 	-- Currency
 	TokenFrame:HookScript("OnShow", function()
-		for i = 1, GetCurrencyListSize() do
-			local button = _G["TokenFrameContainerButton"..i]
+		local buttons = TokenFrameContainer.buttons
+		local numButtons = #buttons
 
+		for i = 1, numButtons do
+			local button = buttons[i]
 			if button then
 				button.highlight:Kill()
 				button.categoryMiddle:Kill()

@@ -76,7 +76,6 @@ L_GUI_AUTOMATION_AUTO_ROLE = "'Auto-imposta' il tuo ruolo"
 L_GUI_AUTOMATION_CANCEL_BAD_BUFFS = "'Auto-cancella' alcuni benefici"
 L_GUI_AUTOMATION_TAB_BINDER = "Usando il tasto TAB, consente di prendere come bersaglio soltanto nemici controllati da altri giocatori (se presenti)"
 L_GUI_AUTOMATION_LOGGING_COMBAT = "In instances da incursione, 'auto-attiva' la registrazione del Registro di combattimento in un file di testo"
-L_GUI_AUTOMATION_CURRENCY_CAP = "Popup automatico valuta massima raggiunta"
 L_GUI_AUTOMATION_BUFF_ON_SCROLL = "Lancia benefici con la rotellina del mouse"
 L_GUI_AUTOMATION_OPEN_ITEMS = "Apertura automatica degli oggetti nelle sacche"
 
@@ -86,7 +85,6 @@ L_GUI_SKINS_BLIZZARD = "Attiva il restyling dei riquadri Blizzard"
 L_GUI_SKINS_MINIMAP_BUTTONS = "Attiva il restyling dei pulsanti delle AddOns sulla minimappa"
 L_GUI_SKINS_CLCR = "Attiva il restyling di CLCRet"
 L_GUI_SKINS_CLCP = "Attiva il restyling di CLCProt"
-L_GUI_SKINS_COMBUSTION_HELPER = "Attiva il restyling di CombustionHelper"
 L_GUI_SKINS_BW = "Attiva il restyling di BigWigs"
 L_GUI_SKINS_DBM = "Attiva il restyling di DBM"
 L_GUI_SKINS_DBM_MOVABLE = "Consenti di poter spostare le barre di DBM"
@@ -144,7 +142,7 @@ L_GUI_COMBATTEXT_MERGE_AOE_SPAM = "Unisci lo spam per danni multipli a più bers
 L_GUI_COMBATTEXT_MERGE_MELEE = "Unifica lo spam di attacchi automatici multipli"
 L_GUI_COMBATTEXT_DISPEL = "Comunica le tue dissoluzioni (dispels)"
 L_GUI_COMBATTEXT_INTERRUPT = "Comunica le tue interruzioni (interrupts)"
-L_GUI_COMBATTEXT_DIRECTION = "Direzione di scorrimento ('sù' (vai in basso) o 'giù' (vai in alto))"
+L_GUI_COMBATTEXT_DIRECTION = "Change scrolling direction from bottom to top" -- Need review
 L_GUI_COMBATTEXT_SHORT_NUMBERS = "Usa abbreviazioni numeriche ('25.3k' invece di '25342')"
 
 -- Buffs reminder options
@@ -270,7 +268,6 @@ L_GUI_LOOT_AUTODE = "'Auto-conferma' il disincantamento degli oggetti"
 L_GUI_NAMEPLATE_ENABLE = "Attiva le barre delle unità"
 L_GUI_NAMEPLATE_COMBAT = "Mostra automaticamente le barre delle unità in combattimento"
 L_GUI_NAMEPLATE_HEALTH = "Valore numerico della salute"
-L_GUI_NAMEPLATE_CASTBAR = "Mostra le barre incantesimi delle barre delle unità"
 L_GUI_NAMEPLATE_HEIGHT = "Altezza delle barre delle unità"
 L_GUI_NAMEPLATE_WIDTH = "Larghezza delle barre delle unità"
 L_GUI_NAMEPLATE_DISTANCE = "Mostra le barre delle unità per le unità entro questo raggio"
@@ -448,7 +445,6 @@ L_GUI_STATS_CURRENCY_ARCHAEOLOGY = "Mostra i frammenti di archeologia sotto la l
 L_GUI_STATS_CURRENCY_COOKING = "Mostra le ricompense di cucina sotto la linguetta della valuta"
 L_GUI_STATS_CURRENCY_PROFESSIONS = "Mostra i gettoni delle professioni sotto la linguetta della valuta"
 L_GUI_STATS_CURRENCY_RAID = "Mostra i sigilli delle incursioni"
-L_GUI_STATS_CURRENCY_PVP = "Mostra la valuta PvP sotto la linguetta della valuta"
 L_GUI_STATS_CURRENCY_MISCELLANEOUS = "Mostra valuta varia sotto la linguetta della valuta"
 
 -- Error options

@@ -76,7 +76,6 @@ L_GUI_AUTOMATION_AUTO_ROLE = "自動設定角色類型"
 L_GUI_AUTOMATION_CANCEL_BAD_BUFFS = "自動取消非增益性質的Buff"
 L_GUI_AUTOMATION_TAB_BINDER = "Tab只選定玩家"
 L_GUI_AUTOMATION_LOGGING_COMBAT = "團隊副本時自動開啟戰鬥記錄"
-L_GUI_AUTOMATION_CURRENCY_CAP = "自動彈出貨幣提示框"
 L_GUI_AUTOMATION_BUFF_ON_SCROLL = "使用滑鼠滾輪施放Buff"
 L_GUI_AUTOMATION_OPEN_ITEMS = "自動打開背包中的封裝物品"
 
@@ -86,7 +85,6 @@ L_GUI_SKINS_BLIZZARD = "暴雪默認介面"
 L_GUI_SKINS_MINIMAP_BUTTONS = "小地圖插件圖示"
 L_GUI_SKINS_CLCR = "CLCRet"
 L_GUI_SKINS_CLCP = "CLCProt"
-L_GUI_SKINS_COMBUSTION_HELPER = "CombustionHelper"
 L_GUI_SKINS_BW = "BigWigs"
 L_GUI_SKINS_DBM = "DBM"
 L_GUI_SKINS_DBM_MOVABLE = "Allow to move DBM bars" -- Need review
@@ -144,7 +142,7 @@ L_GUI_COMBATTEXT_MERGE_AOE_SPAM = "將AOE傷害合併為一條信息"
 L_GUI_COMBATTEXT_MERGE_MELEE = "將多個自動攻擊傷害合併為一條信息"
 L_GUI_COMBATTEXT_DISPEL = "當你驅散成功時提示"
 L_GUI_COMBATTEXT_INTERRUPT = "當你斷法成功時提示"
-L_GUI_COMBATTEXT_DIRECTION = "滾動方向('top'(向上) or 'bottom'(向下))"
+L_GUI_COMBATTEXT_DIRECTION = "Change scrolling direction from bottom to top" -- Need review
 L_GUI_COMBATTEXT_SHORT_NUMBERS = "數值以K為單位顯示"
 
 -- Buffs reminder options
@@ -270,7 +268,6 @@ L_GUI_LOOT_AUTODE = "自動選擇分解"
 L_GUI_NAMEPLATE_ENABLE = "開啟單位名條增強"
 L_GUI_NAMEPLATE_COMBAT = "戰鬥中自動顯示單位名條"
 L_GUI_NAMEPLATE_HEALTH = "生命值以百分比顯示"
-L_GUI_NAMEPLATE_CASTBAR = "施法條"
 L_GUI_NAMEPLATE_HEIGHT = "單位名條高度"
 L_GUI_NAMEPLATE_WIDTH = "單位名條寬度"
 L_GUI_NAMEPLATE_DISTANCE = "Show nameplates for units within this range" -- Need review
@@ -448,7 +445,6 @@ L_GUI_STATS_CURRENCY_ARCHAEOLOGY = "考古學"
 L_GUI_STATS_CURRENCY_COOKING = "烹飪"
 L_GUI_STATS_CURRENCY_PROFESSIONS = "專業技能"
 L_GUI_STATS_CURRENCY_RAID = "副本代幣"
-L_GUI_STATS_CURRENCY_PVP = "PvP代幣"
 L_GUI_STATS_CURRENCY_MISCELLANEOUS = "其他"
 
 -- Error options

@@ -122,7 +122,6 @@
 	<Script file="Modules\Automation\AutoRelease.lua"/>
 	<Script file="Modules\Automation\BuffOnScroll.lua"/>
 	<Script file="Modules\Automation\CancelBadBuffs.lua"/>
-	<Script file="Modules\Automation\CurrencyCap.lua"/>
 	<Script file="Modules\Automation\DeclineDuel.lua"/>
 	<Script file="Modules\Automation\LoggingCombat.lua"/>
 	<Script file="Modules\Automation\Screenshots.lua"/>
@@ -204,7 +203,6 @@
 	<Script file="Modules\Skins\CLCProt.lua"/>
 	<Script file="Modules\Skins\CLCRet.lua"/>
 	<Script file="Modules\Skins\Clique.lua"/>
-	<Script file="Modules\Skins\CombustionHelper.lua"/>
 	<Script file="Modules\Skins\CoolLine.lua"/>
 	<Script file="Modules\Skins\DBM.lua"/>
 	<Script file="Modules\Skins\Dominos.lua"/>

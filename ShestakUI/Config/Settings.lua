@@ -103,7 +103,6 @@ C["automation"] = {
 	["cancel_bad_buffs"] = false,				-- Auto cancel various buffs
 	["tab_binder"] = true,						-- Auto change Tab key to only target enemy players
 	["logging_combat"] = false,					-- Auto enables combat log text file in raid instances
-	["currency_cap"] = false,					-- Auto popup for currency cap
 	["buff_on_scroll"] = false,					-- Cast buff on mouse scroll (from the list)
 	["open_items"] = false,						-- Auto opening of items in bag
 }
@@ -114,38 +113,37 @@ C["automation"] = {
 C["skins"] = {
 	["blizzard_frames"] = true,				-- Blizzard frames skin
 	["minimap_buttons"] = true,				-- Skin addons icons on minimap
+	["ace3"] = false,							-- Ace3 options elements skin
+	["arh"] = false,							-- Archaeology Helper skin
+	["atlasloot"] = false,						-- AtlasLoot skin
+	["bigwigs"] = false,						-- BigWigs skin
+	["blood_shield_tracker"] = false,			-- BloodShieldTracker skin
+	["capping"] = false,						-- Capping skin
 	["clcprot"] = false,						-- CLCProt skin
 	["clcret"] = false,							-- CLCRet skin
-	["combustion_helper"] = false,				-- CombustionHelper skin
-	["bigwigs"] = false,						-- BigWigs skin
+	["clique"] = false,							-- Clique skin
+	["cool_line"] = false,						-- CoolLine skin
 	["dbm"] = false,							-- DBM skin
 	["dbm_movable"] = false,					-- Allow to move DBM bars
-	["dxe"] = false,							-- DXE skin
-	["omen"] = false,							-- Omen skin
-	["recount"] = true,						-- Recount skin
-	["blood_shield_tracker"] = false,			-- BloodShieldTracker skin
 	["dominos"] = false,						-- Dominos skin
-	["flyout_button"] = false,					-- FlyoutButtonCustom skin
-	["nug_running"] = false,					-- NugRunning skin
-	["ovale"] = false,							-- OvaleSpellPriority skin
-	["clique"] = false,							-- Clique skin
-	["ace3"] = false,							-- Ace3 options elements skin
-	["capping"] = false,						-- Capping skin
-	["cool_line"] = false,						-- CoolLine skin
-	["atlasloot"] = false,						-- AtlasLoot skin
-	["tiny_dps"] = false,						-- TinyDPS skin
+	["dxe"] = false,							-- DXE skin
 	["face_shooter"] = false,					-- FaceShooter skin
+	["flyout_button"] = false,					-- FlyoutButtonCustom skin
+	["ls_toasts"] = false,						-- Is: Toasts skin
 	["mage_nuggets"] = false,					-- MageNuggets skin
+	["my_role_play"] = false,					-- MyRolePlay skin
 	["npcscan"] = false,						-- NPCScan skin
+	["nug_running"] = false,					-- NugRunning skin
+	["omen"] = false,							-- Omen skin
+	["opie"] = false,							-- OPie skin
+	["ovale"] = false,							-- OvaleSpellPriority skin
+	["postal"] = false,							-- Postal skin
+	["recount"] = false,						-- Recount skin
+	["rematch"] = false,						-- Rematch skin
+	["skada"] = false,							-- Skada skin
+	["tiny_dps"] = false,						-- TinyDPS skin
 	["vanaskos"] = false,						-- VanasKoS skin
 	["weak_auras"] = false,						-- WeakAuras skin
-	["skada"] = false,							-- Skada skin
-	["my_role_play"] = false,					-- MyRolePlay skin
-	["arh"] = false,							-- Archaeology Helper skin
-	["postal"] = false,							-- Postal skin
-	["opie"] = false,							-- OPie skin
-	["rematch"] = false,						-- Rematch skin
-	["ls_toasts"] = false,						-- Is: Toasts skin
 }
 
 ----------------------------------------------------------------------------------------
@@ -177,7 +175,7 @@ C["combattext"] = {
 	["merge_melee"] = true,						-- Merges multiple auto attack damage spam
 	["dispel"] = true,							-- Tells you about your dispels(works only with ["damage"] = true)
 	["interrupt"] = true,						-- Tells you about your interrupts(works only with ["damage"] = true)
-	["direction"] = "bottom",					-- Scrolling Direction("top"(goes down) or "bottom"(goes up))
+	["direction"] = true,						-- Change scrolling direction from bottom to top
 	["short_numbers"] = true,					-- Use short numbers ("25.3k" instead of "25342")
 }
 
@@ -572,7 +570,6 @@ C["stats"] = {
 	["currency_cooking"] = true,				-- Show Cooking Awards under currency tab
 	["currency_professions"] = true,			-- Show Profession Tokens under currency tab
 	["currency_raid"] = true,					-- Show Seals under currency tab
-	["currency_pvp"] = true,					-- Show PvP Currency under currency tab
 	["currency_misc"] = true,					-- Show Miscellaneous Currency under currency tab
 }
 

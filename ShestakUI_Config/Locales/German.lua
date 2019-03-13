@@ -76,7 +76,6 @@ L_GUI_AUTOMATION_AUTO_ROLE = "Automatisch die eigene Rolle wählen"
 L_GUI_AUTOMATION_CANCEL_BAD_BUFFS = "Automatisch einige Buffs abbrechen"
 L_GUI_AUTOMATION_TAB_BINDER = "Automatisch nur feindliche Spieler mit der TAB Taste anvisieren"
 L_GUI_AUTOMATION_LOGGING_COMBAT = "Automatisch Kampflog in Raids als Textdatei mitschreiben"
-L_GUI_AUTOMATION_CURRENCY_CAP = "Auto Popup beim Marken Limit"
 L_GUI_AUTOMATION_BUFF_ON_SCROLL = "Wirke Stärkungszauber mit Mausrad"
 L_GUI_AUTOMATION_OPEN_ITEMS = "Öffnet Automatisch Items in der Tasche"
 
@@ -86,7 +85,6 @@ L_GUI_SKINS_BLIZZARD = "Aktiviere Styles für Blizzardfenster"
 L_GUI_SKINS_MINIMAP_BUTTONS = "Aktiviere styling Addonincons an der Minimap"
 L_GUI_SKINS_CLCR = "CLCRet Design aktivieren"
 L_GUI_SKINS_CLCP = "CLCProt Design aktivieren"
-L_GUI_SKINS_COMBUSTION_HELPER = "CombustionHelper Design aktivieren"
 L_GUI_SKINS_BW = "BigWigs Design aktivieren"
 L_GUI_SKINS_DBM = "DBM Design aktivieren"
 L_GUI_SKINS_DBM_MOVABLE = "Erlaube das bewegen der DBM Leisten"
@@ -144,7 +142,7 @@ L_GUI_COMBATTEXT_MERGE_AOE_SPAM = "Vereint mehrfachen Flächenschaden in eine ei
 L_GUI_COMBATTEXT_MERGE_MELEE = "Fügt mehrfachen automatischen Angriffsschaden-Spam zusammen"
 L_GUI_COMBATTEXT_DISPEL = "Informiert dich über deine Bannungen"
 L_GUI_COMBATTEXT_INTERRUPT = "Informiert dich über deine Unterbrechungen"
-L_GUI_COMBATTEXT_DIRECTION = "Bildlaufrichtung 'top'(hoch) oder 'bottom'(runter)"
+L_GUI_COMBATTEXT_DIRECTION = "Change scrolling direction from bottom to top" -- Need review
 L_GUI_COMBATTEXT_SHORT_NUMBERS = "Zeige kurze Zahlen an ('25.3k' statt '25342')"
 
 -- Buffs reminder options
@@ -270,7 +268,6 @@ L_GUI_LOOT_AUTODE = "Entzauberung automatisch bestätigen"
 L_GUI_NAMEPLATE_ENABLE = "Namensplaketten aktivieren"
 L_GUI_NAMEPLATE_COMBAT = "Namensplaketten automatisch im Kampf anzeigen"
 L_GUI_NAMEPLATE_HEALTH = "Numerischer Wert der Lebenspunkte"
-L_GUI_NAMEPLATE_CASTBAR = "Zeige Zauberleiste an der Namensplakette"
 L_GUI_NAMEPLATE_HEIGHT = "Höhe der Namensplakette"
 L_GUI_NAMEPLATE_WIDTH = "Breite der Namensplakette"
 L_GUI_NAMEPLATE_DISTANCE = "Show nameplates for units within this range" -- Need review
@@ -448,7 +445,6 @@ L_GUI_STATS_CURRENCY_ARCHAEOLOGY = "Zeige Archäologie Fragmente"
 L_GUI_STATS_CURRENCY_COOKING = "Zeige Kochpreise/Marken"
 L_GUI_STATS_CURRENCY_PROFESSIONS = "Zeige Berufeabzeichen/Tokens"
 L_GUI_STATS_CURRENCY_RAID = "Zeige Schlatzugs Siegel/Bonuswürffe"
-L_GUI_STATS_CURRENCY_PVP = "Zeige PvP Abzeichen an"
 L_GUI_STATS_CURRENCY_MISCELLANEOUS = "Zeige sonstige Abzeichen an"
 
 -- Error options
