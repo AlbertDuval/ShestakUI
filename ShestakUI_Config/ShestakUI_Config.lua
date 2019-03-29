@@ -111,12 +111,9 @@ local function Local(o)
 	if o == "UIConfigskins" then o = L_GUI_SKINS end
 	if o == "UIConfigskinsblizzard_frames" then o = L_GUI_SKINS_BLIZZARD end
 	if o == "UIConfigskinsminimap_buttons" then o = L_GUI_SKINS_MINIMAP_BUTTONS end
-	if o == "UIConfigskinsclcret" then o = L_GUI_SKINS_CLCR end
-	if o == "UIConfigskinsclcprot" then o = L_GUI_SKINS_CLCP end
 	if o == "UIConfigskinsbigwigs" then o = L_GUI_SKINS_BW end
 	if o == "UIConfigskinsdbm" then o = L_GUI_SKINS_DBM end
 	if o == "UIConfigskinsdbm_movable" then o = L_GUI_SKINS_DBM_MOVABLE end
-	if o == "UIConfigskinsdxe" then o = L_GUI_SKINS_DXE end
 	if o == "UIConfigskinsomen" then o = L_GUI_SKINS_OMEN end
 	if o == "UIConfigskinsrecount" then o = L_GUI_SKINS_RECOUNT end
 	if o == "UIConfigskinsblood_shield_tracker" then o = L_GUI_SKINS_BLOOD_SHIELD_TRACKER end
@@ -130,14 +127,12 @@ local function Local(o)
 	if o == "UIConfigskinscool_line" then o = L_GUI_SKINS_COOL_LINE end
 	if o == "UIConfigskinsatlasloot" then o = L_GUI_SKINS_ATLASLOOT end
 	if o == "UIConfigskinstiny_dps" then o = L_GUI_SKINS_TINY_DPS end
-	if o == "UIConfigskinsface_shooter" then o = L_GUI_SKINS_FACE_SHOOTER end
 	if o == "UIConfigskinsmage_nuggets" then o = L_GUI_SKINS_MAGE_NUGGETS end
 	if o == "UIConfigskinsnpcscan" then o = L_GUI_SKINS_NPCSCAN end
 	if o == "UIConfigskinsvanaskos" then o = L_GUI_SKINS_VANASKOS end
 	if o == "UIConfigskinsweak_auras" then o = L_GUI_SKINS_WEAK_AURAS end
 	if o == "UIConfigskinsskada" then o = L_GUI_SKINS_SKADA end
 	if o == "UIConfigskinsmy_role_play" then o = L_GUI_SKINS_MY_ROLE_PLAY end
-	if o == "UIConfigskinsarh" then o = L_GUI_SKINS_ARH end
 	if o == "UIConfigskinspostal" then o = L_GUI_SKINS_POSTAL end
 	if o == "UIConfigskinsopie" then o = L_GUI_SKINS_OPIE end
 	if o == "UIConfigskinsrematch" then o = L_GUI_SKINS_REMATCH end
