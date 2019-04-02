@@ -22,4 +22,3 @@ Locales\Spanish.lua
 Locales\Taiwan.lua
 
 Options.lua
-# ShestakUI_Config.lua
