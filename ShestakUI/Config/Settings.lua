@@ -29,10 +29,9 @@ C["media"] = {
 --	General options
 ----------------------------------------------------------------------------------------
 C["general"] = {
-	["auto_scale"] = true,						-- Autoscale
-	["uiscale"] = 0.96,							-- Your value(between 0.64 and 1) if "auto_scale" is disable
 	["welcome_message"] = true,					-- Enable welcome message in chat
-	["custom_lagtolerance"] = false,			-- Custom lag tolerance to your latency
+	["auto_scale"] = true,						-- Autoscale
+	["uiscale"] = 0.96,							-- Your value(between 0.2 and 1) if "auto_scale" is disable
 }
 
 ----------------------------------------------------------------------------------------
@@ -64,6 +63,7 @@ C["misc"] = {
 	["hide_banner"] = true,						-- Hide Boss Banner Loot Frame
 	["hide_talking_head"] = false,				-- Hide Talking Head Frame
 	["hide_raid_button"] = false,				-- Hide button for oUF_RaidDPS (top left mouseover)
+	["custom_lagtolerance"] = false,			-- Custom lag tolerance to your latency
 }
 
 ----------------------------------------------------------------------------------------
@@ -82,7 +82,7 @@ C["announcements"] = {
 	["flask_food_raid"] = false,				-- Announce to raid channel
 	["feasts"] = true,							-- Announce Feasts/Souls/Repair Bots cast
 	["portals"] = true,						-- Announce Portals/Ritual of Summoning cast
-	["bad_gear"] = true,						-- Check bad gear in instance
+	["bad_gear"] = false,						-- Check bad gear in instance
 	["safari_hat"] = true,						-- Check Safari Hat
 }
 
@@ -184,7 +184,7 @@ C["reminder"] = {
 	["solo_buffs_size"] = 45,					-- Icon size
 	-- Raid buffs
 	["raid_buffs_enable"] = true,				-- Show missing raid buffs
-	["raid_buffs_always"] = true,				-- Show frame always
+	["raid_buffs_always"] = false,				-- Show frame always (default show only in raid)
 	["raid_buffs_size"] = 19.2,					-- Icon size
 	["raid_buffs_alpha"] = 0,					-- Transparent icons when the buff is present
 }
@@ -471,11 +471,11 @@ C["unitframe"] = {
 	-- Plugins
 	["plugins_gcd"] = false,					-- Global cooldown spark on player frame
 	["plugins_swing"] = false,					-- Swing bar
-	["plugins_reputation_bar"] = true,			-- Reputation bar
-	["plugins_experience_bar"] = true,			-- Experience bar
-	["plugins_artifact_bar"] = true,			-- Artefact Power bar
+	["plugins_reputation_bar"] = true,			-- Reputation bar (left from player frame by mouseover)
+	["plugins_experience_bar"] = true,			-- Experience bar (left from player frame by mouseover)
+	["plugins_artifact_bar"] = true,			-- Artifact Power bar (left from player frame by mouseover)
 	["plugins_smooth_bar"] = true,				-- Smooth bar
-	["plugins_enemy_spec"] = true,				-- Enemy specialization
+	["plugins_enemy_spec"] = true,				-- Enemy specialization in BG and Arena
 	["plugins_combat_feedback"] = true,		-- Combat text on player/target frame
 	["plugins_fader"] = true,					-- Fade unit frames
 	["plugins_diminishing"] = true,			-- Diminishing Returns icons on arena frames
@@ -561,11 +561,12 @@ C["stats"] = {
 	["talents"] = true,							-- Specialization
 	["coords"] = true,							-- Coords
 	["location"] = true,						-- Location
-	["currency_archaeology"] = false,			-- Show Archaeology Fragments under currency tab
-	["currency_cooking"] = true,				-- Show Cooking Awards under currency tab
-	["currency_professions"] = true,			-- Show Profession Tokens under currency tab
-	["currency_raid"] = true,					-- Show Seals under currency tab
-	["currency_misc"] = true,					-- Show Miscellaneous Currency under currency tab
+	-- Currency (displayed in gold stats)
+	["currency_archaeology"] = false,			-- Archaeology Fragments
+	["currency_cooking"] = true,				-- Cooking Awards
+	["currency_professions"] = true,			-- Profession Tokens
+	["currency_raid"] = true,					-- Raid Seals
+	["currency_misc"] = true,					-- Miscellaneous Currency
 }
 
 ----------------------------------------------------------------------------------------
