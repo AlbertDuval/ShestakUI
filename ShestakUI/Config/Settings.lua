@@ -35,35 +35,141 @@ C["general"] = {
 }
 
 ----------------------------------------------------------------------------------------
---	Miscellaneous options
+--	Skins options
 ----------------------------------------------------------------------------------------
-C["misc"] = {
-	["shift_marking"] = true,					-- Marks target when you push Shift
-	["invite_keyword"] = "invite",				-- Short keyword for invite(for enable - in game type /ainv)
-	["afk_spin_camera"] = false,				-- Spin camera while afk
-	["vehicle_mouseover"] = false,				-- Vehicle frame on mouseover
-	["quest_auto_button"] = false,				-- Quest/item auto button (from the list)
-	["raid_tools"] = true,						-- Raid tools
-	["profession_tabs"] = true,					-- Professions tabs on TradeSkill frames
-	["hide_bg_spam"] = false,					-- Remove Boss Emote spam during BG("Arathi Basin" and "The Battle for Gilneas")
-	["item_level"] = true,						-- Item level on character slot buttons
-	["already_known"] = true,					-- Colorizes recipes/mounts/pets/toys that is already known
-	["disenchanting"] = false,					-- Milling, Prospecting and Disenchanting by Alt + click
-	["sum_buyouts"] = true,					-- Sum up all current auctions
-	["click_cast"] = false,						-- Simple click2cast spell binder
-	["click_cast_filter"] = false,				-- Ignore Player and Target frames for click2cast
-	["move_blizzard"] = false,					-- Move some Blizzard frames
-	["color_picker"] = false,					-- Improved ColorPicker
-	["enchantment_scroll"] = true,				-- Enchantment scroll on TradeSkill frame
-	["archaeology"] = false,					-- Archaeology artifacts and cooldown
-	["chars_currency"] = false,					-- Tracks your currency tokens across multiple characters
-	["armory_link"] = true,					-- Add Armory link in UnitPopupMenus (It breaks set focus)
-	["merchant_itemlevel"] = false,				-- Show item level for weapons and armor in merchant
-	["minimize_mouseover"] = false,				-- Mouseover for quest minimize button
-	["hide_banner"] = true,						-- Hide Boss Banner Loot Frame
-	["hide_talking_head"] = false,				-- Hide Talking Head Frame
-	["hide_raid_button"] = false,				-- Hide button for oUF_RaidDPS (top left mouseover)
-	["custom_lagtolerance"] = false,			-- Custom lag tolerance to your latency
+C["skins"] = {
+	["blizzard_frames"] = true,				-- Blizzard frames skin
+	["minimap_buttons"] = true,				-- Skin addons icons on minimap
+	["ace3"] = false,							-- Ace3 options elements skin
+	["atlasloot"] = false,						-- AtlasLoot skin
+	["bigwigs"] = false,						-- BigWigs skin
+	["blood_shield_tracker"] = false,			-- BloodShieldTracker skin
+	["capping"] = false,						-- Capping skin
+	["clique"] = false,							-- Clique skin
+	["cool_line"] = false,						-- CoolLine skin
+	["dbm"] = false,							-- DBM skin
+	["dbm_movable"] = false,					-- Allow to move DBM bars
+	["dominos"] = false,						-- Dominos skin
+	["flyout_button"] = false,					-- FlyoutButtonCustom skin
+	["ls_toasts"] = false,						-- Is: Toasts skin
+	["mage_nuggets"] = false,					-- MageNuggets skin
+	["my_role_play"] = false,					-- MyRolePlay skin
+	["npcscan"] = false,						-- NPCScan skin
+	["nug_running"] = false,					-- NugRunning skin
+	["omen"] = false,							-- Omen skin
+	["opie"] = false,							-- OPie skin
+	["ovale"] = false,							-- OvaleSpellPriority skin
+	["postal"] = false,							-- Postal skin
+	["recount"] = false,						-- Recount skin
+	["rematch"] = false,						-- Rematch skin
+	["skada"] = false,							-- Skada skin
+	["tiny_dps"] = false,						-- TinyDPS skin
+	["vanaskos"] = false,						-- VanasKoS skin
+	["weak_auras"] = false,						-- WeakAuras skin
+}
+
+----------------------------------------------------------------------------------------
+--	Unit Frames options
+----------------------------------------------------------------------------------------
+C["unitframe"] = {
+	-- Main
+	["enable"] = true,							-- Enable unit frames
+	["own_color"] = false,						-- Set your color for health bars
+	["uf_color"] = {0.4, 0.4, 0.4},				-- Color for UF if ["own_color"] = true
+	["enemy_health_color"] = true,				-- If enable, enemy target color is red
+	["show_total_value"] = false,				-- Display of info text on player and target with XXXX/Total
+	["color_value"] = false,					-- Health/mana value is colored
+	["bar_color_value"] = false,				-- Health bar color by current health remaining
+	["lines"] = true,							-- Show Player and Target lines
+	-- Cast bars
+	["unit_castbar"] = true,					-- Show castbars
+	["castbar_icon"] = false,					-- Show castbar icons
+	["castbar_latency"] = true,					-- Castbar latency
+	["castbar_ticks"] = true,					-- Castbar ticks
+	-- Frames
+	["show_pet"] = true,						-- Show pet frame
+	["show_focus"] = true,						-- Show focus frame
+	["show_target_target"] = true,				-- Show target target frame
+	["show_boss"] = true,						-- Show boss frames
+	["boss_on_right"] = true,					-- Boss frames on the right
+	["show_arena"] = true,						-- Show arena frames
+	["arena_on_right"] = true,					-- Arena frames on the right
+	["boss_debuffs"] = 0,						-- Number of debuffs on the boss frames
+	["boss_buffs"] = 3,							-- Number of buffs on the boss frames
+	-- Icons
+	["icons_pvp"] = true,						-- Mouseover PvP text(not icons) on player and target frames
+	["icons_combat"] = true,					-- Combat icon
+	["icons_resting"] = true,					-- Resting icon for low lvl chars
+	-- Portraits
+	["portrait_enable"] = false,				-- Enable player/target portraits
+	["portrait_classcolor_border"] = true,		-- Enable classcolor border
+	["portrait_height"] = 92,					-- Portrait height
+	["portrait_width"] = 67,					-- Portrait width
+	-- Plugins
+	["plugins_gcd"] = false,					-- Global cooldown spark on player frame
+	["plugins_swing"] = false,					-- Swing bar
+	["plugins_reputation_bar"] = true,			-- Reputation bar (left from player frame by mouseover)
+	["plugins_experience_bar"] = true,			-- Experience bar (left from player frame by mouseover)
+	["plugins_artifact_bar"] = true,			-- Artifact Power bar (left from player frame by mouseover)
+	["plugins_smooth_bar"] = true,				-- Smooth bar
+	["plugins_enemy_spec"] = true,				-- Enemy specialization in BG and Arena
+	["plugins_combat_feedback"] = true,		-- Combat text on player/target frame
+	["plugins_fader"] = true,					-- Fade unit frames
+	["plugins_diminishing"] = true,			-- Diminishing Returns icons on arena frames
+	["plugins_power_prediction"] = false,		-- Power cost prediction bar on player frame
+}
+
+----------------------------------------------------------------------------------------
+--	Unit Frames Class bar options
+----------------------------------------------------------------------------------------
+C["unitframe_class_bar"] = {
+	["combo"] = true,							-- Rogue/Druid Combo bar
+	["combo_always"] = false,					-- Always show Combo bar for Druid
+	["combo_old"] = false,						-- Show combo point on the target
+	["arcane"] = true,							-- Arcane Charge bar
+	["chi"] = true,								-- Chi bar
+	["stagger"] = true,							-- Stagger bar (for Monk Tanks)
+	["holy"] = true,							-- Holy Power bar
+	["shard"] = true,							-- Shard/Burning bar
+	["rune"] = true,							-- Rune bar
+	["totem"] = true,							-- Totem bar
+	["range"] = false,							-- Range bar (only for Priest)
+}
+
+----------------------------------------------------------------------------------------
+--	Raid Frames options
+----------------------------------------------------------------------------------------
+C["raidframe"] = {
+	-- Main
+	["by_role"] = false,							-- Sorting players in group by role
+	["aggro_border"] = true,					-- Aggro border
+	["deficit_health"] = true,					-- Raid deficit health
+	["vertical_health"] = false,				-- Vertical orientation of health
+	["alpha_health"] = false,					-- Alpha of healthbars when 100%hp
+	["show_range"] = true,						-- Show range opacity for raidframes
+	["range_alpha"] = 0.5,						-- Alpha of unitframes when unit is out of range
+	-- Frames
+	["show_party"] = true,						-- Show party frames
+	["show_raid"] = true,						-- Show raid frames
+	["solo_mode"] = false,						-- Show player frame always
+	["player_in_party"] = true,					-- Show player frame in party
+	["raid_tanks"] = true,						-- Show raid tanks
+	["raid_tanks_tt"] = true,					-- Show raid tanks target target
+	["raid_groups"] = 8,						-- Number of groups in raid
+	["raid_groups_vertical"] = false,			-- Vertical raid groups(only for heal layout)
+	-- Icons
+	["icons_role"] = false,						-- Role icon on frames
+	["icons_raid_mark"] = true,					-- Raid mark icons on frames
+	["icons_ready_check"] = true,				-- Ready check icons on frames
+	["icons_leader"] = true,					-- Leader icon and assistant icon on frames
+	["icons_sumon"] = true,						-- Sumon icons on frames
+	-- Plugins
+	["plugins_debuffhighlight_icon"] = true,	-- Debuff highlight texture + icon
+	["plugins_aura_watch"] = true,				-- Raid debuff icons (from the list)
+	["plugins_aura_watch_timer"] = true,		-- Timer on raid debuff icons
+	["plugins_pvp_debuffs"] = true,			-- Show also PvP debuff icons (from the list)
+	["plugins_healcomm"] = true,				-- Incoming heal bar on raid frame
+	["plugins_auto_resurrection"] = true,		-- Auto cast resurrection on middle-click(doesn't work with Clique)
 }
 
 ----------------------------------------------------------------------------------------
@@ -105,40 +211,6 @@ C["automation"] = {
 	["logging_combat"] = false,					-- Auto enables combat log text file in raid instances
 	["buff_on_scroll"] = false,					-- Cast buff on mouse scroll (from the list)
 	["open_items"] = false,						-- Auto opening of items in bag
-}
-
-----------------------------------------------------------------------------------------
---	Skins options
-----------------------------------------------------------------------------------------
-C["skins"] = {
-	["blizzard_frames"] = true,				-- Blizzard frames skin
-	["minimap_buttons"] = true,				-- Skin addons icons on minimap
-	["ace3"] = false,							-- Ace3 options elements skin
-	["atlasloot"] = false,						-- AtlasLoot skin
-	["bigwigs"] = false,						-- BigWigs skin
-	["blood_shield_tracker"] = false,			-- BloodShieldTracker skin
-	["capping"] = false,						-- Capping skin
-	["clique"] = false,							-- Clique skin
-	["cool_line"] = false,						-- CoolLine skin
-	["dbm"] = false,							-- DBM skin
-	["dbm_movable"] = false,					-- Allow to move DBM bars
-	["dominos"] = false,						-- Dominos skin
-	["flyout_button"] = false,					-- FlyoutButtonCustom skin
-	["ls_toasts"] = false,						-- Is: Toasts skin
-	["mage_nuggets"] = false,					-- MageNuggets skin
-	["my_role_play"] = false,					-- MyRolePlay skin
-	["npcscan"] = false,						-- NPCScan skin
-	["nug_running"] = false,					-- NugRunning skin
-	["omen"] = false,							-- Omen skin
-	["opie"] = false,							-- OPie skin
-	["ovale"] = false,							-- OvaleSpellPriority skin
-	["postal"] = false,							-- Postal skin
-	["recount"] = false,						-- Recount skin
-	["rematch"] = false,						-- Rematch skin
-	["skada"] = false,							-- Skada skin
-	["tiny_dps"] = false,						-- TinyDPS skin
-	["vanaskos"] = false,						-- VanasKoS skin
-	["weak_auras"] = false,						-- WeakAuras skin
 }
 
 ----------------------------------------------------------------------------------------
@@ -342,19 +414,19 @@ C["nameplate"] = {
 	["combat"] = false,							-- Automatically show nameplate in combat
 	["health_value"] = false,					-- Numeral health value
 	["show_castbar_name"] = false,				-- Show castbar name
-	["enhance_threat"] = true,					-- If tank good aggro = green, bad = red
 	["class_icons"] = false,					-- Icons by class in PvP
 	["name_abbrev"] = false,					-- Display abbreviated names
 	["clamp"] = false,							-- Clamp nameplates to the top of the screen when outside of view
-	["good_color"] = {0.2, 0.8, 0.2},			-- Good threat color
-	["near_color"] = {1, 1, 0},					-- Near threat color
-	["bad_color"] = {1, 0, 0},					-- Bad threat color
-	["offtank_color"] = {0, 0.5, 1},			-- Offtank threat color
-	["track_auras"] = true,					-- Show debuffs (from the list)
+	["track_debuffs"] = true,					-- Show debuffs (from the list)
 	["track_buffs"] = true,					-- Show buffs above player nameplate (from the list)
 	["auras_size"] = 26,						-- Debuffs size
 	["healer_icon"] = true,					-- Show icon above enemy healers nameplate in battlegrounds
 	["totem_icons"] = true,					-- Show icon above enemy totems nameplate
+	["enhance_threat"] = true,					-- Enable threat feature, automatically changes by your role
+	["good_color"] = {0.2, 0.8, 0.2},			-- Good threat color
+	["near_color"] = {1, 1, 0},					-- Near threat color
+	["bad_color"] = {1, 0, 0},					-- Bad threat color
+	["offtank_color"] = {0, 0.5, 1},			-- Offtank threat color
 }
 
 ----------------------------------------------------------------------------------------
@@ -427,110 +499,6 @@ C["filger"] = {
 }
 
 ----------------------------------------------------------------------------------------
---	Unit Frames options
-----------------------------------------------------------------------------------------
-C["unitframe"] = {
-	-- Main
-	["enable"] = true,							-- Enable unit frames
-	["own_color"] = false,						-- Set your color for health bars
-	["uf_color"] = {0.4, 0.4, 0.4},				-- Color for UF if ["own_color"] = true
-	["enemy_health_color"] = true,				-- If enable, enemy target color is red
-	["show_total_value"] = false,				-- Display of info text on player and target with XXXX/Total
-	["color_value"] = false,					-- Health/mana value is colored
-	["bar_color_value"] = false,				-- Health bar color by current health remaining
-	["lines"] = true,							-- Show Player and Target lines
-	-- Cast bars
-	["unit_castbar"] = true,					-- Show castbars
-	["castbar_icon"] = true,					-- Show castbar icons
-	["castbar_latency"] = true,					-- Castbar latency
-	["castbar_ticks"] = true,					-- Castbar ticks
-	-- Frames
-	["show_pet"] = true,						-- Show pet frame
-	["show_focus"] = true,						-- Show focus frame
-	["show_target_target"] = true,				-- Show target target frame
-	["show_boss"] = true,						-- Show boss frames
-	["boss_on_right"] = true,					-- Boss frames on the right
-	["show_arena"] = true,						-- Show arena frames
-	["arena_on_right"] = true,					-- Arena frames on the right
-	["boss_debuffs"] = 0,						-- Number of debuffs on the boss frames
-	["boss_buffs"] = 3,							-- Number of buffs on the boss frames
-	-- Icons
-	["icons_pvp"] = true,						-- Mouseover PvP text(not icons) on player and target frames
-	["icons_combat"] = true,					-- Combat icon
-	["icons_resting"] = true,					-- Resting icon for low lvl chars
-	-- Portraits
-	["portrait_enable"] = false,				-- Enable player/target portraits
-	["portrait_classcolor_border"] = true,		-- Enable classcolor border
-	["portrait_height"] = 92,					-- Portrait height
-	["portrait_width"] = 67,					-- Portrait width
-	-- Plugins
-	["plugins_gcd"] = false,					-- Global cooldown spark on player frame
-	["plugins_swing"] = false,					-- Swing bar
-	["plugins_reputation_bar"] = true,			-- Reputation bar (left from player frame by mouseover)
-	["plugins_experience_bar"] = true,			-- Experience bar (left from player frame by mouseover)
-	["plugins_artifact_bar"] = true,			-- Artifact Power bar (left from player frame by mouseover)
-	["plugins_smooth_bar"] = true,				-- Smooth bar
-	["plugins_enemy_spec"] = true,				-- Enemy specialization in BG and Arena
-	["plugins_combat_feedback"] = true,		-- Combat text on player/target frame
-	["plugins_fader"] = true,					-- Fade unit frames
-	["plugins_diminishing"] = true,			-- Diminishing Returns icons on arena frames
-	["plugins_power_prediction"] = false,		-- Power cost prediction bar on player frame
-}
-
-----------------------------------------------------------------------------------------
---	Unit Frames Class bar options
-----------------------------------------------------------------------------------------
-C["unitframe_class_bar"] = {
-	["combo"] = true,							-- Rogue/Druid Combo bar
-	["combo_always"] = false,					-- Always show Combo bar for Druid
-	["combo_old"] = false,						-- Show combo point on the target
-	["arcane"] = true,							-- Arcane Charge bar
-	["chi"] = true,								-- Chi bar
-	["stagger"] = true,							-- Stagger bar (for Monk Tanks)
-	["holy"] = true,							-- Holy Power bar
-	["shard"] = true,							-- Shard/Burning bar
-	["rune"] = true,							-- Rune bar
-	["totem"] = true,							-- Totem bar
-	["range"] = false,							-- Range bar (only for Priest)
-}
-
-----------------------------------------------------------------------------------------
---	Raid Frames options
-----------------------------------------------------------------------------------------
-C["raidframe"] = {
-	-- Main
-	["by_role"] = false,							-- Sorting players in group by role
-	["aggro_border"] = true,					-- Aggro border
-	["deficit_health"] = true,					-- Raid deficit health
-	["vertical_health"] = false,				-- Vertical orientation of health
-	["alpha_health"] = false,					-- Alpha of healthbars when 100%hp
-	["show_range"] = true,						-- Show range opacity for raidframes
-	["range_alpha"] = 0.5,						-- Alpha of unitframes when unit is out of range
-	-- Frames
-	["show_party"] = true,						-- Show party frames
-	["show_raid"] = true,						-- Show raid frames
-	["solo_mode"] = false,						-- Show player frame always
-	["player_in_party"] = true,					-- Show player frame in party
-	["raid_tanks"] = true,						-- Show raid tanks
-	["raid_tanks_tt"] = true,					-- Show raid tanks target target
-	["raid_groups"] = 8,						-- Number of groups in raid
-	["raid_groups_vertical"] = false,			-- Vertical raid groups(only for heal layout)
-	-- Icons
-	["icons_role"] = false,						-- Role icon on frames
-	["icons_raid_mark"] = true,					-- Raid mark icons on frames
-	["icons_ready_check"] = true,				-- Ready check icons on frames
-	["icons_leader"] = true,					-- Leader icon and assistant icon on frames
-	["icons_sumon"] = true,						-- Sumon icons on frames
-	-- Plugins
-	["plugins_debuffhighlight_icon"] = true,	-- Debuff highlight texture + icon
-	["plugins_aura_watch"] = true,				-- Raid debuff icons (from the list)
-	["plugins_aura_watch_timer"] = true,		-- Timer on raid debuff icons
-	["plugins_pvp_debuffs"] = true,			-- Show also PvP debuff icons (from the list)
-	["plugins_healcomm"] = true,				-- Incoming heal bar on raid frame
-	["plugins_auto_resurrection"] = false,		-- Auto cast resurrection on middle-click(doesn't work with Clique)
-}
-
-----------------------------------------------------------------------------------------
 --	Panel options
 ----------------------------------------------------------------------------------------
 C["toppanel"] = {
@@ -544,7 +512,6 @@ C["toppanel"] = {
 --	Stats options
 ----------------------------------------------------------------------------------------
 C["stats"] = {
-	["battleground"] = true,					-- BG Score
 	["clock"] = true,							-- Clock
 	["latency"] = true,							-- Latency
 	["memory"] = true,							-- Memory
@@ -556,6 +523,7 @@ C["stats"] = {
 	["talents"] = true,							-- Specialization
 	["coords"] = true,							-- Coords
 	["location"] = true,						-- Location
+	["battleground"] = false,					-- BG Score
 	-- Currency (displayed in gold stats)
 	["currency_archaeology"] = false,			-- Archaeology Fragments
 	["currency_cooking"] = true,				-- Cooking Awards
@@ -571,4 +539,36 @@ C["error"] = {
 	["black"] = true,							-- Hide errors from black list
 	["white"] = false,							-- Show errors from white list
 	["combat"] = true,							-- Hide all errors in combat
+}
+
+----------------------------------------------------------------------------------------
+--	Miscellaneous options
+----------------------------------------------------------------------------------------
+C["misc"] = {
+	["shift_marking"] = true,					-- Marks mouseover target when you push Shift (only in group)
+	["invite_keyword"] = "invite",				-- Short keyword for invite(for enable - in game type /ainv)
+	["afk_spin_camera"] = false,				-- Spin camera while afk
+	["vehicle_mouseover"] = false,				-- Vehicle frame on mouseover
+	["quest_auto_button"] = false,				-- Quest/item auto button (from the list)
+	["raid_tools"] = true,						-- Raid tools
+	["profession_tabs"] = true,					-- Professions tabs on TradeSkill frames
+	["hide_bg_spam"] = false,					-- Remove Boss Emote spam during BG("Arathi Basin" and "The Battle for Gilneas")
+	["item_level"] = true,						-- Item level on character slot buttons
+	["already_known"] = true,					-- Colorizes recipes/mounts/pets/toys that is already known
+	["disenchanting"] = false,					-- Milling, Prospecting and Disenchanting by Alt + click
+	["sum_buyouts"] = true,					-- Sum up all current auctions
+	["click_cast"] = false,						-- Simple click2cast spell binder
+	["click_cast_filter"] = false,				-- Ignore Player and Target frames for click2cast
+	["move_blizzard"] = false,					-- Move some Blizzard frames
+	["color_picker"] = false,					-- Improved ColorPicker
+	["enchantment_scroll"] = true,				-- Enchantment scroll on TradeSkill frame
+	["archaeology"] = false,					-- Archaeology artifacts and cooldown
+	["chars_currency"] = false,					-- Tracks your currency tokens across multiple characters
+	["armory_link"] = true,					-- Add Armory link in UnitPopupMenus (It breaks set focus)
+	["merchant_itemlevel"] = false,				-- Show item level for weapons and armor in merchant
+	["minimize_mouseover"] = false,				-- Mouseover for quest minimize button
+	["hide_banner"] = true,						-- Hide Boss Banner Loot Frame
+	["hide_talking_head"] = false,				-- Hide Talking Head Frame
+	["hide_raid_button"] = false,				-- Hide button for oUF_RaidDPS (top left mouseover)
+	["custom_lagtolerance"] = false,			-- Custom lag tolerance to your latency
 }

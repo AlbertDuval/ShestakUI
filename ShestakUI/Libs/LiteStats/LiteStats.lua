@@ -209,10 +209,10 @@ function SlashCmdList.LSTATS()
 		slprint(L_STATS_MEMORY, L_STATS_RC_COLLECTS_GARBAGE)
 	end
 	if friends.enabled or guild.enabled then
-		slprint(format("%s/%s", FRIENDS,GUILD), L_STATS_VIEW_NOTES, L_STATS_CHANGE_SORTING)
+		slprint(format("%s/%s", FRIENDS, GUILD), L_STATS_VIEW_NOTES, L_STATS_CHANGE_SORTING)
 	end
 	if durability.enabled then
-		slprint(DURABILITY, L_STATS_OPEN_CHARACTER, L_STATS_RC_AUTO_REPAIRING, L_STATS_EQUIPMENT_CHANGER)
+		slprint(DURABILITY, L_STATS_OPEN_CHARACTER, L_STATS_RC_AUTO_REPAIRING1, L_STATS_RC_AUTO_REPAIRING2, L_STATS_EQUIPMENT_CHANGER)
 	end
 	if experience.enabled then
 		slprint(format("%s/%s/%s", COMBAT_XP_GAIN, TIME_PLAYED_MSG, FACTION), L_STATS_RC_EXPERIENCE, L_STATS_WATCH_FACTIONS, L_STATS_TOOLTIP_EXPERIENCE, L_STATS_TOOLTIP_TIME_PLAYED)
@@ -224,7 +224,7 @@ function SlashCmdList.LSTATS()
 		slprint(L_STATS_LOCATION, L_STATS_WORLD_MAP, L_STATS_INSERTS_COORDS)
 	end
 	if gold.enabled then
-		slprint(strtrim(gsub(MONEY, "%%d", "")), L_STATS_OPEN_CURRENCY, L_STATS_RC_AUTO_SELLING, L_STATS_NOT_TO_SELL, L_STATS_WATCH_CURRENCY)
+		slprint(strtrim(gsub(MONEY, "%%d", "")), L_STATS_OPEN_CURRENCY, L_STATS_RC_AUTO_SELLING, L_STATS_NEED_TO_SELL, L_STATS_WATCH_CURRENCY)
 	end
 	print("|cffBCEE68", format(L_STATS_OTHER_OPTIONS, "|cff66C6FFShestakUI\\Config\\DataText.lua").."|r")
 end
@@ -680,14 +680,14 @@ if gold.enabled then
 	function SlashCmdList.KJUNK(s)
 		local action = strsplit(" ", s)
 		if action == "list" then
-			print(format("|cff66C6FF%s:|r %s", L_STATS_JUNK_EXCEPTIONS, (#SavedStats.JunkIgnore == 0 and NONE or "")))
+			print(format("|cff66C6FF%s:|r %s", L_STATS_JUNK_ADDITIONS, (#SavedStats.JunkIgnore == 0 and NONE or "")))
 			for i, id in pairs(SavedStats.JunkIgnore) do
 				local _, link = GetItemInfo(id)
 				print("- ["..i.."]", link)
 			end
 		elseif action == "clear" then
 			SavedStats.JunkIgnore = {}
-			print("|cff66C6FF"..L_STATS_CLEARED_JUNK.."|r")
+			print("|cff66C6FF"..L_STATS_JUNK_CLEARED.."|r")
 		elseif action == "add" or strfind(action, "^del") or strfind(action, "^rem") then
 			local _, mouselink = GameTooltip:GetItem()
 			for id in s:gmatch("|Hitem:(%d-):") do
@@ -696,13 +696,13 @@ if gold.enabled then
 				if action == "add" then
 					if not tContains(SavedStats.JunkIgnore,id) then
 						tinsert(SavedStats.JunkIgnore, id)
-						print(format("|cff66C6FF%s:|r %s", L_STATS_ADDED_JUNK, link))
+						print(format("|cff66C6FF%s:|r %s", L_STATS_JUNK_ADDED, link))
 					else
-						print(format("%s |cff66C6FF%s|r", link, L_STATS_ALREADY_EXCEPTIONS))
+						print(format("%s |cff66C6FF%s|r", link, L_STATS_JUNK_ALREADY_ADDITIONS))
 					end
 				elseif strfind(action, "^del") or strfind(action, "^rem") then
 					tDeleteItem(SavedStats.JunkIgnore, id)
-					print(format("|cff66C6FF%s:|r %s", L_STATS_REMOVED_JUNK, link))
+					print(format("|cff66C6FF%s:|r %s", L_STATS_JUNK_REMOVED, link))
 				end
 			end
 			if mouselink then
@@ -710,21 +710,21 @@ if gold.enabled then
 					if action == "add" then
 						if not tContains(SavedStats.JunkIgnore,id) then
 							tinsert(SavedStats.JunkIgnore, id)
-							print(format("|cff66C6FF%s:|r %s", L_STATS_ADDED_JUNK, mouselink))
+							print(format("|cff66C6FF%s:|r %s", L_STATS_JUNK_ADDED, mouselink))
 						else
-							print(format("%s |cff66C6FF%s|r", mouselink, L_STATS_ALREADY_EXCEPTIONS))
+							print(format("%s |cff66C6FF%s|r", mouselink, L_STATS_JUNK_ALREADY_ADDITIONS))
 						end
 					elseif strfind(action, "^del") or strfind(action, "^rem") then
 						tDeleteItem(SavedStats.JunkIgnore, id)
-						print(format("|cff66C6FF%s:|r %s", L_STATS_REMOVED_JUNK, mouselink))
+						print(format("|cff66C6FF%s:|r %s", L_STATS_JUNK_REMOVED, mouselink))
 					end
 				end
 			end
 		else
-			print("|Lite|cff66C6FFStats|r: "..L_STATS_JUNK_LIST)
-			print(format("/junk <add||rem(ove)> [%s] - %s", L_STATS_ITEMLINK, L_STATS_REMOVE_EXCEPTION))
-			print("/junk list - "..L_STATS_IGNORED_ITEMS)
-			print("/junk clear - "..L_STATS_CLEAR_EXCEPTIONS)
+			print("Lite|cff66C6FFStats|r: "..L_STATS_JUNK_LIST)
+			print(format("/junk <add||rem(ove)> [%s] - %s", L_STATS_JUNK_ITEMLINK, L_STATS_JUNK_ADD_ITEM))
+			print("/junk list - "..L_STATS_JUNK_ITEMS_LIST)
+			print("/junk clear - "..L_STATS_JUNK_CLEAR_ADDITIONS)
 		end
 	end
 end
@@ -894,12 +894,12 @@ end
 if coords.enabled then
 	Inject("Coords", {
 		text = {string = Coords},
-		OnClick = function(_, button)
-			if button == "LeftButton" then
-				ToggleFrame(WorldMapFrame)
-			else
+		OnClick = function()
+			if IsShiftKeyDown() then
 				ChatEdit_ActivateChat(ChatEdit_ChooseBoxForSend())
 				ChatEdit_ChooseBoxForSend():Insert(format(" (%s: %s)", GetZoneText(), Coords()))
+			else
+				ToggleFrame(WorldMapFrame)
 			end
 		end
 	})
