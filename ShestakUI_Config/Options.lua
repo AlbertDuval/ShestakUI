@@ -788,6 +788,207 @@ do
 	plugins_auto_resurrection:SetPoint("TOPLEFT", plugins_healcomm, "BOTTOMLEFT", 0, 0)
 end
 
+-- ActionBar
+do
+	local parent = ShestakUIOptionsPanel.actionbar
+
+	local enable = ns.CreateCheckBox(parent, "enable", L_GUI_ACTIONBAR_ENABLE)
+	enable:SetPoint("TOPLEFT", parent.subText, "BOTTOMLEFT", 0, 0)
+
+	local hotkey = ns.CreateCheckBox(parent, "hotkey", L_GUI_ACTIONBAR_HOTKEY)
+	hotkey:SetPoint("TOPLEFT", enable, "BOTTOMLEFT", 0, 0)
+
+	local macro = ns.CreateCheckBox(parent, "macro", L_GUI_ACTIONBAR_MACRO)
+	macro:SetPoint("TOPLEFT", hotkey, "BOTTOMLEFT", 0, 0)
+
+	local show_grid = ns.CreateCheckBox(parent, "show_grid", L_GUI_ACTIONBAR_GRID)
+	show_grid:SetPoint("TOPLEFT", macro, "BOTTOMLEFT", 0, 0)
+
+	local button_size = ns.CreateNumberSlider(parent, "button_size", nil, nil, 0, 35, 1, true, L_GUI_ACTIONBAR_BUTTON_SIZE)
+	button_size:SetPoint("TOPLEFT", show_grid, "BOTTOMLEFT", 0, -20)
+
+	local button_space = ns.CreateNumberSlider(parent, "button_space", nil, nil, 0, 7, 1, true, L_GUI_ACTIONBAR_BUTTON_SPACE)
+	button_space:SetPoint("LEFT", button_size, "RIGHT", 120, 0)
+
+	local split_bars = ns.CreateCheckBox(parent, "split_bars", L_GUI_ACTIONBAR_SPLIT_BARS)
+	split_bars:SetPoint("TOPLEFT", button_size, "BOTTOMLEFT", 0, -10)
+
+	local classcolor_border = ns.CreateCheckBox(parent, "classcolor_border", L_GUI_ACTIONBAR_CLASSCOLOR_BORDER)
+	classcolor_border:SetPoint("TOPLEFT", split_bars, "BOTTOMLEFT", 0, 0)
+
+	local toggle_mode = ns.CreateCheckBox(parent, "toggle_mode", L_GUI_ACTIONBAR_TOGGLE_MODE)
+	toggle_mode:SetPoint("TOPLEFT", classcolor_border, "BOTTOMLEFT", 0, 0)
+
+	local hide_highlight = ns.CreateCheckBox(parent, "hide_highlight", L_GUI_ACTIONBAR_HIDE_HIGHLIGHT)
+	hide_highlight:SetPoint("TOPLEFT", toggle_mode, "BOTTOMLEFT", 0, 0)
+
+	local bottombars = ns.CreateNumberSlider(parent, "bottombars", nil, nil, 1, 3, 1, true, L_GUI_ACTIONBAR_BOTTOMBARS)
+	bottombars:SetPoint("TOPLEFT", hide_highlight, "BOTTOMLEFT", 0, -20)
+
+	local rightbars = ns.CreateNumberSlider(parent, "rightbars", nil, nil, 0, 3, 1, true, L_GUI_ACTIONBAR_RIGHTBARS)
+	rightbars:SetPoint("LEFT", bottombars, "RIGHT", 120, 0)
+
+	local rightbars_mouseover = ns.CreateCheckBox(parent, "rightbars_mouseover", L_GUI_ACTIONBAR_RIGHTBARS_MOUSEOVER)
+	rightbars_mouseover:SetPoint("TOPLEFT", bottombars, "BOTTOMLEFT", 0, -10)
+
+	local petbar_hide = ns.CreateCheckBox(parent, "petbar_hide", L_GUI_ACTIONBAR_PETBAR_HIDE)
+	petbar_hide:SetPoint("TOPLEFT", rightbars_mouseover, "BOTTOMLEFT", 0, 0)
+
+	local petbar_horizontal = ns.CreateCheckBox(parent, "petbar_horizontal", L_GUI_ACTIONBAR_PETBAR_HORIZONTAL)
+	petbar_horizontal:SetPoint("TOPLEFT", petbar_hide, "BOTTOMLEFT", 0, 0)
+
+	local petbar_mouseover = ns.CreateCheckBox(parent, "petbar_mouseover", L_GUI_ACTIONBAR_PETBAR_MOUSEOVER)
+	petbar_mouseover:SetPoint("TOPLEFT", petbar_horizontal, "BOTTOMLEFT", 20, 0)
+
+	petbar_horizontal.children = {petbar_mouseover}
+
+	local stancebar_hide = ns.CreateCheckBox(parent, "stancebar_hide", L_GUI_ACTIONBAR_STANCEBAR_HIDE)
+	stancebar_hide:SetPoint("TOPLEFT", petbar_mouseover, "BOTTOMLEFT", -20, 0)
+
+	local stancebar_horizontal = ns.CreateCheckBox(parent, "stancebar_horizontal", L_GUI_ACTIONBAR_STANCEBAR_HORIZONTAL)
+	stancebar_horizontal:SetPoint("TOPLEFT", stancebar_hide, "BOTTOMLEFT", 0, 0)
+
+	local stancebar_mouseover = ns.CreateCheckBox(parent, "stancebar_mouseover", L_GUI_ACTIONBAR_STANCEBAR_MOUSEOVER)
+	stancebar_mouseover:SetPoint("TOPLEFT", stancebar_horizontal, "BOTTOMLEFT", 20, 0)
+
+	stancebar_horizontal.children = {stancebar_mouseover}
+
+	local micromenu = ns.CreateCheckBox(parent, "micromenu", L_GUI_ACTIONBAR_MICROMENU)
+	micromenu:SetPoint("TOPLEFT", stancebar_mouseover, "BOTTOMLEFT", -20, 0)
+
+	local micromenu_mouseover = ns.CreateCheckBox(parent, "micromenu_mouseover", L_GUI_ACTIONBAR_MICROMENU_MOUSEOVER)
+	micromenu_mouseover:SetPoint("TOPLEFT", micromenu, "BOTTOMLEFT", 20, 0)
+
+	micromenu.children = {micromenu_mouseover}
+end
+
+-- Tooltip
+do
+	local parent = ShestakUIOptionsPanel.tooltip
+
+	local enable = ns.CreateCheckBox(parent, "enable", L_GUI_TOOLTIP_ENABLE)
+	enable:SetPoint("TOPLEFT", parent.subText, "BOTTOMLEFT", 0, 0)
+
+	local shift_modifer = ns.CreateCheckBox(parent, "shift_modifer", L_GUI_TOOLTIP_SHIFT)
+	shift_modifer:SetPoint("TOPLEFT", enable, "BOTTOMLEFT", 0, 0)
+
+	local cursor = ns.CreateCheckBox(parent, "cursor", L_GUI_TOOLTIP_CURSOR)
+	cursor:SetPoint("TOPLEFT", shift_modifer, "BOTTOMLEFT", 0, 0)
+
+	local item_icon = ns.CreateCheckBox(parent, "item_icon", L_GUI_TOOLTIP_ICON)
+	item_icon:SetPoint("TOPLEFT", cursor, "BOTTOMLEFT", 0, 0)
+
+	local health_value = ns.CreateCheckBox(parent, "health_value", L_GUI_TOOLTIP_HEALTH)
+	health_value:SetPoint("TOPLEFT", item_icon, "BOTTOMLEFT", 0, 0)
+
+	local hidebuttons = ns.CreateCheckBox(parent, "hidebuttons", L_GUI_TOOLTIP_HIDE)
+	hidebuttons:SetPoint("TOPLEFT", health_value, "BOTTOMLEFT", 0, 0)
+
+	local hide_combat = ns.CreateCheckBox(parent, "hide_combat", L_GUI_TOOLTIP_HIDE_COMBAT)
+	hide_combat:SetPoint("TOPLEFT", hidebuttons, "BOTTOMLEFT", 0, 0)
+
+	-- Plugins
+	local subheader = ns.addSubCategory(parent, L_GUI_TOOLTIP_SUBHEADER_PLUGINS)
+	subheader:SetPoint("TOPLEFT", hide_combat, "BOTTOMLEFT", 0, -16)
+
+	local talents = ns.CreateCheckBox(parent, "talents", L_GUI_TOOLTIP_TALENTS)
+	talents:SetPoint("TOPLEFT", subheader, "BOTTOMLEFT", 0, -8)
+
+	local achievements = ns.CreateCheckBox(parent, "achievements", L_GUI_TOOLTIP_ACHIEVEMENTS)
+	achievements:SetPoint("TOPLEFT", talents, "BOTTOMLEFT", 0, 0)
+
+	local target = ns.CreateCheckBox(parent, "target", L_GUI_TOOLTIP_TARGET)
+	target:SetPoint("TOPLEFT", achievements, "BOTTOMLEFT", 0, 0)
+
+	local title = ns.CreateCheckBox(parent, "title", L_GUI_TOOLTIP_TITLE)
+	title:SetPoint("TOPLEFT", target, "BOTTOMLEFT", 0, 0)
+
+	local realm = ns.CreateCheckBox(parent, "realm", L_GUI_TOOLTIP_REALM)
+	realm:SetPoint("TOPLEFT", title, "BOTTOMLEFT", 0, 0)
+
+	local rank = ns.CreateCheckBox(parent, "rank", L_GUI_TOOLTIP_RANK)
+	rank:SetPoint("TOPLEFT", realm, "BOTTOMLEFT", 0, 0)
+
+	local arena_experience = ns.CreateCheckBox(parent, "arena_experience", L_GUI_TOOLTIP_ARENA_EXPERIENCE)
+	arena_experience:SetPoint("TOPLEFT", rank, "BOTTOMLEFT", 0, 0)
+
+	local spell_id = ns.CreateCheckBox(parent, "spell_id", L_GUI_TOOLTIP_SPELL_ID)
+	spell_id:SetPoint("TOPLEFT", arena_experience, "BOTTOMLEFT", 0, 0)
+
+	local average_lvl = ns.CreateCheckBox(parent, "average_lvl", STAT_AVERAGE_ITEM_LEVEL, L_GUI_TOOLTIP_AVERAGE_LVL_DESC)
+	average_lvl:SetPoint("TOPLEFT", spell_id, "BOTTOMLEFT", 0, 0)
+
+	local raid_icon = ns.CreateCheckBox(parent, "raid_icon", L_GUI_TOOLTIP_RAID_ICON)
+	raid_icon:SetPoint("TOPLEFT", average_lvl, "BOTTOMLEFT", 0, 0)
+
+	local who_targetting = ns.CreateCheckBox(parent, "who_targetting", L_GUI_TOOLTIP_WHO_TARGETTING)
+	who_targetting:SetPoint("TOPLEFT", raid_icon, "BOTTOMLEFT", 0, 0)
+
+	local item_count = ns.CreateCheckBox(parent, "item_count", L_GUI_TOOLTIP_ITEM_COUNT)
+	item_count:SetPoint("TOPLEFT", who_targetting, "BOTTOMLEFT", 0, 0)
+
+	local unit_role = ns.CreateCheckBox(parent, "unit_role", L_GUI_TOOLTIP_UNIT_ROLE)
+	unit_role:SetPoint("TOPLEFT", item_count, "BOTTOMLEFT", 0, 0)
+
+	local instance_lock = ns.CreateCheckBox(parent, "instance_lock", L_GUI_TOOLTIP_INSTANCE_LOCK)
+	instance_lock:SetPoint("TOPLEFT", unit_role, "BOTTOMLEFT", 0, 0)
+end
+
+-- Chat
+do
+	local parent = ShestakUIOptionsPanel.chat
+
+	local enable = ns.CreateCheckBox(parent, "enable", L_GUI_CHAT_ENABLE)
+	enable:SetPoint("TOPLEFT", parent.subText, "BOTTOMLEFT", 0, 0)
+
+	local background = ns.CreateCheckBox(parent, "background", L_GUI_CHAT_BACKGROUND)
+	background:SetPoint("TOPLEFT", enable, "BOTTOMLEFT", 0, 0)
+
+	local background_alpha = ns.CreateNumberSlider(parent, "background_alpha", nil, nil, 0, 1, 0.05, true, L_GUI_CHAT_BACKGROUND_ALPHA)
+	background_alpha:SetPoint("TOPLEFT", background, "BOTTOMLEFT", 0, -20)
+
+	local filter = ns.CreateCheckBox(parent, "filter", L_GUI_CHAT_SPAM)
+	filter:SetPoint("TOPLEFT", background_alpha, "BOTTOMLEFT", 0, -10)
+
+	local spam = ns.CreateCheckBox(parent, "spam", L_GUI_CHAT_GOLD)
+	spam:SetPoint("TOPLEFT", filter, "BOTTOMLEFT", 0, 0)
+
+	local width = ns.CreateNumberSlider(parent, "width", nil, nil, 0, 500, 1, true, L_GUI_CHAT_WIDTH)
+	width:SetPoint("TOPLEFT", spam, "BOTTOMLEFT", 0, -20)
+
+	local height = ns.CreateNumberSlider(parent, "height", nil, nil, 0, 200, 1, true, L_GUI_CHAT_HEIGHT)
+	height:SetPoint("TOPLEFT", width, "BOTTOMLEFT", 0, -20)
+
+	local chat_bar = ns.CreateCheckBox(parent, "chat_bar", L_GUI_CHAT_BAR)
+	chat_bar:SetPoint("TOPLEFT", height, "BOTTOMLEFT", 0, -10)
+
+	local chat_bar_mouseover = ns.CreateCheckBox(parent, "chat_bar_mouseover", L_GUI_CHAT_BAR_MOUSEOVER)
+	chat_bar_mouseover:SetPoint("TOPLEFT", chat_bar, "BOTTOMLEFT", 20, 0)
+
+	chat_bar.children = {chat_bar_mouseover}
+
+	local time_color = ns.CreateColourPicker(parent, "time_color", true, L_GUI_CHAT_TIMESTAMP)
+	time_color:SetPoint("TOPLEFT", chat_bar_mouseover, "BOTTOMLEFT", -16, -10)
+
+	local whisp_sound = ns.CreateCheckBox(parent, "whisp_sound", L_GUI_CHAT_WHISP)
+	whisp_sound:SetPoint("TOPLEFT", time_color, "BOTTOMLEFT", -4, -10)
+
+	local bubbles = ns.CreateCheckBox(parent, "bubbles", L_GUI_CHAT_SKIN_BUBBLE)
+	bubbles:SetPoint("TOPLEFT", whisp_sound, "BOTTOMLEFT", 0, 0)
+
+	local combatlog = ns.CreateCheckBox(parent, "combatlog", L_GUI_CHAT_CL_TAB)
+	combatlog:SetPoint("TOPLEFT", bubbles, "BOTTOMLEFT", 0, 0)
+
+	local tabs_mouseover = ns.CreateCheckBox(parent, "tabs_mouseover", L_GUI_CHAT_TABS_MOUSEOVER)
+	tabs_mouseover:SetPoint("TOPLEFT", combatlog, "BOTTOMLEFT", 0, 0)
+
+	local sticky = ns.CreateCheckBox(parent, "sticky", L_GUI_CHAT_STICKY)
+	sticky:SetPoint("TOPLEFT", tabs_mouseover, "BOTTOMLEFT", 0, 0)
+
+	local damage_meter_spam = ns.CreateCheckBox(parent, "damage_meter_spam", L_GUI_CHAT_DAMAGE_METER_SPAM)
+	damage_meter_spam:SetPoint("TOPLEFT", sticky, "BOTTOMLEFT", 0, 0)
+end
+
 -- Announcements
 do
 	local parent = ShestakUIOptionsPanel.announcements
@@ -818,16 +1019,16 @@ do
 	local flask_food = ns.CreateCheckBox(parent, "flask_food", L_GUI_ANNOUNCEMENTS_FLASK_FOOD)
 	flask_food:SetPoint("TOPLEFT", pull_countdown, "BOTTOMLEFT", 0, 0)
 
-	local flask_food_auto = ns.CreateCheckBox(parent, "flask_food_auto", L_GUI_ANNOUNCEMENTS_FLASK_FOOD_AUTO)
-	flask_food_auto:SetPoint("TOPLEFT", flask_food, "BOTTOMLEFT", 20, 0)
-
 	local flask_food_raid = ns.CreateCheckBox(parent, "flask_food_raid", L_GUI_ANNOUNCEMENTS_FLASK_FOOD_RAID)
-	flask_food_raid:SetPoint("TOPLEFT", flask_food_auto, "BOTTOMLEFT", 0, 0)
+	flask_food_raid:SetPoint("TOPLEFT", flask_food, "BOTTOMLEFT", 20, 0)
+	
+	local flask_food_auto = ns.CreateCheckBox(parent, "flask_food_auto", L_GUI_ANNOUNCEMENTS_FLASK_FOOD_AUTO)
+	flask_food_auto:SetPoint("TOPLEFT", flask_food_raid, "BOTTOMLEFT", 0, 0)
 
-	flask_food.children = {flask_food_auto, flask_food_raid}
+	flask_food.children = {flask_food_raid, flask_food_auto}
 
 	local feasts = ns.CreateCheckBox(parent, "feasts", L_GUI_ANNOUNCEMENTS_FEASTS)
-	feasts:SetPoint("TOPLEFT", flask_food_raid, "BOTTOMLEFT", -20, 0)
+	feasts:SetPoint("TOPLEFT", flask_food_auto, "BOTTOMLEFT", -20, 0)
 
 	local portals = ns.CreateCheckBox(parent, "portals", L_GUI_ANNOUNCEMENTS_PORTALS)
 	portals:SetPoint("TOPLEFT", feasts, "BOTTOMLEFT", 0, 0)
@@ -849,7 +1050,7 @@ do
 	local screenshot = ns.CreateCheckBox(parent, "screenshot", L_GUI_AUTOMATION_SCREENSHOT)
 	screenshot:SetPoint("TOPLEFT", release, "BOTTOMLEFT", 0, 0)
 
-	local solve_artifact = ns.CreateCheckBox(parent, "solve_artifact", L_GUI_AUTOMATION_SOLVE_ARTIFACT)
+	local solve_artifact = ns.CreateCheckBox(parent, "solve_artifact")
 	solve_artifact:SetPoint("TOPLEFT", screenshot, "BOTTOMLEFT", 0, 0)
 
 	local accept_invite = ns.CreateCheckBox(parent, "accept_invite", L_GUI_AUTOMATION_ACCEPT_INVITE)
@@ -878,17 +1079,20 @@ do
 	local cancel_bad_buffs = ns.CreateCheckBox(parent, "cancel_bad_buffs", L_GUI_AUTOMATION_CANCEL_BAD_BUFFS)
 	cancel_bad_buffs:SetPoint("TOPLEFT", auto_role, "BOTTOMLEFT", 0, 0)
 
-	local tab_binder = ns.CreateCheckBox(parent, "tab_binder", L_GUI_AUTOMATION_TAB_BINDER)
+	local tab_binder = ns.CreateCheckBox(parent, "tab_binder")
 	tab_binder:SetPoint("TOPLEFT", cancel_bad_buffs, "BOTTOMLEFT", 0, 0)
 
 	local logging_combat = ns.CreateCheckBox(parent, "logging_combat", L_GUI_AUTOMATION_LOGGING_COMBAT)
 	logging_combat:SetPoint("TOPLEFT", tab_binder, "BOTTOMLEFT", 0, 0)
 
-	local buff_on_scroll = ns.CreateCheckBox(parent, "buff_on_scroll", L_GUI_AUTOMATION_BUFF_ON_SCROLL)
+	local buff_on_scroll = ns.CreateCheckBox(parent, "buff_on_scroll")
 	buff_on_scroll:SetPoint("TOPLEFT", logging_combat, "BOTTOMLEFT", 0, 0)
 
 	local open_items = ns.CreateCheckBox(parent, "open_items", L_GUI_AUTOMATION_OPEN_ITEMS)
 	open_items:SetPoint("TOPLEFT", buff_on_scroll, "BOTTOMLEFT", 0, 0)
+
+	local invite_keyword = ns.CreateEditBox(parent, "invite_keyword", true)
+	invite_keyword:SetPoint("TOPLEFT", open_items, "BOTTOMLEFT", 6, -8)
 end
 
 -- Combat text
@@ -1061,7 +1265,7 @@ do
 	direction:SetPoint("TOPLEFT", size, "BOTTOMLEFT", -16, -10)
 
 	local show_always = ns.CreateCheckBox(parent, "show_always", L_GUI_COOLDOWN_ENEMY_EVERYWHERE)
-	show_always:SetPoint("TOPLEFT", direction, "BOTTOMLEFT", 16, -10)
+	show_always:SetPoint("TOPLEFT", direction, "BOTTOMLEFT", 16, 0)
 
 	local show_inpvp = ns.CreateCheckBox(parent, "show_inpvp", L_GUI_COOLDOWN_ENEMY_IN_BG)
 	show_inpvp:SetPoint("TOPLEFT", show_always, "BOTTOMLEFT", 0, 0)
@@ -1111,133 +1315,6 @@ do
 
 	local hide_solo = ns.CreateCheckBox(parent, "hide_solo", L_GUI_THREAT_HIDE_SOLO)
 	hide_solo:SetPoint("TOPLEFT", bar_rows, "BOTTOMLEFT", 0, -20)
-end
-
--- Tooltip
-do
-	local parent = ShestakUIOptionsPanel.tooltip
-
-	local enable = ns.CreateCheckBox(parent, "enable", L_GUI_TOOLTIP_ENABLE)
-	enable:SetPoint("TOPLEFT", parent.subText, "BOTTOMLEFT", 0, 0)
-
-	local shift_modifer = ns.CreateCheckBox(parent, "shift_modifer", L_GUI_TOOLTIP_SHIFT)
-	shift_modifer:SetPoint("TOPLEFT", enable, "BOTTOMLEFT", 0, 0)
-
-	local cursor = ns.CreateCheckBox(parent, "cursor", L_GUI_TOOLTIP_CURSOR)
-	cursor:SetPoint("TOPLEFT", shift_modifer, "BOTTOMLEFT", 0, 0)
-
-	local item_icon = ns.CreateCheckBox(parent, "item_icon", L_GUI_TOOLTIP_ICON)
-	item_icon:SetPoint("TOPLEFT", cursor, "BOTTOMLEFT", 0, 0)
-
-	local health_value = ns.CreateCheckBox(parent, "health_value", L_GUI_TOOLTIP_HEALTH)
-	health_value:SetPoint("TOPLEFT", item_icon, "BOTTOMLEFT", 0, 0)
-
-	local hidebuttons = ns.CreateCheckBox(parent, "hidebuttons", L_GUI_TOOLTIP_HIDE)
-	hidebuttons:SetPoint("TOPLEFT", health_value, "BOTTOMLEFT", 0, 0)
-
-	local hide_combat = ns.CreateCheckBox(parent, "hide_combat", L_GUI_TOOLTIP_HIDE_COMBAT)
-	hide_combat:SetPoint("TOPLEFT", hidebuttons, "BOTTOMLEFT", 0, 0)
-
-	-- Plugins
-	local subheader = ns.addSubCategory(parent, L_GUI_TOOLTIP_SUBHEADER_PLUGINS)
-	subheader:SetPoint("TOPLEFT", hide_combat, "BOTTOMLEFT", 0, -16)
-
-	local talents = ns.CreateCheckBox(parent, "talents", L_GUI_TOOLTIP_TALENTS)
-	talents:SetPoint("TOPLEFT", subheader, "BOTTOMLEFT", 0, -8)
-
-	local achievements = ns.CreateCheckBox(parent, "achievements", L_GUI_TOOLTIP_ACHIEVEMENTS)
-	achievements:SetPoint("TOPLEFT", talents, "BOTTOMLEFT", 0, 0)
-
-	local target = ns.CreateCheckBox(parent, "target", L_GUI_TOOLTIP_TARGET)
-	target:SetPoint("TOPLEFT", achievements, "BOTTOMLEFT", 0, 0)
-
-	local title = ns.CreateCheckBox(parent, "title", L_GUI_TOOLTIP_TITLE)
-	title:SetPoint("TOPLEFT", target, "BOTTOMLEFT", 0, 0)
-
-	local realm = ns.CreateCheckBox(parent, "realm", L_GUI_TOOLTIP_REALM)
-	realm:SetPoint("TOPLEFT", title, "BOTTOMLEFT", 0, 0)
-
-	local rank = ns.CreateCheckBox(parent, "rank", L_GUI_TOOLTIP_RANK)
-	rank:SetPoint("TOPLEFT", realm, "BOTTOMLEFT", 0, 0)
-
-	local arena_experience = ns.CreateCheckBox(parent, "arena_experience", L_GUI_TOOLTIP_ARENA_EXPERIENCE)
-	arena_experience:SetPoint("TOPLEFT", rank, "BOTTOMLEFT", 0, 0)
-
-	local spell_id = ns.CreateCheckBox(parent, "spell_id", L_GUI_TOOLTIP_SPELL_ID)
-	spell_id:SetPoint("TOPLEFT", arena_experience, "BOTTOMLEFT", 0, 0)
-
-	local average_lvl = ns.CreateCheckBox(parent, "average_lvl", STAT_AVERAGE_ITEM_LEVEL, L_GUI_TOOLTIP_AVERAGE_LVL_DESC)
-	average_lvl:SetPoint("TOPLEFT", spell_id, "BOTTOMLEFT", 0, 0)
-
-	local raid_icon = ns.CreateCheckBox(parent, "raid_icon", L_GUI_TOOLTIP_RAID_ICON)
-	raid_icon:SetPoint("TOPLEFT", average_lvl, "BOTTOMLEFT", 0, 0)
-
-	local who_targetting = ns.CreateCheckBox(parent, "who_targetting", L_GUI_TOOLTIP_WHO_TARGETTING)
-	who_targetting:SetPoint("TOPLEFT", raid_icon, "BOTTOMLEFT", 0, 0)
-
-	local item_count = ns.CreateCheckBox(parent, "item_count", L_GUI_TOOLTIP_ITEM_COUNT)
-	item_count:SetPoint("TOPLEFT", who_targetting, "BOTTOMLEFT", 0, 0)
-
-	local unit_role = ns.CreateCheckBox(parent, "unit_role", L_GUI_TOOLTIP_UNIT_ROLE)
-	unit_role:SetPoint("TOPLEFT", item_count, "BOTTOMLEFT", 0, 0)
-
-	local instance_lock = ns.CreateCheckBox(parent, "instance_lock", L_GUI_TOOLTIP_INSTANCE_LOCK)
-	instance_lock:SetPoint("TOPLEFT", unit_role, "BOTTOMLEFT", 0, 0)
-end
-
--- Chat
-do
-	local parent = ShestakUIOptionsPanel.chat
-
-	local enable = ns.CreateCheckBox(parent, "enable", L_GUI_CHAT_ENABLE)
-	enable:SetPoint("TOPLEFT", parent.subText, "BOTTOMLEFT", 0, 0)
-
-	local background = ns.CreateCheckBox(parent, "background", L_GUI_CHAT_BACKGROUND)
-	background:SetPoint("TOPLEFT", enable, "BOTTOMLEFT", 0, 0)
-
-	local background_alpha = ns.CreateNumberSlider(parent, "background_alpha", nil, nil, 0, 1, 0.05, true, L_GUI_CHAT_BACKGROUND_ALPHA)
-	background_alpha:SetPoint("TOPLEFT", background, "BOTTOMLEFT", 0, -20)
-
-	local filter = ns.CreateCheckBox(parent, "filter", L_GUI_CHAT_SPAM)
-	filter:SetPoint("TOPLEFT", background_alpha, "BOTTOMLEFT", 0, -10)
-
-	local spam = ns.CreateCheckBox(parent, "spam", L_GUI_CHAT_GOLD)
-	spam:SetPoint("TOPLEFT", filter, "BOTTOMLEFT", 0, 0)
-
-	local width = ns.CreateNumberSlider(parent, "width", nil, nil, 0, 500, 1, true, L_GUI_CHAT_WIDTH)
-	width:SetPoint("TOPLEFT", spam, "BOTTOMLEFT", 0, -20)
-
-	local height = ns.CreateNumberSlider(parent, "height", nil, nil, 0, 200, 1, true, L_GUI_CHAT_HEIGHT)
-	height:SetPoint("TOPLEFT", width, "BOTTOMLEFT", 0, -20)
-
-	local chat_bar = ns.CreateCheckBox(parent, "chat_bar", L_GUI_CHAT_BAR)
-	chat_bar:SetPoint("TOPLEFT", height, "BOTTOMLEFT", 0, -10)
-
-	local chat_bar_mouseover = ns.CreateCheckBox(parent, "chat_bar_mouseover", L_GUI_CHAT_BAR_MOUSEOVER)
-	chat_bar_mouseover:SetPoint("TOPLEFT", chat_bar, "BOTTOMLEFT", 20, 0)
-
-	chat_bar.children = {chat_bar_mouseover}
-
-	local time_color = ns.CreateColourPicker(parent, "time_color", true, L_GUI_CHAT_TIMESTAMP)
-	time_color:SetPoint("TOPLEFT", chat_bar_mouseover, "BOTTOMLEFT", -16, -10)
-
-	local whisp_sound = ns.CreateCheckBox(parent, "whisp_sound", L_GUI_CHAT_WHISP)
-	whisp_sound:SetPoint("TOPLEFT", time_color, "BOTTOMLEFT", -4, -10)
-
-	local bubbles = ns.CreateCheckBox(parent, "bubbles", L_GUI_CHAT_SKIN_BUBBLE)
-	bubbles:SetPoint("TOPLEFT", whisp_sound, "BOTTOMLEFT", 0, 0)
-
-	local combatlog = ns.CreateCheckBox(parent, "combatlog", L_GUI_CHAT_CL_TAB)
-	combatlog:SetPoint("TOPLEFT", bubbles, "BOTTOMLEFT", 0, 0)
-
-	local tabs_mouseover = ns.CreateCheckBox(parent, "tabs_mouseover", L_GUI_CHAT_TABS_MOUSEOVER)
-	tabs_mouseover:SetPoint("TOPLEFT", combatlog, "BOTTOMLEFT", 0, 0)
-
-	local sticky = ns.CreateCheckBox(parent, "sticky", L_GUI_CHAT_STICKY)
-	sticky:SetPoint("TOPLEFT", tabs_mouseover, "BOTTOMLEFT", 0, 0)
-
-	local damage_meter_spam = ns.CreateCheckBox(parent, "damage_meter_spam", L_GUI_CHAT_DAMAGE_METER_SPAM)
-	damage_meter_spam:SetPoint("TOPLEFT", sticky, "BOTTOMLEFT", 0, 0)
 end
 
 -- Bag
@@ -1391,80 +1468,6 @@ do
 
 	local offtank_color = ns.CreateColourPicker(parent, "offtank_color", true, L_GUI_NAMEPLATE_OFFTANK_COLOR)
 	offtank_color:SetPoint("TOPLEFT", bad_color, "BOTTOMLEFT", 0, -10)
-end
-
--- ActionBar
-do
-	local parent = ShestakUIOptionsPanel.actionbar
-
-	local enable = ns.CreateCheckBox(parent, "enable", L_GUI_ACTIONBAR_ENABLE)
-	enable:SetPoint("TOPLEFT", parent.subText, "BOTTOMLEFT", 0, 0)
-
-	local hotkey = ns.CreateCheckBox(parent, "hotkey", L_GUI_ACTIONBAR_HOTKEY)
-	hotkey:SetPoint("TOPLEFT", enable, "BOTTOMLEFT", 0, 0)
-
-	local macro = ns.CreateCheckBox(parent, "macro", L_GUI_ACTIONBAR_MACRO)
-	macro:SetPoint("TOPLEFT", hotkey, "BOTTOMLEFT", 0, 0)
-
-	local show_grid = ns.CreateCheckBox(parent, "show_grid", L_GUI_ACTIONBAR_GRID)
-	show_grid:SetPoint("TOPLEFT", macro, "BOTTOMLEFT", 0, 0)
-
-	local button_size = ns.CreateNumberSlider(parent, "button_size", nil, nil, 0, 35, 1, true, L_GUI_ACTIONBAR_BUTTON_SIZE)
-	button_size:SetPoint("TOPLEFT", show_grid, "BOTTOMLEFT", 0, -20)
-
-	local button_space = ns.CreateNumberSlider(parent, "button_space", nil, nil, 0, 7, 1, true, L_GUI_ACTIONBAR_BUTTON_SPACE)
-	button_space:SetPoint("LEFT", button_size, "RIGHT", 120, 0)
-
-	local split_bars = ns.CreateCheckBox(parent, "split_bars", L_GUI_ACTIONBAR_SPLIT_BARS)
-	split_bars:SetPoint("TOPLEFT", button_size, "BOTTOMLEFT", 0, -10)
-
-	local classcolor_border = ns.CreateCheckBox(parent, "classcolor_border", L_GUI_ACTIONBAR_CLASSCOLOR_BORDER)
-	classcolor_border:SetPoint("TOPLEFT", split_bars, "BOTTOMLEFT", 0, 0)
-
-	local toggle_mode = ns.CreateCheckBox(parent, "toggle_mode", L_GUI_ACTIONBAR_TOGGLE_MODE)
-	toggle_mode:SetPoint("TOPLEFT", classcolor_border, "BOTTOMLEFT", 0, 0)
-
-	local hide_highlight = ns.CreateCheckBox(parent, "hide_highlight", L_GUI_ACTIONBAR_HIDE_HIGHLIGHT)
-	hide_highlight:SetPoint("TOPLEFT", toggle_mode, "BOTTOMLEFT", 0, 0)
-
-	local bottombars = ns.CreateNumberSlider(parent, "bottombars", nil, nil, 1, 3, 1, true, L_GUI_ACTIONBAR_BOTTOMBARS)
-	bottombars:SetPoint("TOPLEFT", hide_highlight, "BOTTOMLEFT", 0, -20)
-
-	local rightbars = ns.CreateNumberSlider(parent, "rightbars", nil, nil, 0, 3, 1, true, L_GUI_ACTIONBAR_RIGHTBARS)
-	rightbars:SetPoint("LEFT", bottombars, "RIGHT", 120, 0)
-
-	local rightbars_mouseover = ns.CreateCheckBox(parent, "rightbars_mouseover", L_GUI_ACTIONBAR_RIGHTBARS_MOUSEOVER)
-	rightbars_mouseover:SetPoint("TOPLEFT", bottombars, "BOTTOMLEFT", 0, -10)
-
-	local petbar_hide = ns.CreateCheckBox(parent, "petbar_hide", L_GUI_ACTIONBAR_PETBAR_HIDE)
-	petbar_hide:SetPoint("TOPLEFT", rightbars_mouseover, "BOTTOMLEFT", 0, 0)
-
-	local petbar_horizontal = ns.CreateCheckBox(parent, "petbar_horizontal", L_GUI_ACTIONBAR_PETBAR_HORIZONTAL)
-	petbar_horizontal:SetPoint("TOPLEFT", petbar_hide, "BOTTOMLEFT", 0, 0)
-
-	local petbar_mouseover = ns.CreateCheckBox(parent, "petbar_mouseover", L_GUI_ACTIONBAR_PETBAR_MOUSEOVER)
-	petbar_mouseover:SetPoint("TOPLEFT", petbar_horizontal, "BOTTOMLEFT", 20, 0)
-
-	petbar_horizontal.children = {petbar_mouseover}
-
-	local stancebar_hide = ns.CreateCheckBox(parent, "stancebar_hide", L_GUI_ACTIONBAR_STANCEBAR_HIDE)
-	stancebar_hide:SetPoint("TOPLEFT", petbar_mouseover, "BOTTOMLEFT", -20, 0)
-
-	local stancebar_horizontal = ns.CreateCheckBox(parent, "stancebar_horizontal", L_GUI_ACTIONBAR_STANCEBAR_HORIZONTAL)
-	stancebar_horizontal:SetPoint("TOPLEFT", stancebar_hide, "BOTTOMLEFT", 0, 0)
-
-	local stancebar_mouseover = ns.CreateCheckBox(parent, "stancebar_mouseover", L_GUI_ACTIONBAR_STANCEBAR_MOUSEOVER)
-	stancebar_mouseover:SetPoint("TOPLEFT", stancebar_horizontal, "BOTTOMLEFT", 20, 0)
-
-	stancebar_horizontal.children = {stancebar_mouseover}
-
-	local micromenu = ns.CreateCheckBox(parent, "micromenu", L_GUI_ACTIONBAR_MICROMENU)
-	micromenu:SetPoint("TOPLEFT", stancebar_mouseover, "BOTTOMLEFT", -20, 0)
-
-	local micromenu_mouseover = ns.CreateCheckBox(parent, "micromenu_mouseover", L_GUI_ACTIONBAR_MICROMENU_MOUSEOVER)
-	micromenu_mouseover:SetPoint("TOPLEFT", micromenu, "BOTTOMLEFT", 20, 0)
-
-	micromenu.children = {micromenu_mouseover}
 end
 
 -- Auras/Buffs/Debuffs
@@ -1622,7 +1625,7 @@ do
 	local currency_raid = ns.CreateCheckBox(parent, "currency_raid", L_GUI_STATS_CURRENCY_RAID)
 	currency_raid:SetPoint("TOPLEFT", currency_professions, "BOTTOMLEFT", 0, 0)
 
-	local currency_misc = ns.CreateCheckBox(parent, "currency_misc", L_GUI_STATS_CURRENCY_MISCELLANEOUS)
+	local currency_misc = ns.CreateCheckBox(parent, "currency_misc", CURRENCY.. " "..EXPANSION_NAME7)
 	currency_misc:SetPoint("TOPLEFT", currency_raid, "BOTTOMLEFT", 0, 0)
 end
 
@@ -1647,11 +1650,8 @@ do
 	local shift_marking = ns.CreateCheckBox(parent, "shift_marking")
 	shift_marking:SetPoint("TOPLEFT", parent.subText, "BOTTOMLEFT", 0, 0)
 
-	local invite_keyword = ns.CreateEditBox(parent, "invite_keyword", true, L_GUI_MISC_INVKEYWORD)
-	invite_keyword:SetPoint("TOPLEFT", shift_marking, "BOTTOMLEFT", 6, -10)
-
 	local afk_spin_camera = ns.CreateCheckBox(parent, "afk_spin_camera", L_GUI_MISC_SPIN_CAMERA)
-	afk_spin_camera:SetPoint("TOPLEFT", invite_keyword, "BOTTOMLEFT", -6, -10)
+	afk_spin_camera:SetPoint("TOPLEFT", shift_marking, "BOTTOMLEFT", 0, 0)
 
 	local vehicle_mouseover = ns.CreateCheckBox(parent, "vehicle_mouseover", L_GUI_MISC_VEHICLE_MOUSEOVER)
 	vehicle_mouseover:SetPoint("TOPLEFT", afk_spin_camera, "BOTTOMLEFT", 0, 0)
@@ -1677,13 +1677,13 @@ do
 	local disenchanting = ns.CreateCheckBox(parent, "disenchanting", L_GUI_MISC_DISENCHANTING)
 	disenchanting:SetPoint("TOPLEFT", already_known, "BOTTOMLEFT", 0, 0)
 
-	local sum_buyouts = ns.CreateCheckBox(parent, "sum_buyouts", L_GUI_MISC_SUM_BUYOUTS)
+	local sum_buyouts = ns.CreateCheckBox(parent, "sum_buyouts")
 	sum_buyouts:SetPoint("TOPLEFT", disenchanting, "BOTTOMLEFT", 0, 0)
 
-	local click_cast = ns.CreateCheckBox(parent, "click_cast", L_GUI_MISC_CLICK_CAST)
+	local click_cast = ns.CreateCheckBox(parent, "click_cast")
 	click_cast:SetPoint("TOPLEFT", sum_buyouts, "BOTTOMLEFT", 0, 0)
 
-	local click_cast_filter = ns.CreateCheckBox(parent, "click_cast_filter", L_GUI_MISC_CLICK_CAST_FILTER)
+	local click_cast_filter = ns.CreateCheckBox(parent, "click_cast_filter")
 	click_cast_filter:SetPoint("TOPLEFT", click_cast, "BOTTOMLEFT", 20, 0)
 
 	click_cast.children = {click_cast_filter}
@@ -1691,16 +1691,16 @@ do
 	local move_blizzard = ns.CreateCheckBox(parent, "move_blizzard", L_GUI_MISC_MOVE_BLIZZARD)
 	move_blizzard:SetPoint("TOPLEFT", click_cast_filter, "BOTTOMLEFT", -20, 0)
 
-	local color_picker = ns.CreateCheckBox(parent, "color_picker", L_GUI_MISC_COLOR_PICKER)
+	local color_picker = ns.CreateCheckBox(parent, "color_picker")
 	color_picker:SetPoint("TOPLEFT", move_blizzard, "BOTTOMLEFT", 0, 0)
 
 	local enchantment_scroll = ns.CreateCheckBox(parent, "enchantment_scroll", L_GUI_MISC_ENCHANTMENT_SCROLL)
 	enchantment_scroll:SetPoint("TOPLEFT", color_picker, "BOTTOMLEFT", 0, 0)
 
-	local archaeology = ns.CreateCheckBox(parent, "archaeology", L_GUI_MISC_ARCHAEOLOGY)
+	local archaeology = ns.CreateCheckBox(parent, "archaeology")
 	archaeology:SetPoint("TOPLEFT", enchantment_scroll, "BOTTOMLEFT", 0, 0)
 
-	local chars_currency = ns.CreateCheckBox(parent, "chars_currency", L_GUI_MISC_CHARS_CURRENCY)
+	local chars_currency = ns.CreateCheckBox(parent, "chars_currency")
 	chars_currency:SetPoint("TOPLEFT", archaeology, "BOTTOMLEFT", 0, 0)
 
 	local armory_link = ns.CreateCheckBox(parent, "armory_link")
@@ -1721,11 +1721,8 @@ do
 	local hide_talking_head = ns.CreateCheckBox(parent, "hide_talking_head", L_GUI_MISC_HIDE_TALKING_HEAD)
 	hide_talking_head:SetPoint("TOPLEFT", hide_banner, "BOTTOMLEFT", 0, 0)
 
-	local hide_raid_button = ns.CreateCheckBox(parent, "hide_raid_button", L_GUI_MISC_HIDE_RAID_BUTTON)
+	local hide_raid_button = ns.CreateCheckBox(parent, "hide_raid_button")
 	hide_raid_button:SetPoint("TOPLEFT", hide_talking_head, "BOTTOMLEFT", 0, 0)
-
-	local custom_lagtolerance = ns.CreateCheckBox(parent, "custom_lagtolerance", L_GUI_MISC_LAG_TOLERANCE)
-	custom_lagtolerance:SetPoint("TOPLEFT", hide_raid_button, "BOTTOMLEFT", 0, 0)
 end
 
 ----------------------------------------------------------------------------------------
