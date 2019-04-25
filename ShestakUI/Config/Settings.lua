@@ -99,7 +99,7 @@ C["unitframe"] = {
 	-- Icons
 	["icons_pvp"] = true,						-- Mouseover PvP text (not icons) on player and target frames
 	["icons_combat"] = true,					-- Combat icon
-	["icons_resting"] = true,					-- Resting icon for low lvl chars
+	["icons_resting"] = true,					-- Resting icon
 	-- Portraits
 	["portrait_enable"] = false,				-- Enable player/target portraits
 	["portrait_classcolor_border"] = true,		-- Enable classcolor border
@@ -256,6 +256,142 @@ C["chat"] = {
 }
 
 ----------------------------------------------------------------------------------------
+--	Nameplate options
+----------------------------------------------------------------------------------------
+C["nameplate"] = {
+	["enable"] = true, 							-- Enable nameplate
+	["height"] = 9,								-- Nameplate height
+	["width"] = 120,							-- Nameplate width
+	["distance"] = 40,							-- Show nameplates for units within this range
+	["ad_height"] = 0,							-- Additional height for selected nameplate
+	["ad_width"] = 0,							-- Additional width for selected nameplate
+	["combat"] = false,							-- Automatically show nameplate in combat
+	["health_value"] = false,					-- Numeral health value
+	["show_castbar_name"] = false,				-- Show castbar name
+	["class_icons"] = false,					-- Icons by class in PvP
+	["name_abbrev"] = false,					-- Display abbreviated names
+	["clamp"] = false,							-- Clamp nameplates to the top of the screen when outside of view
+	["track_debuffs"] = true,					-- Show debuffs (from the list)
+	["track_buffs"] = true,					-- Show buffs above player nameplate (from the list)
+	["auras_size"] = 26,						-- Debuffs size
+	["healer_icon"] = true,					-- Show icon above enemy healers nameplate in battlegrounds
+	["totem_icons"] = true,					-- Show icon above enemy totems nameplate
+	["enhance_threat"] = true,					-- Enable threat feature, automatically changes by your role
+	["good_color"] = {0.2, 0.8, 0.2},			-- Good threat color
+	["near_color"] = {1, 1, 0},					-- Near threat color
+	["bad_color"] = {1, 0, 0},					-- Bad threat color
+	["offtank_color"] = {0, 0.5, 1},			-- Offtank threat color
+}
+
+----------------------------------------------------------------------------------------
+--	Combat text options
+----------------------------------------------------------------------------------------
+C["combattext"] = {
+	["enable"] = true,							-- Global enable combat text
+	["blizz_head_numbers"] = true,				-- Use blizzard damage/healing output (above mob/player head)
+	["damage_style"] = true,					-- Change default damage/healing font above mobs/player heads (you need to restart WoW to see changes)
+	["damage"] = true,							-- Show outgoing damage in it's own frame
+	["healing"] = true,							-- Show outgoing healing in it's own frame
+	["show_hots"] = true,						-- Show periodic healing effects in healing frame
+	["show_overhealing"] = true,				-- Show outgoing overhealing
+	["pet_damage"] = true,						-- Show your pet damage
+	["dot_damage"] = true,						-- Show damage from your dots
+	["damage_color"] = true,					-- Display damage numbers depending on school of magic
+	["crit_prefix"] = "*",						-- Symbol that will be added before crit
+	["crit_postfix"] = "*",						-- Symbol that will be added after crit
+	["icons"] = true,							-- Show outgoing damage icons
+	["icon_size"] = 16,							-- Icon size of spells in outgoing damage frame, also has effect on dmg font size
+	["treshold"] = 1,							-- Minimum damage to show in damage frame
+	["heal_treshold"] = 1,						-- Minimum healing to show in incoming/outgoing healing messages
+	["scrollable"] = false,						-- Allows you to scroll frame lines with mousewheel
+	["max_lines"] = 15,							-- Max lines to keep in scrollable mode (more lines = more memory)
+	["time_visible"] = 3,						-- Time (seconds) a single message will be visible
+	["dk_runes"] = true,						-- Show deathknight rune recharge
+	["killingblow"] = false,					-- Tells you about your killingblows
+	["merge_aoe_spam"] = true,					-- Merges multiple aoe damage spam into single message
+	["merge_melee"] = true,						-- Merges multiple auto attack damage spam
+	["dispel"] = true,							-- Tells you about your dispels (works only with ["damage"] = true)
+	["interrupt"] = true,						-- Tells you about your interrupts (works only with ["damage"] = true)
+	["direction"] = true,						-- Change scrolling direction from bottom to top
+	["short_numbers"] = true,					-- Use short numbers ("25.3k" instead of "25342")
+}
+
+----------------------------------------------------------------------------------------
+--	Auras/Buffs/Debuffs options
+----------------------------------------------------------------------------------------
+C["aura"] = {
+	["player_buff_size"] = 25,					-- Player buffs size
+	["show_spiral"] = false,					-- Spiral on aura icons
+	["show_timer"] = true,						-- Show cooldown timer on aura icons
+	["player_auras"] = true,					-- Auras on player frame
+	["target_auras"] = true,					-- Auras on target frame
+	["focus_debuffs"] = false,					-- DeBuffs on focus frame
+	["fot_debuffs"] = false,					-- DeBuffs on focustarget frame
+	["pet_debuffs"] = false,					-- DeBuffs on pet frame
+	["tot_debuffs"] = false,					-- DeBuffs on targettarget frame
+	["boss_buffs"] = true,						-- Buffs on boss frame
+	["player_aura_only"] = false,				-- Only your debuff on target frame
+	["debuff_color_type"] = true,				-- Color debuff by type
+	["cast_by"] = false,						-- Show who cast a buff/debuff in its tooltip
+	["classcolor_border"] = false,				-- Enable classcolor border for player buffs
+}
+
+----------------------------------------------------------------------------------------
+--	Bag options
+----------------------------------------------------------------------------------------
+C["bag"] = {
+	["enable"] = true,							-- Enable bags
+	["ilvl"] = true,							-- Show item level for weapons and armor
+	["button_size"] = 27,						-- Buttons size
+	["button_space"] = 3,						-- Buttons space
+	["bank_columns"] = 17,						-- Horizontal number of columns in bank
+	["bag_columns"] = 10,						-- Horizontal number of columns in main bag
+}
+
+----------------------------------------------------------------------------------------
+--	Minimap options
+----------------------------------------------------------------------------------------
+C["minimap"] = {
+	["enable"] = true,							-- Enable minimap
+	["tracking_icon"] = false,					-- Tracking icon
+	["garrison_icon"] = false,					-- Garrison icon
+	["size"] = 130,								-- Minimap size
+	["hide_combat"] = false,					-- Hide minimap in combat
+	["toggle_menu"] = true,						-- Show toggle menu
+	-- Other
+	["bg_map_stylization"] = true,				-- BG map stylization
+	["fog_of_war"] = false,						-- Remove fog of war on World Map
+}
+
+----------------------------------------------------------------------------------------
+--	Loot options
+----------------------------------------------------------------------------------------
+C["loot"] = {
+	["lootframe"] = true,						-- Enable loot frame
+	["rolllootframe"] = true,					-- Enable group roll frame
+	["icon_size"] = 22,							-- Icon size
+	["width"] = 221,							-- Loot window width
+	["auto_greed"] = true,						-- Push "greed" or "disenchant" button when green item roll at max level
+	["auto_confirm_de"] = true,					-- Auto confirm disenchant
+}
+
+----------------------------------------------------------------------------------------
+--	Filger options
+----------------------------------------------------------------------------------------
+C["filger"] = {
+	["enable"] = true,							-- Enable Filger
+	["test_mode"] = false,						-- Test icon mode
+	["max_test_icon"] = 5,						-- Number of icons to the test
+	["show_tooltip"] = false,					-- Show tooltip
+	["disable_cd"] = false,						-- Disable cooldowns
+	["disable_pvp"] = false,					-- Disable PvP debuffs on Player and Target
+	["expiration"] = false,						-- Sort cooldowns by expiration time
+	["buffs_size"] = 37,						-- Buffs size
+	["cooldown_size"] = 30,						-- Cooldowns size
+	["pvp_size"] = 60,							-- PvP debuffs size
+}
+
+----------------------------------------------------------------------------------------
 --	Announcements options
 ----------------------------------------------------------------------------------------
 C["announcements"] = {
@@ -295,39 +431,6 @@ C["automation"] = {
 	["buff_on_scroll"] = false,					-- Cast buff on mouse scroll (from the list)
 	["open_items"] = false,						-- Auto opening of items in bag
 	["invite_keyword"] = "inv",					-- Short keyword for invite (for enable - in game type /ainv)
-}
-
-----------------------------------------------------------------------------------------
---	Combat text options
-----------------------------------------------------------------------------------------
-C["combattext"] = {
-	["enable"] = true,							-- Global enable combat text
-	["blizz_head_numbers"] = true,				-- Use blizzard damage/healing output (above mob/player head)
-	["damage_style"] = true,					-- Change default damage/healing font above mobs/player heads (you need to restart WoW to see changes)
-	["damage"] = true,							-- Show outgoing damage in it's own frame
-	["healing"] = true,							-- Show outgoing healing in it's own frame
-	["show_hots"] = true,						-- Show periodic healing effects in healing frame
-	["show_overhealing"] = true,				-- Show outgoing overhealing
-	["pet_damage"] = true,						-- Show your pet damage
-	["dot_damage"] = true,						-- Show damage from your dots
-	["damage_color"] = true,					-- Display damage numbers depending on school of magic
-	["crit_prefix"] = "*",						-- Symbol that will be added before crit
-	["crit_postfix"] = "*",						-- Symbol that will be added after crit
-	["icons"] = true,							-- Show outgoing damage icons
-	["icon_size"] = 16,							-- Icon size of spells in outgoing damage frame, also has effect on dmg font size
-	["treshold"] = 1,							-- Minimum damage to show in damage frame
-	["heal_treshold"] = 1,						-- Minimum healing to show in incoming/outgoing healing messages
-	["scrollable"] = false,						-- Allows you to scroll frame lines with mousewheel
-	["max_lines"] = 15,							-- Max lines to keep in scrollable mode (more lines = more memory)
-	["time_visible"] = 3,						-- Time (seconds) a single message will be visible
-	["dk_runes"] = true,						-- Show deathknight rune recharge
-	["killingblow"] = true,					-- Tells you about your killingblows
-	["merge_aoe_spam"] = true,					-- Merges multiple aoe damage spam into single message
-	["merge_melee"] = true,						-- Merges multiple auto attack damage spam
-	["dispel"] = true,							-- Tells you about your dispels (works only with ["damage"] = true)
-	["interrupt"] = true,						-- Tells you about your interrupts (works only with ["damage"] = true)
-	["direction"] = true,						-- Change scrolling direction from bottom to top
-	["short_numbers"] = true,					-- Use short numbers ("25.3k" instead of "25342")
 }
 
 ----------------------------------------------------------------------------------------
@@ -397,110 +500,7 @@ C["threat"] = {
 }
 
 ----------------------------------------------------------------------------------------
---	Bag options
-----------------------------------------------------------------------------------------
-C["bag"] = {
-	["enable"] = true,							-- Enable bags
-	["ilvl"] = true,							-- Show item level for weapons and armor
-	["button_size"] = 27,						-- Buttons size
-	["button_space"] = 3,						-- Buttons space
-	["bank_columns"] = 17,						-- Horizontal number of columns in bank
-	["bag_columns"] = 10,						-- Horizontal number of columns in main bag
-}
-
-----------------------------------------------------------------------------------------
---	Minimap options
-----------------------------------------------------------------------------------------
-C["minimap"] = {
-	["enable"] = true,							-- Enable minimap
-	["tracking_icon"] = false,					-- Tracking icon
-	["garrison_icon"] = false,					-- Garrison icon
-	["size"] = 130,								-- Minimap size
-	["hide_combat"] = false,					-- Hide minimap in combat
-	["toggle_menu"] = true,						-- Show toggle menu
-	-- Other
-	["bg_map_stylization"] = true,				-- BG map stylization
-	["fog_of_war"] = false,						-- Remove fog of war on World Map
-}
-
-----------------------------------------------------------------------------------------
---	Loot options
-----------------------------------------------------------------------------------------
-C["loot"] = {
-	["lootframe"] = true,						-- Enable loot frame
-	["rolllootframe"] = true,					-- Enable group roll frame
-	["icon_size"] = 22,							-- Icon size
-	["width"] = 221,							-- Loot window width
-	["auto_greed"] = true,						-- Push "greed" or "disenchant" button when green item roll at max level
-	["auto_confirm_de"] = true,					-- Auto confirm disenchant
-}
-
-----------------------------------------------------------------------------------------
---	Nameplate options
-----------------------------------------------------------------------------------------
-C["nameplate"] = {
-	["enable"] = true, 							-- Enable nameplate
-	["height"] = 9,								-- Nameplate height
-	["width"] = 120,							-- Nameplate width
-	["distance"] = 40,							-- Show nameplates for units within this range
-	["ad_height"] = 0,							-- Additional height for selected nameplate
-	["ad_width"] = 0,							-- Additional width for selected nameplate
-	["combat"] = false,							-- Automatically show nameplate in combat
-	["health_value"] = false,					-- Numeral health value
-	["show_castbar_name"] = false,				-- Show castbar name
-	["class_icons"] = false,					-- Icons by class in PvP
-	["name_abbrev"] = false,					-- Display abbreviated names
-	["clamp"] = false,							-- Clamp nameplates to the top of the screen when outside of view
-	["track_debuffs"] = true,					-- Show debuffs (from the list)
-	["track_buffs"] = true,					-- Show buffs above player nameplate (from the list)
-	["auras_size"] = 26,						-- Debuffs size
-	["healer_icon"] = true,					-- Show icon above enemy healers nameplate in battlegrounds
-	["totem_icons"] = true,					-- Show icon above enemy totems nameplate
-	["enhance_threat"] = true,					-- Enable threat feature, automatically changes by your role
-	["good_color"] = {0.2, 0.8, 0.2},			-- Good threat color
-	["near_color"] = {1, 1, 0},					-- Near threat color
-	["bad_color"] = {1, 0, 0},					-- Bad threat color
-	["offtank_color"] = {0, 0.5, 1},			-- Offtank threat color
-}
-
-----------------------------------------------------------------------------------------
---	Auras/Buffs/Debuffs options
-----------------------------------------------------------------------------------------
-C["aura"] = {
-	["player_buff_size"] = 35,					-- Player buffs size
-	["show_spiral"] = true,					-- Spiral on aura icons
-	["show_timer"] = true,						-- Show cooldown timer on aura icons
-	["player_auras"] = true,					-- Auras on player frame
-	["target_auras"] = true,					-- Auras on target frame
-	["focus_debuffs"] = true,					-- DeBuffs on focus frame
-	["fot_debuffs"] = false,					-- DeBuffs on focustarget frame
-	["pet_debuffs"] = false,					-- DeBuffs on pet frame
-	["tot_debuffs"] = false,					-- DeBuffs on targettarget frame
-	["boss_buffs"] = true,						-- Buffs on boss frame
-	["player_aura_only"] = false,				-- Only your debuff on target frame
-	["debuff_color_type"] = true,				-- Color debuff by type
-	["cast_by"] = true,						-- Show who cast a buff/debuff in its tooltip
-	["classcolor_border"] = false,				-- Enable classcolor border for player buffs
-}
-
-----------------------------------------------------------------------------------------
---	Filger options
-----------------------------------------------------------------------------------------
-C["filger"] = {
-	["enable"] = true,							-- Enable Filger
-	["test_mode"] = false,						-- Test icon mode
-	["max_test_icon"] = 5,						-- The number of icons to the test
-	["show_tooltip"] = false,					-- Show tooltip
-	["disable_cd"] = false,						-- Disable cooldowns
-	["disable_pvp"] = false,					-- Disable PvP debuffs on Player and Target
-	["expiration"] = false,						-- Sort cooldowns by expiration time
-	["buffs_size"] = 37,						-- Buffs size
-	["cooldown_size"] = 30,						-- Cooldowns size
-	["pvp_size"] = 60,							-- PvP debuffs size
-}
-
-----------------------------------------------------------------------------------------
---	Panel options
+--	Top panel options
 ----------------------------------------------------------------------------------------
 C["toppanel"] = {
 	["enable"] = true,							-- Enable top panel
@@ -564,7 +564,7 @@ C["misc"] = {
 	["enchantment_scroll"] = true,				-- Enchantment scroll on TradeSkill frame
 	["archaeology"] = false,					-- Archaeology tracker ('/arch' or right mouseover minimap button to show)
 	["chars_currency"] = false,					-- Tracks your currency tokens across multiple characters
-	["armory_link"] = true,					-- Add Armory link in UnitPopupMenus (It breaks set focus)
+	["armory_link"] = true,					-- Add the Armory link in the chat menu and target (It breaks set focus)
 	["merchant_itemlevel"] = false,				-- Show item level for weapons and armor in merchant
 	["minimize_mouseover"] = false,				-- Mouseover for quest minimize button
 	["hide_banner"] = true,						-- Hide Boss Banner Loot Frame

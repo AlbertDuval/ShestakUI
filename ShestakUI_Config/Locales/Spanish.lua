@@ -220,6 +220,129 @@ L_GUI_CHAT_TABS_MOUSEOVER = "Chat tabs on mouseover" -- Needs review
 L_GUI_CHAT_STICKY = "Recordar último canal"
 L_GUI_CHAT_DAMAGE_METER_SPAM = "Merge damage meter spam in one line-link" -- Needs review
 
+-- Nameplate options
+L_GUI_NAMEPLATE_SUBTEXT = "Nameplates settings" -- Need review
+L_GUI_NAMEPLATE_ENABLE = "Activar placas de nombre"
+L_GUI_NAMEPLATE_COMBAT = "Mostrar automáticamente placa de nombre en combate"
+L_GUI_NAMEPLATE_HEALTH = "Valor de la vida en números"
+L_GUI_NAMEPLATE_HEIGHT = "Altura de la placa de nombre"
+L_GUI_NAMEPLATE_WIDTH = "Anchura de la placa de nombre"
+L_GUI_NAMEPLATE_DISTANCE = "Display range" -- Need review
+L_GUI_NAMEPLATE_AD_HEIGHT = "Additional height" -- Need review
+L_GUI_NAMEPLATE_AD_WIDTH = "Additional width" -- Need review
+L_GUI_NAMEPLATE_CASTBAR_NAME = "Mostrar nombre del hechizo en la barra de lanzamiento"
+L_GUI_NAMEPLATE_CLASS_ICON = "Iconos de clase en JcJ"
+L_GUI_NAMEPLATE_NAME_ABBREV = "Mostrar los nombres abreviados"
+L_GUI_NAMEPLATE_CLAMP = "Clamp nameplates to the top of the screen when outside of view" -- Need review
+L_GUI_NAMEPLATE_SHOW_DEBUFFS = "Mostrar perjuicios (Nombres abreviados debe ser desactivado)"
+L_GUI_NAMEPLATE_SHOW_BUFFS = "Show buffs above player nameplate (from the list)" -- Need review
+L_GUI_NAMEPLATE_DEBUFFS_SIZE = "Tamaño de los perjuicios"
+L_GUI_NAMEPLATE_HEALER_ICON = "Show icon above enemy healers nameplate in battlegrounds" -- Needs review
+L_GUI_NAMEPLATE_TOTEM_ICONS = "Show icon above enemy totems nameplate" -- Need review
+L_GUI_NAMEPLATE_THREAT = "Activar visor de amenaza, cambia automáticamente según tu rol"
+L_GUI_NAMEPLATE_GOOD_COLOR = "Color de alta amenaza, varía dependiendo si eres tanque o dps/sanador"
+L_GUI_NAMEPLATE_NEAR_COLOR = "Color de perdiendo/ganando amenaza"
+L_GUI_NAMEPLATE_BAD_COLOR = "Color de baja amenaza, varía dependiendo si eres tanque o dps/sanador"
+L_GUI_NAMEPLATE_OFFTANK_COLOR = "Offtank threat color" -- Need review
+
+-- Combat text options
+L_GUI_COMBATTEXT = "Texto de Combate"
+L_GUI_COMBATTEXT_SUBTEXT = "For moving type in the chat '/xct'" -- Need review
+L_GUI_COMBATTEXT_ENABLE = "Activar Texto de Combate"
+L.combattext_blizz_head_numbers = "Enable Blizzard combat text" -- Need review
+L.combattext_blizz_head_numbers_desc = "Usar la salida de daño/curación de Blizzard (sobre la cabeza del monstruo/jugador)"
+L.combattext_damage_style = "Change default combat font" -- Need review
+L.combattext_damage_style_desc = "Cambiar la fuente de daño/sanación por defecto de encima de los monstruos/jugadores (tendrás que reiniciar WoW para ver los cambios)"
+L_GUI_COMBATTEXT_DAMAGE = "Mostrar daño saliente en su propio marco"
+L_GUI_COMBATTEXT_HEALING = "Mostrar sanación saliente en su propio marco"
+L_GUI_COMBATTEXT_HOTS = "Mostrar efectos de cura periódicos en el marco de curas"
+L_GUI_COMBATTEXT_OVERHEALING = "Mostrar la sobrecuracion saliente"
+L_GUI_COMBATTEXT_PET_DAMAGE = "Mostrar el daño de tu mascota"
+L_GUI_COMBATTEXT_DOT_DAMAGE = "Mostrar el daño de tus dots (Daño periodico)"
+L_GUI_COMBATTEXT_DAMAGE_COLOR = "Mostrar números de daño dependiendo de la escuela de magia"
+L_GUI_COMBATTEXT_CRIT_PREFIX = "Símbolo que se añadirá antes de un crítico"
+L_GUI_COMBATTEXT_CRIT_POSTFIX = "Símbolo que se añadirá después de un crítico"
+L_GUI_COMBATTEXT_ICONS = "Mostrar iconos de daño saliente"
+L_GUI_COMBATTEXT_ICON_SIZE = "Icon size" -- Need review
+L_GUI_COMBATTEXT_ICON_SIZE_DESC = "Tamaño de los iconos de los hechizos en el marco de daño saliente, también tiene efecto sobre el tamaño de la fuente de daño"
+L_GUI_COMBATTEXT_TRESHOLD = "Daño mínimo que se mostrar en el marco de daño"
+L_GUI_COMBATTEXT_HEAL_TRESHOLD = "Sanación mínima que se mostrar en los mensajes de sanación entrante/saliente"
+L_GUI_COMBATTEXT_SCROLLABLE = "Permitir usar la rueda del ratón para desplazar las líneas de los marcos"
+L_GUI_COMBATTEXT_MAX_LINES = "Max lines" -- Need review
+L_GUI_COMBATTEXT_MAX_LINES_DESC = "Máx de líneas para mantener desplazables (a más lineas, más memoria requerida)"
+L_GUI_COMBATTEXT_TIME_VISIBLE = "Time" -- Need review
+L_GUI_COMBATTEXT_TIME_VISIBLE_DESC = "Tiempo (segundos) en que un mensaje es visible"
+L_GUI_COMBATTEXT_DK_RUNES = "Mostrar recarga de runas de los Caballeros de la Muerte"
+L_GUI_COMBATTEXT_KILLINGBLOW = "Mostrar tus golpes de gracia"
+L_GUI_COMBATTEXT_MERGE_AOE_SPAM = "Unir el spam de daño de area en un solo mensaje"
+L_GUI_COMBATTEXT_MERGE_MELEE = "Merges multiple auto attack damage spam" -- Needs review
+L_GUI_COMBATTEXT_DISPEL = "Mostrar tus disipaciones"
+L_GUI_COMBATTEXT_INTERRUPT = "Mostrar tus interrupciones"
+L_GUI_COMBATTEXT_DIRECTION = "Change scrolling direction from bottom to top" -- Need review
+L_GUI_COMBATTEXT_SHORT_NUMBERS = "Use short numbers ('25.3k' instead of '25342')" -- Need review
+
+-- Auras/Buffs/Debuffs
+L_GUI_AURA_PLAYER_BUFF_SIZE = "Buffs size" -- Need review
+L_GUI_AURA_PLAYER_BUFF_SIZE_DESC = "Tamaño de las beneficios del jugador"
+L_GUI_AURA_SHOW_SPIRAL = "Espiral en los iconos de las auras"
+L_GUI_AURA_SHOW_TIMER = "Mostrar tiempo de reutilización en los iconos de las auras"
+L_GUI_AURA_PLAYER_AURAS = "Auras en el marco del jugador"
+L_GUI_AURA_TARGET_AURAS = "Auras en el marco del objetivo"
+L_GUI_AURA_FOCUS_DEBUFFS = "Perjuicios en el marco del foco"
+L_GUI_AURA_FOT_DEBUFFS = "Perjuicios en el marco del objetivo del foco"
+L_GUI_AURA_PET_DEBUFFS = "Perjuicios en el marco de la mascota"
+L_GUI_AURA_TOT_DEBUFFS = "Perjuicios en el marco del objetivo del objetivo"
+L_GUI_AURA_BOSS_BUFFS = "Beneficios en el marco del jefe"
+L_GUI_AURA_PLAYER_AURA_ONLY = "Solo tus perjuicios en el marco del objetivo"
+L_GUI_AURA_DEBUFF_COLOR_TYPE = "Color de los perjuicios por tipo"
+L_GUI_AURA_CAST_BY = "Mostrar quién lanza un beneficio/perjuicio en su descripción"
+L_GUI_AURA_CLASSCOLOR_BORDER = "Activar borde por color de clase para los beneficios del jugador"
+
+-- Bag options
+L_GUI_BAGS = "Bolsas"
+L_GUI_BAGS_SUBTEXT = "Changing the built-in bags." -- Need review
+L_GUI_BAGS_ENABLE = "Activar bolsas"
+L_GUI_BAGS_ILVL = "Show item level for weapons and armor" -- Need review
+L_GUI_BAGS_BUTTON_SIZE = "Tamaño de los huecos"
+L_GUI_BAGS_BUTTON_SPACE = "Espacio entre huecos"
+L_GUI_BAGS_BANK = "Número de columnas en el banco"
+L_GUI_BAGS_BAG = "Número de columnas en la bolsa principal"
+
+-- Minimap options
+L_GUI_MINIMAP_SUBTEXT = "Minimap settings." -- Need review
+L_GUI_MINIMAP_ENABLE = "Activar minimapa"
+L_GUI_MINIMAP_ICON = "Icono de seguimiento"
+L_GUI_GARRISON_ICON = "Garrison icon" -- Need review
+L_GUI_MINIMAP_SIZE = "Tamaño del minimapa"
+L_GUI_MINIMAP_HIDE_COMBAT = "Ocultar minimapa en combate"
+L_GUI_MINIMAP_TOGGLE_MENU = "Show toggle menu" -- Needs review
+L.minimap_bg_map_stylization = "Estilizado del mapa de CB"
+L.minimap_fog_of_war = "Remove fog of war on World Map" -- Needs review
+L.minimap_fog_of_war_desc = "Right click on the close button of World Map to activate the option to hide fog of war" -- Need review
+
+-- Loot options
+L_GUI_LOOT_SUBTEXT = "Settings for loot frame." -- Need review
+L_GUI_LOOT_ENABLE = "Activar el marco de botín"
+L_GUI_LOOT_ROLL_ENABLE = "Activar el marco de botín de grupo"
+L_GUI_LOOT_ICON_SIZE = "Tamaño de los iconos"
+L_GUI_LOOT_WIDTH = "Anchura del marco de botín"
+L_GUI_LOOT_AUTOGREED = "Activar auto-codicia para objetos verdes cuando eres nivel máx"
+L_GUI_LOOT_AUTODE = "Auto confirmar desencantar"
+
+-- Filger
+L_GUI_FILGER = "Timers (Filger)" -- Need review
+L_GUI_FILGER_SUBTEXT = "Filger - analogue WeakAuras, but more simple and easy. Allows you to display in the form of icons and bars your auras and timers." -- Need review
+L_GUI_FILGER_ENABLE = "Enable Filger" -- Need review
+L_GUI_FILGER_TEST_MODE = "Test icon mode" -- Need review
+L_GUI_FILGER_MAX_TEST_ICON = "The number of icons to the test" -- Need review
+L_GUI_FILGER_SHOW_TOOLTIP = "Show tooltip" -- Need review
+L_GUI_FILGER_DISABLE_CD = "Disable cooldowns" -- Need review
+L_GUI_FILGER_DISABLE_PVP = "Disable PvP debuffs on Player and Target" -- Need review
+L_GUI_FILGER_EXPIRATION = "Sort cooldowns by expiration time" -- Need review
+L_GUI_FILGER_BUFFS_SIZE = "Buffs size" -- Need review
+L_GUI_FILGER_COOLDOWN_SIZE = "Cooldowns size" -- Need review
+L_GUI_FILGER_PVP_SIZE = "PvP debuffs size" -- Need review
+
 -- Announcements options
 L_GUI_ANNOUNCEMENTS = "Anuncios"
 L_GUI_ANNOUNCEMENTS_SUBTEXT = "Settings that add chat announcements about spells or items." -- Need review
@@ -261,42 +384,6 @@ L.automation_buff_on_scroll_desc = "If the buff from the list is not applied to 
 L_GUI_AUTOMATION_OPEN_ITEMS = "Auto opening of items in bag" -- Needs review
 L.automation_invite_keyword = "Acrónimo para invitaciones"
 L.automation_invite_keyword_desc = "When player whisper you keyword he will be invited in your group. \nFor enable - type '/ainv'. Also after the command, you can write your word '/ainv inv'" -- Need review
-
--- Combat text options
-L_GUI_COMBATTEXT = "Texto de Combate"
-L_GUI_COMBATTEXT_SUBTEXT = "For moving type in the chat '/xct'" -- Need review
-L_GUI_COMBATTEXT_ENABLE = "Activar Texto de Combate"
-L.combattext_blizz_head_numbers = "Enable Blizzard combat text" -- Need review
-L.combattext_blizz_head_numbers_desc = "Usar la salida de daño/curación de Blizzard (sobre la cabeza del monstruo/jugador)"
-L.combattext_damage_style = "Change default combat font" -- Need review
-L.combattext_damage_style_desc = "Cambiar la fuente de daño/sanación por defecto de encima de los monstruos/jugadores (tendrás que reiniciar WoW para ver los cambios)"
-L_GUI_COMBATTEXT_DAMAGE = "Mostrar daño saliente en su propio marco"
-L_GUI_COMBATTEXT_HEALING = "Mostrar sanación saliente en su propio marco"
-L_GUI_COMBATTEXT_HOTS = "Mostrar efectos de cura periódicos en el marco de curas"
-L_GUI_COMBATTEXT_OVERHEALING = "Mostrar la sobrecuracion saliente"
-L_GUI_COMBATTEXT_PET_DAMAGE = "Mostrar el daño de tu mascota"
-L_GUI_COMBATTEXT_DOT_DAMAGE = "Mostrar el daño de tus dots (Daño periodico)"
-L_GUI_COMBATTEXT_DAMAGE_COLOR = "Mostrar números de daño dependiendo de la escuela de magia"
-L_GUI_COMBATTEXT_CRIT_PREFIX = "Símbolo que se añadirá antes de un crítico"
-L_GUI_COMBATTEXT_CRIT_POSTFIX = "Símbolo que se añadirá después de un crítico"
-L_GUI_COMBATTEXT_ICONS = "Mostrar iconos de daño saliente"
-L_GUI_COMBATTEXT_ICON_SIZE = "Icon size" -- Need review
-L_GUI_COMBATTEXT_ICON_SIZE_DESC = "Tamaño de los iconos de los hechizos en el marco de daño saliente, también tiene efecto sobre el tamaño de la fuente de daño"
-L_GUI_COMBATTEXT_TRESHOLD = "Daño mínimo que se mostrar en el marco de daño"
-L_GUI_COMBATTEXT_HEAL_TRESHOLD = "Sanación mínima que se mostrar en los mensajes de sanación entrante/saliente"
-L_GUI_COMBATTEXT_SCROLLABLE = "Permitir usar la rueda del ratón para desplazar las líneas de los marcos"
-L_GUI_COMBATTEXT_MAX_LINES = "Max lines" -- Need review
-L_GUI_COMBATTEXT_MAX_LINES_DESC = "Máx de líneas para mantener desplazables (a más lineas, más memoria requerida)"
-L_GUI_COMBATTEXT_TIME_VISIBLE = "Time" -- Need review
-L_GUI_COMBATTEXT_TIME_VISIBLE_DESC = "Tiempo (segundos) en que un mensaje es visible"
-L_GUI_COMBATTEXT_DK_RUNES = "Mostrar recarga de runas de los Caballeros de la Muerte"
-L_GUI_COMBATTEXT_KILLINGBLOW = "Mostrar tus golpes de gracia"
-L_GUI_COMBATTEXT_MERGE_AOE_SPAM = "Unir el spam de daño de area en un solo mensaje"
-L_GUI_COMBATTEXT_MERGE_MELEE = "Merges multiple auto attack damage spam" -- Needs review
-L_GUI_COMBATTEXT_DISPEL = "Mostrar tus disipaciones"
-L_GUI_COMBATTEXT_INTERRUPT = "Mostrar tus interrupciones"
-L_GUI_COMBATTEXT_DIRECTION = "Change scrolling direction from bottom to top" -- Need review
-L_GUI_COMBATTEXT_SHORT_NUMBERS = "Use short numbers ('25.3k' instead of '25342')" -- Need review
 
 -- Buffs reminder options
 L_GUI_REMINDER = "Recordatorio de Ventajas"
@@ -357,94 +444,7 @@ L_GUI_THREAT_WIDTH = "Anchura de las barras de amenaza"
 L_GUI_THREAT_ROWS = "Número de barras de amenaza"
 L_GUI_THREAT_HIDE_SOLO = "Mostrar solo en grupo/raid"
 
--- Bag options
-L_GUI_BAGS = "Bolsas"
-L_GUI_BAGS_SUBTEXT = "Changing the built-in bags." -- Need review
-L_GUI_BAGS_ENABLE = "Activar bolsas"
-L_GUI_BAGS_ILVL = "Show item level for weapons and armor" -- Need review
-L_GUI_BAGS_BUTTON_SIZE = "Tamaño de los huecos"
-L_GUI_BAGS_BUTTON_SPACE = "Espacio entre huecos"
-L_GUI_BAGS_BANK = "Número de columnas en el banco"
-L_GUI_BAGS_BAG = "Número de columnas en la bolsa principal"
-
--- Minimap options
-L_GUI_MINIMAP_SUBTEXT = "Minimap settings." -- Need review
-L_GUI_MINIMAP_ENABLE = "Activar minimapa"
-L_GUI_MINIMAP_ICON = "Icono de seguimiento"
-L_GUI_GARRISON_ICON = "Garrison icon" -- Need review
-L_GUI_MINIMAP_SIZE = "Tamaño del minimapa"
-L_GUI_MINIMAP_HIDE_COMBAT = "Ocultar minimapa en combate"
-L_GUI_MINIMAP_TOGGLE_MENU = "Show toggle menu" -- Needs review
-L.minimap_bg_map_stylization = "Estilizado del mapa de CB"
-L.minimap_fog_of_war = "Remove fog of war on World Map" -- Needs review
-L.minimap_fog_of_war_desc = "Right click on the close button of World Map to activate the option to hide fog of war" -- Need review
-
--- Loot options
-L_GUI_LOOT_SUBTEXT = "Settings for loot frame." -- Need review
-L_GUI_LOOT_ENABLE = "Activar el marco de botín"
-L_GUI_LOOT_ROLL_ENABLE = "Activar el marco de botín de grupo"
-L_GUI_LOOT_ICON_SIZE = "Tamaño de los iconos"
-L_GUI_LOOT_WIDTH = "Anchura del marco de botín"
-L_GUI_LOOT_AUTOGREED = "Activar auto-codicia para objetos verdes cuando eres nivel máx"
-L_GUI_LOOT_AUTODE = "Auto confirmar desencantar"
-
--- Nameplate options
-L_GUI_NAMEPLATE_SUBTEXT = "Nameplates settings" -- Need review
-L_GUI_NAMEPLATE_ENABLE = "Activar placas de nombre"
-L_GUI_NAMEPLATE_COMBAT = "Mostrar automáticamente placa de nombre en combate"
-L_GUI_NAMEPLATE_HEALTH = "Valor de la vida en números"
-L_GUI_NAMEPLATE_HEIGHT = "Altura de la placa de nombre"
-L_GUI_NAMEPLATE_WIDTH = "Anchura de la placa de nombre"
-L_GUI_NAMEPLATE_DISTANCE = "Display range" -- Need review
-L_GUI_NAMEPLATE_AD_HEIGHT = "Additional height" -- Need review
-L_GUI_NAMEPLATE_AD_WIDTH = "Additional width" -- Need review
-L_GUI_NAMEPLATE_CASTBAR_NAME = "Mostrar nombre del hechizo en la barra de lanzamiento"
-L_GUI_NAMEPLATE_CLASS_ICON = "Iconos de clase en JcJ"
-L_GUI_NAMEPLATE_NAME_ABBREV = "Mostrar los nombres abreviados"
-L_GUI_NAMEPLATE_CLAMP = "Clamp nameplates to the top of the screen when outside of view" -- Need review
-L_GUI_NAMEPLATE_SHOW_DEBUFFS = "Mostrar perjuicios (Nombres abreviados debe ser desactivado)"
-L_GUI_NAMEPLATE_SHOW_BUFFS = "Show buffs above player nameplate (from the list)" -- Need review
-L_GUI_NAMEPLATE_DEBUFFS_SIZE = "Tamaño de los perjuicios"
-L_GUI_NAMEPLATE_HEALER_ICON = "Show icon above enemy healers nameplate in battlegrounds" -- Needs review
-L_GUI_NAMEPLATE_TOTEM_ICONS = "Show icon above enemy totems nameplate" -- Need review
-L_GUI_NAMEPLATE_THREAT = "Activar visor de amenaza, cambia automáticamente según tu rol"
-L_GUI_NAMEPLATE_GOOD_COLOR = "Color de alta amenaza, varía dependiendo si eres tanque o dps/sanador"
-L_GUI_NAMEPLATE_NEAR_COLOR = "Color de perdiendo/ganando amenaza"
-L_GUI_NAMEPLATE_BAD_COLOR = "Color de baja amenaza, varía dependiendo si eres tanque o dps/sanador"
-L_GUI_NAMEPLATE_OFFTANK_COLOR = "Offtank threat color" -- Need review
-
--- Auras/Buffs/Debuffs
-L_GUI_AURA_PLAYER_BUFF_SIZE = "Buffs size" -- Need review
-L_GUI_AURA_PLAYER_BUFF_SIZE_DESC = "Tamaño de las beneficios del jugador"
-L_GUI_AURA_SHOW_SPIRAL = "Espiral en los iconos de las auras"
-L_GUI_AURA_SHOW_TIMER = "Mostrar tiempo de reutilización en los iconos de las auras"
-L_GUI_AURA_PLAYER_AURAS = "Auras en el marco del jugador"
-L_GUI_AURA_TARGET_AURAS = "Auras en el marco del objetivo"
-L_GUI_AURA_FOCUS_DEBUFFS = "Perjuicios en el marco del foco"
-L_GUI_AURA_FOT_DEBUFFS = "Perjuicios en el marco del objetivo del foco"
-L_GUI_AURA_PET_DEBUFFS = "Perjuicios en el marco de la mascota"
-L_GUI_AURA_TOT_DEBUFFS = "Perjuicios en el marco del objetivo del objetivo"
-L_GUI_AURA_BOSS_BUFFS = "Beneficios en el marco del jefe"
-L_GUI_AURA_PLAYER_AURA_ONLY = "Solo tus perjuicios en el marco del objetivo"
-L_GUI_AURA_DEBUFF_COLOR_TYPE = "Color de los perjuicios por tipo"
-L_GUI_AURA_CAST_BY = "Mostrar quién lanza un beneficio/perjuicio en su descripción"
-L_GUI_AURA_CLASSCOLOR_BORDER = "Activar borde por color de clase para los beneficios del jugador"
-
--- Filger
-L_GUI_FILGER = "Timers (Filger)" -- Need review
-L_GUI_FILGER_SUBTEXT = "Filger - analogue WeakAuras, but more simple and easy. Allows you to display in the form of icons and bars your auras and timers." -- Need review
-L_GUI_FILGER_ENABLE = "Enable Filger" -- Need review
-L_GUI_FILGER_TEST_MODE = "Test icon mode" -- Need review
-L_GUI_FILGER_MAX_TEST_ICON = "The number of icons to the test" -- Need review
-L_GUI_FILGER_SHOW_TOOLTIP = "Show tooltip" -- Need review
-L_GUI_FILGER_DISABLE_CD = "Disable cooldowns" -- Need review
-L_GUI_FILGER_DISABLE_PVP = "Disable PvP debuffs on Player and Target" -- Need review
-L_GUI_FILGER_EXPIRATION = "Sort cooldowns by expiration time" -- Need review
-L_GUI_FILGER_BUFFS_SIZE = "Buffs size" -- Need review
-L_GUI_FILGER_COOLDOWN_SIZE = "Cooldowns size" -- Need review
-L_GUI_FILGER_PVP_SIZE = "PvP debuffs size" -- Need review
-
--- Panel options
+-- Top panel options
 L_GUI_TOP_PANEL = "Panel superior"
 L_GUI_TOP_PANEL_SUBTEXT = "Manage built-in top panel with information." -- Need review
 L_GUI_TOP_PANEL_ENABLE = "Activar panel superior"

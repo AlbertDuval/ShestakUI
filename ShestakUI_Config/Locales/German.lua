@@ -220,6 +220,129 @@ L_GUI_CHAT_TABS_MOUSEOVER = "Zeige Chat-Reiter bei Mouseover"
 L_GUI_CHAT_STICKY = "Behalte den letzen Channel"
 L_GUI_CHAT_DAMAGE_METER_SPAM = "Fasse DMG-Meterspam in einer Zeile zusammen"
 
+-- Nameplate options
+L_GUI_NAMEPLATE_SUBTEXT = "Nameplates Einstellung"
+L_GUI_NAMEPLATE_ENABLE = "Namensplaketten aktivieren"
+L_GUI_NAMEPLATE_COMBAT = "Namensplaketten automatisch im Kampf anzeigen"
+L_GUI_NAMEPLATE_HEALTH = "Numerischer Wert der Lebenspunkte"
+L_GUI_NAMEPLATE_HEIGHT = "Höhe der Namensplakette"
+L_GUI_NAMEPLATE_WIDTH = "Breite der Namensplakette"
+L_GUI_NAMEPLATE_DISTANCE = "Anzeigerbereich"
+L_GUI_NAMEPLATE_AD_HEIGHT = "Zusätzliche Höhe"
+L_GUI_NAMEPLATE_AD_WIDTH = "Zusätzliche Breite"
+L_GUI_NAMEPLATE_CASTBAR_NAME = "Zeige den Namen in der Zauberleiste"
+L_GUI_NAMEPLATE_CLASS_ICON = "Zeige Klassensymbole an (PvP)"
+L_GUI_NAMEPLATE_NAME_ABBREV = "Namen abgekürzt anzeigen"
+L_GUI_NAMEPLATE_CLAMP = "Clamp nameplates to the top of the screen when outside of view" -- Need review
+L_GUI_NAMEPLATE_SHOW_DEBUFFS = "Zeige Schwächungszauber (Abgekürzte Namen müssen deaktiviert sein)"
+L_GUI_NAMEPLATE_SHOW_BUFFS = "Show buffs above player nameplate (from the list)" -- Need review
+L_GUI_NAMEPLATE_DEBUFFS_SIZE = "Größe der Debuffs"
+L_GUI_NAMEPLATE_HEALER_ICON = "Zeige Heilersymbol auf allen gegnerischen Heiler-Nameplates im BG"
+L_GUI_NAMEPLATE_TOTEM_ICONS = "Show icon above enemy totems nameplate" -- Need review
+L_GUI_NAMEPLATE_THREAT = "Aktiviere Bedrohungsanzeige, ändert sich automatisch je nach deiner Rolle"
+L_GUI_NAMEPLATE_GOOD_COLOR = "Positive Bedrohungsfarbe. Variiert abhängig ob Tank oder dps/heal"
+L_GUI_NAMEPLATE_NEAR_COLOR = "Verlust oder Zuwachs der Bedrohung farbig kennzeichen"
+L_GUI_NAMEPLATE_BAD_COLOR = "Negative Bedrohungsfarbe. Variiert abhängig ob Tank oder dps/heal"
+L_GUI_NAMEPLATE_OFFTANK_COLOR = "Offtank threat color" -- Need review
+
+-- Combat text options
+L_GUI_COMBATTEXT = "Kampftext"
+L_GUI_COMBATTEXT_SUBTEXT = "For moving type in the chat '/xct'" -- Need review
+L_GUI_COMBATTEXT_ENABLE = "Kampftext aktivieren"
+L.combattext_blizz_head_numbers = "Aktiviere Blizzard Kampftext"
+L.combattext_blizz_head_numbers_desc = "Blizzard Schaden-/Heilausgabe benutzen (über Spieler/Kreaturen Kopf)"
+L.combattext_damage_style = "Ändert die Standardkampfschriftart"
+L.combattext_damage_style_desc = "Standard Schaden/Heilung Schriftart über Kreaturen/Spieler Köpfen ändern (Neustart von WoW erforderlich um Änderungen zu sehen)"
+L_GUI_COMBATTEXT_DAMAGE = "Zeige ausgehenden Schaden in einem eigenen Fenster"
+L_GUI_COMBATTEXT_HEALING = "Zeige ausgehende Heilung in einem eigenen Fenster"
+L_GUI_COMBATTEXT_HOTS = "Zeige peroidische Heilungseffekte im Heilungsfenster"
+L_GUI_COMBATTEXT_OVERHEALING = "Zeige ausgehende Überheilung an"
+L_GUI_COMBATTEXT_PET_DAMAGE = "Zeige Begleiterschaden"
+L_GUI_COMBATTEXT_DOT_DAMAGE = "Zeige Schaden von Schaden über Zeit"
+L_GUI_COMBATTEXT_DAMAGE_COLOR = "Zeige Schadensnummern in Abhängigkeit von der Art des Zaubers"
+L_GUI_COMBATTEXT_CRIT_PREFIX = "Symbol vor einem kritischen Treffer"
+L_GUI_COMBATTEXT_CRIT_POSTFIX = "Symbol hinter einem kritischen Treffer"
+L_GUI_COMBATTEXT_ICONS = "Zeige Symbole für ausgehenden Schaden"
+L_GUI_COMBATTEXT_ICON_SIZE = "Icon größe"
+L_GUI_COMBATTEXT_ICON_SIZE_DESC = "Symbolgröße der Zauber im Fenster für ausgehenden Schaden. Nimmt auch Einfluss auf die Schriftgröße"
+L_GUI_COMBATTEXT_TRESHOLD = "Ab welcher Größe soll der Schaden angezeigt werden"
+L_GUI_COMBATTEXT_HEAL_TRESHOLD = "Ab welche Größe soll ein-/ausgehende Heilung angezeigt werden"
+L_GUI_COMBATTEXT_SCROLLABLE = "Erlaubt es dir mit dem Mausrad durch die letzten Zeilen zu scrollen"
+L_GUI_COMBATTEXT_MAX_LINES = "Max. Zeilen"
+L_GUI_COMBATTEXT_MAX_LINES_DESC = "Maximale Zeilen, die behalten werden sollen im Scrollmodus (mehr Zeilen = mehr Speicherverbrauch)"
+L_GUI_COMBATTEXT_TIME_VISIBLE = "Zeit"
+L_GUI_COMBATTEXT_TIME_VISIBLE_DESC = "Zeit(Sekunden) wielange eine einzelne Nachricht angezeigt wird"
+L_GUI_COMBATTEXT_DK_RUNES = "Zeige Runenaufladung vom Todesritter"
+L_GUI_COMBATTEXT_KILLINGBLOW = "Teilt dir mit ob du den Todesstoß bei einer Kreatur/einem Spieler hattest"
+L_GUI_COMBATTEXT_MERGE_AOE_SPAM = "Vereint mehrfachen Flächenschaden in eine einzige Nachricht"
+L_GUI_COMBATTEXT_MERGE_MELEE = "Fügt mehrfachen automatischen Angriffsschaden-Spam zusammen"
+L_GUI_COMBATTEXT_DISPEL = "Informiert dich über deine Bannungen"
+L_GUI_COMBATTEXT_INTERRUPT = "Informiert dich über deine Unterbrechungen"
+L_GUI_COMBATTEXT_DIRECTION = "Ändert die Bildlaufrichtung von unten nach oben"
+L_GUI_COMBATTEXT_SHORT_NUMBERS = "Zeige kurze Zahlen an ('25.3k' statt '25342')"
+
+-- Auras/Buffs/Debuffs
+L_GUI_AURA_PLAYER_BUFF_SIZE = "Buffs größe"
+L_GUI_AURA_PLAYER_BUFF_SIZE_DESC = "Größe der Spielerbuffs"
+L_GUI_AURA_SHOW_SPIRAL = "Spirale auf Buffsymbolen"
+L_GUI_AURA_SHOW_TIMER = "Zeige Abklingzeit für Buffs"
+L_GUI_AURA_PLAYER_AURAS = "Buffs auf dem Spielerfenster"
+L_GUI_AURA_TARGET_AURAS = "Buffs auf dem Zielfenster"
+L_GUI_AURA_FOCUS_DEBUFFS = "Debuffs auf dem Fokusfenster"
+L_GUI_AURA_FOT_DEBUFFS = "Debuffs auf dem Fokusziel"
+L_GUI_AURA_PET_DEBUFFS = "Debuffs auf dem Begleiterfenster"
+L_GUI_AURA_TOT_DEBUFFS = "Debuffs bei Ziel des Ziels anzeigen"
+L_GUI_AURA_BOSS_BUFFS = "Stärkungszauber auf dem Bossframe anzeigen."
+L_GUI_AURA_PLAYER_AURA_ONLY = "Nur eigenen Debuffs bei dem Zielfenster anzeigen"
+L_GUI_AURA_DEBUFF_COLOR_TYPE = "Debuffs nach Art einfärben"
+L_GUI_AURA_CAST_BY = "Zeige im Tooltip an von wem ein Buff- bzw. Debuff gewirkt wurde"
+L_GUI_AURA_CLASSCOLOR_BORDER = "Aktiviere Klassenfarbe für Spielerbuffs"
+
+-- Bag options
+L_GUI_BAGS = "Taschen"
+L_GUI_BAGS_SUBTEXT = "Ändern der Blizzard Taschen."
+L_GUI_BAGS_ENABLE = "Taschen aktivieren"
+L_GUI_BAGS_ILVL = "Zeigt Itemlevel der Waffen & Rüstung"
+L_GUI_BAGS_BUTTON_SIZE = "Buttongröße"
+L_GUI_BAGS_BUTTON_SPACE = "Buttonabstand"
+L_GUI_BAGS_BANK = "Anzahl der Spalten in der Bank"
+L_GUI_BAGS_BAG = "Anzahl der Spalten in der Tasche"
+
+-- Minimap options
+L_GUI_MINIMAP_SUBTEXT = "Minimap Einstellungen."
+L_GUI_MINIMAP_ENABLE = "Minimap aktivieren"
+L_GUI_MINIMAP_ICON = "Aufspüren Symbol"
+L_GUI_GARRISON_ICON = "Garrisons Symbol"
+L_GUI_MINIMAP_SIZE = "Kartengröße"
+L_GUI_MINIMAP_HIDE_COMBAT = "Minimap im Kampf verstecken"
+L_GUI_MINIMAP_TOGGLE_MENU = "Zeige Toggle Menü"
+L.minimap_bg_map_stylization = "Schlachtfeldkarte Aussehn"
+L.minimap_fog_of_war = "Nebel des Krieges auf der Weltkarte"
+L.minimap_fog_of_war_desc = "Right click on the close button of World Map to activate the option to hide fog of war" -- Need review
+
+-- Loot options
+L_GUI_LOOT_SUBTEXT = "Settings for loot frame." -- Need review
+L_GUI_LOOT_ENABLE = "Plünderfenster aktivieren"
+L_GUI_LOOT_ROLL_ENABLE = "Gruppenplünderfenster aktivieren"
+L_GUI_LOOT_ICON_SIZE = "Symbolgröße"
+L_GUI_LOOT_WIDTH = "Breite des Plünderfensters"
+L_GUI_LOOT_AUTOGREED = "Aktiviere automatisches Würfeln (Gier) für Gegenstände, falls das höchste Level erreicht wurde."
+L_GUI_LOOT_AUTODE = "Entzauberung automatisch bestätigen"
+
+-- Filger
+L_GUI_FILGER = "Timers (Filger)"
+L_GUI_FILGER_SUBTEXT = "Filger - analogue WeakAuras, but more simple and easy. Allows you to display in the form of icons and bars your auras and timers." -- Need review
+L_GUI_FILGER_ENABLE = "Aktiviere Filger"
+L_GUI_FILGER_TEST_MODE = "Test Icon Mode"
+L_GUI_FILGER_MAX_TEST_ICON = "Anzahl der Icons im Test Mode"
+L_GUI_FILGER_SHOW_TOOLTIP = "Zeige Tooltips"
+L_GUI_FILGER_DISABLE_CD = "Deaktiviere Cooldowns"
+L_GUI_FILGER_DISABLE_PVP = "Disable PvP debuffs on Player and Target" -- Need review
+L_GUI_FILGER_EXPIRATION = "Sort cooldowns by expiration time" -- Need review
+L_GUI_FILGER_BUFFS_SIZE = "Buffs größe ändern"
+L_GUI_FILGER_COOLDOWN_SIZE = "Cooldowns größe ändern"
+L_GUI_FILGER_PVP_SIZE = "PvP Debuffs größe ändern"
+
 -- Announcements options
 L_GUI_ANNOUNCEMENTS = "Benachrichtigungen"
 L_GUI_ANNOUNCEMENTS_SUBTEXT = "Settings that add chat announcements about spells or items." -- Need review
@@ -261,42 +384,6 @@ L.automation_buff_on_scroll_desc = "If the buff from the list is not applied to 
 L_GUI_AUTOMATION_OPEN_ITEMS = "Öffnet Automatisch Items in der Tasche"
 L.automation_invite_keyword = "Kurzes Schlüsselwort für Einladungen"
 L.automation_invite_keyword_desc = "When player whisper you keyword he will be invited in your group. \nFor enable - type '/ainv'. Also after the command, you can write your word '/ainv inv'" -- Need review
-
--- Combat text options
-L_GUI_COMBATTEXT = "Kampftext"
-L_GUI_COMBATTEXT_SUBTEXT = "For moving type in the chat '/xct'" -- Need review
-L_GUI_COMBATTEXT_ENABLE = "Kampftext aktivieren"
-L.combattext_blizz_head_numbers = "Aktiviere Blizzard Kampftext"
-L.combattext_blizz_head_numbers_desc = "Blizzard Schaden-/Heilausgabe benutzen (über Spieler/Kreaturen Kopf)"
-L.combattext_damage_style = "Ändert die Standardkampfschriftart"
-L.combattext_damage_style_desc = "Standard Schaden/Heilung Schriftart über Kreaturen/Spieler Köpfen ändern (Neustart von WoW erforderlich um Änderungen zu sehen)"
-L_GUI_COMBATTEXT_DAMAGE = "Zeige ausgehenden Schaden in einem eigenen Fenster"
-L_GUI_COMBATTEXT_HEALING = "Zeige ausgehende Heilung in einem eigenen Fenster"
-L_GUI_COMBATTEXT_HOTS = "Zeige peroidische Heilungseffekte im Heilungsfenster"
-L_GUI_COMBATTEXT_OVERHEALING = "Zeige ausgehende Überheilung an"
-L_GUI_COMBATTEXT_PET_DAMAGE = "Zeige Begleiterschaden"
-L_GUI_COMBATTEXT_DOT_DAMAGE = "Zeige Schaden von Schaden über Zeit"
-L_GUI_COMBATTEXT_DAMAGE_COLOR = "Zeige Schadensnummern in Abhängigkeit von der Art des Zaubers"
-L_GUI_COMBATTEXT_CRIT_PREFIX = "Symbol vor einem kritischen Treffer"
-L_GUI_COMBATTEXT_CRIT_POSTFIX = "Symbol hinter einem kritischen Treffer"
-L_GUI_COMBATTEXT_ICONS = "Zeige Symbole für ausgehenden Schaden"
-L_GUI_COMBATTEXT_ICON_SIZE = "Icon größe"
-L_GUI_COMBATTEXT_ICON_SIZE_DESC = "Symbolgröße der Zauber im Fenster für ausgehenden Schaden. Nimmt auch Einfluss auf die Schriftgröße"
-L_GUI_COMBATTEXT_TRESHOLD = "Ab welcher Größe soll der Schaden angezeigt werden"
-L_GUI_COMBATTEXT_HEAL_TRESHOLD = "Ab welche Größe soll ein-/ausgehende Heilung angezeigt werden"
-L_GUI_COMBATTEXT_SCROLLABLE = "Erlaubt es dir mit dem Mausrad durch die letzten Zeilen zu scrollen"
-L_GUI_COMBATTEXT_MAX_LINES = "Max. Zeilen"
-L_GUI_COMBATTEXT_MAX_LINES_DESC = "Maximale Zeilen, die behalten werden sollen im Scrollmodus (mehr Zeilen = mehr Speicherverbrauch)"
-L_GUI_COMBATTEXT_TIME_VISIBLE = "Zeit"
-L_GUI_COMBATTEXT_TIME_VISIBLE_DESC = "Zeit(Sekunden) wielange eine einzelne Nachricht angezeigt wird"
-L_GUI_COMBATTEXT_DK_RUNES = "Zeige Runenaufladung vom Todesritter"
-L_GUI_COMBATTEXT_KILLINGBLOW = "Teilt dir mit ob du den Todesstoß bei einer Kreatur/einem Spieler hattest"
-L_GUI_COMBATTEXT_MERGE_AOE_SPAM = "Vereint mehrfachen Flächenschaden in eine einzige Nachricht"
-L_GUI_COMBATTEXT_MERGE_MELEE = "Fügt mehrfachen automatischen Angriffsschaden-Spam zusammen"
-L_GUI_COMBATTEXT_DISPEL = "Informiert dich über deine Bannungen"
-L_GUI_COMBATTEXT_INTERRUPT = "Informiert dich über deine Unterbrechungen"
-L_GUI_COMBATTEXT_DIRECTION = "Ändert die Bildlaufrichtung von unten nach oben"
-L_GUI_COMBATTEXT_SHORT_NUMBERS = "Zeige kurze Zahlen an ('25.3k' statt '25342')"
 
 -- Buffs reminder options
 L_GUI_REMINDER = "Erinnerungen für Buffs"
@@ -357,94 +444,7 @@ L_GUI_THREAT_WIDTH = "Breite der Bedrohungsleisten"
 L_GUI_THREAT_ROWS = "Anzahl der Bedrohungsleisten"
 L_GUI_THREAT_HIDE_SOLO = "Nur in Gruppen oder Schlachtzügen anzeigen"
 
--- Bag options
-L_GUI_BAGS = "Taschen"
-L_GUI_BAGS_SUBTEXT = "Ändern der Blizzard Taschen."
-L_GUI_BAGS_ENABLE = "Taschen aktivieren"
-L_GUI_BAGS_ILVL = "Zeigt Itemlevel der Waffen & Rüstung"
-L_GUI_BAGS_BUTTON_SIZE = "Buttongröße"
-L_GUI_BAGS_BUTTON_SPACE = "Buttonabstand"
-L_GUI_BAGS_BANK = "Anzahl der Spalten in der Bank"
-L_GUI_BAGS_BAG = "Anzahl der Spalten in der Tasche"
-
--- Minimap options
-L_GUI_MINIMAP_SUBTEXT = "Minimap Einstellungen."
-L_GUI_MINIMAP_ENABLE = "Minimap aktivieren"
-L_GUI_MINIMAP_ICON = "Aufspüren Symbol"
-L_GUI_GARRISON_ICON = "Garrisons Symbol"
-L_GUI_MINIMAP_SIZE = "Kartengröße"
-L_GUI_MINIMAP_HIDE_COMBAT = "Minimap im Kampf verstecken"
-L_GUI_MINIMAP_TOGGLE_MENU = "Zeige Toggle Menü"
-L.minimap_bg_map_stylization = "Schlachtfeldkarte Aussehn"
-L.minimap_fog_of_war = "Nebel des Krieges auf der Weltkarte"
-L.minimap_fog_of_war_desc = "Right click on the close button of World Map to activate the option to hide fog of war" -- Need review
-
--- Loot options
-L_GUI_LOOT_SUBTEXT = "Settings for loot frame." -- Need review
-L_GUI_LOOT_ENABLE = "Plünderfenster aktivieren"
-L_GUI_LOOT_ROLL_ENABLE = "Gruppenplünderfenster aktivieren"
-L_GUI_LOOT_ICON_SIZE = "Symbolgröße"
-L_GUI_LOOT_WIDTH = "Breite des Plünderfensters"
-L_GUI_LOOT_AUTOGREED = "Aktiviere automatisches Würfeln (Gier) für Gegenstände, falls das höchste Level erreicht wurde."
-L_GUI_LOOT_AUTODE = "Entzauberung automatisch bestätigen"
-
--- Nameplate options
-L_GUI_NAMEPLATE_SUBTEXT = "Nameplates Einstellung"
-L_GUI_NAMEPLATE_ENABLE = "Namensplaketten aktivieren"
-L_GUI_NAMEPLATE_COMBAT = "Namensplaketten automatisch im Kampf anzeigen"
-L_GUI_NAMEPLATE_HEALTH = "Numerischer Wert der Lebenspunkte"
-L_GUI_NAMEPLATE_HEIGHT = "Höhe der Namensplakette"
-L_GUI_NAMEPLATE_WIDTH = "Breite der Namensplakette"
-L_GUI_NAMEPLATE_DISTANCE = "Anzeigerbereich"
-L_GUI_NAMEPLATE_AD_HEIGHT = "Zusätzliche Höhe"
-L_GUI_NAMEPLATE_AD_WIDTH = "Zusätzliche Breite"
-L_GUI_NAMEPLATE_CASTBAR_NAME = "Zeige den Namen in der Zauberleiste"
-L_GUI_NAMEPLATE_CLASS_ICON = "Zeige Klassensymbole an (PvP)"
-L_GUI_NAMEPLATE_NAME_ABBREV = "Namen abgekürzt anzeigen"
-L_GUI_NAMEPLATE_CLAMP = "Clamp nameplates to the top of the screen when outside of view" -- Need review
-L_GUI_NAMEPLATE_SHOW_DEBUFFS = "Zeige Schwächungszauber (Abgekürzte Namen müssen deaktiviert sein)"
-L_GUI_NAMEPLATE_SHOW_BUFFS = "Show buffs above player nameplate (from the list)" -- Need review
-L_GUI_NAMEPLATE_DEBUFFS_SIZE = "Größe der Debuffs"
-L_GUI_NAMEPLATE_HEALER_ICON = "Zeige Heilersymbol auf allen gegnerischen Heiler-Nameplates im BG"
-L_GUI_NAMEPLATE_TOTEM_ICONS = "Show icon above enemy totems nameplate" -- Need review
-L_GUI_NAMEPLATE_THREAT = "Aktiviere Bedrohungsanzeige, ändert sich automatisch je nach deiner Rolle"
-L_GUI_NAMEPLATE_GOOD_COLOR = "Positive Bedrohungsfarbe. Variiert abhängig ob Tank oder dps/heal"
-L_GUI_NAMEPLATE_NEAR_COLOR = "Verlust oder Zuwachs der Bedrohung farbig kennzeichen"
-L_GUI_NAMEPLATE_BAD_COLOR = "Negative Bedrohungsfarbe. Variiert abhängig ob Tank oder dps/heal"
-L_GUI_NAMEPLATE_OFFTANK_COLOR = "Offtank threat color" -- Need review
-
--- Auras/Buffs/Debuffs
-L_GUI_AURA_PLAYER_BUFF_SIZE = "Buffs größe"
-L_GUI_AURA_PLAYER_BUFF_SIZE_DESC = "Größe der Spielerbuffs"
-L_GUI_AURA_SHOW_SPIRAL = "Spirale auf Buffsymbolen"
-L_GUI_AURA_SHOW_TIMER = "Zeige Abklingzeit für Buffs"
-L_GUI_AURA_PLAYER_AURAS = "Buffs auf dem Spielerfenster"
-L_GUI_AURA_TARGET_AURAS = "Buffs auf dem Zielfenster"
-L_GUI_AURA_FOCUS_DEBUFFS = "Debuffs auf dem Fokusfenster"
-L_GUI_AURA_FOT_DEBUFFS = "Debuffs auf dem Fokusziel"
-L_GUI_AURA_PET_DEBUFFS = "Debuffs auf dem Begleiterfenster"
-L_GUI_AURA_TOT_DEBUFFS = "Debuffs bei Ziel des Ziels anzeigen"
-L_GUI_AURA_BOSS_BUFFS = "Stärkungszauber auf dem Bossframe anzeigen."
-L_GUI_AURA_PLAYER_AURA_ONLY = "Nur eigenen Debuffs bei dem Zielfenster anzeigen"
-L_GUI_AURA_DEBUFF_COLOR_TYPE = "Debuffs nach Art einfärben"
-L_GUI_AURA_CAST_BY = "Zeige im Tooltip an von wem ein Buff- bzw. Debuff gewirkt wurde"
-L_GUI_AURA_CLASSCOLOR_BORDER = "Aktiviere Klassenfarbe für Spielerbuffs"
-
--- Filger
-L_GUI_FILGER = "Timers (Filger)"
-L_GUI_FILGER_SUBTEXT = "Filger - analogue WeakAuras, but more simple and easy. Allows you to display in the form of icons and bars your auras and timers." -- Need review
-L_GUI_FILGER_ENABLE = "Aktiviere Filger"
-L_GUI_FILGER_TEST_MODE = "Test Icon Mode"
-L_GUI_FILGER_MAX_TEST_ICON = "Anzahl der Icons im Test Mode"
-L_GUI_FILGER_SHOW_TOOLTIP = "Zeige Tooltips"
-L_GUI_FILGER_DISABLE_CD = "Deaktiviere Cooldowns"
-L_GUI_FILGER_DISABLE_PVP = "Disable PvP debuffs on Player and Target" -- Need review
-L_GUI_FILGER_EXPIRATION = "Sort cooldowns by expiration time" -- Need review
-L_GUI_FILGER_BUFFS_SIZE = "Buffs größe ändern"
-L_GUI_FILGER_COOLDOWN_SIZE = "Cooldowns größe ändern"
-L_GUI_FILGER_PVP_SIZE = "PvP Debuffs größe ändern"
-
--- Panel options
+-- Top panel options
 L_GUI_TOP_PANEL = "Oberes Panel"
 L_GUI_TOP_PANEL_SUBTEXT = "Manage built-in top panel with information." -- Need review
 L_GUI_TOP_PANEL_ENABLE = "Aktiviere oberes Panel"
