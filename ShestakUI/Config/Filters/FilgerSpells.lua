@@ -2227,6 +2227,10 @@ C["filger_spells"] = {
 			{spellID = 191877, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Control of Lava [FM ADD]
 			{spellID = 236746, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Earth Shield [FM ADD]
+			{spellID = 974, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Synapse Shock [FM ADD]
+			{spellID = 277960, unitID = "player", caster = "player", filter = "BUFF"},
 		},
 		{
 			Name = "P_PROC_ICON",
@@ -2351,6 +2355,8 @@ C["filger_spells"] = {
 			{spellID = 117014, filter = "CD"},
 			-- [ADD FM] Sundering
 			{spellID = 197214, filter = "CD"},
+			-- [ADD FM] Stormkeeper
+			{spellID = 191634, filter = "CD"},
 			-- Lava Lash
 			{spellID = 60103, filter = "CD"},
 			-- [ADD FM] Icefury
@@ -2383,10 +2389,16 @@ C["filger_spells"] = {
 			{spellID = 204332, filter = "CD"},
 			-- [ADD FM] Call of the Elements
 			{spellID = 108285, filter = "CD"},
+			-- [ADD FM] Earthen Wall Totem
+			{spellID = 198838, filter = "CD"},
+			-- [ADD FM] Wind Rush Totem
+			{spellID = 192077, filter = "CD"},
+			-- [ADD FM] Ancestral Protection Totem
+			{spellID = 207399, filter = "CD"},
 			-- Hex
 			{spellID = 51514, filter = "CD"},
-			-- Tremor Totem
-			--BETA {spellID = 8143, filter = "CD"},
+			-- -- [COMMENT FM] Tremor Totem
+			-- {spellID = 8143, filter = "CD"},
 			-- Earthbind Totem
 			{spellID = 2484, filter = "CD"},
 			-- Thunderstorm
@@ -2407,8 +2419,8 @@ C["filger_spells"] = {
 			{spellID = 196884, filter = "CD"},
 			-- Flametongue
 			{spellID = 193796, filter = "CD"},
-			-- Lightning Surge Totem
-			{spellID = 192058, filter = "CD"},
+			-- -- [RENAME and COMMENT FM] Capacitor Totem
+			-- {spellID = 192058, filter = "CD"},
 			-- Crash Lightning
 			{spellID = 187874, filter = "CD"},
 			-- Doom Winds
