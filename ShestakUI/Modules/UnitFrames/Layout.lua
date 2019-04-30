@@ -592,7 +592,14 @@ local function Shared(self, unit)
 			self.Experience.Rested:SetStatusBarTexture(C.media.texture)
 
 			self.Experience.inAlpha = 1
-			self.Experience.outAlpha = 0
+			-- self.Experience.outAlpha = 0
+
+			-- Always show bars
+			if C.unitframe.always_show_bars == true then
+				self.Experience.outAlpha = 1
+			else
+				self.Experience.outAlpha = 0
+			end
 		end
 
 		-- Reputation bar
@@ -622,8 +629,15 @@ local function Shared(self, unit)
 			self.Reputation.bg:SetTexture(C.media.texture)
 
 			self.Reputation.inAlpha = 1
-			self.Reputation.outAlpha = 0
+			-- self.Reputation.outAlpha = 0
 			self.Reputation.colorStanding = true
+
+			-- Always show bars
+			if C.unitframe.always_show_bars == true then
+				self.Reputation.outAlpha = 1
+			else
+				self.Reputation.outAlpha = 0
+			end
 		end
 
 		-- Artifact Power bar
@@ -670,7 +684,14 @@ local function Shared(self, unit)
 			self.ArtifactPower.bg:SetVertexColor(T.color.r, T.color.g, T.color.b, 0.2)
 
 			self.ArtifactPower.color = {T.color.r, T.color.g, T.color.b}
-			self.ArtifactPower.offAlpha = 0
+			-- self.ArtifactPower.offAlpha = 0
+
+			-- Always show bars
+			if C.unitframe.always_show_bars == true then
+				self.ArtifactPower.offAlpha = 1
+			else
+				self.ArtifactPower.offAlpha = 0
+			end
 		end
 
 		-- GCD spark
