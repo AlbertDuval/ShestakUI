@@ -242,7 +242,7 @@ end
 -- Update archaeology skill information
 function stArch:updateSkillLevel()
 	if IsArchaeologist() then
-		local name, _, rank, maxRank = GetProfessionInfo(select(3, GetProfessions()))
+		local _, _, rank, maxRank = GetProfessionInfo(select(3, GetProfessions()))
 		stArch["archSkill"]["rank"] = rank
 		stArch["archSkill"]["maxRank"] = maxRank
 	else
@@ -497,7 +497,7 @@ stArchFrame:HookScript("OnMouseUp", function(self)
 	stArch:updateFramePosition(self)
 end)
 
-SlashCmdList.STARCHAEOLOGIST = function(msg, editBox)
+SlashCmdList.STARCHAEOLOGIST = function()
 	ToggleFrame(stArchFrame)
 	stArchFrame:StopMovingOrSizing()
 

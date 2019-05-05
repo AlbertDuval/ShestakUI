@@ -80,7 +80,6 @@ local function LoadSkin()
 
 	for i = 1, #MountJournal.ListScrollFrame.buttons do
 		local button = _G["MountJournalListScrollFrameButton"..i]
-		local name = _G["MountJournalListScrollFrameButton"..i.."Name"]
 
 		if not button.isSkinned then
 			button:GetRegions():Hide()
@@ -562,7 +561,6 @@ local function LoadSkin()
 
 	for i = 1, #WardrobeCollectionFrame.SetsCollectionFrame.ScrollFrame.buttons do
 		local button = _G["WardrobeCollectionFrameScrollFrameButton"..i]
-		local name = _G["WardrobeCollectionFrameScrollFrameButton"..i.."Name"]
 
 		if not button.isSkinned then
 			button:GetRegions():Hide()
@@ -602,7 +600,7 @@ local function LoadSkin()
 	hooksecurefunc(WardrobeCollectionFrameScrollFrame, "update", ColorSelectedSet)
 
 	hooksecurefunc(WardrobeCollectionFrame.SetsCollectionFrame, "DisplaySet", function()
-		for i, child in ipairs({WardrobeCollectionFrame.SetsCollectionFrame.DetailsFrame:GetChildren()}) do
+		for _, child in ipairs({WardrobeCollectionFrame.SetsCollectionFrame.DetailsFrame:GetChildren()}) do
 			if child.Icon and not child.isSkinned then
 				child.Icon:SetTexCoord(0.1, 0.9, 0.1, 0.9)
 

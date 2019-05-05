@@ -2363,14 +2363,10 @@ C["filger_spells"] = {
 			{spellID = 210714, filter = "CD"},
 			-- Healing Rain
 			{spellID = 73920, filter = "CD"},
-			-- Unleash Elements
-			--BETA {spellID = 73680, filter = "CD"},
 			-- [ADD FM] Unleash Life
 			{spellID = 73685, filter = "CD"},
 			-- [ADD FM] Healing Stream Totem
 			{spellID = 5394, filter = "CD"},
-			-- [ADD FM] Gift of the Queen
-			{spellID = 207778, filter = "CD"},
 			-- [ADD FM] Stormkeeper
 			{spellID = 205495, filter = "CD"},
 			-- Cloudburst Totem
@@ -2399,34 +2395,34 @@ C["filger_spells"] = {
 			{spellID = 51514, filter = "CD"},
 			-- -- [COMMENT FM] Tremor Totem
 			-- {spellID = 8143, filter = "CD"},
+			-- Crash Lightning
+			{spellID = 187874, filter = "CD"},
+			-- Flametongue
+			{spellID = 193796, filter = "CD"},
+			-- Feral Lunge
+			{spellID = 196884, filter = "CD"},
 			-- Earthbind Totem
 			{spellID = 2484, filter = "CD"},
 			-- Thunderstorm
 			{spellID = 51490, filter = "CD"},
-			-- Stone Bulwark Totem
-			{spellID = 108270, filter = "CD"},
-			-- -- [COMMENT FM] Astral Shift
-			-- {spellID = 108271, filter = "CD"},
-			-- -- [COMMENT FM] Feral Spirit
-			-- {spellID = 51533, filter = "CD"},
-			-- -- [COMMENT FM] Spiritwalker's Grace
-			-- {spellID = 79206, filter = "CD"},
-			-- Ancestral Guidance
-			{spellID = 108281, filter = "CD"},
-			--  [COMMENT FM] Ascendance
-			-- {spellID = 114049, filter = "CD"},
-			-- Feral Lunge
-			{spellID = 196884, filter = "CD"},
-			-- Flametongue
-			{spellID = 193796, filter = "CD"},
-			-- -- [RENAME and COMMENT FM] Capacitor Totem
-			-- {spellID = 192058, filter = "CD"},
-			-- Crash Lightning
-			{spellID = 187874, filter = "CD"},
-			-- Doom Winds
-			{spellID = 204945, filter = "CD"},
 			-- Windsong
 			{spellID = 201898, filter = "CD"},
+			-- Stone Bulwark Totem
+			{spellID = 108270, filter = "CD"},
+			-- [COMMENT FM] Capacitor Totem
+			-- {spellID = 192058, filter = "CD"},
+			-- Doom Winds
+			{spellID = 204945, filter = "CD"},
+			-- [COMMENT FM] Astral Shift
+			-- {spellID = 108271, filter = "CD"},
+			-- Ancestral Guidance
+			{spellID = 108281, filter = "CD"},
+			-- [COMMENT FM] Spiritwalker's Grace
+			-- {spellID = 79206, filter = "CD"},
+			-- [COMMENT FM] Feral Spirit
+			-- {spellID = 51533, filter = "CD"},
+			-- [COMMENT FM] Ascendance
+			-- {spellID = 114049, filter = "CD"},
 
 			-- PvP
 			-- Honorable Medallion

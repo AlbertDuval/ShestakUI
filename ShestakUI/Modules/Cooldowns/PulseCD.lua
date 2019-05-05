@@ -127,7 +127,7 @@ local function OnUpdate(_, update)
 end
 
 -- Event Handlers
-function frame:ADDON_LOADED(addon)
+function frame:ADDON_LOADED()
 	for _, v in pairs(T.pulse_ignored_spells) do
 		T.pulse_ignored_spells[v] = true
 	end
@@ -135,7 +135,7 @@ function frame:ADDON_LOADED(addon)
 end
 frame:RegisterEvent("ADDON_LOADED")
 
-function frame:UNIT_SPELLCAST_SUCCEEDED(unit, spell, spellID)
+function frame:UNIT_SPELLCAST_SUCCEEDED(unit, _, spellID)
 	if unit == "player" then
 		watching[spellID] = {GetTime(), "spell", spellID}
 		self:SetScript("OnUpdate", OnUpdate)
