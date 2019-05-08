@@ -118,6 +118,7 @@ C["unitframe"] = {
 	["plugins_fader"] = true,					-- Fade unit frames
 	["plugins_diminishing"] = true,			-- Diminishing Returns icons on arena frames
 	["plugins_power_prediction"] = false,		-- Power cost prediction bar on player frame
+	["plugins_absorbs"] = false,				-- Absorbs value on player frame
 }
 
 ----------------------------------------------------------------------------------------
