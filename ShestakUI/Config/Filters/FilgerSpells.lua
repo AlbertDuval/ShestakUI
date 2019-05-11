@@ -2229,6 +2229,8 @@ C["filger_spells"] = {
 			{spellID = 236746, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Earth Shield [FM ADD]
 			{spellID = 974, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Spirit Wolf [FM ADD]
+			{spellID = 260881, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Synapse Shock [FM ADD]
 			{spellID = 277960, unitID = "player", caster = "player", filter = "BUFF"},
 		},
@@ -2248,6 +2250,10 @@ C["filger_spells"] = {
 			{spellID = 118522, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Tidal Waves
 			{spellID = 53390, unitID = "player", caster = "player", filter = "BUFF"},
+			-- [ADD FM] Flash Flodd
+			{spellID = 280615, unitID = "player", caster = "player", filter = "BUFF"},
+			-- [ADD FM] Tidebringer
+			{spellID = 236502, unitID = "player", caster = "player", filter = "BUFF"},
 			-- [ADD FM] Icefury
 			{spellID = 210714, unitID = "player", caster = "player", filter = "BUFF"},
 			-- [ADD FM] Undulation
@@ -2351,6 +2357,8 @@ C["filger_spells"] = {
 			{spellID = 61295, filter = "CD"},
 			-- Stormstrike
 			{spellID = 17364, filter = "CD"},
+			-- [ADD FM] Downpour
+			{spellID = 207778, filter = "CD"},
 			-- [MOVE FM] Elemental Blast
 			{spellID = 117014, filter = "CD"},
 			-- [ADD FM] Sundering
