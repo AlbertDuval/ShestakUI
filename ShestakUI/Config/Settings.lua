@@ -111,7 +111,7 @@ C["unitframe"] = {
 	["plugins_reputation_bar"] = true,			-- Reputation bar (left from player frame by mouseover)
 	["plugins_experience_bar"] = true,			-- Experience bar (left from player frame by mouseover)
 	["plugins_artifact_bar"] = true,			-- Artifact Power bar (left from player frame by mouseover)
-	["always_show_bars"] = true,			-- FM ADD -- Always Show bars (instead of mouseover default)
+	["always_show_bars"] = false,			-- FM ADD -- Always Show bars (instead of mouseover default)
 	["plugins_smooth_bar"] = true,				-- Smooth bar
 	["plugins_enemy_spec"] = true,				-- Enemy specialization in BG and Arena
 	["plugins_combat_feedback"] = true,		-- Combat text on player/target frame
@@ -309,7 +309,7 @@ C["combattext"] = {
 	["max_lines"] = 15,							-- Max lines to keep in scrollable mode (more lines = more memory)
 	["time_visible"] = 3,						-- Time (seconds) a single message will be visible
 	["dk_runes"] = true,						-- Show deathknight rune recharge
-	["killingblow"] = false,					-- Tells you about your killingblows
+	["killingblow"] = true,					-- Tells you about your killingblows
 	["merge_aoe_spam"] = true,					-- Merges multiple aoe damage spam into single message
 	["merge_melee"] = true,						-- Merges multiple auto attack damage spam
 	["dispel"] = true,							-- Tells you about your dispels (works only with ["damage"] = true)
