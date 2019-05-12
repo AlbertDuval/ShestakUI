@@ -108,11 +108,10 @@ C["unitframe"] = {
 	-- Plugins
 	["plugins_gcd"] = false,					-- Global cooldown spark on player frame
 	["plugins_swing"] = false,					-- Swing bar
-	["plugins_reputation_bar"] = true,			-- Reputation bar (left from player frame by mouseover)
-	["plugins_experience_bar"] = true,			-- Experience bar (left from player frame by mouseover)
-	["plugins_artifact_bar"] = true,			-- Artifact Power bar (left from player frame by mouseover)
-	["always_show_bars"] = false,			-- FM ADD -- Always Show bars (instead of mouseover default)
-	["plugins_smooth_bar"] = true,				-- Smooth bar
+	["plugins_reputation_bar"] = true,			-- Reputation bar (left from player frame by mouseover, Middle-Click to lock visibility)
+	["plugins_experience_bar"] = true,			-- Experience bar (left from player frame by mouseover, Middle-Click to lock visibility)
+	["plugins_artifact_bar"] = true,			-- Artifact Power bar (left from player frame by mouseover, Middle-Click to lock visibility)
+	["plugins_smooth_bar"] = false,				-- Smooth bar
 	["plugins_enemy_spec"] = true,				-- Enemy specialization in BG and Arena
 	["plugins_combat_feedback"] = true,		-- Combat text on player/target frame
 	["plugins_fader"] = true,					-- Fade unit frames
