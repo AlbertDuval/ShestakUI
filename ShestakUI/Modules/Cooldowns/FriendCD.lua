@@ -132,7 +132,7 @@ end
 
 local OnEvent = function(self, event, ...)
 	if event == "COMBAT_LOG_EVENT_UNFILTERED" then
-		local _, eventType, _, _, sourceName, sourceFlags, _, _, _, _, _, spellID = ...
+		local _, eventType, _, _, sourceName, sourceFlags, _, _, _, _, _, spellID = CombatLogGetCurrentEventInfo()
 
 		if eventType == "SPELL_CAST_SUCCESS" then
 			if sourceName ~= T.name then
