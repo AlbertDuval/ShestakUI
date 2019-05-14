@@ -477,6 +477,10 @@ C["enemycooldown"] = {
 	["show_inarena"] = true,					-- Show in arena zone
 }
 
+C["friendsdcooldown"] = {
+	["enable"] = true,							-- Enable friends cooldowns
+}
+
 ----------------------------------------------------------------------------------------
 --	Pulse cooldowns options
 ----------------------------------------------------------------------------------------

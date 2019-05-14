@@ -1,5 +1,5 @@
 local T, C, L, _ = unpack(select(2, ...))
-if C.enemycooldown.enable ~= true then return end
+if C.friendsdcooldown.enable ~= true then return end
 
 ----------------------------------------------------------------------------------------
 --	Enemy cooldowns(alEnemyCD by Allez)
