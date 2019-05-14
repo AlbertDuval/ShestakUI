@@ -614,7 +614,7 @@ local function Shared(self, unit)
 					self.Reputation:SetPoint("TOPLEFT", self, "TOPLEFT", -25 - C.unitframe.portrait_width, 28)
 				end
 			else
-				if self.Experience and self.Experience:IsShown() then
+				if T.level ~= MAX_PLAYER_LEVEL and self.Experience and self.Experience:IsShown() then
 					self.Reputation:SetPoint("TOPLEFT", self, "TOPLEFT", -32, 28)
 				else
 					self.Reputation:SetPoint("TOPLEFT", self, "TOPLEFT", -18, 28)
