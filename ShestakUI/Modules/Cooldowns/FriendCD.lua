@@ -5,16 +5,16 @@ if C.friendsdcooldown.enable ~= true then return end
 --	Enemy cooldowns(alEnemyCD by Allez)
 ----------------------------------------------------------------------------------------
 local show = {
-	none = C.enemycooldown.show_always,
-	pvp = C.enemycooldown.show_inpvp,
-	arena = C.enemycooldown.show_inarena,
+	none = C.friendsdcooldown.show_always,
+	pvp = C.friendsdcooldown.show_inpvp,
+	arena = C.friendsdcooldown.show_inarena,
 }
 -- local filter = COMBATLOG_OBJECT_AFFILIATION_RAID + COMBATLOG_OBJECT_AFFILIATION_PARTY
-local direction = C.enemycooldown.direction
+local direction = C.friendsdcooldown.direction
 local icons = {}
 local band = bit.band
 local pos = C.position.enemy_cooldown
-local limit = (C.actionbar.button_size * 12)/C.enemycooldown.size
+local limit = (C.actionbar.button_size * 12)/C.friendsdcooldown.size
 
 local EnemyCDAnchor = CreateFrame("Frame", "EnemyCDAnchor", UIParent)
 if C.unitframe.enable ~= true then
@@ -27,9 +27,9 @@ else
 	end
 end
 if direction == "UP" or direction == "DOWN" then
-	EnemyCDAnchor:SetSize(C.enemycooldown.size, (C.enemycooldown.size * 5) + 12)
+	EnemyCDAnchor:SetSize(C.friendsdcooldown.size, (C.friendsdcooldown.size * 5) + 12)
 else
-	EnemyCDAnchor:SetSize((C.enemycooldown.size * 5) + 12, C.enemycooldown.size)
+	EnemyCDAnchor:SetSize((C.friendsdcooldown.size * 5) + 12, C.friendsdcooldown.size)
 end
 
 local OnEnter = function(self)
@@ -90,7 +90,7 @@ end
 
 local CreateIcon = function()
 	local icon = CreateFrame("Frame", nil, UIParent)
-	icon:SetSize(C.enemycooldown.size, C.enemycooldown.size)
+	icon:SetSize(C.friendsdcooldown.size, C.friendsdcooldown.size)
 	icon:SetTemplate("Default")
 	icon.Cooldown = CreateFrame("Cooldown", nil, icon, "CooldownFrameTemplate")
 	icon.Cooldown:SetPoint("TOPLEFT", 2, -2)
@@ -136,7 +136,7 @@ local OnEvent = function(self, event, ...)
 
 		if eventType == "SPELL_CAST_SUCCESS" then
 			if sourceName ~= T.name then
-				if (T.enemy_spells[spellID] or spellID == 208683) and (UnitInParty(sourceName) or UnitInRaid(sourceName)) and UnitInBattleground("player") then
+				if (T.enemy_spells[spellID] or spellID == 208683) and (UnitInParty(sourceName) or UnitInRaid(sourceName)) and show[select(2, IsInInstance())] then
 					StartTimer(sourceName, spellID)
 				end
 			end
@@ -165,7 +165,7 @@ SlashCmdList.FriendCD = function()
 	StartTimer(T.name, 78675)
 	StartTimer(T.name, 8122)
 	StartTimer(T.name, 51514)
-	-- StartTimer(T.name, 59752)
+	StartTimer(T.name, 286348)
 end
 SLASH_FriendCD1 = "/friendcd"
-SLASH_FriendCD2 = "/св"
+SLASH_FriendCD2 = "/fcd"

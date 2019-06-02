@@ -479,6 +479,11 @@ C["enemycooldown"] = {
 
 C["friendsdcooldown"] = {
 	["enable"] = true,							-- Enable friends cooldowns
+	["size"] = 30,								-- Icon size
+	["direction"] = "RIGHT",					-- Icon direction
+	["show_always"] = true,					-- Show everywhere
+	["show_inpvp"] = false,						-- Show in bg zone
+	["show_inarena"] = true,					-- Show in arena zone
 }
 
 ----------------------------------------------------------------------------------------
