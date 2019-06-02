@@ -67,6 +67,8 @@ if C.enemycooldown.enable == true then
 		[126152] = 120,
 	}
 	T.enemy_spells = {
+		[286348] = 120,	-- [ADD FM] Maledic trinket
+		[286349] = 120,	-- [ADD FM] Maledic trinket
 		[2782] = 8,	-- [ADD FM] Drood Dispell
 		-- Interrupts and Silences
 		[57994] = 12,	-- Wind Shear
