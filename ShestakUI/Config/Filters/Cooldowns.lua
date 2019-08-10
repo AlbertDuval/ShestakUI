@@ -71,6 +71,8 @@ if C.enemycooldown.enable == true then
 		[286349] = 120,	-- [ADD FM] Maledic trinket
 		[2782] = 8,	-- [ADD FM] Drood Dispell
 		-- Interrupts and Silences
+		[187707] = 15,	-- [ADD FM] Muzzle (Hunt kick)
+		[183752] = 15,	-- [ADD FM] Manavore (DH kick)
 		[57994] = 12,	-- Wind Shear
 		[47528] = 15,	-- Mind Freeze
 		[106839] = 15,	-- Skull Bash
@@ -78,7 +80,6 @@ if C.enemycooldown.enable == true then
 		[96231] = 15,	-- Rebuke
 		[1766] = 15,	-- Kick
 		[6552] = 15,	-- Pummel
-		[183752] = 15,	-- [ADD FM] Manavore (DH kick)
 		[147362] = 24,	-- Counter Shot
 		[2139] = 24,	-- Counterspell
 		[19647] = 24,	-- Spell Lock
@@ -106,6 +107,7 @@ if C.enemycooldown.enable == true then
 		[853] = 60,		-- Hammer of Justice
 		-- Defense abilities
 		[642] = 300, -- Divine Shield [FM ADD]
+		[122470] = 90, -- Touch of Karma [FM ADD]
 		[48707] = 60,	-- Anti-Magic Shell
 		[31224] = 90,	-- Cloak of Shadows
 		[46924] = 90,	-- Bladestorm

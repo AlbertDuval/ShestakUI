@@ -2375,8 +2375,8 @@ C["filger_spells"] = {
 			{spellID = 73685, filter = "CD"},
 			-- [ADD FM] Healing Stream Totem
 			{spellID = 5394, filter = "CD"},
-			-- Cloudburst Totem
-			{spellID = 157153, filter = "CD"},
+			-- [COMMENT FM to avoid twice timer with HST] Cloudburst Totem
+			-- {spellID = 157153, filter = "CD"},
 			-- [ADD FM] Ground Totem
 			{spellID = 204336, filter = "CD"},
 			-- [ADD FM] Earthgrab Totem
