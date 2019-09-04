@@ -1547,8 +1547,6 @@ C["filger_spells"] = {
 			{spellID = 853, filter = "CD"},
 			-- Judgment
 			{spellID = 20271, filter = "CD"},
-			-- Crusader Strike
-			{spellID = 35395, filter = "CD"},
 			-- Blade of Justice
 			{spellID = 184575, filter = "CD"},
 			-- Holy Shock
