@@ -156,6 +156,18 @@ L_GUI_UF_PLUGINS_HEALCOMM = "即將受到的治療"
 L.raidframe_plugins_auto_resurrection = "中鍵施放復活技能"
 L.raidframe_plugins_auto_resurrection_desc = "滑鼠中鍵點擊已死亡角色時施放復活技能(Clique啟用時無效)"
 L.raidframe_hide_health_value = "隱藏血量(僅在HPS佈局中生效)"
+L.raidframe_subheader_heal_size = "HPS佈局框架大小"
+L.raidframe_heal_width = "框架寬度"
+L.raidframe_heal_height = "框架高度"
+L.raidframe_heal_power_height = "能量框架高度"
+L.raidframe_subheader_dps_size = "DPS佈局框架大小"
+L.raidframe_dps_party_width = "隊伍框架寬度"
+L.raidframe_dps_party_height = "隊伍框架高度"
+L.raidframe_dps_raid_width = "框架寬度"
+L.raidframe_dps_raid_height = "框架高度"
+L.raidframe_dps_party_power_height = "隊伍能量框架高度"
+L.raidframe_dps_raid_power_height = "能量框架高度"
+
 
 -- ActionBar options
 L_GUI_ACTIONBAR = "快捷列"
