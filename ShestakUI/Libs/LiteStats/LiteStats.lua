@@ -1323,10 +1323,10 @@ if friends.enabled then
 			ShowFriends()
 			self.hovered = true
 			local online, total = 0, GetNumFriends()
-			local name, level, class, zone, connected, status, note, classc, levelc, zone_r, zone_g, zone_b, grouped
+			local name, level, class, zone, connected, status, note, classc, levelc, zone_r, zone_g, zone_b, grouped, realm_r, realm_g, realm_b
 			for i = 0, total do if select(5, GetFriendInfo(i)) then online = online + 1 end end
 			local BNonline, BNtotal = 0, BNGetNumFriends()
-			local presenceName, toonName, toonID, client, isOnline
+			local presenceName, battleTag, toonName, toonID, client, isOnline, isAFK, isDND
 			if BNtotal > 0 then
 				for i = 1, BNtotal do if select(8, BNGetFriendInfo(i)) then BNonline = BNonline + 1 end end
 			end
@@ -1350,6 +1350,9 @@ if friends.enabled then
 							for k, v in pairs(LOCALIZED_CLASS_NAMES_FEMALE) do if class == v then class = k end end
 						end
 						classc, levelc = (CUSTOM_CLASS_COLORS or RAID_CLASS_COLORS)[class], GetQuestDifficultyColor(level)
+						if not classc then
+							classc = {r = 1, g = 1, b = 1}
+						end
 						grouped = (UnitInParty(name) or UnitInRaid(name)) and (GetRealZoneText() == zone and " |cff7fff00*|r" or " |cffff7f00*|r") or ""
 						GameTooltip:AddDoubleLine(format("|cff%02x%02x%02x%d|r %s%s%s", levelc.r * 255, levelc.g * 255, levelc.b * 255, level, name, grouped, " "..status), zone, classc.r, classc.g, classc.b, zone_r, zone_g, zone_b)
 						if self.altdown and note then GameTooltip:AddLine("  "..note, ttsubh.r, ttsubh.g, ttsubh.b, 1) end
@@ -1378,6 +1381,9 @@ if friends.enabled then
 									for k, v in pairs(LOCALIZED_CLASS_NAMES_FEMALE) do if class == v then class = k end end
 								end
 								classc, levelc = (CUSTOM_CLASS_COLORS or RAID_CLASS_COLORS)[class], GetQuestDifficultyColor(level)
+								if not classc then
+									classc = {r = 1, g = 1, b = 1}
+								end
 								if UnitInParty(toonName) or UnitInRaid(toonName) then grouped = " |cffaaaaaa*|r" else grouped = "" end
 								GameTooltip:AddDoubleLine(format("%s (|cff%02x%02x%02x%d|r |cff%02x%02x%02x%s|r%s) |cff%02x%02x%02x%s|r", client, levelc.r * 255, levelc.g * 255, levelc.b * 255, level, classc.r * 255, classc.g * 255, classc.b * 255, toonName, grouped, 255, 0, 0, status), presenceName, 238, 238, 238, 238, 238, 238)
 								if self.altdown then
@@ -1598,9 +1604,9 @@ if stats.enabled then
 			local Effective = Base + PosBuff + NegBuff
 			local RangedBase, RangedPosBuff, RangedNegBuff = UnitRangedAttackPower("player")
 			local range = RangedBase + RangedPosBuff + RangedNegBuff
-			heal = GetSpellBonusHealing()
-			spell = GetSpellBonusDamage(7)
-			attack = Effective
+			local heal = GetSpellBonusHealing()
+			local spell = GetSpellBonusDamage(7)
+			local attack = Effective
 			if heal > spell then
 				power = heal
 			else
