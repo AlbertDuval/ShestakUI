@@ -21,13 +21,13 @@ WORLD_QUEST_TRACKER_MODULE.Header.Background:Hide()
 
 ObjectiveTrackerFrame.HeaderMenu.Title:SetAlpha(0)
 
-hooksecurefunc(DEFAULT_OBJECTIVE_TRACKER_MODULE, "SetStringText", function(_, fontString, _, useFullHeight)
-	local _, fontHeight = SystemFont_Shadow_Med1:GetFont()
-	local stringHeight = fontString:GetHeight()
-	if stringHeight > OBJECTIVE_TRACKER_DOUBLE_LINE_HEIGHT * 2 - (fontHeight * 2) and not useFullHeight then
-		fontString:SetHeight(fontHeight * 2.1)
-	end
-end)
+--FIXME hooksecurefunc(DEFAULT_OBJECTIVE_TRACKER_MODULE, "SetStringText", function(_, fontString, _, useFullHeight)
+	-- local _, fontHeight = SystemFont_Shadow_Med1:GetFont()
+	-- local stringHeight = fontString:GetHeight()
+	-- if stringHeight > OBJECTIVE_TRACKER_DOUBLE_LINE_HEIGHT * 2 - (fontHeight * 2) and not useFullHeight then
+		-- fontString:SetHeight(fontHeight * 2.1)
+	-- end
+-- end)
 
 ----------------------------------------------------------------------------------------
 --	Skin ObjectiveTrackerFrame item buttons
@@ -119,7 +119,7 @@ hooksecurefunc(QUEST_TRACKER_MODULE, "Update", function()
 	end
 end)
 
-hooksecurefunc(DEFAULT_OBJECTIVE_TRACKER_MODULE, "AddObjective", function(self, block)
+hooksecurefunc(DEFAULT_OBJECTIVE_TRACKER_MODULE, "AddObjective", function(_, block)
 	if block.module == ACHIEVEMENT_TRACKER_MODULE then
 		block.HeaderText:SetTextColor(0.75, 0.61, 0)
 		block.HeaderText.col = nil
@@ -319,7 +319,7 @@ end)
 local StageBlock = _G["ScenarioStageBlock"]
 StageBlock:CreateBackdrop("Overlay")
 StageBlock.backdrop:SetPoint("TOPLEFT", ScenarioStageBlock.NormalBG, 3, -3)
-StageBlock.backdrop:SetPoint("BOTTOMRIGHT", ScenarioStageBlock.NormalBG, -6, 3)
+StageBlock.backdrop:SetPoint("BOTTOMRIGHT", ScenarioStageBlock.NormalBG, -6, 5)
 
 StageBlock.NormalBG:SetAlpha(0)
 StageBlock.FinalBG:SetAlpha(0)

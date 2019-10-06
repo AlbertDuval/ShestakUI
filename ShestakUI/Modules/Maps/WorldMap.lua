@@ -25,7 +25,7 @@ coords:SetFrameLevel(WorldMapFrame.BorderFrame:GetFrameLevel() + 2)
 coords:SetFrameStrata(WorldMapFrame.BorderFrame:GetFrameStrata())
 
 coords.PlayerText = coords:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-coords.PlayerText:SetPoint("BOTTOM", WorldMapFrame.ScrollContainer, "BOTTOM", 5, 20)
+coords.PlayerText:SetPoint("BOTTOMLEFT", WorldMapFrame.ScrollContainer, "BOTTOM", -40, 20)
 coords.PlayerText:SetJustifyH("LEFT")
 coords.PlayerText:SetText(UnitName("player")..": 0,0")
 
@@ -53,7 +53,7 @@ local function GetPlayerMapPos(mapID)
 end
 
 local int = 0
-WorldMapFrame:HookScript("OnUpdate", function(self)
+WorldMapFrame:HookScript("OnUpdate", function()
 	int = int + 1
 	if int >= 3 then
 		local unitMap = C_Map.GetBestMapForUnit("player")

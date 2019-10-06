@@ -443,7 +443,7 @@ function T.SkinDropDownBox(frame, width, pos)
 	frame.backdrop:SetPoint("BOTTOMRIGHT", button, "BOTTOMRIGHT", 2, -2)
 end
 
-function T.SkinCheckBox(frame, default)
+function T.SkinCheckBox(frame)
 	frame:SetNormalTexture("")
 	frame:SetPushedTexture("")
 	frame:CreateBackdrop("Overlay")
@@ -460,7 +460,6 @@ function T.SkinCheckBox(frame, default)
 	end
 
 	if frame.SetCheckedTexture then
-		if default then return end
 		local checked = frame:CreateTexture()
 		checked:SetColorTexture(1, 0.82, 0, 0.8)
 		checked:SetPoint("TOPLEFT", frame, 6, -6)
@@ -1510,6 +1509,21 @@ T.CustomFilter = function(_, unit, button, _, _, _, _, _, _, caster)
 				return false
 			end
 		end
+	end
+	return true
+end
+
+T.CustomFilterBoss = function(_, unit, button, name, _, _, _, _, _, caster)
+	if button.isDebuff then
+		local playerUnits = {
+			player = true,
+			pet = true,
+			vehicle = true,
+		}
+		if playerUnits[caster] or caster == unit and not T.DebuffBlackList[name] then
+			return true
+		end
+		return false
 	end
 	return true
 end

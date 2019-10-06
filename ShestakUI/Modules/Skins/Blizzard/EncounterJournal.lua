@@ -5,7 +5,7 @@ local T, C, L, _ = unpack(select(2, ...))
 ----------------------------------------------------------------------------------------
 local LoadTootlipSkin = CreateFrame("Frame")
 LoadTootlipSkin:RegisterEvent("ADDON_LOADED")
-LoadTootlipSkin:SetScript("OnEvent", function(self, event, addon)
+LoadTootlipSkin:SetScript("OnEvent", function(self, _, addon)
 	if IsAddOnLoaded("Skinner") or IsAddOnLoaded("Aurora") or not C.tooltip.enable then
 		self:UnregisterEvent("ADDON_LOADED")
 		return
@@ -137,9 +137,13 @@ local function LoadSkin()
 		suggestion.centerDisplay.description.text:SetTextColor(1, 1, 1)
 		suggestion.reward.iconRing:Hide()
 		suggestion.reward.iconRingHighlight:SetTexture("")
-		suggestion:CreateBackdrop("Default")
-		suggestion.backdrop:SetPoint("TOPLEFT", suggestion.icon, -2, 2)
-		suggestion.backdrop:SetPoint("BOTTOMRIGHT", suggestion.icon, 2, -2)
+
+		suggestion.icon.b = CreateFrame("Frame", nil, suggestion)
+		suggestion.icon.b:SetTemplate("Default")
+		suggestion.icon.b:SetPoint("TOPLEFT", suggestion.icon, "TOPLEFT", -2, 2)
+		suggestion.icon.b:SetPoint("BOTTOMRIGHT", suggestion.icon, "BOTTOMRIGHT", 2, -2)
+		suggestion.icon.b:SetFrameLevel(1)
+
 		suggestion.reward:CreateBackdrop("Default")
 		suggestion.reward.backdrop:SetFrameLevel(suggestion.reward:GetFrameLevel())
 		suggestion.reward.backdrop:SetPoint("TOPLEFT", suggestion.reward.icon, -2, 2)
