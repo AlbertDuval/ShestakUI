@@ -551,21 +551,23 @@ local function Shared(self, unit)
 			self.Reputation = CreateFrame("StatusBar", self:GetName().."_Reputation", self)
 			self.Reputation:CreateBackdrop("Default")
 			self.Reputation:EnableMouse(true)
-			if C.unitframe.portrait_enable == true then
-				if self.Experience and self.Experience:IsShown() then
-					self.Reputation:SetPoint("TOPLEFT", self, "TOPLEFT", -39 - C.unitframe.portrait_width, 28)
-				else
-					self.Reputation:SetPoint("TOPLEFT", self, "TOPLEFT", -25 - C.unitframe.portrait_width, 28)
-				end
-			else
-				if T.level ~= MAX_PLAYER_LEVEL and self.Experience and self.Experience:IsShown() then
-					self.Reputation:SetPoint("TOPLEFT", self, "TOPLEFT", -32, 28)
-				else
-					self.Reputation:SetPoint("TOPLEFT", self, "TOPLEFT", -18, 28)
-				end
-			end
-			self.Reputation:SetSize(7, 94)
-			self.Reputation:SetOrientation("Vertical")
+			-- if C.unitframe.portrait_enable == true then
+			-- 	if self.Experience and self.Experience:IsShown() then
+			-- 		self.Reputation:SetPoint("TOPLEFT", self, "TOPLEFT", -39 - C.unitframe.portrait_width, 28)
+			-- 	else
+			-- 		self.Reputation:SetPoint("TOPLEFT", self, "TOPLEFT", -25 - C.unitframe.portrait_width, 28)
+			-- 	end
+			-- else
+			-- 	if T.level ~= MAX_PLAYER_LEVEL and self.Experience and self.Experience:IsShown() then
+			-- 		self.Reputation:SetPoint("TOPLEFT", self, "TOPLEFT", -32, 28)
+			-- 	else
+			-- 		self.Reputation:SetPoint("TOPLEFT", self, "TOPLEFT", -18, 28)
+			-- 	end
+			-- end
+
+			self.Reputation:SetPoint("TOPLEFT", ActionBarAnchor, "TOPRIGHT", 10, -19)
+			self.Reputation:SetSize(107, 7)
+			self.Reputation:SetOrientation("Horizontal")
 			self.Reputation:SetStatusBarTexture(C.media.texture)
 
 			self.Reputation.bg = self.Reputation:CreateTexture(nil, "BORDER")
@@ -576,7 +578,7 @@ local function Shared(self, unit)
 			-- self.Reputation.outAlpha = 0
 			self.Reputation.colorStanding = true
 
-			-- Always show bars
+			-- Always show barsdq
 			if C.unitframe.always_show_bars == true then
 				self.Reputation.outAlpha = 1
 			else
@@ -618,8 +620,9 @@ local function Shared(self, unit)
 					end
 				end
 			end
-			self.ArtifactPower:SetSize(7, 94)
-			self.ArtifactPower:SetOrientation("Vertical")
+			self.ArtifactPower:SetPoint("TOPLEFT", self.Reputation, "TOPRIGHT", 10, 0)
+			self.ArtifactPower:SetSize(107, 7)
+			self.ArtifactPower:SetOrientation("Horizontal")
 			self.ArtifactPower:SetStatusBarTexture(C.media.texture)
 
 			self.ArtifactPower.bg = self.ArtifactPower:CreateTexture(nil, "BORDER")
