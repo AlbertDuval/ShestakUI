@@ -23,7 +23,7 @@ else
 	if C.unitframe.plugins_swing == true then
 		EnemyCDAnchor:SetPoint(unpack(C.position.enemy_cooldown))
 	else
-		EnemyCDAnchor:SetPoint(pos[1], pos[2], pos[3], pos[4], pos[5] - 232)
+		EnemyCDAnchor:SetPoint(pos[1], pos[2], pos[3], pos[4], pos[5] - 9 + C.friendsdcooldown.size)
 	end
 end
 if direction == "UP" or direction == "DOWN" then
@@ -136,7 +136,8 @@ local OnEvent = function(self, event, ...)
 
 		if eventType == "SPELL_CAST_SUCCESS" then
 			if sourceName ~= T.name then
-				if (T.enemy_spells[spellID] or spellID == 208683) and (UnitInParty(sourceName) or UnitInRaid(sourceName)) and show[select(2, IsInInstance())] then
+				-- if (T.enemy_spells[spellID] or spellID == 208683) and (UnitInParty(sourceName) or UnitInRaid(sourceName)) and show[select(2, IsInInstance())] then
+				if (T.enemy_spells[spellID] or spellID == 208683) and (UnitInParty(sourceName) or UnitInRaid(sourceName)) then
 					StartTimer(sourceName, spellID)
 				end
 			end

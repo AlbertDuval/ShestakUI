@@ -2355,6 +2355,10 @@ C["filger_spells"] = {
 			{spellID = 61295, filter = "CD"},
 			-- Stormstrike
 			{spellID = 17364, filter = "CD"},
+			-- [ADD FM] Lightning Lasso
+			{spellID = 305483, filter = "CD"},
+			-- [ADD FM] Concentrated Flame
+			{spellID = 295373, filter = "CD"},
 			-- [ADD FM] Downpour
 			{spellID = 207778, filter = "CD"},
 			-- [MOVE FM] Elemental Blast

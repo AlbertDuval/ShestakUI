@@ -106,6 +106,9 @@ if C.enemycooldown.enable == true then
 		[6789] = 45,	-- Mortal Coil
 		[853] = 60,		-- Hammer of Justice
 		-- Defense abilities
+		[205604] = 60, -- Reverse Magic [FM ADD]
+		[196718] = 180, -- Darkness [FM ADD]
+		[198589] = 60, -- Blur [FM ADD]
 		[642] = 300, -- Divine Shield [FM ADD]
 		[122470] = 90, -- Touch of Karma [FM ADD]
 		[48707] = 60,	-- Anti-Magic Shell
