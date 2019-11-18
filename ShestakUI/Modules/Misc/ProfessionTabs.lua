@@ -35,7 +35,6 @@ local defaults = {
 	-- Secondary Professions
 	[794] = {false, false},	-- Archaeology
 	[185] = {true, true},	-- Cooking
-	[129] = {true, false},	-- First Aid
 	[356] = {false, false},	-- Fishing
 }
 
@@ -195,7 +194,7 @@ function handler:TRADE_SKILL_SHOW(event)
 	end
 end
 
-function handler:TRADE_SKILL_CLOSE(event)
+function handler:TRADE_SKILL_CLOSE()
 	for object in next, tabs do
 		if object:IsShown() then
 			UpdateSelectedTabs(object)
