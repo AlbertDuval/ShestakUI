@@ -2197,6 +2197,8 @@ C["filger_spells"] = {
 			IconSize = C.filger.buffs_size,
 			Position = {"TOP", P_BUFF_ICON_Anchor},
 
+			-- ElementalBuffFrost [ADD_FM]
+			{spellID = 279029, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Elemental Mastery
 			{spellID = 16166, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Ascendance
@@ -2381,6 +2383,8 @@ C["filger_spells"] = {
 			{spellID = 5394, filter = "CD"},
 			-- [COMMENT FM to avoid twice timer with HST] Cloudburst Totem
 			-- {spellID = 157153, filter = "CD"},
+			-- [ADD FM] Vitaly Conduit
+			{spellID = 296230, filter = "CD"},
 			-- [ADD FM] Ground Totem
 			{spellID = 204336, filter = "CD"},
 			-- [ADD FM] Earthgrab Totem
