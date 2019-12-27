@@ -2944,6 +2944,8 @@ C["filger_spells"] = {
 			{spellID = 146555, unitID = "player", caster = "all", filter = "BUFF"},
 			-- Drums of the Maelstrom
 			{spellID = 256740, unitID = "player", caster = "all", filter = "BUFF"},
+			-- Drums of the Mountain
+			{spellID = 230935, unitID = "player", caster = "all", filter = "BUFF"},
 
 			-- Engineering
 			-- Goblin Glider [Goblin Glider Kit]
