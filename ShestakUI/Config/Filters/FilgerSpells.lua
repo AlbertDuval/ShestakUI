@@ -2252,6 +2252,8 @@ C["filger_spells"] = {
 			{spellID = 118522, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Tidal Waves
 			{spellID = 53390, unitID = "player", caster = "player", filter = "BUFF"},
+			-- [ADD FM] Tectonic Thunder
+			{spellID = 286976, unitID = "player", caster = "player", filter = "BUFF"},
 			-- [ADD FM] Flash Flodd
 			{spellID = 280615, unitID = "player", caster = "player", filter = "BUFF"},
 			-- [ADD FM] Tidebringer
