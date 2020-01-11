@@ -89,7 +89,6 @@ if C.enemycooldown.enable == true then
 		[47476] = 60,	-- Strangulate
 		[78675] = 60,	-- Solar Beam
 		-- Crowd Controls
-		[5246] = 90,	-- [ADD FM] Fear War
 		[115078] = 15,	-- Paralysis
 		[20066] = 15,	-- Repentance
 		[187650] = 30,	-- Freezing Trap
@@ -105,30 +104,36 @@ if C.enemycooldown.enable == true then
 		[64044] = 45,	-- Psychic Horror
 		[6789] = 45,	-- Mortal Coil
 		[853] = 60,		-- Hammer of Justice
+		[5246] = 90,	-- [ADD FM] Fear War
 		-- Defense abilities
+		[210256] = 45, -- Blessing of Sanctuary [FM ADD]
 		[205604] = 60, -- Reverse Magic [FM ADD]
-		[196718] = 180, -- Darkness [FM ADD]
 		[198589] = 60, -- Blur [FM ADD]
-		[642] = 300, -- Divine Shield [FM ADD]
-		[122470] = 90, -- Touch of Karma [FM ADD]
 		[48707] = 60,	-- Anti-Magic Shell
+		[287081] = 60,	-- Lichborne
 		[31224] = 90,	-- Cloak of Shadows
 		[46924] = 90,	-- Bladestorm
-		[287081] = 60,	-- Lichborne
+		[122470] = 90, -- Touch of Karma [FM ADD]
 		[213664] = 120,	-- Nimble Brew
 		[47585] = 120,	-- Dispersion
 		[1856] = 120,	-- Vanish
+		[97462] = 180,	-- [ADD FM] Rally Cry
+		[236385] = 180,	-- [ADD FM] Die by the Sword
 		[148467] = 180,	-- [ADD FM] Deterrence
 		[7744] = 120,	-- Will of the Forsaken (Racial)
 		[186265] = 180,	-- Aspect of the Turtle
 		[33206] = 180,	-- Pain Suppression
 		[7744] = 180,	-- Will of the Forsaken (Racial)
 		[61336] = 180,	-- Survival Instincs
+		[196718] = 180, -- Darkness [FM ADD]
+		[642] = 300, -- Divine Shield [FM ADD]
 		-- Ofensive abilities
 		[114050] = 180,	-- Ascendance (Elemental)
 		[114051] = 180,	-- Ascendance (Enhancement)
 		[114052] = 180,	-- Ascendance (Restauration)
 		[31884] = 120,	-- Avenging Wrath
+		[79140] = 120,	-- [ADD FM] Vendetta
+		[190319] = 120,	-- [ADD FM] Combustion
 		[12472] = 180,	-- Icy Veins
 		[102543] = 180,	-- Incarnation (Feral)
 		[102560] = 180,	-- Incarnation (Boomy)
