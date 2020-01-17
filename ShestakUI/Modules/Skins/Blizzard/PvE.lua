@@ -113,6 +113,12 @@ local function LoadSkin()
 		T.SkinScrollBar(scrollbars[i])
 	end
 
+	-- Set texture to hide circle
+	_G.GroupFinderFrame.groupButton1.icon:SetTexture("Interface\\Icons\\INV_Helmet_08")
+	_G.GroupFinderFrame.groupButton2.icon:SetTexture("Interface\\Icons\\Icon_Scenarios")
+	_G.GroupFinderFrame.groupButton3.icon:SetTexture("Interface\\LFGFrame\\UI-LFR-PORTRAIT")
+	_G.GroupFinderFrame.groupButton4.icon:SetTexture("Interface\\Icons\\Achievement_General_StayClassy")
+
 	for i = 1, 4 do
 		local button = GroupFinderFrame["groupButton"..i]
 
@@ -514,6 +520,7 @@ local function LoadSecondarySkin()
 	NoticeFrame.SeasonDescription:SetShadowOffset(1, -1)
 	NoticeFrame.SeasonDescription2:SetTextColor(1, 1, 1)
 	NoticeFrame.SeasonDescription2:SetShadowOffset(1, -1)
+	NoticeFrame.SeasonDescription2:SetWidth(400)
 	NoticeFrame.SeasonDescription3:SetTextColor(1, 0.8, 0)
 	NoticeFrame.SeasonDescription3:SetShadowOffset(1, -1)
 

@@ -15,7 +15,7 @@ local function LoadSkin()
 	DressUpFrame.ModelScene.backdrop:SetPoint("BOTTOMRIGHT", 2, 1)
 	DressUpFrame.ModelBackground:SetDrawLayer("BACKGROUND", 3)
 
-	T.SkinMaxMinFrame(MaximizeMinimizeFrame, DressUpFrameCloseButton)
+	T.SkinMaxMinFrame(DressUpFrame.MaximizeMinimizeFrame, DressUpFrameCloseButton)
 
 	DressUpFrameCancelButton:SkinButton()
 	DressUpFrameResetButton:SkinButton()
