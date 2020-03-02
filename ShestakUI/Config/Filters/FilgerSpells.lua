@@ -2365,6 +2365,8 @@ C["filger_spells"] = {
 			{spellID = 17364, filter = "CD"},
 			-- [ADD FM] Lightning Lasso
 			{spellID = 305483, filter = "CD"},
+			-- [ADD FM] Overcharge Mana
+			{spellID = 296072, filter = "CD"},
 			-- [ADD FM] Concentrated Flame
 			{spellID = 295373, filter = "CD"},
 			-- [ADD FM] Downpour
@@ -2409,6 +2411,8 @@ C["filger_spells"] = {
 			{spellID = 192077, filter = "CD"},
 			-- [ADD FM] Ancestral Protection Totem
 			{spellID = 207399, filter = "CD"},
+			-- [ADD FM] Unwavering Ward
+			{spellID = 296036, filter = "CD"},
 			-- Hex
 			{spellID = 51514, filter = "CD"},
 			-- -- [COMMENT FM] Tremor Totem
