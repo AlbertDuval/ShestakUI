@@ -34,7 +34,7 @@ C["position"] = {
 	["archaeology"] = {"BOTTOMRIGHT", Minimap, "TOPRIGHT", 2, 5},					-- Archaeology frame
 	["auto_button"] = {"BOTTOMLEFT", Minimap, "TOPLEFT", -2, 27},					-- Auto button
 	["extra_button"] = {"BOTTOM", UIParent, "BOTTOM", 0, 350},						-- Extra action button
-	["alt_power_bar"] = {"TOP", UIParent, "TOP", 0, -21},							-- Alt power bar
+	["alt_power_bar"] = {"TOP", UIWidgetTopCenterContainerFrame, "BOTTOM", 0, -7},	-- Alt power bar
 	["talking_head"] = {"TOP", UIParent, "TOP", 0, -21},							-- Talking Head
 	["uiwidget_top"] = {"TOP", UIParent, "TOP", 0, -21},							-- Top Widget
 	["uiwidget_below"] = {"TOP", UIParent, "TOP", 0, -71},							-- Below Widget
@@ -75,7 +75,7 @@ C["position"] = {
 		["target_buff_icon"] = {"BOTTOMLEFT", "oUF_Target", "TOPLEFT", -2, 253},	-- "T_BUFF"
 		["pve_debuff"] = {"BOTTOMRIGHT", "oUF_Player", "TOPRIGHT", 2, 253},			-- "PVE/PVP_DEBUFF"
 		["pve_cc"] = {"TOPLEFT", "oUF_Player", "BOTTOMLEFT", -2, -44},				-- "PVE/PVP_CC"
-		["cooldown"] = {"BOTTOMRIGHT", "oUF_Player", "TOPRIGHT", 63, C.unitframe.plugins_swing and 29 or 17},	-- "COOLDOWN"
-		["target_bar"] = {"BOTTOMLEFT", C.unitframe.portrait_enable and "oUF_Target_Portrait" or "oUF_Target", "BOTTOMRIGHT", C.unitframe.portrait_enable and 6 or 9, C.unitframe.portrait_enable and -3 or -41},	-- "T_DE/BUFF_BAR"
+		["cooldown"] = {"BOTTOMRIGHT", "oUF_Player", "TOPRIGHT", 63, 17},			-- "COOLDOWN"
+		["target_bar"] = {"BOTTOMLEFT", "oUF_Target", "BOTTOMRIGHT", 9, -41},		-- "T_DE/BUFF_BAR"
 	},
 }
