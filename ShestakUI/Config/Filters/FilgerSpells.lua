@@ -2925,7 +2925,10 @@ C["filger_spells"] = {
 
 			-- Ashjra'kamas, Shroud of Resolve
 			-- Draconic Empowerment
-			{spellID = 317859 , unitID = "player", caster = "player", filter = "BUFF"},
+			{spellID = 317859, unitID = "player", caster = "player", filter = "BUFF"},
+
+			-- Gift of the Titans
+			{spellID = 313698, unitID = "player", caster = "player", filter = "BUFF"},
 
 			-- Potions: Miscellaneous
 			-- Invisibility [Invisibility Potion]
@@ -3308,6 +3311,10 @@ C["filger_spells"] = {
 			{spellID = 76577, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Rocket Fuel Leak
 			{spellID = 94794, unitID = "player", caster = "player", filter = "DEBUFF"},
+
+			-- Mythic+
+			-- Necrotic Wound
+			{spellID = 209858, unitID = "player", caster = "all", filter = "DEBUFF", count = 16},
 		},
 		{
 			Name = "T_BUFF",
@@ -3647,7 +3654,7 @@ C["filger_spells"] = {
 			-- Food & Drink
 			{spellID = 257427, unitID = "target", caster = "all", filter = "BUFF"},
 
-			-- Mythic
+			-- Mythic+
 			-- Sanguine Ichor
 			{spellID = 226510, unitID = "target", caster = "all", filter = "BUFF"},
 		},
