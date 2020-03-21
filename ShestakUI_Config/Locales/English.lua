@@ -75,6 +75,7 @@ L_GUI_SKINS_SKADA = "Skada"
 L_GUI_SKINS_TINY_DPS = "TinyDPS"
 L_GUI_SKINS_VANASKOS = "VanasKoS"
 L_GUI_SKINS_WEAK_AURAS = "WeakAuras"
+L.skins_minimap_buttons_mouseover = "Addons icons on mouseover"
 
 -- Unit Frames options
 L_GUI_UF_SUBTEXT = "Customize player, target frames and etc."
@@ -254,13 +255,15 @@ L_GUI_CHAT_WIDTH = "Chat width"
 L_GUI_CHAT_HEIGHT = "Chat height"
 L_GUI_CHAT_BAR = "Lite Button Bar for switch chat channel"
 L_GUI_CHAT_BAR_MOUSEOVER = "Lite Button Bar on mouseover"
-L_GUI_CHAT_TIMESTAMP = "Timestamp coloring"
 L_GUI_CHAT_WHISP = "Sound when whisper"
 L_GUI_CHAT_SKIN_BUBBLE = "Skin Blizzard chat bubbles"
 L_GUI_CHAT_CL_TAB = "Show Combat Log tab"
 L_GUI_CHAT_TABS_MOUSEOVER = "Chat tabs on mouseover"
 L_GUI_CHAT_STICKY = "Remember last channel"
 L_GUI_CHAT_DAMAGE_METER_SPAM = "Merge damage meter spam in one line-link"
+L.chat_loot_icons = "Icons for loot"
+L.chat_custom_time_color = "Enable custom timestamp coloring"
+L.chat_time_color = "Timestamp coloring"
 
 -- Nameplate options
 L_GUI_NAMEPLATE_SUBTEXT = "Nameplate settings"
@@ -330,6 +333,7 @@ L_GUI_COMBATTEXT_SHORT_NUMBERS = "Use short numbers ('25.3k' instead of '25342')
 -- Auras/Buffs/Debuffs
 L_GUI_AURA_PLAYER_BUFF_SIZE = "Buffs size"
 L_GUI_AURA_PLAYER_BUFF_SIZE_DESC = "Player buffs size"
+L.aura_player_debuff_size = "Debuffs size"
 L_GUI_AURA_SHOW_SPIRAL = "Spiral on aura icons"
 L_GUI_AURA_SHOW_TIMER = "Show cooldown timer on aura icons"
 L_GUI_AURA_PLAYER_AURAS = "Auras on player frame"
@@ -471,6 +475,8 @@ L_GUI_COOLDOWN_ENEMY_DIRECTION = "Enemy cooldowns icon direction"
 L_GUI_COOLDOWN_ENEMY_EVERYWHERE = "Show everywhere enemy cooldowns"
 L_GUI_COOLDOWN_ENEMY_IN_BG = "Show enemy cooldowns in bg zone"
 L_GUI_COOLDOWN_ENEMY_IN_ARENA = "Show enemy cooldowns in arena zone"
+L.enemycooldown_show_inparty = "Show in party zone for allies"
+L.enemycooldown_class_color = "Enable classcolor border"
 
 -- Pulse cooldowns options
 L_GUI_COOLDOWN_PULSE = "Pulse Cooldowns"
@@ -514,7 +520,6 @@ L_GUI_STATS_BG = "Battleground"
 L_GUI_STATS_SUBHEADER_CURRENCY = "Currency (displayed in gold data text)"
 L_GUI_STATS_CURRENCY_ARCHAEOLOGY = "Archaeology Fragments"
 L_GUI_STATS_CURRENCY_COOKING = "Cooking Awards"
-L_GUI_STATS_CURRENCY_PROFESSIONS = "Profession Tokens"
 L_GUI_STATS_CURRENCY_RAID = "Raid Seals"
 
 -- Error options

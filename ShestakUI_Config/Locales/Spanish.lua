@@ -53,6 +53,7 @@ L_GUI_SKINS_BLIZZARD = "Activar estilizado de marcos de Blizzard"
 L_GUI_SKINS_MINIMAP_BUTTONS = "Activar estilizado de los iconos de los addons en el minimapa"
 L_GUI_SKINS_SUBHEADER = "Stylization of addons" -- Need review
 L_GUI_SKINS_DBM_MOVABLE = "Allow to move DBM bars" -- Need review
+L.skins_minimap_buttons_mouseover = "Addons icons on mouseover" -- Need review
 
 -- Unit Frames options
 L_GUI_UF_SUBTEXT = "Customize player, target frames and etc." -- Need review
@@ -233,13 +234,15 @@ L_GUI_CHAT_WIDTH = "Anchura del chat"
 L_GUI_CHAT_HEIGHT = "Altura del chat"
 L_GUI_CHAT_BAR = "Pequeña barra de botones para cambiar de canal en el chat"
 L_GUI_CHAT_BAR_MOUSEOVER = "Lite Button Bar on mouseover" -- Needs review
-L_GUI_CHAT_TIMESTAMP = "Color de la marca de tiempo"
 L_GUI_CHAT_WHISP = "Sonido cuando te susurran"
 L_GUI_CHAT_SKIN_BUBBLE = "Estilizar las burbujas de chat"
 L_GUI_CHAT_CL_TAB = "Mostrar la pestaña del Registro de Combate"
 L_GUI_CHAT_TABS_MOUSEOVER = "Chat tabs on mouseover" -- Needs review
 L_GUI_CHAT_STICKY = "Recordar último canal"
 L_GUI_CHAT_DAMAGE_METER_SPAM = "Merge damage meter spam in one line-link" -- Needs review
+L.chat_loot_icons = "Icons for loot" -- Needs review
+L.chat_custom_time_color = "Enable custom timestamp coloring" -- Needs review
+L.chat_time_color = "Color de la marca de tiempo"
 
 -- Nameplate options
 L_GUI_NAMEPLATE_SUBTEXT = "Nameplate settings" -- Need review
@@ -309,6 +312,7 @@ L_GUI_COMBATTEXT_SHORT_NUMBERS = "Use short numbers ('25.3k' instead of '25342')
 -- Auras/Buffs/Debuffs
 L_GUI_AURA_PLAYER_BUFF_SIZE = "Buffs size" -- Need review
 L_GUI_AURA_PLAYER_BUFF_SIZE_DESC = "Tamaño de las beneficios del jugador"
+L.aura_player_debuff_size = "Debuffs size" -- Need review
 L_GUI_AURA_SHOW_SPIRAL = "Espiral en los iconos de las auras"
 L_GUI_AURA_SHOW_TIMER = "Mostrar tiempo de reutilización en los iconos de las auras"
 L_GUI_AURA_PLAYER_AURAS = "Auras en el marco del jugador"
@@ -450,6 +454,8 @@ L_GUI_COOLDOWN_ENEMY_DIRECTION = "Icono de dirección de tiempos de reutilizaci�
 L_GUI_COOLDOWN_ENEMY_EVERYWHERE = "Mostrar tiempos de reutilización del enemigo siempre"
 L_GUI_COOLDOWN_ENEMY_IN_BG = "Mostrar tiempos de reutilización del enemigo en zona de CB"
 L_GUI_COOLDOWN_ENEMY_IN_ARENA = "Mostrar tiempos de reutilización del enemigo en zona de Arena"
+L.enemycooldown_show_inparty = "Show in party zone for allies" -- Need review
+L.enemycooldown_class_color = "Enable classcolor border" -- Need review
 
 -- Pulse cooldowns options
 L_GUI_COOLDOWN_PULSE = "Cuenta atrás de tiempos de reutilización"
@@ -493,7 +499,6 @@ L_GUI_STATS_BG = "Campo de Batalla"
 L_GUI_STATS_SUBHEADER_CURRENCY = "Currency (displayed in gold data text)" -- Need review
 L_GUI_STATS_CURRENCY_ARCHAEOLOGY = "Show Archaeology Fragments" -- Needs review
 L_GUI_STATS_CURRENCY_COOKING = "Show Cooking Awards" -- Needs review
-L_GUI_STATS_CURRENCY_PROFESSIONS = "Show Profession Tokens" -- Needs review
 L_GUI_STATS_CURRENCY_RAID = "Show Raid Seals" -- Needs review
 
 -- Error options

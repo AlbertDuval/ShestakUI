@@ -185,7 +185,7 @@ do
 	border_color:SetPoint("TOPLEFT", parent.subText, "BOTTOMLEFT", 4, 0)
 
 	local backdrop_color = ns.CreateColourPicker(parent, "backdrop_color", true)
-	backdrop_color:SetPoint("TOPLEFT", border_color, "BOTTOMLEFT", 0, -10)
+	backdrop_color:SetPoint("TOPLEFT", border_color, "BOTTOMLEFT", 0, -8)
 
 	local backdrop_alpha = ns.CreateNumberSlider(parent, "backdrop_alpha", nil, nil, 0, 1, 0.05, true)
 	backdrop_alpha:SetPoint("TOPLEFT", backdrop_color, "BOTTOMLEFT", 0, -28)
@@ -446,9 +446,12 @@ do
 	local minimap_buttons = ns.CreateCheckBox(parent, "minimap_buttons", L_GUI_SKINS_MINIMAP_BUTTONS)
 	minimap_buttons:SetPoint("TOPLEFT", blizzard_frames, "BOTTOMLEFT", 0, 0)
 
+	local minimap_buttons_mouseover = ns.CreateCheckBox(parent, "minimap_buttons_mouseover")
+	minimap_buttons_mouseover:SetPoint("TOPLEFT", minimap_buttons, "BOTTOMLEFT", 20, 0)
+
 	-- Addons
 	local subheader = ns.addSubCategory(parent, L_GUI_SKINS_SUBHEADER)
-	subheader:SetPoint("TOPLEFT", minimap_buttons, "BOTTOMLEFT", 0, -16)
+	subheader:SetPoint("TOPLEFT", minimap_buttons_mouseover, "BOTTOMLEFT", -20, -16)
 
 	local ace3 = ns.CreateCheckBox(parent, "ace3", L_GUI_SKINS_ACE3)
 	ace3:SetPoint("TOPLEFT", subheader, "BOTTOMLEFT", 0, -8)
@@ -542,10 +545,10 @@ do
 	own_color:SetPoint("TOPLEFT", enable, "BOTTOMLEFT", 0, 0)
 
 	local uf_color = ns.CreateColourPicker(parent, "uf_color", true, L_GUI_UF_UF_COLOR)
-	uf_color:SetPoint("TOPLEFT", own_color, "BOTTOMLEFT", 15, -10)
+	uf_color:SetPoint("TOPLEFT", own_color, "BOTTOMLEFT", 24, -4)
 
 	local enemy_health_color = ns.CreateCheckBox(parent, "enemy_health_color", L_GUI_UF_ENEMY_HEALTH_COLOR)
-	enemy_health_color:SetPoint("TOPLEFT", uf_color, "BOTTOMLEFT", -15, -10)
+	enemy_health_color:SetPoint("TOPLEFT", uf_color, "BOTTOMLEFT", -24, -4)
 
 	local show_total_value = ns.CreateCheckBox(parent, "show_total_value", L_GUI_UF_TOTAL_VALUE)
 	show_total_value:SetPoint("TOPLEFT", enemy_health_color, "BOTTOMLEFT", 0, 0)
@@ -1047,11 +1050,8 @@ do
 
 	chat_bar.children = {chat_bar_mouseover}
 
-	local time_color = ns.CreateColourPicker(parent, "time_color", true, L_GUI_CHAT_TIMESTAMP)
-	time_color:SetPoint("TOPLEFT", chat_bar_mouseover, "BOTTOMLEFT", -16, -10)
-
 	local whisp_sound = ns.CreateCheckBox(parent, "whisp_sound", L_GUI_CHAT_WHISP)
-	whisp_sound:SetPoint("TOPLEFT", time_color, "BOTTOMLEFT", -4, -10)
+	whisp_sound:SetPoint("TOPLEFT", chat_bar_mouseover, "BOTTOMLEFT", -20, 0)
 
 	local bubbles = ns.CreateCheckBox(parent, "bubbles", L_GUI_CHAT_SKIN_BUBBLE)
 	bubbles:SetPoint("TOPLEFT", whisp_sound, "BOTTOMLEFT", 0, 0)
@@ -1067,6 +1067,15 @@ do
 
 	local damage_meter_spam = ns.CreateCheckBox(parent, "damage_meter_spam", L_GUI_CHAT_DAMAGE_METER_SPAM)
 	damage_meter_spam:SetPoint("TOPLEFT", sticky, "BOTTOMLEFT", 0, 0)
+
+	local loot_icons = ns.CreateCheckBox(parent, "loot_icons")
+	loot_icons:SetPoint("TOPLEFT", damage_meter_spam, "BOTTOMLEFT", 0, 0)
+
+	local custom_time_color = ns.CreateCheckBox(parent, "custom_time_color")
+	custom_time_color:SetPoint("TOPLEFT", loot_icons, "BOTTOMLEFT", 0, 0)
+
+	local time_color = ns.CreateColourPicker(parent, "time_color", true)
+	time_color:SetPoint("TOPLEFT", custom_time_color, "BOTTOMLEFT", 24, -4)
 end
 
 -- Nameplate
@@ -1134,16 +1143,16 @@ do
 	enhance_threat:SetPoint("TOPLEFT", parent.subText, "BOTTOMLEFT", 0, 0)
 
 	local good_color = ns.CreateColourPicker(parent, "good_color", true, L_GUI_NAMEPLATE_GOOD_COLOR)
-	good_color:SetPoint("TOPLEFT", enhance_threat, "BOTTOMLEFT", 4, -10)
+	good_color:SetPoint("TOPLEFT", enhance_threat, "BOTTOMLEFT", 24, -4)
 
 	local near_color = ns.CreateColourPicker(parent, "near_color", true, L_GUI_NAMEPLATE_NEAR_COLOR)
-	near_color:SetPoint("TOPLEFT", good_color, "BOTTOMLEFT", 0, -10)
+	near_color:SetPoint("TOPLEFT", good_color, "BOTTOMLEFT", 0, -8)
 
 	local bad_color = ns.CreateColourPicker(parent, "bad_color", true, L_GUI_NAMEPLATE_BAD_COLOR)
-	bad_color:SetPoint("TOPLEFT", near_color, "BOTTOMLEFT", 0, -10)
+	bad_color:SetPoint("TOPLEFT", near_color, "BOTTOMLEFT", 0, -8)
 
 	local offtank_color = ns.CreateColourPicker(parent, "offtank_color", true, L_GUI_NAMEPLATE_OFFTANK_COLOR)
-	offtank_color:SetPoint("TOPLEFT", bad_color, "BOTTOMLEFT", 0, -10)
+	offtank_color:SetPoint("TOPLEFT", bad_color, "BOTTOMLEFT", 0, -8)
 end
 
 -- Combat text
@@ -1243,6 +1252,9 @@ do
 
 	local player_buff_size = ns.CreateNumberSlider(parent, "player_buff_size", nil, nil, 0, 40, 1, true, L_GUI_AURA_PLAYER_BUFF_SIZE, L_GUI_AURA_PLAYER_BUFF_SIZE_DESC)
 	player_buff_size:SetPoint("TOPLEFT", parent.subText, "BOTTOMLEFT", 0, -20)
+
+	local player_debuff_size = ns.CreateNumberSlider(parent, "player_debuff_size", nil, nil, 0, 40, 1, true)
+	player_debuff_size:SetPoint("LEFT", player_buff_size, "RIGHT", 120, 0)
 
 	local show_spiral = ns.CreateCheckBox(parent, "show_spiral", L_GUI_AURA_SHOW_SPIRAL)
 	show_spiral:SetPoint("TOPLEFT", player_buff_size, "BOTTOMLEFT", 0, -10)
@@ -1593,6 +1605,12 @@ do
 
 	local show_inarena = ns.CreateCheckBox(parent, "show_inarena", L_GUI_COOLDOWN_ENEMY_IN_ARENA)
 	show_inarena:SetPoint("TOPLEFT", show_inpvp, "BOTTOMLEFT", 0, 0)
+
+	local show_inparty = ns.CreateCheckBox(parent, "show_inparty")
+	show_inparty:SetPoint("TOPLEFT", show_inarena, "BOTTOMLEFT", 0, 0)
+
+	local class_color = ns.CreateCheckBox(parent, "class_color")
+	class_color:SetPoint("TOPLEFT", show_inparty, "BOTTOMLEFT", 0, 0)
 end
 
 -- Pulse cooldowns
@@ -1702,11 +1720,8 @@ do
 	local currency_cooking = ns.CreateCheckBox(parent, "currency_cooking", L_GUI_STATS_CURRENCY_COOKING)
 	currency_cooking:SetPoint("TOPLEFT", currency_archaeology, "BOTTOMLEFT", 0, 0)
 
-	local currency_professions = ns.CreateCheckBox(parent, "currency_professions", L_GUI_STATS_CURRENCY_PROFESSIONS)
-	currency_professions:SetPoint("TOPLEFT", currency_cooking, "BOTTOMLEFT", 0, 0)
-
 	local currency_raid = ns.CreateCheckBox(parent, "currency_raid", L_GUI_STATS_CURRENCY_RAID)
-	currency_raid:SetPoint("TOPLEFT", currency_professions, "BOTTOMLEFT", 0, 0)
+	currency_raid:SetPoint("TOPLEFT", currency_cooking, "BOTTOMLEFT", 0, 0)
 
 	local currency_misc = ns.CreateCheckBox(parent, "currency_misc", CURRENCY.. " "..EXPANSION_NAME7)
 	currency_misc:SetPoint("TOPLEFT", currency_raid, "BOTTOMLEFT", 0, 0)

@@ -53,6 +53,7 @@ L_GUI_SKINS_BLIZZARD = "Attiva il restyling dei riquadri Blizzard"
 L_GUI_SKINS_MINIMAP_BUTTONS = "Attiva il restyling dei pulsanti delle AddOns sulla minimappa"
 L_GUI_SKINS_SUBHEADER = "Stylization of addons" -- Need review
 L_GUI_SKINS_DBM_MOVABLE = "Consenti di poter spostare le barre di DBM"
+L.skins_minimap_buttons_mouseover = "Addons icons on mouseover" -- Need review
 
 -- Unit Frames options
 L_GUI_UF_SUBTEXT = "Customize player, target frames and etc." -- Need review
@@ -233,13 +234,15 @@ L_GUI_CHAT_WIDTH = "Larghezza chat"
 L_GUI_CHAT_HEIGHT = "Altezza chat"
 L_GUI_CHAT_BAR = "Barra con pulsanti per passare velocemente da un canale all'altro della chat"
 L_GUI_CHAT_BAR_MOUSEOVER = "Barra canali chat al passaggio del mouse"
-L_GUI_CHAT_TIMESTAMP = "Colorazione orario dei messaggi"
 L_GUI_CHAT_WHISP = "Suono quando ricevi un sussurro"
 L_GUI_CHAT_SKIN_BUBBLE = "Restyling dei fumetti delle chats"
 L_GUI_CHAT_CL_TAB = "Mostra la linguetta del Registro di combattimento"
 L_GUI_CHAT_TABS_MOUSEOVER = "Linguette delle chats al passaggio del mouse"
 L_GUI_CHAT_STICKY = "Ricorda l'ultimo canale"
 L_GUI_CHAT_DAMAGE_METER_SPAM = "Riunisce lo spam di un contatore dei danni in un singolo link"
+L.chat_loot_icons = "Icons for loot" -- Needs review
+L.chat_custom_time_color = "Enable custom timestamp coloring" -- Needs review
+L.chat_time_color = "Colorazione orario dei messaggi"
 
 -- Nameplate options
 L_GUI_NAMEPLATE_SUBTEXT = "Nameplate settings" -- Need review
@@ -309,6 +312,7 @@ L_GUI_COMBATTEXT_SHORT_NUMBERS = "Usa abbreviazioni numeriche ('25.3k' invece di
 -- Auras/Buffs/Debuffs
 L_GUI_AURA_PLAYER_BUFF_SIZE = "Buffs size" -- Need review
 L_GUI_AURA_PLAYER_BUFF_SIZE_DESC = "Dimensione benefici giocatore"
+L.aura_player_debuff_size = "Debuffs size" -- Need review
 L_GUI_AURA_SHOW_SPIRAL = "Spirale trascorrere tempo sulle icone delle auree"
 L_GUI_AURA_SHOW_TIMER = "Mostra il timer del recupero sulle icone delle auree"
 L_GUI_AURA_PLAYER_AURAS = "Auree sul riquadro del giocatore"
@@ -450,6 +454,8 @@ L_GUI_COOLDOWN_ENEMY_DIRECTION = "Direzione icone recuperi del nemico"
 L_GUI_COOLDOWN_ENEMY_EVERYWHERE = "Mostra i recuperi del nemico in qualsiasi area"
 L_GUI_COOLDOWN_ENEMY_IN_BG = "Mostra i recuperi del nemico nelle aree da Campo di Battaglia"
 L_GUI_COOLDOWN_ENEMY_IN_ARENA = "Mostra i recuperi del nemico nelle aree da arena"
+L.enemycooldown_show_inparty = "Show in party zone for allies" -- Need review
+L.enemycooldown_class_color = "Enable classcolor border" -- Need review
 
 -- Pulse cooldowns options
 L_GUI_COOLDOWN_PULSE = "Recuperi effetto 'pulse'"
@@ -493,7 +499,6 @@ L_GUI_STATS_BG = "Campi di Battaglia"
 L_GUI_STATS_SUBHEADER_CURRENCY = "Currency (displayed in gold data text)" -- Need review
 L_GUI_STATS_CURRENCY_ARCHAEOLOGY = "Mostra i frammenti di archeologia sotto la linguetta della valuta"
 L_GUI_STATS_CURRENCY_COOKING = "Mostra le ricompense di cucina sotto la linguetta della valuta"
-L_GUI_STATS_CURRENCY_PROFESSIONS = "Mostra i gettoni delle professioni sotto la linguetta della valuta"
 L_GUI_STATS_CURRENCY_RAID = "Mostra i sigilli delle incursioni"
 
 -- Error options

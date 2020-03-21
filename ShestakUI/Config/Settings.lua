@@ -40,6 +40,7 @@ C["general"] = {
 C["skins"] = {
 	["blizzard_frames"] = true,				-- Blizzard frames skin
 	["minimap_buttons"] = true,				-- Skin addons icons on minimap
+	["minimap_buttons_mouseover"] = true,		-- Addons icons on mouseover
 	["ace3"] = false,							-- Ace3 options elements skin
 	["atlasloot"] = false,						-- AtlasLoot skin
 	["bigwigs"] = false,						-- BigWigs skin
@@ -263,13 +264,15 @@ C["chat"] = {
 	["height"] = 112,							-- Chat height
 	["chat_bar"] = false,						-- Lite Button Bar for switch chat channel
 	["chat_bar_mouseover"] = false,				-- Lite Button Bar on mouseover
-	["time_color"] = {1, 1, 0},					-- Timestamp coloring (http://www.december.com/html/spec/colorcodescompact.html)
 	["whisp_sound"] = true,						-- Sound when whisper
 	["bubbles"] = true,							-- Skin Blizzard chat bubbles
 	["combatlog"] = true,						-- Show CombatLog tab
 	["tabs_mouseover"] = false,					-- Chat tabs on mouseover
 	["sticky"] = true,							-- Remember last channel
 	["damage_meter_spam"] = false,				-- Merge damage meter spam in one line-link
+	["loot_icons"] = false,						-- Icons for loot
+	["custom_time_color"] = true,				-- Enable custom timestamp coloring
+	["time_color"] = {1, 1, 0},					-- Timestamp coloring (http://www.december.com/html/spec/colorcodescompact.html)
 }
 
 ----------------------------------------------------------------------------------------
@@ -339,6 +342,7 @@ C["combattext"] = {
 ----------------------------------------------------------------------------------------
 C["aura"] = {
 	["player_buff_size"] = 35,					-- Player buffs size
+	["player_debuff_size"] = 35,				-- Debuffs size
 	["show_spiral"] = false,					-- Spiral on aura icons
 	["show_timer"] = true,						-- Show cooldown timer on aura icons
 	["player_auras"] = true,					-- Auras on player frame
@@ -502,6 +506,8 @@ C["friendsdcooldown"] = {
 	["show_always"] = true,					-- Show everywhere
 	["show_inpvp"] = false,						-- Show in bg zone
 	["show_inarena"] = true,					-- Show in arena zone
+	["show_inparty"] = false,					-- Show in party zone for allies
+	["class_color"] = false,					-- Enable classcolor border
 }
 
 ----------------------------------------------------------------------------------------
@@ -555,7 +561,6 @@ C["stats"] = {
 	-- Currency (displayed in gold stats)
 	["currency_archaeology"] = false,			-- Archaeology Fragments
 	["currency_cooking"] = true,				-- Cooking Awards
-	["currency_professions"] = true,			-- Profession Tokens
 	["currency_raid"] = true,					-- Raid Seals
 	["currency_misc"] = true,					-- BfA Currency
 }

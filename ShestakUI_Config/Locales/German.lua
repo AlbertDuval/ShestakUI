@@ -53,6 +53,7 @@ L_GUI_SKINS_BLIZZARD = "Aktiviere Styles für Blizzardfenster"
 L_GUI_SKINS_MINIMAP_BUTTONS = "Aktiviere styling Addonincons an der Minimap"
 L_GUI_SKINS_SUBHEADER = "Design/Skins für Addons"
 L_GUI_SKINS_DBM_MOVABLE = "Erlaube das bewegen der DBM Leisten"
+L.skins_minimap_buttons_mouseover = "Addons icons on mouseover" -- Need review
 
 -- Unit Frames options
 L_GUI_UF_SUBTEXT = "Customize player, target frames and etc." -- Need review
@@ -233,13 +234,15 @@ L_GUI_CHAT_WIDTH = "Breite des Chatfensters"
 L_GUI_CHAT_HEIGHT = "Höhe desChatfensters"
 L_GUI_CHAT_BAR = "Kleine Leiste um den Chatchannel zu wechseln"
 L_GUI_CHAT_BAR_MOUSEOVER = "Aktionsleiste bei Mousover hervorheben"
-L_GUI_CHAT_TIMESTAMP = "Farbe des Zeitstempels"
 L_GUI_CHAT_WHISP = "Geräusch abspielen wenn eine private Nachricht empfangen wird"
 L_GUI_CHAT_SKIN_BUBBLE = "Blizzard Chat Blasen verändern"
 L_GUI_CHAT_CL_TAB = "Kampflog Reiter anzeigen"
 L_GUI_CHAT_TABS_MOUSEOVER = "Zeige Chat-Reiter bei Mouseover"
 L_GUI_CHAT_STICKY = "Behalte den letzen Channel"
 L_GUI_CHAT_DAMAGE_METER_SPAM = "Fasse DMG-Meterspam in einer Zeile zusammen"
+L.chat_loot_icons = "Icons for loot" -- Needs review
+L.chat_custom_time_color = "Enable custom timestamp coloring" -- Needs review
+L.chat_time_color = "Farbe des Zeitstempels"
 
 -- Nameplate options
 L_GUI_NAMEPLATE_SUBTEXT = "Nameplates Einstellung"
@@ -309,6 +312,7 @@ L_GUI_COMBATTEXT_SHORT_NUMBERS = "Zeige kurze Zahlen an ('25.3k' statt '25342')"
 -- Auras/Buffs/Debuffs
 L_GUI_AURA_PLAYER_BUFF_SIZE = "Buffs größe"
 L_GUI_AURA_PLAYER_BUFF_SIZE_DESC = "Größe der Spielerbuffs"
+L.aura_player_debuff_size = "Debuffs size" -- Need review
 L_GUI_AURA_SHOW_SPIRAL = "Spirale auf Buffsymbolen"
 L_GUI_AURA_SHOW_TIMER = "Zeige Abklingzeit für Buffs"
 L_GUI_AURA_PLAYER_AURAS = "Buffs auf dem Spielerfenster"
@@ -450,6 +454,8 @@ L_GUI_COOLDOWN_ENEMY_DIRECTION = "Gegner Cooldowns Symbol ausrichtung"
 L_GUI_COOLDOWN_ENEMY_EVERYWHERE = "Zeige gegnerische Abklingzeiten überall"
 L_GUI_COOLDOWN_ENEMY_IN_BG = "Zeige gegnerische Abklingzeiten in Schlachtfeldern"
 L_GUI_COOLDOWN_ENEMY_IN_ARENA = "Zeige gegnerische Abklingzeiten in der Arena"
+L.enemycooldown_show_inparty = "Show in party zone for allies" -- Need review
+L.enemycooldown_class_color = "Enable classcolor border" -- Need review
 
 -- Pulse cooldowns options
 L_GUI_COOLDOWN_PULSE = "Pulse Cooldowns"
@@ -493,7 +499,6 @@ L_GUI_STATS_BG = "Schlachtfeld"
 L_GUI_STATS_SUBHEADER_CURRENCY = "Currency/Abzeichen (Anzeige im Gold Data Text)"
 L_GUI_STATS_CURRENCY_ARCHAEOLOGY = "Zeige Archäologie Fragmente"
 L_GUI_STATS_CURRENCY_COOKING = "Zeige Kochpreise/Marken"
-L_GUI_STATS_CURRENCY_PROFESSIONS = "Zeige Berufeabzeichen/Tokens"
 L_GUI_STATS_CURRENCY_RAID = "Zeige Schlatzugs Siegel/Bonuswürffe"
 
 -- Error options

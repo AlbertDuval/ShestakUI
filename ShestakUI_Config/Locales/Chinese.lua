@@ -53,6 +53,7 @@ L_GUI_SKINS_BLIZZARD = "美化暴雪默认界面"
 L_GUI_SKINS_MINIMAP_BUTTONS = "小地图插件图标"
 L_GUI_SKINS_SUBHEADER = "单体插件"
 L_GUI_SKINS_DBM_MOVABLE = "允许移动DBM计时条"
+L.skins_minimap_buttons_mouseover = "Addons icons on mouseover" -- Need review
 
 -- Unit Frames options
 L_GUI_UF_SUBTEXT = "定制玩家/目标框架/其他框架"
@@ -233,13 +234,15 @@ L_GUI_CHAT_WIDTH = "聊天框宽度"
 L_GUI_CHAT_HEIGHT = "聊天框高度"
 L_GUI_CHAT_BAR = "聊天频道快捷键"
 L_GUI_CHAT_BAR_MOUSEOVER = "鼠标悬停显示聊天频道快捷键"
-L_GUI_CHAT_TIMESTAMP = "时间标签颜色"
 L_GUI_CHAT_WHISP = "接受密语时声音提示"
 L_GUI_CHAT_SKIN_BUBBLE = "美化聊天泡泡"
 L_GUI_CHAT_CL_TAB = "战斗记录标签"
 L_GUI_CHAT_TABS_MOUSEOVER = "鼠标悬停显示频道标签"
 L_GUI_CHAT_STICKY = "记住上一次使用的频道"
 L_GUI_CHAT_DAMAGE_METER_SPAM = "在链接中合并垃圾邮件"
+L.chat_loot_icons = "Icons for loot" -- Needs review
+L.chat_custom_time_color = "Enable custom timestamp coloring" -- Needs review
+L.chat_time_color = "时间标签颜色"
 
 -- Nameplate options
 L_GUI_NAMEPLATE_SUBTEXT = "单位姓名板设置"
@@ -309,6 +312,7 @@ L_GUI_COMBATTEXT_SHORT_NUMBERS = "数值以K为单位显示"
 -- Auras/Buffs/Debuffs
 L_GUI_AURA_PLAYER_BUFF_SIZE = "Buff大小"
 L_GUI_AURA_PLAYER_BUFF_SIZE_DESC = "玩家Buff图标大小"
+L.aura_player_debuff_size = "Debuffs size" -- Need review
 L_GUI_AURA_SHOW_SPIRAL = "漩涡冷却样式"
 L_GUI_AURA_SHOW_TIMER = "层数堆叠"
 L_GUI_AURA_PLAYER_AURAS = "玩家显示法术效果"
@@ -450,6 +454,8 @@ L_GUI_COOLDOWN_ENEMY_DIRECTION = "敌对技能冷却图标"
 L_GUI_COOLDOWN_ENEMY_EVERYWHERE = "始终显示敌对技能冷却"
 L_GUI_COOLDOWN_ENEMY_IN_BG = "战场中显示敌对技能冷却"
 L_GUI_COOLDOWN_ENEMY_IN_ARENA = "竞技场中显示敌对技能冷却"
+L.enemycooldown_show_inparty = "Show in party zone for allies" -- Need review
+L.enemycooldown_class_color = "Enable classcolor border" -- Need review
 
 -- Pulse cooldowns options
 L_GUI_COOLDOWN_PULSE = "技能冷却闪烁"
@@ -493,7 +499,6 @@ L_GUI_STATS_BG = "战场分数"
 L_GUI_STATS_SUBHEADER_CURRENCY = "货币(金币信息中显示)"
 L_GUI_STATS_CURRENCY_ARCHAEOLOGY = "考古"
 L_GUI_STATS_CURRENCY_COOKING = "烹饪"
-L_GUI_STATS_CURRENCY_PROFESSIONS = "专业技能"
 L_GUI_STATS_CURRENCY_RAID = "副本徽记"
 
 -- Error options

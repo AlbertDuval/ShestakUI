@@ -53,6 +53,7 @@ L_GUI_SKINS_BLIZZARD = "Activer la personnalisation des fenêtres Blizzard"
 L_GUI_SKINS_MINIMAP_BUTTONS = "Activer la personnalisation des icônes de la minimap"
 L_GUI_SKINS_SUBHEADER = "Stylization of addons" -- Need review
 L_GUI_SKINS_DBM_MOVABLE = "Autoriser le déplacement des barres DBM"
+L.skins_minimap_buttons_mouseover = "Addons icons on mouseover" -- Need review
 
 -- Unit Frames options
 L_GUI_UF_SUBTEXT = "Customize player, target frames and etc." -- Need review
@@ -232,13 +233,15 @@ L_GUI_CHAT_WIDTH = "Largeur de la fenêtre"
 L_GUI_CHAT_HEIGHT = "Hauteur de la fenêtre"
 L_GUI_CHAT_BAR = "Bouton pour changer de canal"
 L_GUI_CHAT_BAR_MOUSEOVER = "Affiche les boutons de canaux au survol de la souris"
-L_GUI_CHAT_TIMESTAMP = "Coloration du temps"
 L_GUI_CHAT_WHISP = "Alerte sonore quand murmure"
 L_GUI_CHAT_SKIN_BUBBLE = "Skin des bulles de discussions"
 L_GUI_CHAT_CL_TAB = "Afficher l'onglet du journal de combat"
 L_GUI_CHAT_TABS_MOUSEOVER = "Affiche les onglets de discussion au survol de la souris"
 L_GUI_CHAT_STICKY = "Active le dernier canal utilisé(canal persistant)"
 L_GUI_CHAT_DAMAGE_METER_SPAM = "Rassemble les lignes de statistiques de dégâts en un seul lien/ligne"
+L.chat_loot_icons = "Icons for loot" -- Needs review
+L.chat_custom_time_color = "Enable custom timestamp coloring" -- Needs review
+L.chat_time_color = "Coloration du temps"
 
 -- Nameplate options
 L_GUI_NAMEPLATE_SUBTEXT = "Nameplate settings" -- Need review
@@ -308,6 +311,7 @@ L_GUI_COMBATTEXT_SHORT_NUMBERS = "Rendre plus lisible les nombres ('25.3k' au li
 -- Auras/Buffs/Debuffs
 L_GUI_AURA_PLAYER_BUFF_SIZE = "Buffs size" -- Need review
 L_GUI_AURA_PLAYER_BUFF_SIZE_DESC = "Taille des buffs du joueur"
+L.aura_player_debuff_size = "Debuffs size" -- Need review
 L_GUI_AURA_SHOW_SPIRAL = "Spirale sur les icones d'aura"
 L_GUI_AURA_SHOW_TIMER = "Afficher le cooldown des icones d'aura"
 L_GUI_AURA_PLAYER_AURAS = "Auras sur la barre du joueur"
@@ -449,6 +453,8 @@ L_GUI_COOLDOWN_ENEMY_DIRECTION = "Icône directionnelle du temps de recharge enn
 L_GUI_COOLDOWN_ENEMY_EVERYWHERE = "Voir les temps de recharge ennemis partout"
 L_GUI_COOLDOWN_ENEMY_IN_BG = "Voir les temps de recharge ennemis dans les champs de bataille"
 L_GUI_COOLDOWN_ENEMY_IN_ARENA = "Voir les temps de recharge ennemis en arène"
+L.enemycooldown_show_inparty = "Show in party zone for allies" -- Need review
+L.enemycooldown_class_color = "Enable classcolor border" -- Need review
 
 -- Pulse cooldowns options
 L_GUI_COOLDOWN_PULSE = "Temps de recharge par îcone d'impulsion"
@@ -492,7 +498,6 @@ L_GUI_STATS_BG = "Champ de bataille"
 L_GUI_STATS_SUBHEADER_CURRENCY = "Currency (displayed in gold data text)" -- Need review
 L_GUI_STATS_CURRENCY_ARCHAEOLOGY = "Afficher les fragments d'Archéologie dans l'onglet des devises"
 L_GUI_STATS_CURRENCY_COOKING = "Afficher les marques de Cuisine dans l'onglet des devises"
-L_GUI_STATS_CURRENCY_PROFESSIONS = "Afficher les marques de métiers dans l'onglet des devises"
 L_GUI_STATS_CURRENCY_RAID = "Afficher les sceaux de raid dans l'onglet des devises"
 
 -- Error options
