@@ -693,7 +693,7 @@ local function Shared(self, unit)
 		self.Debuffs = CreateFrame("Frame", self:GetName().."Debuffs", self)
 		self.Debuffs:SetHeight(25)
 		self.Debuffs:SetWidth(109)
-		self.Debuffs.size = T.Scale(C.aura.player_debuff_size)
+		self.Debuffs.size = T.Scale(C.aura.target_aura_size)
 		self.Debuffs.spacing = T.Scale(3)
 		self.Debuffs.num = 4
 		self.Debuffs["growth-y"] = "DOWN"
@@ -781,7 +781,7 @@ local function Shared(self, unit)
 			self.Auras:SetHeight(165)
 			self.Auras:SetWidth(221)
 			self.Auras.spacing = T.Scale(3)
-			self.Auras.size = T.Scale(C.aura.player_debuff_size)
+			self.Auras.size = T.Scale(C.aura.target_aura_size)
 			self.Auras.gap = true
 			self.Auras.PostCreateIcon = T.PostCreateIcon
 			self.Auras.PostUpdateIcon = T.PostUpdateIcon
