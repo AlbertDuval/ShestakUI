@@ -281,6 +281,7 @@ local function Shared(self, unit)
 			self.Runes:SetPoint("BOTTOMLEFT", self, "TOPLEFT", 0, 7)
 			self.Runes:SetSize(217, 7)
 			self.Runes.colorSpec = true
+			self.Runes.sortOrder = "asc"
 
 			for i = 1, 6 do
 				self.Runes[i] = CreateFrame("StatusBar", self:GetName().."_RuneBar", self.Runes)
@@ -336,7 +337,7 @@ local function Shared(self, unit)
 
 				for i = 1, 6 do
 					self.HarmonyBar[i] = CreateFrame("StatusBar", self:GetName().."_HarmonyBar", self.HarmonyBar)
-					self.HarmonyBar[i]:SetSize(213 / 6, 7)
+					self.HarmonyBar[i]:SetSize(212 / 6, 7)
 					if i == 1 then
 						self.HarmonyBar[i]:SetPoint("BOTTOMLEFT", self, "TOPLEFT", 0, 7)
 					else
@@ -429,7 +430,7 @@ local function Shared(self, unit)
 
 			for i = 1, 6 do
 				self.CPoints[i] = CreateFrame("StatusBar", self:GetName().."_ComboBar", self.CPoints)
-				self.CPoints[i]:SetSize(213 / 10, 7)
+				self.CPoints[i]:SetSize(212 / 6, 7)
 				if i == 1 then
 					self.CPoints[i]:SetPoint("LEFT", self.CPoints)
 				else
@@ -456,17 +457,12 @@ local function Shared(self, unit)
 
 			for i = 1, 4 do
 				self.TotemBar[i] = CreateFrame("StatusBar", self:GetName().."_TotemBar", self.TotemBar)
-				self.TotemBar[i]:SetSize(213 / 4, 7)
+				self.TotemBar[i]:SetSize(214 / 4, 7)
 
-				local fixpos
-				if i == 2 then
+				if i == 1 then
 					self.TotemBar[i]:SetPoint("BOTTOMLEFT", self, "TOPLEFT", 0, 7)
-				elseif i == 1 then
-					self.TotemBar[i]:SetPoint("BOTTOMLEFT", self, "TOPLEFT", 55, 7)
 				else
-					fixpos = i
-					if i == 3 then fixpos = i-1 end
-					self.TotemBar[i]:SetPoint("TOPLEFT", self.TotemBar[fixpos-1], "TOPRIGHT", 1, 0)
+					self.TotemBar[i]:SetPoint("TOPLEFT", self.TotemBar[i-1], "TOPRIGHT", 1, 0)
 				end
 				self.TotemBar[i]:SetStatusBarTexture(C.media.texture)
 				self.TotemBar[i]:SetMinMaxValues(0, 1)
@@ -665,7 +661,7 @@ local function Shared(self, unit)
 	if unit == "player" or unit == "pet" then
 		self.CounterBar = CreateFrame("StatusBar", self:GetName().."_CounterBar", self)
 		self.CounterBar:CreateBackdrop("Default")
-		self.CounterBar:SetWidth(217)
+		self.CounterBar:SetWidth(221)
 		self.CounterBar:SetHeight(20)
 		self.CounterBar:SetStatusBarTexture(C.media.texture)
 		self.CounterBar:SetPoint("TOP", UIParent, "TOP", 0, -102)
@@ -796,7 +792,7 @@ local function Shared(self, unit)
 
 				for i = 1, 6 do
 					self.CPoints[i] = CreateFrame("StatusBar", self:GetName().."_ComboBar", self.CPoints)
-					self.CPoints[i]:SetSize(213 / 10, 7)
+					self.CPoints[i]:SetSize(212 / 6, 7)
 					if i == 1 then
 						self.CPoints[i]:SetPoint("LEFT", self.CPoints)
 					else
