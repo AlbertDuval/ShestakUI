@@ -71,6 +71,12 @@ if C.enemycooldown.enable == true then
 		[286348] = 120,	-- [ADD FM] Maledic trinket
 		[286349] = 120,	-- [ADD FM] Maledic trinket
 		[2782] = 8,	-- [ADD FM] Drood Dispell
+		-- Dispells [ADD FM]
+		[88423] = 8,	-- [ADD FM] Druid
+		[4987] = 8,	-- [ADD FM] Paladin
+		[527] = 8,	-- [ADD FM] Priest
+		[115450] = 8,	-- [ADD FM] Monk
+		[77130] = 8,	-- [ADD FM] Shaman
 		-- Interrupts and Silences
 		[187707] = 15,	-- [ADD FM] Muzzle (Hunt kick)
 		[183752] = 15,	-- [ADD FM] Manavore (DH kick)
