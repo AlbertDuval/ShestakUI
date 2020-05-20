@@ -241,7 +241,7 @@ C["tooltip"] = {
 	["title"] = true,							-- Player title in tooltip
 	["realm"] = true,							-- Player realm name in tooltip
 	["rank"] = true,							-- Player guild-rank in tooltip
-	["arena_experience"] = false,				-- Player PvP experience in arena
+	["arena_experience"] = true,				-- Player PvP experience in arena
 	["spell_id"] = true,						-- Id number spells (/si to print buff info in chat)
 	["average_lvl"] = true,					-- Average items level
 	["raid_icon"] = true,						-- Raid icon
@@ -284,14 +284,14 @@ C["nameplate"] = {
 	["width"] = 120,							-- Nameplate width
 	["alpha"] = 0.5,							-- Non-target nameplate alpha
 	["distance"] = 40,							-- Show nameplates for units within this range
-	["ad_height"] = 0,							-- Additional height for selected nameplate
-	["ad_width"] = 0,							-- Additional width for selected nameplate
+	["ad_height"] = 2,							-- Additional height for selected nameplate
+	["ad_width"] = 16,							-- Additional width for selected nameplate
 	["combat"] = false,							-- Automatically show nameplate in combat
 	["health_value"] = false,					-- Numeral health value
 	["show_castbar_name"] = false,				-- Show castbar name
 	["class_icons"] = false,					-- Icons by class in PvP
 	["name_abbrev"] = false,					-- Display abbreviated names
-	["clamp"] = false,							-- Clamp nameplates to the top of the screen when outside of view
+	["clamp"] = true,							-- Clamp nameplates to the top of the screen when outside of view
 	["track_debuffs"] = true,					-- Show debuffs (from the list)
 	["track_buffs"] = true,					-- Show buffs above player nameplate (from the list)
 	["auras_size"] = 26,						-- Debuffs size
@@ -409,7 +409,7 @@ C["filger"] = {
 	["show_tooltip"] = false,					-- Show tooltip
 	["disable_cd"] = false,						-- Disable cooldowns
 	["disable_pvp"] = false,					-- Disable PvP debuffs on Player and Target
-	["expiration"] = false,						-- Sort cooldowns by expiration time
+	["expiration"] = true,						-- Sort cooldowns by expiration time
 	["buffs_size"] = 37,						-- Buffs size
 	["cooldown_size"] = 30,						-- Cooldowns size
 	["pvp_size"] = 60,							-- PvP debuffs size
@@ -446,7 +446,7 @@ C["automation"] = {
 	["decline_duel"] = true,					-- Auto decline duel (/disduel to temporarily disable)
 	["accept_quest"] = false,					-- Auto accept quests (disabled if hold Shift)
 	["auto_collapse"] = true,					-- Auto collapse ObjectiveTrackerFrame in instance
-	["auto_collapse_reload"] = false,			-- Auto collapse ObjectiveTrackerFrame after reload
+	["auto_collapse_reload"] = true,			-- Auto collapse ObjectiveTrackerFrame after reload
 	["skip_cinematic"] = false,					-- Auto skip cinematics/movies (disabled if hold Ctrl)
 	["auto_role"] = false,						-- Auto set your role
 	["cancel_bad_buffs"] = false,				-- Auto cancel annoying holiday buffs (from the list)
@@ -467,7 +467,7 @@ C["reminder"] = {
 	["solo_buffs_size"] = 45,					-- Icon size
 	-- Raid buffs
 	["raid_buffs_enable"] = true,				-- Show missing raid buffs
-	["raid_buffs_always"] = false,				-- Show frame always (default show only in raid)
+	["raid_buffs_always"] = true,				-- Show frame always (default show only in raid)
 	["raid_buffs_size"] = 19.2,					-- Icon size
 	["raid_buffs_alpha"] = 0,					-- Transparent icons when the buff is present
 }
@@ -480,12 +480,12 @@ C["raidcooldown"] = {
 	["height"] = 15,							-- Bars height
 	["width"] = 186,							-- Bars width (if show_icon = false, bar width+28)
 	["upwards"] = false,						-- Sort upwards bars
-	["expiration"] = false,						-- Sort by expiration time
+	["expiration"] = true,						-- Sort by expiration time
 	["show_self"] = true,						-- Show self cooldowns
 	["show_icon"] = true,						-- Show icons
 	["show_inraid"] = true,						-- Show in raid zone
 	["show_inparty"] = true,					-- Show in party zone
-	["show_inarena"] = false,					-- Show in arena zone
+	["show_inarena"] = true,					-- Show in arena zone
 }
 
 ----------------------------------------------------------------------------------------
@@ -508,7 +508,7 @@ C["friendsdcooldown"] = {
 	["show_inpvp"] = false,						-- Show in bg zone
 	["show_inarena"] = true,					-- Show in arena zone
 	["show_inparty"] = false,					-- Show in party zone for allies
-	["class_color"] = false,					-- Enable classcolor border
+	["class_color"] = true,					-- Enable classcolor border
 }
 
 ----------------------------------------------------------------------------------------
