@@ -19,6 +19,7 @@ end
 T.ArenaControl = {
 	-- Crowd Controls
 	-- Demon Hunter
+	[SpellName(211881)] = 5,		-- Fel Eruption
 	[SpellName(217832)] = 5,		-- Imprison
 	[SpellName(179057)] = 5,		-- Chaos Nova
 	-- Death Knight

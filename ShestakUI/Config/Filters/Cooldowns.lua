@@ -142,6 +142,7 @@ if C.enemycooldown.enable == true then
 		[31884] = 120,	-- Avenging Wrath
 		[79140] = 120,	-- [ADD FM] Vendetta
 		[190319] = 120,	-- [ADD FM] Combustion
+		[113858] = 120,	-- [ADD FM] Dark soul
 		[12472] = 180,	-- Icy Veins
 		[102543] = 180,	-- Incarnation (Feral)
 		[102560] = 180,	-- Incarnation (Boomy)
