@@ -13,6 +13,7 @@ L_GUI_PER_CHAR = "¿Estás segudo de que quieres cambiar a o desde 'Cambios sól
 L_GUI_RESET_CAT = "Are you sure you want to reset category's settings?" -- Need review
 L_GUI_RESET_CAT_DESC = "Reset category's settings. \nCTRL-click to reset all" -- Need review
 L_GUI_NEED_RELOAD = "You need to reload the UI to apply your changes." -- Need review
+L_GUI_LAYOUT = "Change layout" -- Need review
 
 -- General options
 L_GUI_GENERAL_SUBTEXT = "These settings control the general user interface settings. Type in chat '/uihelp' for help." -- Need review
@@ -82,7 +83,8 @@ L_GUI_UF_BOSS_DEBUFFS = "Number of debuffs" -- Need review
 L_GUI_UF_BOSS_DEBUFFS_DESC = "Number of debuffs on the boss frames" -- Need review
 L_GUI_UF_BOSS_BUFFS = "Number of buffs" -- Need review
 L_GUI_UF_BOSS_BUFFS_DESC = "Number of buffs on the boss frames" -- Need review
-L_GUI_UF_ICONS_PVP = "Texto JcJ (iconos no) al pasar el ratón sobre los marcos del jugador y objetivo"
+L.unitframe_icons_pvp = "PvP status text" -- Need review
+L.unitframe_icons_pvp_desc = "Texto JcJ (iconos no) al pasar el ratón sobre los marcos del jugador y objetivo"
 L_GUI_UF_ICONS_COMBAT = "Icono de combate"
 L_GUI_UF_ICONS_RESTING = "Icono de descansado para pjs con nivel bajo"
 L_GUI_UF_SUBHEADER_PORTRAIT = "Portraits" -- Need review
@@ -124,7 +126,6 @@ L_GUI_UF_PLUGINS_HOLY_BAR = "Activar barra de poder sagrado"
 L_GUI_UF_PLUGINS_SHARD_BAR = "Activar barra de fragmentos"
 L_GUI_UF_PLUGINS_RUNE_BAR = "Activar barra de Runas"
 L_GUI_UF_PLUGINS_TOTEM_BAR = "Activar barra de totems"
-L_GUI_UF_PLUGINS_RANGE_BAR = "Enable Range bar (for Priest)" -- Needs review
 
 -- Raid Frames options
 L_GUI_UF_RAIDFRAMES_SUBTEXT = "Customize the appearance of the raid frames." -- Need review
@@ -150,7 +151,8 @@ L_GUI_UF_ICONS_ROLE = "Role icon on frames" -- Needs review
 L_GUI_UF_ICONS_RAID_MARK = "Marcas de banda"
 L_GUI_UF_ICONS_READY_CHECK = "Iconos de comprobación"
 L_GUI_UF_ICONS_LEADER = "Iconos de líder, ayudantes en los marcos"
-L_GUI_UF_ICONS_SUMON = "Sumon icons on frames" -- Need review
+L_GUI_UF_ICONS_SUMON = "Sumon icons" -- Need review
+L.raidframe_icons_phase = "Phase" -- Need review
 L_GUI_UF_PLUGINS_DEBUFFHIGHLIGHT_ICON = "Remarcar textura de desventajas + icono"
 L_GUI_UF_PLUGINS_AURA_WATCH = "'BANDA' Ver las auras"
 L_GUI_UF_PLUGINS_AURA_WATCH_TIMER = "Temporizador en los iconos de perjuicios de la banda"
@@ -518,8 +520,6 @@ L_GUI_MISC_QUEST_AUTOBUTTON = "Auto botón misión/objeto"
 L.misc_raid_tools = "Herramientas de Raid"
 L.misc_raid_tools_desc = "Button at the top of the screen for ready check (Left-click), checking roles (Middle-click), setting marks, etc. (for leader and assistants)" -- Need review
 L_GUI_MISC_PROFESSION_TABS = "Pestanas de profesiones de artesania y marcos de comercio"
-L_GUI_MISC_HIDE_BG_SPAM = "Remove Boss Emote spam during BG" -- Needs review
-L.misc_hide_bg_spam_desc = "Remove Boss Emote spam about capture/losing node during BG Arathi and Gilneas" -- Need review
 L_GUI_MISC_ITEM_LEVEL = "Item level on character slot buttons" -- Needs review
 L_GUI_MISC_ALREADY_KNOWN = "Colorizes recipes/mounts/pets/toys that is already known" -- Needs review
 L_GUI_MISC_DISENCHANTING = "Milling, Prospecting and Disenchanting by Alt + click" -- Needs review

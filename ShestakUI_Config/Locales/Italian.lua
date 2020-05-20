@@ -13,6 +13,7 @@ L_GUI_PER_CHAR = "Vuoi davvero modificare questa impostazione (attivazione/disat
 L_GUI_RESET_CAT = "Are you sure you want to reset category's settings?" -- Need review
 L_GUI_RESET_CAT_DESC = "Reset category's settings. \nCTRL-click to reset all" -- Need review
 L_GUI_NEED_RELOAD = "You need to reload the UI to apply your changes." -- Need review
+L_GUI_LAYOUT = "Change layout" -- Need review
 
 -- General options
 L_GUI_GENERAL_SUBTEXT = "These settings control the general user interface settings. Type in chat '/uihelp' for help." -- Need review
@@ -82,7 +83,8 @@ L_GUI_UF_BOSS_DEBUFFS = "Number of debuffs" -- Need review
 L_GUI_UF_BOSS_DEBUFFS_DESC = "Numero di penalità sui riquadri dei bosses"
 L_GUI_UF_BOSS_BUFFS = "Number of buffs" -- Need review
 L_GUI_UF_BOSS_BUFFS_DESC = "Numero di benefici sui riquadri dei bosses"
-L_GUI_UF_ICONS_PVP = "Testo PvP (senza icona) al passaggio del mouse sui riquadri di giocatore e bersaglio"
+L.unitframe_icons_pvp = "PvP status text" -- Need review
+L.unitframe_icons_pvp_desc = "Testo PvP (senza icona) al passaggio del mouse sui riquadri di giocatore e bersaglio"
 L_GUI_UF_ICONS_COMBAT = "Icona di status 'in combattimento'"
 L_GUI_UF_ICONS_RESTING = "Icona 'Riposato' per personaggi di basso livello"
 L_GUI_UF_SUBHEADER_PORTRAIT = "Portraits" -- Need review
@@ -124,7 +126,6 @@ L_GUI_UF_PLUGINS_HOLY_BAR = "Attiva la barra di classe del paladino"
 L_GUI_UF_PLUGINS_SHARD_BAR = "Attiva la barra di classe dello stregone"
 L_GUI_UF_PLUGINS_RUNE_BAR = "Attiva la barra di classe del cavaliere della morte"
 L_GUI_UF_PLUGINS_TOTEM_BAR = "Attiva la barra dei totems dello sciamano"
-L_GUI_UF_PLUGINS_RANGE_BAR = "Attiva la barra della distanza per i sacerdoti"
 
 -- Raid Frames options
 L_GUI_UF_RAIDFRAMES_SUBTEXT = "Customize the appearance of the raid frames." -- Need review
@@ -151,6 +152,7 @@ L_GUI_UF_ICONS_RAID_MARK = "Marchi d'incursione"
 L_GUI_UF_ICONS_READY_CHECK = "Icone dell'appello"
 L_GUI_UF_ICONS_LEADER = "Icona del capoincursione, dell'assistente"
 L_GUI_UF_ICONS_SUMON = "Icone d’evocazione sui riquadri"
+L.raidframe_icons_phase = "Phase" -- Need review
 L_GUI_UF_PLUGINS_DEBUFFHIGHLIGHT_ICON = "Evidenzia texture + icona delle penalità"
 L_GUI_UF_PLUGINS_AURA_WATCH = "Icone delle penalità d'incursione"
 L_GUI_UF_PLUGINS_AURA_WATCH_TIMER = "Timer sulle icone delle penalità d'incursione"
@@ -518,8 +520,6 @@ L_GUI_MISC_QUEST_AUTOBUTTON = "Pulsante automatico missione/oggetto"
 L.misc_raid_tools = "Strumenti per le incursioni"
 L.misc_raid_tools_desc = "Button at the top of the screen for ready check (Left-click), checking roles (Middle-click), setting marks, etc. (for leader and assistants)" -- Need review
 L_GUI_MISC_PROFESSION_TABS = "Visualizza la linguetta delle professioni sul riquadro abilità di commercio/commercio"
-L_GUI_MISC_HIDE_BG_SPAM = "Rimuovi lo spam delle emotes dei bosses durante i Campi di Battaglia"
-L.misc_hide_bg_spam_desc = "Remove Boss Emote spam about capture/losing node during BG Arathi and Gilneas" -- Need review
 L_GUI_MISC_ITEM_LEVEL = "Livello oggetto sugli scomparti della schermata Personaggio"
 L_GUI_MISC_ALREADY_KNOWN = "Colora ricette/cavalcature/mascottes possedute"
 L_GUI_MISC_DISENCHANTING = "Disincantamento, Pestatura e Prospezione in un solo click"

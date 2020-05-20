@@ -139,7 +139,6 @@ C["unitframe_class_bar"] = {
 	["shard"] = true,							-- Shard/Burning bar
 	["rune"] = true,							-- Rune bar
 	["totem"] = true,							-- Totem bar
-	["range"] = false,							-- Range bar (only for Priest)
 }
 
 ----------------------------------------------------------------------------------------
@@ -169,6 +168,7 @@ C["raidframe"] = {
 	["icons_ready_check"] = true,				-- Ready check icons on frames
 	["icons_leader"] = true,					-- Leader icon and assistant icon on frames
 	["icons_sumon"] = true,						-- Sumon icons on frames
+	["icons_phase"] = true,						-- Phase icons on frames
 	-- Plugins
 	["plugins_debuffhighlight_icon"] = true,	-- Debuff highlight texture + icon
 	["plugins_aura_watch"] = true,				-- Raid debuff icons (from the list)
@@ -585,7 +585,6 @@ C["misc"] = {
 	["quest_auto_button"] = false,				-- Quest/item auto button (from the list)
 	["raid_tools"] = true,						-- Raid tools
 	["profession_tabs"] = true,					-- Professions tabs on TradeSkill frames
-	["hide_bg_spam"] = false,					-- Remove Boss Emote spam during BG ("Arathi Basin" and "The Battle for Gilneas")
 	["item_level"] = true,						-- Item level on character slot buttons
 	["already_known"] = true,					-- Colorizes recipes/mounts/pets/toys that is already known
 	["disenchanting"] = false,					-- Milling, Prospecting and Disenchanting by Alt + click

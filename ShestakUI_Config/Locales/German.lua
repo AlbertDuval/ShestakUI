@@ -13,6 +13,7 @@ L_GUI_PER_CHAR = "Bist du sicher, dass du 'Einzelne Einstellungen für jeden Cha
 L_GUI_RESET_CAT = "Are you sure you want to reset category's settings?" -- Need review
 L_GUI_RESET_CAT_DESC = "Reset category's settings. \nCTRL-click to reset all" -- Need review
 L_GUI_NEED_RELOAD = "Benutzeroberfläche erneut laden, um Ihre Änderungen zu übernehmen."
+L_GUI_LAYOUT = "Change layout" -- Need review
 
 -- General options
 L_GUI_GENERAL_SUBTEXT = "Diese Einstellungen steuern die allgemeinen Einstellungen der Benutzeroberfläche. Geben Sie im Chat '/uihelp ein, um Hilfe zu erhalten."
@@ -82,7 +83,8 @@ L_GUI_UF_BOSS_DEBUFFS = "Anzahl der Debuffs"
 L_GUI_UF_BOSS_DEBUFFS_DESC = "Anzahl der Debuffs am Boss Frames"
 L_GUI_UF_BOSS_BUFFS = "Anzahl der Buffs"
 L_GUI_UF_BOSS_BUFFS_DESC = "Anzahl der Buffs am Boss Frames"
-L_GUI_UF_ICONS_PVP = "Zeige PvP Text (keine Symbole) bei Mouseover (Spieler+Ziel)"
+L.unitframe_icons_pvp = "PvP status text" -- Need review
+L.unitframe_icons_pvp_desc = "Zeige PvP Text (keine Symbole) bei Mouseover (Spieler+Ziel)"
 L_GUI_UF_ICONS_COMBAT = "Kampfsymbol"
 L_GUI_UF_ICONS_RESTING = "Ausruhensymbol für low-lvl Chars"
 L_GUI_UF_SUBHEADER_PORTRAIT = "Portraits"
@@ -124,7 +126,6 @@ L_GUI_UF_PLUGINS_HOLY_BAR = "Aktivere Heilige Kraft Leiste"
 L_GUI_UF_PLUGINS_SHARD_BAR = "Aktiviere Splitter Leiste"
 L_GUI_UF_PLUGINS_RUNE_BAR = "Runenleiste"
 L_GUI_UF_PLUGINS_TOTEM_BAR = "Totemleiste"
-L_GUI_UF_PLUGINS_RANGE_BAR = "Aktiviere Abstandsleiste"
 
 -- Raid Frames options
 L_GUI_UF_RAIDFRAMES_SUBTEXT = "Customize the appearance of the raid frames." -- Need review
@@ -150,7 +151,8 @@ L_GUI_UF_ICONS_ROLE = "Rollensymbol auf den Unit Frames"
 L_GUI_UF_ICONS_RAID_MARK = "Raidsymbole"
 L_GUI_UF_ICONS_READY_CHECK = "Bereitschaftschecksymbole"
 L_GUI_UF_ICONS_LEADER = "Anführer/Assistent an den Fenstern anzeigen"
-L_GUI_UF_ICONS_SUMON = "Sumon icons on frames" -- Need review
+L_GUI_UF_ICONS_SUMON = "Sumon icons" -- Need review
+L.raidframe_icons_phase = "Phase" -- Need review
 L_GUI_UF_PLUGINS_DEBUFFHIGHLIGHT_ICON = "Debufftextur und Symbol hervorheben"
 L_GUI_UF_PLUGINS_AURA_WATCH = "'RAID' Buffüberwachung"
 L_GUI_UF_PLUGINS_AURA_WATCH_TIMER = "Timer auf Schlachtzugsdebuff Icons"
@@ -518,8 +520,6 @@ L_GUI_MISC_QUEST_AUTOBUTTON = "Quest/Gegenstand auto Taste"
 L.misc_raid_tools = "Raid Hilfsmittel"
 L.misc_raid_tools_desc = "Button at the top of the screen for ready check (Left-click), checking roles (Middle-click), setting marks, etc. (for leader and assistants)" -- Need review
 L_GUI_MISC_PROFESSION_TABS = "Berufereiter an Handelsfähigkeiten und Handelsfenstern anzeigen"
-L_GUI_MISC_HIDE_BG_SPAM = "In Schlachtfeldern Bossemotes im Chat unterbinden"
-L.misc_hide_bg_spam_desc = "Entferne Boss Emote-Spam über den Gewinn/Verlust-Knoten während BG Arathi und Gilneas"
 L_GUI_MISC_ITEM_LEVEL = "Itemlevel im Charakterfenster auf Items anzeigen"
 L_GUI_MISC_ALREADY_KNOWN = "Bekannte Rezepte/Reittiere/Begleiter farblich hervorheben"
 L_GUI_MISC_DISENCHANTING = "Sondieren, Mahlen and Entzaubern mit einem Klick"

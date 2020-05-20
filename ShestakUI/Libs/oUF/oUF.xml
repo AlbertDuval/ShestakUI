@@ -17,6 +17,7 @@
 	<Script file="Elements\HealPrediction.lua"/>
 	<Script file="Elements\Health.lua"/>
 	<Script file="Elements\LeaderIndicator.lua"/>
+	<Script file="Elements\PhaseIndicator.lua"/>
 	<Script file="Elements\Portraits.lua"/>
 	<Script file="Elements\Power.lua"/>
 	<Script file="Elements\PowerPrediction.lua"/>
@@ -51,7 +52,6 @@
 	<Script file="Modules\HolyPower.lua"/>
 	<Script file="Modules\MovableFrames.lua"/>
 	<Script file="Modules\RaidDebuffs.lua"/>
-	<Script file="Modules\RangeBar.lua"/>
 	<Script file="Modules\Reputation.lua"/>
 	<Script file="Modules\Smooth.lua"/>
 	<Script file="Modules\SoulShards.lua"/>

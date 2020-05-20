@@ -155,7 +155,7 @@ ns.addCategory("threat", L_GUI_THREAT, L_GUI_THREAT_SUBTEXT)
 ns.addCategory("toppanel", L_GUI_TOP_PANEL, L_GUI_TOP_PANEL_SUBTEXT)
 ns.addCategory("stats", L_GUI_STATS, L_GUI_STATS_SUBTEXT)
 ns.addCategory("error", L_GUI_ERROR, L_GUI_ERROR_SUBTEXT)
-ns.addCategory("misc", OTHER, L_GUI_MISC_SUBTEXT, true)
+ns.addCategory("misc", OTHER, L_GUI_MISC_SUBTEXT)
 
 -- General
 do
@@ -612,7 +612,7 @@ do
 	-- Panel 2
 	local parent = ShestakUIOptionsPanel.unitframe2
 
-	local icons_pvp = ns.CreateCheckBox(parent, "icons_pvp", L_GUI_UF_ICONS_PVP)
+	local icons_pvp = ns.CreateCheckBox(parent, "icons_pvp")
 	icons_pvp:SetPoint("TOPLEFT", parent.subText, "BOTTOMLEFT", 0, 0)
 
 	local icons_combat = ns.CreateCheckBox(parent, "icons_combat", L_GUI_UF_ICONS_COMBAT)
@@ -734,9 +734,6 @@ do
 
 	local totem = ns.CreateCheckBox(parent, "totem", L_GUI_UF_PLUGINS_TOTEM_BAR)
 	totem:SetPoint("TOPLEFT", rune, "BOTTOMLEFT", 0, 0)
-
-	local range = ns.CreateCheckBox(parent, "range", L_GUI_UF_PLUGINS_RANGE_BAR)
-	range:SetPoint("TOPLEFT", totem, "BOTTOMLEFT", 0, 0)
 end
 
 -- Raid Frames
@@ -811,6 +808,9 @@ do
 	local icons_sumon = ns.CreateCheckBox(parent, "icons_sumon", L_GUI_UF_ICONS_SUMON)
 	icons_sumon:SetPoint("TOPLEFT", icons_ready_check, "BOTTOMLEFT", 0, 0)
 
+	local icons_phase = ns.CreateCheckBox(parent, "icons_phase")
+	icons_phase:SetPoint("LEFT", icons_sumon, "RIGHT", 248, 0)
+
 	-- Panel 2
 	local parent = ShestakUIOptionsPanel.raidframe2
 
@@ -869,6 +869,16 @@ do
 
 	local dps_raid_power_height = ns.CreateNumberSlider(parent, "dps_raid_power_height", nil, nil, 0, 10, 1, true)
 	dps_raid_power_height:SetPoint("LEFT", dps_party_power_height, "RIGHT", 120, 0)
+
+	local LayoutButton = CreateFrame("Button", nil, parent, "UIPanelButtonTemplate")
+	LayoutButton:SetPoint("BOTTOMRIGHT", parent, "BOTTOMRIGHT", -20, 5)
+	LayoutButton:SetSize(100, 23)
+	LayoutButton:SetText(L_GUI_LAYOUT)
+	LayoutButton:SetWidth(LayoutButton.Text:GetWidth() + 15)
+	LayoutButton:SetScript("OnClick", function()
+		StaticPopup_Show("SWITCH_RAID")
+	end)
+	tinsert(ns.buttons, LayoutButton)
 end
 
 -- ActionBar
@@ -1763,11 +1773,8 @@ do
 	local profession_tabs = ns.CreateCheckBox(parent, "profession_tabs", L_GUI_MISC_PROFESSION_TABS)
 	profession_tabs:SetPoint("TOPLEFT", raid_tools, "BOTTOMLEFT", 0, 0)
 
-	local hide_bg_spam = ns.CreateCheckBox(parent, "hide_bg_spam", L_GUI_MISC_HIDE_BG_SPAM)
-	hide_bg_spam:SetPoint("TOPLEFT", profession_tabs, "BOTTOMLEFT", 0, 0)
-
 	local item_level = ns.CreateCheckBox(parent, "item_level", L_GUI_MISC_ITEM_LEVEL)
-	item_level:SetPoint("TOPLEFT", hide_bg_spam, "BOTTOMLEFT", 0, 0)
+	item_level:SetPoint("TOPLEFT", profession_tabs, "BOTTOMLEFT", 0, 0)
 
 	local already_known = ns.CreateCheckBox(parent, "already_known", L_GUI_MISC_ALREADY_KNOWN)
 	already_known:SetPoint("TOPLEFT", item_level, "BOTTOMLEFT", 0, 0)
@@ -1807,11 +1814,8 @@ do
 	local merchant_itemlevel = ns.CreateCheckBox(parent, "merchant_itemlevel", L_GUI_MISC_MERCHANT_ITEMLEVEL)
 	merchant_itemlevel:SetPoint("TOPLEFT", armory_link, "BOTTOMLEFT", 0, 0)
 
-	-- Panel 2
-	local parent = ShestakUIOptionsPanel.misc2
-
 	local minimize_mouseover = ns.CreateCheckBox(parent, "minimize_mouseover", L_GUI_MISC_MINIMIZE_MOUSEOVER)
-	minimize_mouseover:SetPoint("TOPLEFT", parent.subText, "BOTTOMLEFT", 0, 0)
+	minimize_mouseover:SetPoint("TOPLEFT", merchant_itemlevel, "BOTTOMLEFT", 0, 0)
 
 	local hide_banner = ns.CreateCheckBox(parent, "hide_banner", L_GUI_MISC_HIDE_BANNER)
 	hide_banner:SetPoint("TOPLEFT", minimize_mouseover, "BOTTOMLEFT", 0, 0)
