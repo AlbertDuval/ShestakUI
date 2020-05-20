@@ -2201,6 +2201,10 @@ C["filger_spells"] = {
 			IconSize = C.filger.buffs_size,
 			Position = {"TOP", P_BUFF_ICON_Anchor},
 
+			-- Manifesto of Madness Crit [ADD_FM]
+			{spellID = 313948, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Manifesto of Madness Versa [ADD_FM]
+			{spellID = 314040, unitID = "player", caster = "player", filter = "BUFF"},
 			-- ElementalBuffFrost [ADD_FM]
 			{spellID = 279029, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Elemental Mastery
@@ -2931,6 +2935,8 @@ C["filger_spells"] = {
 
 			-- Gift of the Titans
 			{spellID = 313698, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Gift of the Titans
+			{spellID = 307528, unitID = "player", caster = "player", filter = "BUFF"},
 
 			-- Potions: Miscellaneous
 			-- Invisibility [Invisibility Potion]
