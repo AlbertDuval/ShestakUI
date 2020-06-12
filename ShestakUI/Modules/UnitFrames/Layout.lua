@@ -1485,6 +1485,9 @@ if C.raidframe.auto_position then
 			if InCombatLockdown() then return end
 			local num = GetNumGroupMembers()
 			local maxGroup = 5
+			local _, _, maxGroup2, _, _, _, _, _, _, _, _ = GetRaidRosterInfo(num)
+			local offset = max(0, maxGroup2 - 4) * (C.raidframe.heal_height + 4)
+			-- print("|cffffff00"..num.." "..maxGroup2.." "..offset.."|r")
 			if num > 35 then
 				maxGroup = 8
 			elseif num > 30 then
@@ -1499,29 +1502,29 @@ if C.raidframe.auto_position then
 			end
 			if prevNum ~= maxGroup then
 				if C.unitframe.castbar_icon == true then
-					oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4] + 11, C.position.unitframes.player_castbar[5] + (maxGroup - 5) * 33)
+					oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4] + 11, C.position.unitframes.player_castbar[5] + offset)
 				else
-					oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4], C.position.unitframes.player_castbar[5] + (maxGroup - 5) * 33)
+					oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4], C.position.unitframes.player_castbar[5] + offset)
 				end
 
-				player:SetPoint(C.position.unitframes.player[1], C.position.unitframes.player[2], C.position.unitframes.player[3], C.position.unitframes.player[4], C.position.unitframes.player[5] + (maxGroup - 5) * 33)
-				target:SetPoint(C.position.unitframes.target[1], C.position.unitframes.target[2], C.position.unitframes.target[3], C.position.unitframes.target[4], C.position.unitframes.target[5] + (maxGroup - 5) * 33)
+				player:SetPoint(C.position.unitframes.player[1], C.position.unitframes.player[2], C.position.unitframes.player[3], C.position.unitframes.player[4], C.position.unitframes.player[5] + offset)
+				target:SetPoint(C.position.unitframes.target[1], C.position.unitframes.target[2], C.position.unitframes.target[3], C.position.unitframes.target[4], C.position.unitframes.target[5] + offset)
 				prevNum = maxGroup
 			end
 		else
 			self:UnregisterEvent("GROUP_ROSTER_UPDATE")
 		end
 	end
-	-- if SavedOptions and SavedOptions.RaidLayout == "VHEAL" and not C.raidframe.raid_groups_vertical then
-	-- 	if a < 5 then a = 5 end
-	-- 	if C.unitframe.castbar_icon == true then
-	-- 		oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4] + 11 - (a - 5) * 33.6, C.position.unitframes.player_castbar[5])
-	-- 	else
-	-- 		oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4] - (a - 5) * 33.6, C.position.unitframes.player_castbar[5])
-	-- 	end
-	-- 	oUF_Player:SetPoint(C.position.unitframes.player[1], C.position.unitframes.player[2], C.position.unitframes.player[3], C.position.unitframes.player[4] - (a - 5) * 33.6, C.position.unitframes.player[5])
-	-- 	oUF_Target:SetPoint(C.position.unitframes.target[1], C.position.unitframes.target[2], C.position.unitframes.target[3], C.position.unitframes.target[4] + (a - 5) * 33.6, C.position.unitframes.target[5])
-	-- end
+	if SavedOptions and SavedOptions.RaidLayout == "VHEAL" and not C.raidframe.raid_groups_vertical then
+		if a < 5 then a = 5 end
+		if C.unitframe.castbar_icon == true then
+			oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4] + 11 - (a - 5) * 33.6, C.position.unitframes.player_castbar[5])
+		else
+			oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4] - (a - 5) * 33.6, C.position.unitframes.player_castbar[5])
+		end
+		oUF_Player:SetPoint(C.position.unitframes.player[1], C.position.unitframes.player[2], C.position.unitframes.player[3], C.position.unitframes.player[4] - (a - 5) * 33.6, C.position.unitframes.player[5])
+		oUF_Target:SetPoint(C.position.unitframes.target[1], C.position.unitframes.target[2], C.position.unitframes.target[3], C.position.unitframes.target[4] + (a - 5) * 33.6, C.position.unitframes.target[5])
+	end
 
 	local frame = CreateFrame("Frame")
 	frame:RegisterEvent("PLAYER_ENTERING_WORLD")
