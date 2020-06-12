@@ -2201,6 +2201,8 @@ C["filger_spells"] = {
 			IconSize = C.filger.buffs_size,
 			Position = {"TOP", P_BUFF_ICON_Anchor},
 
+			-- Surging Vitality [ADD_FM]
+			{spellID = 318211, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Manifesto of Madness Crit [ADD_FM]
 			{spellID = 313948, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Manifesto of Madness Versa [ADD_FM]

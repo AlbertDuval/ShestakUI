@@ -125,7 +125,7 @@ if C.enemycooldown.enable == true then
 		[213664] = 120,	-- Nimble Brew
 		[47585] = 120,	-- Dispersion
 		[1856] = 120,	-- Vanish
-		[97462] = 180,	-- [ADD FM] Rally Cry
+		[97462] = 60,	-- [ADD FM] Rally Cry
 		[236385] = 180,	-- [ADD FM] Die by the Sword
 		[148467] = 180,	-- [ADD FM] Deterrence
 		[7744] = 120,	-- Will of the Forsaken (Racial)
