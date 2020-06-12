@@ -50,7 +50,7 @@ C["skins"] = {
 	["cool_line"] = false,						-- CoolLine skin
 	["dbm"] = true,							-- DBM skin
 	["dbm_movable"] = false,					-- Allow to move DBM bars
-	["details"] = false,						-- Details skin
+	["details"] = true,						-- Details skin
 	["dominos"] = false,						-- Dominos skin
 	["flyout_button"] = false,					-- FlyoutButtonCustom skin
 	["ls_toasts"] = false,						-- Is: Toasts skin
@@ -161,7 +161,7 @@ C["raidframe"] = {
 	["player_in_party"] = true,					-- Show player frame in party
 	["raid_tanks"] = true,						-- Show raid tanks
 	["raid_tanks_tt"] = true,					-- Show raid tanks target target
-	["raid_groups"] = 8,						-- Number of groups in raid
+	["raid_groups"] = 9,						-- Number of groups in raid
 	["raid_groups_vertical"] = false,			-- Vertical raid groups (only for heal layout)
 	-- Icons
 	["icons_role"] = false,						-- Role icon on frames
@@ -181,7 +181,7 @@ C["raidframe"] = {
 	["auto_position"] = true,					-- Auto reposition raid frame (only for heal layout)
 	-- Heal layout size
 	["heal_width"] = 60.2,						-- Unit width
-	["heal_height"] = 26,						-- Unit height
+	["heal_height"] = 34,						-- Unit height
 	["heal_power_height"] = 2,					-- Raid power height
 	-- DPS layout size
 	["dps_raid_width"] = 104,					-- Raid width

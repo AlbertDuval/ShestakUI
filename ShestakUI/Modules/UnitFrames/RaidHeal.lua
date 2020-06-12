@@ -8,10 +8,8 @@ local _, ns = ...
 local oUF = ns.oUF
 
 -- Frame size
---local unit_width = C.raidframe.heal_width
-local unit_width = 60.2
---local unit_height = C.raidframe.heal_height
-local unit_height = 34
+local unit_width = C.raidframe.heal_width
+local unit_height = C.raidframe.heal_height
 local power_height = C.raidframe.heal_power_height
 
 -- Create layout
