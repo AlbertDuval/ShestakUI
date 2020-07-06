@@ -32,6 +32,14 @@ C["general"] = {
 	["welcome_message"] = true,					-- Enable welcome message in chat
 	["auto_scale"] = true,						-- Autoscale
 	["uiscale"] = 0.96,							-- Your value (between 0.2 and 1) if "auto_scale" is disable
+	-- Blizzard UI
+	["error_filter"] = "BLACKLIST",				-- Filter Blizzard red errors (BLACKLIST, WHITELIST, COMBAT, NONE)
+	["move_blizzard"] = false,					-- Move some Blizzard frames
+	["color_picker"] = false,					-- Improved ColorPicker
+	["vehicle_mouseover"] = false,				-- Vehicle frame on mouseover
+	["minimize_mouseover"] = false,				-- Mouseover for quest minimize button
+	["hide_banner"] = false,					-- Hide Boss Banner Loot Frame
+	["hide_talking_head"] = false,				-- Hide Talking Head Frame
 }
 
 ----------------------------------------------------------------------------------------
@@ -571,7 +579,7 @@ C["stats"] = {
 }
 
 ----------------------------------------------------------------------------------------
---	Error options
+--	Trade options
 ----------------------------------------------------------------------------------------
 C["error"] = {
 	["black"] = true,							-- Hide errors from black list
@@ -579,16 +587,24 @@ C["error"] = {
 	["combat"] = true,							-- Hide all errors in combat
 }
 
+C["trade"] = {
+	["profession_tabs"] = true,					-- Professions tabs on TradeSkill frames
+	["already_known"] = true,					-- Colorizes recipes/mounts/pets/toys that is already known
+	["disenchanting"] = false,					-- Milling, Prospecting and Disenchanting by Alt + click
+	["enchantment_scroll"] = false,				-- Enchantment scroll on TradeSkill frame
+	["sum_buyouts"] = false,					-- Sum up all current auctions
+	["archaeology"] = false,					-- Archaeology tracker ('/arch' or right mouseover minimap button to show)
+	["merchant_itemlevel"] = false,				-- Show item level for weapons and armor in merchant
+}
+
 ----------------------------------------------------------------------------------------
 --	Miscellaneous options
 ----------------------------------------------------------------------------------------
 C["misc"] = {
+	["raid_tools"] = true,						-- Raid tools
 	["shift_marking"] = true,					-- Marks mouseover target when you push Shift (only in group)
 	["afk_spin_camera"] = false,				-- Spin camera while afk
-	["vehicle_mouseover"] = false,				-- Vehicle frame on mouseover
 	["quest_auto_button"] = false,				-- Quest/item auto button (from the list)
-	["raid_tools"] = true,						-- Raid tools
-	["profession_tabs"] = true,					-- Professions tabs on TradeSkill frames
 	["item_level"] = true,						-- Item level on character slot buttons
 	["already_known"] = true,					-- Colorizes recipes/mounts/pets/toys that is already known
 	["disenchanting"] = false,					-- Milling, Prospecting and Disenchanting by Alt + click
