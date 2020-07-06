@@ -698,7 +698,7 @@ local function Shared(self, unit)
 		self.Debuffs = CreateFrame("Frame", self:GetName().."Debuffs", self)
 		self.Debuffs:SetHeight(25)
 		self.Debuffs:SetWidth(pet_width + 4)
-		self.Debuffs.size = T.Scale(C.aura.player_debuff_size)
+		self.Debuffs.size = T.Scale(C.aura.target_aura_size)
 		self.Debuffs.spacing = T.Scale(3)
 		self.Debuffs.num = 4
 		self.Debuffs["growth-y"] = "DOWN"
@@ -1494,9 +1494,7 @@ if C.raidframe.auto_position then
 			if InCombatLockdown() then return end
 			local num = GetNumGroupMembers()
 			local maxGroup = 5
-			local _, _, maxGroup2, _, _, _, _, _, _, _, _ = GetRaidRosterInfo(num)
-			local offset = max(0, maxGroup2 - 4) * (C.raidframe.heal_height + 4)
-			-- print("|cffffff00"..num.." "..maxGroup2.." "..offset.."|r")
+			-- local _, _, maxGroup2, _, _, _, _, _, _, _, _ = GetRaidRosterInfo(num)
 			if num > 35 then
 				maxGroup = 8
 			elseif num > 30 then
@@ -1509,6 +1507,8 @@ if C.raidframe.auto_position then
 			if maxGroup >= C.raidframe.raid_groups then
 				maxGroup = C.raidframe.raid_groups
 			end
+			local offset = max(0, maxGroup - 5) * (C.raidframe.heal_height + 4)
+			-- print("|cffffff00"..num.." "..maxGroup.." "..offset.."|r")
 			if prevNum ~= maxGroup then
 				if C.unitframe.castbar_icon == true then
 					oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4] + 11, C.position.unitframes.player_castbar[5] + offset)
