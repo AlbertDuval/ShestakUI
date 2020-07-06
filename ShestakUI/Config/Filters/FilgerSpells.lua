@@ -2209,6 +2209,8 @@ C["filger_spells"] = {
 			{spellID = 314040, unitID = "player", caster = "player", filter = "BUFF"},
 			-- ElementalBuffFrost [ADD_FM]
 			{spellID = 279029, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Devout Spirit [ADD_FM]
+			{spellID = 297412, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Elemental Mastery
 			{spellID = 16166, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Ascendance
@@ -2476,7 +2478,7 @@ C["filger_spells"] = {
 
 			-- Items
 			-- Back
-			{slotID = 15, filter = "CD"},
+			-- {slotID = 15, filter = "CD"},
 			-- Belt
 			{slotID = 6, filter = "CD"},
 			-- Gloves
