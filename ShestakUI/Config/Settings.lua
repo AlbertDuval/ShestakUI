@@ -12,7 +12,7 @@ C["media"] = {
 	["normal_font"] = [[Interface\AddOns\ShestakUI\Media\Fonts\Normal.ttf]],		-- Normal font
 	["blank_font"] = [[Interface\AddOns\ShestakUI\Media\Fonts\Blank.ttf]],			-- Blank font
 	["pixel_font"] = [[Interface\AddOns\ShestakUI\Media\Fonts\Pixel.ttf]],			-- Pixel font
-	["pixel_font_style"] = "OUTLINEMONOCHROME",										-- Pixel font style ("OUTLINEMONOCHROME" or "OUTLINE")
+	["pixel_font_style"] = "MONOCHROMEOUTLINE",										-- Pixel font style ("MONOCHROMEOUTLINE" or "OUTLINE")
 	["pixel_font_size"] = 8,														-- Pixel font size for those places where it is not specified
 	["blank"] = [[Interface\AddOns\ShestakUI\Media\Textures\White.tga]],			-- Texture for borders
 	["texture"] = [[Interface\AddOns\ShestakUI\Media\Textures\Texture.tga]],		-- Texture for status bars
@@ -20,6 +20,7 @@ C["media"] = {
 	["whisp_sound"] = [[Interface\AddOns\ShestakUI\Media\Sounds\Whisper.ogg]],		-- Sound for whispers
 	["warning_sound"] = [[Interface\AddOns\ShestakUI\Media\Sounds\Warning.ogg]],	-- Sound for warning
 	["proc_sound"] = [[Interface\AddOns\ShestakUI\Media\Sounds\Proc.ogg]],			-- Sound for procs
+	["classborder_color"] = {T.color.r, T.color.g, T.color.b, 1},					-- Color for class borders
 	["border_color"] = {0.37, 0.3, 0.3, 1},		-- Color for borders
 	["backdrop_color"] = {0, 0, 0, 1},			-- Color for borders backdrop
 	["backdrop_alpha"] = 0.7,					-- Alpha for transparent backdrop
@@ -47,6 +48,7 @@ C["general"] = {
 ----------------------------------------------------------------------------------------
 C["skins"] = {
 	["blizzard_frames"] = true,				-- Blizzard frames skin
+	["bubbles"] = true,							-- Skin Blizzard chat bubbles
 	["minimap_buttons"] = true,				-- Skin addons icons on minimap
 	["minimap_buttons_mouseover"] = true,		-- Addons icons on mouseover
 	-- Addons
@@ -273,8 +275,9 @@ C["tooltip"] = {
 	["realm"] = true,							-- Player realm name in tooltip
 	["rank"] = true,							-- Player guild-rank in tooltip
 	["target"] = true,							-- Target player in tooltip
-	["talents"] = true,						-- Show tooltip talents
+	["talents"] = true,						-- Show specialization
 	["average_lvl"] = true,					-- Average items level
+	["show_shift"] = true,						-- Show items level and spec when Shift is pushed
 	["raid_icon"] = true,						-- Raid icon
 	["unit_role"] = true,						-- Unit role in tooltip
 	["who_targetting"] = true,					-- Show who is targetting the unit (in raid or party)
@@ -300,7 +303,6 @@ C["chat"] = {
 	["chat_bar"] = false,						-- Lite Button Bar for switch chat channel
 	["chat_bar_mouseover"] = false,				-- Lite Button Bar on mouseover
 	["whisp_sound"] = true,						-- Sound when whisper
-	["bubbles"] = true,							-- Skin Blizzard chat bubbles
 	["combatlog"] = true,						-- Show CombatLog tab
 	["tabs_mouseover"] = false,					-- Chat tabs on mouseover
 	["sticky"] = true,							-- Remember last channel
@@ -417,15 +419,27 @@ C["loot"] = {
 ----------------------------------------------------------------------------------------
 C["filger"] = {
 	["enable"] = true,							-- Enable Filger
+	["show_tooltip"] = false,					-- Show tooltip
+	["expiration"] = true,						-- Sort cooldowns by expiration time
+	-- Elements
+	["show_buff"] = true,						-- Player buffs
+	["show_proc"] = true,						-- Player procs
+	["show_debuff"] = true,						-- Debuffs on target
+	["show_aura_bar"] = true,					-- Aura bars on target
+	["show_special"] = true,					-- Special buffs on player
+	["show_pvp_player"] = true,					-- PvP debuffs on player
+	["show_pvp_target"] = true,					-- PvP auras on target
+	["show_cd"] = true,							-- Cooldowns
+	-- Icons size
+	["buffs_size"] = 37,						-- Buffs size
+	["buffs_space"] = 3,						-- Buffs space
+	["pvp_size"] = 60,							-- PvP auras size
+	["pvp_space"] = 3,							-- PvP auras space
+	["cooldown_size"] = 30,						-- Cooldowns size
+	["cooldown_space"] = 3,						-- Cooldowns space
+	-- Testing
 	["test_mode"] = false,						-- Test icon mode
 	["max_test_icon"] = 5,						-- Number of icons to the test
-	["show_tooltip"] = false,					-- Show tooltip
-	["disable_cd"] = false,						-- Disable cooldowns
-	["disable_pvp"] = false,					-- Disable PvP debuffs on Player and Target
-	["expiration"] = true,						-- Sort cooldowns by expiration time
-	["buffs_size"] = 37,						-- Buffs size
-	["cooldown_size"] = 30,						-- Cooldowns size
-	["pvp_size"] = 60,							-- PvP debuffs size
 }
 
 ----------------------------------------------------------------------------------------
@@ -570,8 +584,8 @@ C["stats"] = {
 	["durability"] = true,						-- Durability
 	["experience"] = true,						-- Experience
 	["talents"] = true,							-- Specialization
-	["coords"] = true,							-- Coords
 	["location"] = true,						-- Location
+	["coords"] = true,							-- Coords
 	["battleground"] = false,					-- BG Score
 	-- Currency (displayed in gold stats)
 	["currency_archaeology"] = false,			-- Archaeology Fragments
@@ -611,6 +625,5 @@ C["misc"] = {
 	["click_cast"] = false,						-- Simple click2cast spell binder
 	["click_cast_filter"] = false,				-- Ignore Player and Target frames for click2cast
 	["chars_currency"] = false,					-- Tracks your currency tokens across multiple characters
-	["armory_link"] = true,					-- Add the Armory link in the chat menu and target (It breaks set focus)
 	["hide_raid_button"] = false,				-- Button to hide raid frames in dps layout (top left mouseover)
 }

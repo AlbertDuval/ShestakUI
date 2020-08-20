@@ -426,28 +426,28 @@ local function Shared(self, unit)
 
 		-- Rogue/Druid Combo bar
 		if C.unitframe_class_bar.combo == true and C.unitframe_class_bar.combo_old ~= true and (T.class == "ROGUE" or T.class == "DRUID") then
-			self.CPoints = CreateFrame("Frame", self:GetName().."_ComboBar", self)
-			self.CPoints:CreateBackdrop("Default")
-			self.CPoints:SetPoint("BOTTOMLEFT", self, "TOPLEFT", 0, 7)
-			self.CPoints:SetSize(player_width, 7)
+			self.ComboPoints = CreateFrame("Frame", self:GetName().."_ComboBar", self)
+			self.ComboPoints:CreateBackdrop("Default")
+			self.ComboPoints:SetPoint("BOTTOMLEFT", self, "TOPLEFT", 0, 7)
+			self.ComboPoints:SetSize(player_width, 7)
 
 			for i = 1, 6 do
-				self.CPoints[i] = CreateFrame("StatusBar", self:GetName().."_Combo"..i, self.CPoints)
-				self.CPoints[i]:SetSize((player_width - 5) / 6, 7)
+				self.ComboPoints[i] = CreateFrame("StatusBar", self:GetName().."_Combo"..i, self.ComboPoints)
+				self.ComboPoints[i]:SetSize((player_width - 5) / 6, 7)
 				if i == 1 then
-					self.CPoints[i]:SetPoint("LEFT", self.CPoints)
+					self.ComboPoints[i]:SetPoint("LEFT", self.ComboPoints)
 				else
-					self.CPoints[i]:SetPoint("LEFT", self.CPoints[i-1], "RIGHT", 1, 0)
+					self.ComboPoints[i]:SetPoint("LEFT", self.ComboPoints[i-1], "RIGHT", 1, 0)
 				end
-				self.CPoints[i]:SetStatusBarTexture(C.media.texture)
+				self.ComboPoints[i]:SetStatusBarTexture(C.media.texture)
 			end
 
-			self.CPoints[1]:SetStatusBarColor(0.9, 0.1, 0.1)
-			self.CPoints[2]:SetStatusBarColor(0.9, 0.1, 0.1)
-			self.CPoints[3]:SetStatusBarColor(0.9, 0.9, 0.1)
-			self.CPoints[4]:SetStatusBarColor(0.9, 0.9, 0.1)
-			self.CPoints[5]:SetStatusBarColor(0.1, 0.9, 0.1)
-			self.CPoints[6]:SetStatusBarColor(0.1, 0.9, 0.1)
+			self.ComboPoints[1]:SetStatusBarColor(0.9, 0.1, 0.1)
+			self.ComboPoints[2]:SetStatusBarColor(0.9, 0.1, 0.1)
+			self.ComboPoints[3]:SetStatusBarColor(0.9, 0.9, 0.1)
+			self.ComboPoints[4]:SetStatusBarColor(0.9, 0.9, 0.1)
+			self.ComboPoints[5]:SetStatusBarColor(0.1, 0.9, 0.1)
+			self.ComboPoints[6]:SetStatusBarColor(0.1, 0.9, 0.1)
 		end
 
 		-- Totem bar for Shaman
@@ -794,28 +794,28 @@ local function Shared(self, unit)
 
 			-- Rogue/Druid Combo bar
 			if C.unitframe_class_bar.combo == true and (C.unitframe_class_bar.combo_old == true or (T.class ~= "DRUID" and T.class ~= "ROGUE")) then
-				self.CPoints = CreateFrame("Frame", self:GetName().."_ComboBar", self)
-				self.CPoints:CreateBackdrop("Default")
-				self.CPoints:SetPoint("BOTTOMLEFT", self, "TOPLEFT", 0, 7)
-				self.CPoints:SetSize(player_width, 7)
+				self.ComboPoints = CreateFrame("Frame", self:GetName().."_ComboBar", self)
+				self.ComboPoints:CreateBackdrop("Default")
+				self.ComboPoints:SetPoint("BOTTOMLEFT", self, "TOPLEFT", 0, 7)
+				self.ComboPoints:SetSize(player_width, 7)
 
 				for i = 1, 6 do
-					self.CPoints[i] = CreateFrame("StatusBar", self:GetName().."_Combo"..i, self.CPoints)
-					self.CPoints[i]:SetSize((player_width - 5) / 6, 7)
+					self.ComboPoints[i] = CreateFrame("StatusBar", self:GetName().."_Combo"..i, self.ComboPoints)
+					self.ComboPoints[i]:SetSize((player_width - 5) / 6, 7)
 					if i == 1 then
-						self.CPoints[i]:SetPoint("LEFT", self.CPoints)
+						self.ComboPoints[i]:SetPoint("LEFT", self.ComboPoints)
 					else
-						self.CPoints[i]:SetPoint("LEFT", self.CPoints[i-1], "RIGHT", 1, 0)
+						self.ComboPoints[i]:SetPoint("LEFT", self.ComboPoints[i-1], "RIGHT", 1, 0)
 					end
-					self.CPoints[i]:SetStatusBarTexture(C.media.texture)
+					self.ComboPoints[i]:SetStatusBarTexture(C.media.texture)
 				end
 
-				self.CPoints[1]:SetStatusBarColor(0.9, 0.1, 0.1)
-				self.CPoints[2]:SetStatusBarColor(0.9, 0.1, 0.1)
-				self.CPoints[3]:SetStatusBarColor(0.9, 0.9, 0.1)
-				self.CPoints[4]:SetStatusBarColor(0.9, 0.9, 0.1)
-				self.CPoints[5]:SetStatusBarColor(0.1, 0.9, 0.1)
-				self.CPoints[6]:SetStatusBarColor(0.1, 0.9, 0.1)
+				self.ComboPoints[1]:SetStatusBarColor(0.9, 0.1, 0.1)
+				self.ComboPoints[2]:SetStatusBarColor(0.9, 0.1, 0.1)
+				self.ComboPoints[3]:SetStatusBarColor(0.9, 0.9, 0.1)
+				self.ComboPoints[4]:SetStatusBarColor(0.9, 0.9, 0.1)
+				self.ComboPoints[5]:SetStatusBarColor(0.1, 0.9, 0.1)
+				self.ComboPoints[6]:SetStatusBarColor(0.1, 0.9, 0.1)
 			end
 
 			-- Enemy specialization
@@ -1448,9 +1448,11 @@ SLASH_TEST_UF4 = "/еуыега"
 if C.unitframe.lines == true then
 	local HorizontalPlayerLine = CreateFrame("Frame", "HorizontalPlayerLine", oUF_Player)
 	HorizontalPlayerLine:CreatePanel("ClassColor", player_width + 11, 1, "TOPLEFT", "oUF_Player", "BOTTOMLEFT", -5, -5)
+	HorizontalPlayerLine:SetBackdropBorderColor(T.color.r, T.color.g, T.color.b)
 
 	local VerticalPlayerLine = CreateFrame("Frame", "VerticalPlayerLine", oUF_Player)
 	VerticalPlayerLine:CreatePanel("ClassColor", 1, 98 + T.extraHeight + (C.unitframe.extra_health_height / 2), "TOPRIGHT", "oUF_Player", "TOPLEFT", -5, 30)
+	VerticalPlayerLine:SetBackdropBorderColor(T.color.r, T.color.g, T.color.b)
 end
 
 ----------------------------------------------------------------------------------------

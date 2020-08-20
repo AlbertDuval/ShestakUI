@@ -8,7 +8,7 @@ lpanels:CreateLayout("Load For All", {
 
 -- AFK panel
 {	name = "AFK", anchor_to = "TOP", y_off = -210,
-	width = 180, height = 75 + (C.font.stats_font_size - 8),
+	width = 180 + (C.font.stats_font_size - 8), height = 75 + ((C.font.stats_font_size - 8) * 5),
 	text = {
 			{	string = L_PANELS_AFK, anchor_to = "TOP", y_off = -10,
 				shadow = 0, outline = 3, font = C.font.stats_font, size = C.font.stats_font_size,
@@ -23,7 +23,7 @@ lpanels:CreateLayout("Load For All", {
 				shadow = 0, outline = 3, font = C.font.stats_font, size = C.font.stats_font_size * 2,
 				anchor_to = "CENTER", color = "1 0.1 0.1"
 			},
-			{	string = L_PANELS_AFK_RCLICK, anchor_to = "BOTTOM", y_off = 13,
+			{	string = L_PANELS_AFK_RCLICK, anchor_to = "BOTTOM", y_off = 13 + (C.font.stats_font_size - 8),
 				shadow = 0, outline = 3, font = C.font.stats_font, size = C.font.stats_font_size,
 			},
 			{	string = L_PANELS_AFK_LCLICK, anchor_to = "BOTTOM", y_off = 3,
@@ -50,7 +50,7 @@ lpanels:CreateLayout("Load For All", {
 			self:Hide()
 			if b == "LeftButton" then SendChatMessage("", "AFK") end
 		end,
-		OnEnter = function(self) self:SetBackdropBorderColor(T.color.r, T.color.g, T.color.b) end,
+		OnEnter = function(self) self:SetBackdropBorderColor(unpack(C.media.classborder_color)) end,
 		OnLeave = function(self) self:SetBackdropBorderColor(unpack(C.media.border_color)) end
 	},
 })

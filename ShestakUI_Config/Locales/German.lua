@@ -36,6 +36,7 @@ L.general_hide_talking_head = "Verstecke Talking Head Frame"
 
 -- Media options
 L.media_border_color = "Farbe für Rahmen"
+L.media_classborder_color = "Color for class borders" -- Need review
 L.media_backdrop_color = "Farbe für Rahmen-Hintergrund"
 L.media_backdrop_alpha = "Alpha für transparenten Hintergrund"
 L.media_texture = "Main texture" -- Need review
@@ -231,6 +232,8 @@ L.tooltip_hidebuttons = "Tooltips für Aktionsleisten verstecken"
 L.tooltip_hide_combat = "Verstecke Tooltip im Kampf"
 L.tooltip_subheader = "Plugins"
 L.tooltip_talents = "Zeige die Talente im Tooltip an"
+L.tooltip_show_shift = "Show when Shift is pushed" -- Need review
+L.tooltip_show_shift_desc = "Show items level and spec when Shift is pushed" -- Need review
 L.tooltip_achievements = "Verlgeichen von Erfolgen in Tooltips"
 L.tooltip_target = "Ziel des Spielers im Tooltip anzeigen"
 L.tooltip_title = "Spieler Title im Tooltip"
@@ -352,7 +355,7 @@ L_GUI_AURA_CLASSCOLOR_BORDER = "Aktiviere Klassenfarbe für Spielerbuffs"
 
 -- Bag options
 L_GUI_BAGS = "Taschen"
-L_GUI_BAGS_SUBTEXT = "Ändern der Blizzard Taschen."
+L_GUI_BAGS_SUBTEXT = "Right click on the close button to open the menu. To move the bags, hold down Shift - click." -- Need review
 L_GUI_BAGS_ENABLE = "Taschen aktivieren"
 L_GUI_BAGS_ILVL = "Zeigt Itemlevel der Waffen & Rüstung"
 L_GUI_BAGS_BUTTON_SIZE = "Buttongröße"
@@ -390,12 +393,24 @@ L_GUI_FILGER_ENABLE = "Aktiviere Filger"
 L_GUI_FILGER_TEST_MODE = "Test Icon Mode"
 L_GUI_FILGER_MAX_TEST_ICON = "Anzahl der Icons im Test Mode"
 L_GUI_FILGER_SHOW_TOOLTIP = "Zeige Tooltips"
-L_GUI_FILGER_DISABLE_CD = "Deaktiviere Cooldowns"
-L_GUI_FILGER_DISABLE_PVP = "Disable PvP debuffs on Player and Target" -- Need review
+L.filger_subheader_elements = "Showing elements" -- Need review
+L.filger_show_buff = "Player buffs" -- Need review
+L.filger_show_proc = "Player procs" -- Need review
+L.filger_show_debuff = "Debuffs on target" -- Need review
+L.filger_show_aura_bar = "Aura bars on target" -- Need review
+L.filger_show_special = "Special buffs on player" -- Need review
+L.filger_show_pvp_player = "SPvP debuffs on player" -- Need review
+L.filger_show_pvp_target = "PvP auras on target" -- Need review
+L.filger_show_cd = "Cooldowns" -- Need review
+L.filger_subheader_size = "Icons size" -- Need review
+L.filger_subheader_test = "Test mode" -- Need review
 L_GUI_FILGER_EXPIRATION = "Sort cooldowns by expiration time" -- Need review
 L_GUI_FILGER_BUFFS_SIZE = "Buffs größe ändern"
 L_GUI_FILGER_COOLDOWN_SIZE = "Cooldowns größe ändern"
 L_GUI_FILGER_PVP_SIZE = "PvP Debuffs größe ändern"
+L.filger_buffs_space = "Buffs space" -- Need review
+L.filger_pvp_space = "PvP auras space" -- Need review
+L.filger_cooldown_space = "Cooldowns space" -- Need review
 
 -- Announcements options
 L_GUI_ANNOUNCEMENTS = "Benachrichtigungen"
@@ -559,7 +574,5 @@ L.misc_click_cast_desc = "Allows you to assign spells (analog Clique) to the mou
 L.misc_click_cast_filter = "Ignoriere Spieler- und Zielfenster für click2cast"
 L.misc_chars_currency = "Zeige deine Währungstoken über diverse Karaktere"
 L.misc_chars_currency_desc = "Hover over the icon of the required currency in the character window to display information in the tooltip" -- Need review
-L.misc_armory_link = "Armory Link hinzufügen"
-L.misc_armory_link_desc = "Add Armory Link im Spieler PopupMenus (Deaktiviert das Focusziel)"
 L.misc_hide_raid_button = "Verstecke oUF_RaidDPS Knopf"
 L.misc_hide_raid_button_desc = "The button is displayed by hovering the mouse in the upper left corner" -- Need review
