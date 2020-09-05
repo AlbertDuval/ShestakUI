@@ -58,37 +58,37 @@ end
 if C.enemycooldown.enable == true then
 	T.trinket_spells = {
 		-- Trinket Alliance
-		[127125] = 120,
-		[125977] = 120,
-		[125979] = 120,
-		[125980] = 120,
-		[127123] = 120,
-		[124863] = 120,
-		[126152] = 120,
-		[126151] = 120,
-		[126153] = 120,
-		[126154] = 120,
+    {127125, 120},
+    {125977, 120},
+    {125979, 120},
+    {125980, 120},
+    {127123, 120},
+    {124863, 120},
+    {126152, 120},
+    {126151, 120},
+    {126153, 120},
+    {126154, 120},
 		-- Trinket Horde
-		[125978] = 120,
-		[126456] = 120,
-		[127126] = 120,
-		[126457] = 120,
-		[124864] = 120,
-		[126629] = 120,
-		[126630] = 120,
-		[126631] = 120,
-		[126152] = 120,
+    {125978, 120},
+    {126456, 120},
+    {127126, 120},
+    {126457, 120},
+    {124864, 120},
+    {126629, 120},
+    {126630, 120},
+    {126631, 120},
+    {126152, 120}
 	}
 	T.enemy_spells = {
-		[286348] = 120,	-- [ADD FM] Maledic trinket
-		[286349] = 120,	-- [ADD FM] Maledic trinket
-		[2782] = 8,	-- [ADD FM] Drood Dispell
+    {286348, 120},	-- [ADD FM] Maledic trinket
+    {286349, 120},	-- [ADD FM] Maledic trinket
+    {2782, 8},	-- [ADD FM] Drood Dispell
 		-- Dispells [ADD FM]
-		[88423] = 8,	-- [ADD FM] Druid
-		[4987] = 8,	-- [ADD FM] Paladin
-		[527] = 8,	-- [ADD FM] Priest
-		[115450] = 8,	-- [ADD FM] Monk
-		[77130] = 8,	-- [ADD FM] Shaman
+    {88423, 8},	-- [ADD FM] Druid
+    {4987, 8},	-- [ADD FM] Paladin
+    {527, 8},	-- [ADD FM] Priest
+    {115450, 8},	-- [ADD FM] Monk
+    {77130, 8},	-- [ADD FM] Shaman
 		-- Interrupts and Silences
 		{187707, 15},	-- [ADD FM] Muzzle (Hunt kick)
 		{57994, 12},	-- Wind Shear
@@ -143,15 +143,15 @@ if C.enemycooldown.enable == true then
 		{196718, 180}, -- Darkness [FM ADD]
 		{642, 300}, -- Divine Shield [FM ADD]
 		-- Ofensive abilities
-		{114050, 180} -- Ascendance (Elemental)
-		{114051, 180} -- Ascendance (Enhancement)
-		{114052, 180} -- Ascendance (Restauration)
-		{31884, 120} -- Avenging Wrath
-		{79140, 120} -- {ADD FM] Vendetta
-		{190319, 120} -- {ADD FM] Combustion
-		{113858, 120} -- {ADD FM] Dark soul
-		{12472, 180} -- Icy Veins
-		{102543, 180} -- Incarnation (Feral)
+		{114050, 180}, -- Ascendance (Elemental)
+		{114051, 180}, -- Ascendance (Enhancement)
+		{114052, 180}, -- Ascendance (Restauration)
+		{31884, 120}, -- Avenging Wrath
+		{79140, 120}, -- [ADD FM] Vendetta
+		{190319, 120}, -- [ADD FM] Combustion
+		{113858, 120}, -- [ADD FM] Dark soul
+		{12472, 180}, -- Icy Veins
+		{102543, 180}, -- Incarnation (Feral)
 		{102560, 180} -- Incarnation (Boomy)
 	}
 
