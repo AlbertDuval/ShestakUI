@@ -326,7 +326,7 @@ if clock.enabled then
 			if T.level == MAX_PLAYER_LEVEL then
 				local c = 0
 				for _, q in ipairs({52834, 52835, 52837, 52838, 52839, 52840}) do
-					if IsQuestFlaggedCompleted(q) then
+					if C_QuestLog.IsQuestFlaggedCompleted(q) then
 						c = c + 1
 					end
 				end
@@ -638,7 +638,7 @@ if friends.enabled then
 									notCheckable = true,
 									func = function(_, arg1)
 										menuFrame:Hide()
-										InviteUnit(arg1)
+										C_PartyInfo.InviteUnit(arg1)
 									end
 								}
 							end
@@ -692,7 +692,7 @@ if friends.enabled then
 			end
 		end,
 		OnEnter = function(self)
-			ShowFriends()
+			C_FriendList.ShowFriends()
 			self.hovered = true
 			local online, total = 0, GetNumFriends()
 			local name, level, class, zone, connected, status, note, classc, levelc, zone_r, zone_g, zone_b, grouped, realm_r, realm_g, realm_b
@@ -892,7 +892,7 @@ if guild.enabled then
 									notCheckable = true,
 									func = function(_, arg1)
 										menuFrame:Hide()
-										InviteUnit(arg1)
+										C_PartyInfo.InviteUnit(arg1)
 									end
 								}
 							end
