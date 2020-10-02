@@ -14,6 +14,8 @@ L_GUI_LAYOUT = "Change layout"
 L_GUI_SPELL_LIST = "List of spells"
 L_GUI_SPELL_INPUT = "Spell ID"
 L_GUI_TIME_INPUT = "Time"
+L_GUI_EXPERT_MODE = "Expert mode"
+L_GUI_EXPERT_MODE_DESC = "Custom editing of Lua profile"
 
 -- General options
 L_GUI_GENERAL_SUBTEXT = "These settings control the general user interface settings. Type in chat '/uihelp' for help."
@@ -239,6 +241,7 @@ L.actionbar_toggle_mode_desc = "The quick change in the number of panels. For th
 L_GUI_ACTIONBAR_HIDE_HIGHLIGHT = "Hide proc highlight"
 L_GUI_ACTIONBAR_BOTTOMBARS = "Number of action bars on the bottom"
 L_GUI_ACTIONBAR_RIGHTBARS = "Number of action bars on right"
+L.actionbar_bottombars_mouseover = "Bottom bars on mouseover"
 L_GUI_ACTIONBAR_RIGHTBARS_MOUSEOVER = "Right bars on mouseover"
 L_GUI_ACTIONBAR_PETBAR_HIDE = "Hide pet bar"
 L_GUI_ACTIONBAR_PETBAR_HORIZONTAL = "Enable horizontal pet bar"
@@ -486,8 +489,9 @@ L.automation_buff_on_scroll_desc = "If the buff from the list is not applied to 
 L.automation_open_items = "Auto opening of items in bag"
 L.automation_resurrection = "Confirm resurrection"
 L.automation_summon = "Confirm summon"
-L.automation_invite_keyword = "Short keyword for invite"
-L.automation_invite_keyword_desc = "When player whisper you keyword he will be invited in your group. \nFor enable - type '/ainv'. Also after the command, you can write your word '/ainv inv'"
+L.automation_whisper_invite = "Auto invite when whisper keyword"
+L.automation_invite_keyword = "List of keyword (separated by space)"
+L.automation_invite_keyword_desc = "When player whisper you keyword he will be invited in your group"
 
 -- Buffs reminder options
 L_GUI_REMINDER = "Buffs Reminder"

@@ -114,7 +114,6 @@ if T.name == "Oz" and T.realm == "Pozzo dell'Eternità" then
 	C["chat"].damage_meter_spam = true
 	C["minimap"].size = 116
 	C["minimap"].toggle_menu = false
-	C["map"].map_boss_count = true
 	C["loot"].auto_greed = false
 	C["nameplate"].show_castbar_name = true
 	C["nameplate"].class_icons = true
@@ -198,27 +197,18 @@ end
 ----------------------------------------------------------------------------------------
 if IsWetxius then
 	C["general"].welcome_message = false
-	C["misc"].shift_marking = false
 	C["general"].vehicle_mouseover = true
-	C["misc"].quest_auto_button = true
-	C["trade"].disenchanting = true
-	C["misc"].click_cast = true
-	C["trade"].enchantment_scroll = true
-	C["announcements"].bad_gear = true
-	C["automation"].accept_invite = true
-	C["automation"].screenshot = true
-	C["automation"].auto_role = true
-	C["automation"].tab_binder = true
 	C["skins"].blizzard_frames = true
 	C["skins"].minimap_buttons = true
 	C["skins"].bigwigs = true
-	C["combattext"].crit_prefix = ""
-	C["combattext"].blizz_head_numbers = true
-	C["combattext"].dk_runes = false
-	C["combattext"].heal_treshold = UnitHealthMax("player")/100
-	C["pulsecooldown"].enable = true
-	C["pulsecooldown"].threshold = 6
-	C["threat"].enable = false
+	C["unitframe"].castbar_icon = true
+	C["unitframe"].plugins_enemy_spec = true
+	C["raidframe"].solo_mode = true
+	C["raidframe"].icons_leader = false
+	C["aura"].show_spiral = true
+	C["aura"].cast_by = true
+	C["actionbar"].toggle_mode = false
+	C["actionbar"].bottombars = 3
 	C["tooltip"].hide_combat = true
 	C["tooltip"].rank = false
 	C["tooltip"].spell_id = true
@@ -229,25 +219,34 @@ if IsWetxius then
 	C["chat"].chat_bar = true
 	C["chat"].chat_bar_mouseover = true
 	C["chat"].combatlog = false
-	C["minimap"].toggle_menu = false
-	C["minimap"].fog_of_war = true
 	C["nameplate"].health_value = true
 	C["nameplate"].healer_icon = true
-	C["actionbar"].toggle_mode = false
-	C["actionbar"].bottombars = 3
-	C["aura"].show_spiral = true
-	C["aura"].cast_by = true
+	C["combattext"].crit_prefix = ""
+	C["combattext"].blizz_head_numbers = true
+	C["combattext"].dk_runes = false
+	C["combattext"].heal_treshold = UnitHealthMax("player")/100
+	C["minimap"].toggle_menu = false
+	C["minimap"].fog_of_war = true
 	C["filger"].show_tooltip = true
-	C["unitframe"].castbar_icon = true
-	C["unitframe"].plugins_enemy_spec = true
-	C["raidframe"].solo_mode = true
-	C["raidframe"].icons_leader = false
+	C["announcements"].bad_gear = true
+	C["automation"].accept_invite = true
+	C["automation"].screenshot = true
+	C["automation"].auto_role = true
+	C["automation"].tab_binder = true
+	C["pulsecooldown"].enable = true
+	C["pulsecooldown"].threshold = 6
+	C["threat"].enable = false
 	C["toppanel"].enable = false
 	C["stats"].battleground = true
 	C["stats"].currency_cooking = false
 	C["stats"].currency_professions = false
 	C["stats"].currency_raid = false
 	C["stats"].currency_misc = false
+	C["trade"].disenchanting = true
+	C["trade"].enchantment_scroll = true
+	C["misc"].shift_marking = false
+	C["misc"].quest_auto_button = true
+	C["misc"].click_cast = true
 	C["font"].stats_font = C.media.normal_font
 	C["font"].stats_font_style = "OUTLINE"
 	C["font"].stats_font_size = 12
@@ -260,4 +259,8 @@ if IsWetxius then
 	T.CustomFilgerSpell = {
 		{"COOLDOWN", {spellID = 313698, filter = "ICD", trigger = "BUFF", duration = 80}}, -- Gift of the Titans
 	}
+end
+
+if ShestakUICustomProfile then
+	ShestakUICustomProfile()
 end

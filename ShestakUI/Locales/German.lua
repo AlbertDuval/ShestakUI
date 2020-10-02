@@ -149,10 +149,6 @@ L_COOLDOWNS_COMBATRESS = "Battlerezz"
 L_COOLDOWNS_COMBATRESS_REMAINDER = "Battlerezz übrig: "
 L_COOLDOWNS_NEXTTIME = "Nächste möglichkeit: "
 
--- Autoinvite
-L_INVITE_ENABLE = "Autoinvite AN: "
-L_INVITE_DISABLE = "Autoinvite AUS"
-
 -- Bind key
 L_BIND_SAVED = "Alle Tastenbelegungen wurden gespeichert."
 L_BIND_DISCARD = "Alle grade neu belegten Tastenbelegungen wurden verworfen."
@@ -286,25 +282,23 @@ L_SLASHCMD_HELP = {
 	"/rd - Gruppe oder Schlachtzug auflösen.",
 	"/toraid - In Gruppe oder Schlachtzug umwandeln.",
 	"/teleport - Teleport vom beliebigen Dungeon.",
-	"/spec, /ss - Zwischen den Talenten wechseln.",
+	"/ss - Zwischen den Talenten wechseln.",
+	"/tt - Ziehl anflüstern.",
 	"/heal - Zum Heiler Layout wechseln.",
 	"/dps - Zum DPS Layout wechseln.",
-	"/frame - Beschreibung nicht verfügbar.",
 	"/farmmode - Erhöht die Größe der Minimap.",
-	"/moveui - Ermöglicht das Bewegen der Interface Elemente.", -- Need review
 	"/resetui - Zurücksetzen der allgemeinen Einstellungen auf die Standardwerte.",
 	"/resetuf - Zurücksetzen der Einheitenfenster auf die Standardposition.",
 	"/resetconfig - Zurücksetzen der ShestakUI_Config Einstellungen.",
 	"/resetstats - Gold Statistik und gespielte Zeit zurücksetzen.",
-	"/settings ADDON_NAME - Einstellungen für msbt, dbm, skada, oder alle Addons anwenden.",
-	"/ls, /litestats - Hilfe für LiteStats.",
+	"/settings - Einstellungen für msbt, dbm, skada, oder alle Addons anwenden.",
+	"/ls - Hilfe für LiteStats.",
 	"/xct - Kampflogtext verwalten.",
 	"/raidcd - Abklingzeiten für Schlachtzüge testen.",
 	"/enemycd - Gegnerische Abklingzeiten testen.",
 	"/pulsecd - Pulsierende Abklingzeiten testen.",
 	"/threat - Bedrohungsmeter testen.",
-	"/tt - Ziehl anflüstern.",
-	"/ainv - Automatisches Einladen aktivieren.",
 	"/testuf - Einheitenfenster testen.",
+	"/moveui - Ermöglicht das Bewegen der Interface Elemente.", -- Need review
 	"/cfg - Interface Einstellungen öffnen.",
 }

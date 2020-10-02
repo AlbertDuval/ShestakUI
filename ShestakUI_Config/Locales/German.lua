@@ -17,6 +17,8 @@ L_GUI_LAYOUT = "Layout ändern"
 L_GUI_SPELL_LIST = "Liste der Zauber"
 L_GUI_SPELL_INPUT = "Zauber ID"
 L_GUI_TIME_INPUT = "Zeit"
+L_GUI_EXPERT_MODE = "Expert mode" -- Need review
+L_GUI_EXPERT_MODE_DESC = "Custom editing of Lua profile" -- Need review
 
 -- General options
 L_GUI_GENERAL_SUBTEXT = "Diese Einstellungen steuern die allgemeinen Einstellungen der Benutzeroberfläche. Geben Sie im Chat '/uihelp ein, um Hilfe zu erhalten."
@@ -216,6 +218,7 @@ L.actionbar_toggle_mode_desc = "The quick change in the number of panels. For th
 L_GUI_ACTIONBAR_HIDE_HIGHLIGHT = "hebe keine Procs hervor"
 L_GUI_ACTIONBAR_BOTTOMBARS = "Anzahl der Aktionsleisten an der unteren Seite"
 L_GUI_ACTIONBAR_RIGHTBARS = "Anzahl der Aktionsleisten an der rechten Seite"
+L.actionbar_bottombars_mouseover = "Bottom bars on mouseover" -- Needs review
 L_GUI_ACTIONBAR_RIGHTBARS_MOUSEOVER = "Zeige die rechten Leisten nur bei Mouseover"
 L_GUI_ACTIONBAR_PETBAR_HIDE = "Verstecke Begleiterleiste"
 L_GUI_ACTIONBAR_PETBAR_HORIZONTAL = "Aktiviere horizontale Begleiterleiste"
@@ -463,8 +466,9 @@ L.automation_buff_on_scroll_desc = "Wenn der Stärkungszauber aus der Liste nich
 L.automation_open_items = "Öffnet Automatisch Items in der Tasche"
 L.automation_resurrection = "Auferstehung bestätigen"
 L.automation_summon = "Bestätige Summon"
-L.automation_invite_keyword = "Kurzes Schlüsselwort für Einladungen"
-L.automation_invite_keyword_desc = "When player whisper you keyword he will be invited in your group. \nFor enable - type '/ainv'. Also after the command, you can write your word '/ainv inv'" -- Need review
+L.automation_whisper_invite = "Auto invite when whisper keyword" -- Needs review
+L.automation_invite_keyword = "List of keyword (separated by space)" -- Needs review
+L.automation_invite_keyword_desc = "When player whisper you keyword he will be invited in your group" -- Needs review
 
 -- Buffs reminder options
 L_GUI_REMINDER = "Erinnerungen für Buffs"

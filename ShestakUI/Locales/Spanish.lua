@@ -149,10 +149,6 @@ L_COOLDOWNS_COMBATRESS = "CombatRess" -- Needs review
 L_COOLDOWNS_COMBATRESS_REMAINDER = "Combat resurrect: " -- Needs review
 L_COOLDOWNS_NEXTTIME = "Next time: " -- Needs review
 
--- Autoinvite
-L_INVITE_ENABLE = "Auto Invitar ON: "
-L_INVITE_DISABLE = "Auto Invitar OFF"
-
 -- Bind key
 L_BIND_SAVED = "La configuración de las teclas ha sido guardada."
 L_BIND_DISCARD = "Se han descartado los cambios en la configuración de las teclas."
@@ -286,25 +282,23 @@ L_SLASHCMD_HELP = {
 	"/rd - Rompe el grupo o la banda.",
 	"/toraid - Convierte el grupo a bandaConvert to party or raid.",
 	"/teleport - Teleportarse desde una mazmorra aleatoria.",
-	"/spec, /ss - Cambia entre especializaciones de talentos.",
+	"/ss - Cambia entre especializaciones de talentos.",
+	"/tt - Susurrar objetivo.",
 	"/heal - Cambia a la apariencia de 'Curación'.",
 	"/dps - Cambia a la apariencia de 'Daño'.",
-	"/frame - La descripción aun no está lista.",
 	"/farmmode - Incrementa el tamaño del minimapa.",
-	"/moveui - Permite mover los elementos de la interfaz.", -- Need review
 	"/resetui - Reinicia la configuración general a la por defecto.",
 	"/resetuf - Reinicia los marcos de unidades a su posición por defecto.",
 	"/resetconfig - Reinicia la configuración de ShestakUI_Config.",
 	"/resetstats - Reinicia las estadísticas de oro y tiempo empleado.",
-	"/settings ADDON_NAME - Aplica la configuración a msbt, dbm, skada, o a todos los addons (con 'all').",
-	"/ls, /litestats - Ayuda para LiteStats.",
+	"/settings - Aplica la configuración a msbt, dbm, skada, o a todos los addons (con 'all').",
+	"/ls - Ayuda para LiteStats.",
 	"/xct - Gestiona el texto de combate.",
 	"/raidcd - Prueba de los enfriamientos de la banda.",
 	"/enemycd - Prueba de los enfriamientos del enemigo.",
 	"/pulsecd - Prueba de tus propios enfriamientos.",
 	"/threat - Prueba del medidor de amenaza.",
-	"/tt - Susurrar objetivo.",
-	"/ainv - Activa la invitación automática.",
 	"/testuf - Prueba de los marcos de unidades.",
+	"/moveui - Permite mover los elementos de la interfaz.", -- Need review
 	"/cfg - Abre la configuración de la interfaz.",
 }

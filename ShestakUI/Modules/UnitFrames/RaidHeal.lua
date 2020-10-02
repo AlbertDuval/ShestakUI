@@ -298,8 +298,8 @@ end
 --	Default position of ShestakUI unitframes
 ----------------------------------------------------------------------------------------
 oUF:Factory(function(self)
-	--if string.find(SavedOptions.RaidLayout,'HEAL') == nil then return end
-	if SavedOptions == nil or string.find(SavedOptions.RaidLayout,'HEAL') == nil then return end
+	--if ShestakUISettings == nil or ShestakUISettings.RaidLayout ~= "HEAL" then return end
+	if ShestakUISettings == nil or string.find(ShestakUISettings.RaidLayout,'HEAL') == nil then return end
 
 	oUF:RegisterStyle("ShestakHeal", Shared)
 	oUF:SetActiveStyle("ShestakHeal")

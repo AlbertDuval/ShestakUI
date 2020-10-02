@@ -166,9 +166,9 @@ C["raidframe"] = {
 	["raid_tanks"] = true,						-- Show raid tanks
 	["raid_tanks_tt"] = true,					-- Show raid tanks target target
 	["raid_groups"] = 9,						-- Number of groups in raid
-	["auto_position"] = "DYNAMIC",				-- Auto reposition raid frame (only for heal layout) (DYNAMIC, STATIC, NONE)
-	["raid_groups_vertical"] = false,			-- Vertical raid groups (only for heal layout)
-	["vertical_health"] = false,				-- Vertical orientation of health (only for heal layout)
+	["auto_position"] = "DYNAMIC",				-- Auto reposition raid frame (only for Heal layout) (DYNAMIC, STATIC, NONE)
+	["raid_groups_vertical"] = false,			-- Vertical raid groups (only for Heal layout)
+	["vertical_health"] = false,				-- Vertical orientation of health (only for Heal layout)
 	["by_role"] = false,							-- Sorting players in group by role
 	["aggro_border"] = true,					-- Aggro border
 	["deficit_health"] = true,					-- Raid deficit health
@@ -242,6 +242,7 @@ C["actionbar"] = {
 	["toggle_mode"] = true,						-- Enable toggle mode
 	-- Bottom bars
 	["bottombars"] = 2,							-- Number of action bars on the bottom (1, 2 or 3)
+	["bottombars_mouseover"] = false,			-- Bottom bars on mouseover
 	-- Right bars
 	["rightbars"] = 3,							-- Number of action bars on right (0, 1, 2 or 3)
 	["rightbars_mouseover"] = true,				-- Right bars on mouseover
@@ -480,7 +481,8 @@ C["automation"] = {
 	["open_items"] = false,						-- Auto opening of items in bag
 	["resurrection"] = false,					-- Auto confirm resurrection
 	["summon"] = false,							-- Auto confirm summon after 10 sec
-	["invite_keyword"] = "inv",					-- Short keyword for invite (for enable - in game type /ainv)
+	["whisper_invite"] = false,					-- Auto invite when whisper keyword
+	["invite_keyword"] = "inv +",				-- List of keyword (separated by space)
 }
 
 ----------------------------------------------------------------------------------------
@@ -623,5 +625,5 @@ C["misc"] = {
 	["click_cast"] = false,						-- Simple click2cast spell binder
 	["click_cast_filter"] = false,				-- Ignore Player and Target frames for click2cast
 	["chars_currency"] = false,					-- Tracks your currency tokens across multiple characters
-	["hide_raid_button"] = false,				-- Button to hide raid frames in dps layout (top left mouseover)
+	["hide_raid_button"] = false,				-- Button to hide raid frames in DPS layout (top left mouseover)
 }

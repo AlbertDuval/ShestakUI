@@ -17,6 +17,8 @@ L_GUI_LAYOUT = "布局切换"
 L_GUI_SPELL_LIST = "法术列表"
 L_GUI_SPELL_INPUT = "法术ID"
 L_GUI_TIME_INPUT = "时间"
+L_GUI_EXPERT_MODE = "Expert mode" -- Need review
+L_GUI_EXPERT_MODE_DESC = "Custom editing of Lua profile" -- Need review
 
 -- General options
 L_GUI_GENERAL_SUBTEXT = "一般用戶界面设置，键入 /uihelp 获取更多可用命令。"
@@ -216,6 +218,7 @@ L.actionbar_toggle_mode_desc = "可随时调节动作条显示数目。按钮位
 L_GUI_ACTIONBAR_HIDE_HIGHLIGHT = "关闭动作条技能特效高亮"
 L_GUI_ACTIONBAR_BOTTOMBARS = "底部动作条数目"
 L_GUI_ACTIONBAR_RIGHTBARS = "右侧动作条数目"
+L.actionbar_bottombars_mouseover = "Bottom bars on mouseover" -- Needs review
 L_GUI_ACTIONBAR_RIGHTBARS_MOUSEOVER = "右侧动作条鼠标悬停显示"
 L_GUI_ACTIONBAR_PETBAR_HIDE = "隐藏宠物动作条"
 L_GUI_ACTIONBAR_PETBAR_HORIZONTAL = "宠物动作条横向排列"
@@ -463,8 +466,9 @@ L.automation_buff_on_scroll_desc = "指定Buff缺失时使用鼠标滚轮施放"
 L.automation_open_items = "自动打开背包中的封装物品"
 L.automation_resurrection = "自动确认复活"
 L.automation_summon = "自动确认召唤"
-L.automation_invite_keyword = "自动邀请关键词"
-L.automation_invite_keyword_desc = "键入 /ainv 开/关密语自动邀请，键入 /ainv 123 代表开启并更改当前密语关键词为123。"
+L.automation_whisper_invite = "Auto invite when whisper keyword" -- Needs review
+L.automation_invite_keyword = "List of keyword (separated by space)" -- Needs review
+L.automation_invite_keyword_desc = "When player whisper you keyword he will be invited in your group" -- Needs review
 
 -- Buffs reminder options
 L_GUI_REMINDER = "Buff提示"

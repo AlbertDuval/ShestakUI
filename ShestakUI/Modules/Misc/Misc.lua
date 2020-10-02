@@ -140,7 +140,9 @@ if C.misc.hide_raid_button == true then
 				for i = 1, C.raidframe.raid_groups do
 					_G["oUF_RaidDPS"..i]:SetAlpha(0)
 				end
-				oUF_MainTank:SetAlpha(0)
+				if oUF_MainTank then
+					oUF_MainTank:SetAlpha(0)
+				end
 			end
 			show = true
 		else
@@ -148,7 +150,9 @@ if C.misc.hide_raid_button == true then
 				for i = 1, C.raidframe.raid_groups do
 					_G["oUF_RaidDPS"..i]:SetAlpha(1)
 				end
-				oUF_MainTank:SetAlpha(1)
+				if oUF_MainTank then
+					oUF_MainTank:SetAlpha(1)
+				end
 			end
 			show = false
 		end
@@ -187,7 +191,7 @@ if C.misc.hide_raid_button == true then
 
 	HideRaid:RegisterEvent("PLAYER_LOGIN")
 	HideRaid:SetScript("OnEvent", function(self)
-		if C.unitframe.enable == true and SavedOptions and SavedOptions.RaidLayout == "DPS" then
+		if C.unitframe.enable == true and ShestakUISettings and ShestakUISettings.RaidLayout == "DPS" then
 			self:Show()
 		end
 	end)

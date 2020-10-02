@@ -16,8 +16,8 @@ local partytarget_height = party_height
 local raid_width = C.raidframe.dps_raid_width
 local raid_height = C.raidframe.dps_raid_height
 local raid_power_height = C.raidframe.dps_raid_power_height
-local tank_width = 60
-local tank_height = 26
+local tank_width = C.raidframe.heal_width
+local tank_height = C.raidframe.heal_height
 
 -- Create layout
 local function Shared(self, unit)
@@ -281,7 +281,7 @@ end
 --	Default position of ShestakUI unitframes
 ----------------------------------------------------------------------------------------
 oUF:Factory(function(self)
-	if SavedOptions == nil or SavedOptions.RaidLayout ~= "DPS" then return end
+	if ShestakUISettings == nil or ShestakUISettings.RaidLayout ~= "DPS" then return end
 
 	oUF:RegisterStyle("ShestakDPS", Shared)
 	oUF:SetActiveStyle("ShestakDPS")

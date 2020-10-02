@@ -145,10 +145,6 @@ L_COOLDOWNS_COMBATRESS = "BattleRes"
 L_COOLDOWNS_COMBATRESS_REMAINDER = "Battle Resurrection: "
 L_COOLDOWNS_NEXTTIME = "Next time: "
 
--- Autoinvite
-L_INVITE_ENABLE = "Autoinvite ON: "
-L_INVITE_DISABLE = "Autoinvite OFF"
-
 -- Bind key
 L_BIND_SAVED = "All keybindings have been saved."
 L_BIND_DISCARD = "All newly set keybindings have been discarded."
@@ -282,25 +278,23 @@ L_SLASHCMD_HELP = {
 	"/rd - Disband party or raid.",
 	"/toraid - Convert to party or raid.",
 	"/teleport - Teleportation from random dungeon.",
-	"/spec, /ss - Switches between talent spec's.",
+	"/ss - Switches between talent spec's.",
+	"/tt - Whisper target.",
 	"/heal - Switches to 'Heal' layout.",
 	"/dps - Switches to 'DPS' layout.",
-	"/frame - Description is not ready.",
 	"/farmmode - Increase the size of the minimap.",
-	"/moveui - Allows the movement of interface elements. Ctrl + Right-Click to reset position",
 	"/resetui - Resets general settings to default.",
 	"/resetuf - Resets the unit frames to their default position.",
 	"/resetconfig - Resets ShestakUI_Config settings.",
 	"/resetstats - Resets the statistics of gold and time spent.",
-	"/settings ADDON_NAME - Applies settings to msbt, dbm, skada, or all addons.",
-	"/ls, /litestats - Help for LiteStats.",
+	"/settings - Applies settings to msbt, dbm, skada, bw addons.",
+	"/ls - Help for LiteStats.",
 	"/xct - Manage the combat text.",
 	"/raidcd - Raid cooldown test.",
 	"/enemycd - Enemy cooldown test.",
 	"/pulsecd - Self cooldown pulse test.",
 	"/threat - Threat meter test.",
-	"/tt - Whisper target.",
-	"/ainv - Enables automatic invitation.",
 	"/testuf - Unit frame test.",
+	"/moveui - Allows the movement of interface elements. Right-Click to reset position",
 	"/cfg - Opens interface settings.",
 }

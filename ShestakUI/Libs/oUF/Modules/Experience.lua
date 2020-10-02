@@ -33,7 +33,7 @@ local function IsPlayerMaxHonorLevel()
 end
 
 local function ShouldShowHonor()
-	return IsPlayerMaxLevel() and (IsWatchingHonorAsXP() or InActiveBattlefield() or IsInActiveWorldPVP())
+	return IsPlayerMaxLevel() and (IsWatchingHonorAsXP() or C_PvP.IsActiveBattlefield() or IsInActiveWorldPVP())
 end
 
 local function GetValues()
@@ -80,16 +80,16 @@ local function OnMouseUp(element, btn)
 	if btn == "MiddleButton" then
 		if element.outAlpha == 0 then
 			element.outAlpha = 1
-			SavedOptions.Experience = true
+			ShestakUISettings.Experience = true
 		else
 			element.outAlpha = 0
-			SavedOptions.Experience = false
+			ShestakUISettings.Experience = false
 		end
 	end
 end
 
 local function CheckAlpha(element)
-	if SavedOptions and SavedOptions.Experience == true then
+	if ShestakUISettings and ShestakUISettings.Experience == true then
 		element.outAlpha = 1
 		element:SetAlpha(element.outAlpha or 1)
 	end

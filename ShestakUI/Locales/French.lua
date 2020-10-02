@@ -149,10 +149,6 @@ L_COOLDOWNS_COMBATRESS = "Résurrection en combat"
 L_COOLDOWNS_COMBATRESS_REMAINDER = "Résurrection en combat : "
 L_COOLDOWNS_NEXTTIME = "Suivant : "
 
--- Autoinvite
-L_INVITE_ENABLE = "Invitation automatique activée : "
-L_INVITE_DISABLE = "Invitation automatique désactivée"
-
 -- Bind key
 L_BIND_SAVED = "Vos assignations de touches ont été sauvegardées."
 L_BIND_DISCARD = "Vos nouvelles assignations de touches n'ont pas été sauvegardées."
@@ -286,25 +282,23 @@ L_SLASHCMD_HELP = {
 	"/rd - Dissout le groupe ou raid.",
 	"/toraid - Active le mode raid.",
 	"/teleport - Téléportation dans le donjon aléatoire en cours.",
-	"/spec, /ss - Bascule d'une spécialisation talent à l'autre.",
+	"/ss - Bascule d'une spécialisation talent à l'autre.",
+	"/tt - Chuchote à la cible.",
 	"/heal - Bascule vers l'interface 'Heal'.",
 	"/dps - Bascule sur l'interface 'DPS'.",
-	"/frame - Description is not ready.",
 	"/farmmode - Agrandi la taille de la minimap.",
-	"/moveui - Permet de déplacer des éléments de l'interface.", -- Need review
 	"/resetui - Remet les paramètres généraux à leurs valeurs par défaut.",
 	"/resetuf - Remet les cadres d'unité à leur position par défaut.",
 	"/resetconfig - Remet les paramètres ShestakUI_Config à leurs valeurs par défaut.",
 	"/resetstats - Remet à zéro les statitisques or et temps passé en jeu.",
-	"/settings ADDON_NAME - Applique les paramètres pour msbt, dbm, skada, ou à tous les addons.",
-	"/ls, /litestats - Menu d'aide pour LiteStats.",
+	"/settings - Applique les paramètres pour msbt, dbm, skada, ou à tous les addons.",
+	"/ls - Menu d'aide pour LiteStats.",
 	"/xct - Menu d'aide pour le texte de combat.",
 	"/raidcd - Lance un test du temps de recharge Raid.",
 	"/enemycd - Lance un test du temps de recharge Ennemi.",
 	"/pulsecd - Lance un test local de Cooldown pulse.",
 	"/threat - Lance un test des barres de menace.",
-	"/tt - Chuchote à la cible.",
-	"/ainv - Active l'invitation automatique.",
 	"/testuf - Lance un test des cadres d'unité.",
+	"/moveui - Permet de déplacer des éléments de l'interface.", -- Need review
 	"/cfg - Ouvre les paramètres de l'interface.",
 }
