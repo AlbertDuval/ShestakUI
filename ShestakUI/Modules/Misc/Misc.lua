@@ -198,6 +198,11 @@ if C.misc.hide_raid_button == true then
 end
 
 ----------------------------------------------------------------------------------------
+--	Easy delete good items
+----------------------------------------------------------------------------------------
+hooksecurefunc(StaticPopupDialogs["DELETE_GOOD_ITEM"], "OnShow", function(s) s.editBox:SetText(DELETE_ITEM_CONFIRM_STRING) s.editBox:SetAutoFocus(false) s.editBox:ClearFocus() end)
+
+----------------------------------------------------------------------------------------
 --	Change UIErrorsFrame strata
 ----------------------------------------------------------------------------------------
 UIErrorsFrame:SetFrameLevel(0)

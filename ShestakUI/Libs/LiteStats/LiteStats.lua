@@ -6,6 +6,8 @@ local T, C, L, _ = unpack(select(2, ...))
 local P = "player"
 local realm, char, class, layout = GetRealmName(), UnitName(P), select(2, UnitClass(P)), {}
 
+SHOW_SPEC_LEVEL = 15 --FIXME
+
 -- Tooltip text colors
 local tthead = {r = 0.40, g = 0.78, b = 1}	-- Headers
 local ttsubh = {r = 0.75, g = 0.90, b = 1}	-- Subheaders
@@ -1729,13 +1731,13 @@ if gold.enabled then
 			GameTooltip:AddLine(" ")
 
 			local currencies = 0
-			for i = 1, GetCurrencyListSize() do
-				local name, _, _, _, watched, count, icon = GetCurrencyListInfo(i)
-				if watched then
+			for i = 1, C_CurrencyInfo.GetCurrencyListSize() do
+				local info = C_CurrencyInfo.GetCurrencyListInfo(i)
+				if info and info.isShowInBackpack then
 					if currencies == 0 then GameTooltip:AddLine(TRACKING, ttsubh.r, ttsubh.g, ttsubh.b) end
 					local r, g, b
-					if count > 0 then r, g, b = 1, 1, 1 else r, g, b = 0.5, 0.5, 0.5 end
-					GameTooltip:AddDoubleLine(name, format("%d |T%s:"..t_icon..":"..t_icon..":0:0:64:64:5:59:5:59:%d|t", count, icon, t_icon), r, g, b, r, g, b)
+					if info.quantity > 0 then r, g, b = 1, 1, 1 else r, g, b = 0.5, 0.5, 0.5 end
+					GameTooltip:AddDoubleLine(info.name, format("%d |T%s:"..t_icon..":"..t_icon..":0:0:64:64:5:59:5:59:%d|t", info.quantity, info.iconFileID, t_icon), r, g, b, r, g, b)
 					currencies = currencies + 1
 				end
 			end
