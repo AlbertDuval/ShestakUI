@@ -39,8 +39,8 @@ local function Shared(self, unit)
 		self.Health:SetPoint("BOTTOMLEFT", self, "BOTTOMLEFT", 0, 0)
 		self.Health:SetPoint("BOTTOMRIGHT", self, "BOTTOMRIGHT", 0, 0)
 	else
-		self.Health:SetPoint("BOTTOMLEFT", self, "BOTTOMLEFT", 0, power_height + 1)
-		self.Health:SetPoint("BOTTOMRIGHT", self, "BOTTOMRIGHT", 0, power_height + 1)
+		self.Health:SetPoint("BOTTOMLEFT", self, "BOTTOMLEFT", 0, C.raidframe.heal_power_height > 0 and power_height + 1 or 0)
+		self.Health:SetPoint("BOTTOMRIGHT", self, "BOTTOMRIGHT", 0, C.raidframe.heal_power_height > 0 and power_height + 1 or 0)
 	end
 	self.Health:SetStatusBarTexture(C.media.texture)
 
@@ -289,6 +289,10 @@ local function Shared(self, unit)
 		self.RaidDebuffs.FilterDispellableDebuff = true
 		self.RaidDebuffs.MatchBySpellName = true
 		self.RaidDebuffs.Debuffs = T.RaidDebuffs
+	end
+
+	if T.PostCreateHealRaidFrames then
+		T.PostCreateHealRaidFrames(self, unit)
 	end
 
 	return self

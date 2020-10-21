@@ -460,6 +460,12 @@ function T.SkinCloseButton(f, point, text, pixel)
 	f:SetSize(18, 18)
 
 	if not text then text = "x" end
+	if text == "-" and not pixel then
+		f.text = f:CreateTexture(nil, "OVERLAY")
+		f.text:SetSize(7, 1)
+		f.text:SetPoint("CENTER")
+		f.text:SetTexture(C.media.blank)
+	end
 	if not f.text then
 		if pixel then
 			f.text = f:FontString(nil, C.media.pixel_font, 8)
@@ -1029,7 +1035,9 @@ T.UpdateManaLevel = function(self, elapsed)
 	self.elapsed = 0
 
 	if UnitPowerType("player") == 0 then
-		local percMana = UnitPower("player", Enum.PowerType.Mana) / UnitPowerMax("player", Enum.PowerType.Mana) * 100
+		local cur = UnitPower("player", 0)
+		local max = UnitPowerMax("player", 0)
+		local percMana = max > 0 and (cur / max * 100) or 0
 		if percMana <= 20 and not UnitIsDeadOrGhost("player") then
 			self.ManaLevel:SetText("|cffaf5050"..MANA_LOW.."|r")
 			Flash(self)
@@ -1049,8 +1057,7 @@ T.UpdateClassMana = function(self)
 	if UnitPowerType("player") ~= 0 then
 		local min = UnitPower("player", 0)
 		local max = UnitPowerMax("player", 0)
-
-		local percMana = min / max * 100
+		local percMana = max > 0 and (min / max * 100) or 0
 		if percMana <= 20 and not UnitIsDeadOrGhost("player") then
 			self.FlashInfo.ManaLevel:SetText("|cffaf5050"..MANA_LOW.."|r")
 			Flash(self.FlashInfo)

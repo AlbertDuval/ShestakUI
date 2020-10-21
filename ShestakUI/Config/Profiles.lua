@@ -261,6 +261,9 @@ if IsWetxius then
 	}
 end
 
+----------------------------------------------------------------------------------------
+--	Load external profile https://github.com/Wetxius/ShestakUI_Profile
+----------------------------------------------------------------------------------------
 if ShestakUICustomProfile then
 	ShestakUICustomProfile()
 end

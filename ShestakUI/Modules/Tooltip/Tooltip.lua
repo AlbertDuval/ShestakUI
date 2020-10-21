@@ -21,6 +21,7 @@ local tooltips = {
 	ReputationParagonTooltip,
 	WarCampaignTooltip,
 	EmbeddedItemTooltip,
+	QuickKeybindTooltip,
 	-- Addons
 	AtlasLootTooltip,
 	QuestGuru_QuestWatchTooltip,
@@ -347,6 +348,8 @@ local OnTooltipSetUnit = function(self)
 		local raidIndex = GetRaidTargetIndex(unit)
 		if raidIndex then
 			ricon:SetTexture("Interface\\TargetingFrame\\UI-RaidTargetingIcon_"..raidIndex)
+		else
+			ricon:SetTexture(nil)
 		end
 	end
 
