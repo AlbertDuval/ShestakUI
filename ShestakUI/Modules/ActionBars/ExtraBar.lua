@@ -14,31 +14,18 @@ anchor:SetSize(53, 53)
 anchor:SetFrameStrata("LOW")
 RegisterStateDriver(anchor, "visibility", "[petbattle] hide; show")
 
-ExtraActionBarFrame:SetParent(ExtraButtonAnchor)
+ExtraActionBarFrame:SetParent(anchor)
 ExtraActionBarFrame:ClearAllPoints()
-ExtraActionBarFrame:SetPoint("CENTER", anchor, "CENTER")
-ExtraActionBarFrame:SetSize(53, 53)
-ExtraActionBarFrame.ignoreFramePositionManager = true
-ExtraActionButton1:SetAttribute("showgrid", 1)
+ExtraActionBarFrame:SetAllPoints()
+ExtraActionBarFrame.ignoreInLayout = true
+ExtraAbilityContainer.SetSize = T.dummy
+UIPARENT_MANAGED_FRAME_POSITIONS.ExtraAbilityContainer = nil
 
-ZoneAbilityFrame:SetParent(ExtraButtonAnchor)
+ZoneAbilityFrame:SetParent(anchor)
 ZoneAbilityFrame:ClearAllPoints()
-ZoneAbilityFrame:SetPoint("CENTER", anchor, "CENTER")
-ZoneAbilityFrame:SetSize(53, 53)
-ZoneAbilityFrame.ignoreFramePositionManager = true
+ZoneAbilityFrame:SetAllPoints()
+ZoneAbilityFrame.ignoreInLayout = true
 ZoneAbilityFrame.SpellButtonContainer:SetPoint("TOP", anchor, "TOP")
-
-hooksecurefunc(ZoneAbilityFrame, "SetParent", function(frame, parent)
-	if parent ~= ExtraButtonAnchor then
-		frame:SetParent(ExtraButtonAnchor)
-	end
-end)
-
-hooksecurefunc(ExtraActionBarFrame, "SetParent", function(frame, parent)
-	if parent ~= ExtraButtonAnchor then
-		frame:SetParent(ExtraButtonAnchor)
-	end
-end)
 
 ------------------------------------------------------------------------------------------
 --	Skin ExtraActionBarFrame(by Zork)
@@ -53,7 +40,6 @@ end
 button.style:SetTexture(nil)
 hooksecurefunc(texture, "SetTexture", disableTexture)
 
-button:StyleButton()
 button:SetSize(53, 53)
 
 button.Count:SetFont(C.font.cooldown_timers_font, C.font.cooldown_timers_font_size, C.font.cooldown_timers_font_style)
@@ -61,13 +47,15 @@ button.Count:SetShadowOffset(C.font.cooldown_timers_font_shadow and 1 or 0, C.fo
 button.Count:SetPoint("BOTTOMRIGHT", 0, 1)
 button.Count:SetJustifyH("RIGHT")
 
+button:SetAttribute("showgrid", 1)
+
 ------------------------------------------------------------------------------------------
 --	Skin ZoneAbilityFrame
 ------------------------------------------------------------------------------------------
 local function SkinZoneAbilities()
 	for button in ZoneAbilityFrame.SpellButtonContainer:EnumerateActive() do
 		if not button.IsSkinned then
-			button:StripTextures()
+			button.NormalTexture:SetAlpha(0)
 			button:StyleButton()
 			button:SetSize(53, 53)
 			button:SetTemplate("Transparent")

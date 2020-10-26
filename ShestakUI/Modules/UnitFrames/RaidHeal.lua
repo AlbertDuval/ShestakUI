@@ -54,7 +54,6 @@ local function Shared(self, unit)
 		end
 	end
 
-	self.Health.frequentUpdates = true
 	if C.unitframe.own_color == true then
 		self.Health.colorDisconnected = false
 		self.Health.colorReaction = false
@@ -130,10 +129,8 @@ local function Shared(self, unit)
 
 	-- Agro border
 	if C.raidframe.aggro_border == true then
-		table.insert(self.__elements, T.UpdateThreat)
-		self:RegisterEvent("PLAYER_TARGET_CHANGED", T.UpdateThreat, true)
-		self:RegisterEvent("UNIT_THREAT_LIST_UPDATE", T.UpdateThreat)
-		self:RegisterEvent("UNIT_THREAT_SITUATION_UPDATE", T.UpdateThreat)
+		self.ThreatIndicator = CreateFrame("Frame", nil, self)
+		self.ThreatIndicator.PostUpdate = T.UpdateThreat
 	end
 
 	-- Raid marks
@@ -220,8 +217,7 @@ local function Shared(self, unit)
 			myBar = mhpb,
 			otherBar = ohpb,
 			absorbBar = ahpb,
-			maxOverflow = 1,
-			frequentUpdates = true
+			maxOverflow = 1
 		}
 
 		--self.IncHeal = T.SetFontString(self.Health, C.font.unit_frames_font, C.font.unit_frames_font_size, C.font.unit_frames_font_style)

@@ -1203,6 +1203,8 @@ C["filger_spells"] = {
 			{spellID = 286393, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Selfless Healer
 			{spellID = 114250, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Shining Light
+			{spellID = 327510, unitID = "player", caster = "player", filter = "BUFF", absID = true},
 		},
 		{
 			Name = "T_DEBUFF_ICON",
@@ -1258,6 +1260,8 @@ C["filger_spells"] = {
 			{spellID = 20271, filter = "CD"},
 			-- Blade of Justice
 			{spellID = 184575, filter = "CD"},
+			-- Hammer of Wrath
+			{spellID = 24275, filter = "CD"},
 			-- Holy Shock
 			{spellID = 20473, filter = "CD"},
 			-- Consecration

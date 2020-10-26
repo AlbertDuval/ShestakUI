@@ -59,7 +59,6 @@ local function Shared(self, unit)
 	self.Health:SetPoint("TOPRIGHT", self, "TOPRIGHT", 0, 0)
 	self.Health:SetStatusBarTexture(C.media.texture)
 
-	self.Health.frequentUpdates = true
 	if C.unitframe.own_color == true then
 		self.Health.colorTapping = false
 		self.Health.colorDisconnected = false
@@ -854,7 +853,7 @@ local function Shared(self, unit)
 		end
 	end
 
-	if C.unitframe.unit_castbar == true and unit ~= "arenatarget" then
+	if C.unitframe.unit_castbar == true and not unit:match('%wtarget$') then
 		self.Castbar = CreateFrame("StatusBar", self:GetName().."_Castbar", self)
 		self.Castbar:SetStatusBarTexture(C.media.texture, "ARTWORK")
 
@@ -870,7 +869,6 @@ local function Shared(self, unit)
 		self.Castbar.Overlay:SetPoint("BOTTOMRIGHT", 2, -2)
 
 		self.Castbar.PostCastStart = T.PostCastStart
-		self.Castbar.PostChannelStart = T.PostChannelStart
 
 		if unit == "player" then
 			if C.unitframe.castbar_icon == true then
@@ -1125,10 +1123,8 @@ local function Shared(self, unit)
 
 	-- Agro border
 	if C.raidframe.aggro_border == true and unit ~= "arenatarget" then
-		table.insert(self.__elements, T.UpdateThreat)
-		self:RegisterEvent("PLAYER_TARGET_CHANGED", T.UpdateThreat, true)
-		self:RegisterEvent("UNIT_THREAT_LIST_UPDATE", T.UpdateThreat)
-		self:RegisterEvent("UNIT_THREAT_SITUATION_UPDATE", T.UpdateThreat)
+		self.ThreatIndicator = CreateFrame("Frame", nil, self)
+		self.ThreatIndicator.PostUpdate = T.UpdateThreat
 	end
 
 	-- Raid marks
@@ -1168,8 +1164,7 @@ local function Shared(self, unit)
 			myBar = mhpb,
 			otherBar = ohpb,
 			absorbBar = ahpb,
-			maxOverflow = 1,
-			frequentUpdates = true
+			maxOverflow = 1
 		}
 	end
 
