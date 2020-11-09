@@ -45,7 +45,8 @@ L.media_classborder_color = "Цвет для классовых окантово
 L.media_backdrop_color = "Цвет для фона"
 L.media_backdrop_alpha = "Прозрачность фона"
 L.media_texture = "Основная текстура"
-L.media_subheader_pixel = "Изменение пиксельного шрифта"
+L.media_subheader_normal = "Изменение основного шрифта"
+L.media_subheader_pixel = "Изменение дополнительного шрифта"
 
 -- Font options
 L.font = "Шрифты"
@@ -132,6 +133,7 @@ L_GUI_UF_PLUGINS_POWER_PREDICTION = "Полоса прогноза исполь�
 L.unitframe_plugins_absorbs = "Количество поглощения на рамке игрока"
 L.unitframe_subheader_player_width = "Размеры рамок игрока и цели"
 L.unitframe_player_width = "Ширина"
+L.unitframe_subheader_boss_width = "Размеры рамок босса и арены"
 L.unitframe_extra_height_auto = "Авто высота здоровья и энергии"
 L.unitframe_extra_height_auto_desc = "Умное увеличение в зависимости от размера шрифта"
 L.unitframe_extra_health_height = "Доп. высота для здоровья"
@@ -549,6 +551,7 @@ L_GUI_STATS_TALENTS_DESC = "Дата-текст позволяет менять 
 L_GUI_STATS_COORDS = "Координаты"
 L_GUI_STATS_LOCATION = "Зона"
 L_GUI_STATS_BG = "Поле боя"
+L.stats_bottom_line = "Цветная полоса снизу"
 L_GUI_STATS_SUBHEADER_CURRENCY = "Валюта (отображается в дата-тексте золота)"
 L_GUI_STATS_CURRENCY_ARCHAEOLOGY = "Фрагменты археологии"
 L_GUI_STATS_CURRENCY_COOKING = "Кулинарные награды"

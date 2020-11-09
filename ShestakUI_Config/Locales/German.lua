@@ -45,7 +45,8 @@ L.media_classborder_color = "Farbe für Klassenrahmen"
 L.media_backdrop_color = "Farbe für Rahmen-Hintergrund"
 L.media_backdrop_alpha = "Alpha für transparenten Hintergrund"
 L.media_texture = "Haupttextur"
-L.media_subheader_pixel = "Ändere Pixel Schriftart"
+L.media_subheader_normal = "Change general font" -- Need review
+L.media_subheader_pixel = "Ändere Pixel Schriftart" -- Need review
 
 -- Font options
 L.font = "Schriftart"
@@ -132,6 +133,7 @@ L_GUI_UF_PLUGINS_POWER_PREDICTION = "Balken der Energiekosten auf dem Spielerfra
 L.unitframe_plugins_absorbs = "Absorbiert den Wert auf dem Spielerframe"
 L.unitframe_subheader_player_width = "Spieler- und Ziel-Frame-Größe"
 L.unitframe_player_width = "Breite"
+L.unitframe_subheader_boss_width = "Boss and arena frame size" -- Need review
 L.unitframe_extra_height_auto = "Automatische Höhe für Gesundheit/Kraft"
 L.unitframe_extra_height_auto_desc = "Intelligente Anpassung je nach Schriftgröße"
 L.unitframe_extra_health_height = "Zusätzliche Höhe für die Gesundheit"
@@ -549,6 +551,7 @@ L_GUI_STATS_TALENTS_DESC = "Wechselt bei Klick die Beute und Spec"
 L_GUI_STATS_COORDS = "Koordinaten"
 L_GUI_STATS_LOCATION = "Ort"
 L_GUI_STATS_BG = "Schlachtfeld"
+L.stats_bottom_line = "Bottom classcolor line" -- Need review
 L_GUI_STATS_SUBHEADER_CURRENCY = "Currency/Abzeichen (Anzeige im Gold Data Text)"
 L_GUI_STATS_CURRENCY_ARCHAEOLOGY = "Zeige Archäologie Fragmente"
 L_GUI_STATS_CURRENCY_COOKING = "Zeige Kochpreise/Marken"

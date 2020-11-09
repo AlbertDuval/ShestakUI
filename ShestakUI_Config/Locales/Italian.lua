@@ -45,7 +45,8 @@ L.media_classborder_color = "Color for class borders" -- Need review
 L.media_backdrop_color = "Color for borders backdrop" -- Need review
 L.media_backdrop_alpha = "Alpha for transparent backdrop" -- Need review
 L.media_texture = "Main texture" -- Need review
-L.media_subheader_pixel = "Change Pixel font" -- Need review
+L.media_subheader_normal = "Change general font" -- Need review
+L.media_subheader_pixel = "Change secondary font" -- Need review
 
 -- Font options
 L.font = "Fonts" -- Need review
@@ -132,6 +133,7 @@ L_GUI_UF_PLUGINS_POWER_PREDICTION = "Previsione del costo in potere sulla barra 
 L.unitframe_plugins_absorbs = "Absorbs value on player frame" -- Need review
 L.unitframe_subheader_player_width = "Player and target frame size" -- Need review
 L.unitframe_player_width = "Width" -- Need review
+L.unitframe_subheader_boss_width = "Boss and arena frame size" -- Need review
 L.unitframe_extra_height_auto = "Auto height for health/power" -- Need review
 L.unitframe_extra_height_auto_desc = "Smart adjust depending on font size" -- Need review
 L.unitframe_extra_health_height = "Additional height for health" -- Need review
@@ -549,6 +551,7 @@ L_GUI_STATS_TALENTS_DESC = "Date-text allows you to change the spec and loot on 
 L_GUI_STATS_COORDS = "Coordinate"
 L_GUI_STATS_LOCATION = "Località"
 L_GUI_STATS_BG = "Campi di Battaglia"
+L.stats_bottom_line = "Bottom classcolor line" -- Need review
 L_GUI_STATS_SUBHEADER_CURRENCY = "Currency (displayed in gold data text)" -- Need review
 L_GUI_STATS_CURRENCY_ARCHAEOLOGY = "Mostra i frammenti di archeologia sotto la linguetta della valuta"
 L_GUI_STATS_CURRENCY_COOKING = "Mostra le ricompense di cucina sotto la linguetta della valuta"

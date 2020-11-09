@@ -45,6 +45,7 @@ L.media_classborder_color = "Color for class borders" -- Need review
 L.media_backdrop_color = "Couleurs du remplissage des bordures (fenêtres, barres, info-bulles, etc)"
 L.media_backdrop_alpha = "Transparence du fond des bordures"
 L.media_texture = "Main texture" -- Need review
+L.media_subheader_normal = "Change general font" -- Need review
 L.media_subheader_pixel = "Modification de la Police Pixel" -- Need review
 
 -- Font options
@@ -132,6 +133,7 @@ L_GUI_UF_PLUGINS_POWER_PREDICTION = "Prédiction du coût des sorts sur la fenê
 L.unitframe_plugins_absorbs = "Absorbs value on player frame" -- Need review
 L.unitframe_subheader_player_width = "Player and target frame size" -- Need review
 L.unitframe_player_width = "Width" -- Need review
+L.unitframe_subheader_boss_width = "Boss and arena frame size" -- Need review
 L.unitframe_extra_height_auto = "Auto height for health/power" -- Need review
 L.unitframe_extra_height_auto_desc = "Smart adjust depending on font size" -- Need review
 L.unitframe_extra_health_height = "Additional height for health" -- Need review
@@ -549,6 +551,7 @@ L_GUI_STATS_TALENTS_DESC = "Date-text allows you to change the spec and loot on 
 L_GUI_STATS_COORDS = "Coordonnées"
 L_GUI_STATS_LOCATION = "Lieu actuel"
 L_GUI_STATS_BG = "Champ de bataille"
+L.stats_bottom_line = "Bottom classcolor line" -- Need review
 L_GUI_STATS_SUBHEADER_CURRENCY = "Currency (displayed in gold data text)" -- Need review
 L_GUI_STATS_CURRENCY_ARCHAEOLOGY = "Afficher les fragments d'Archéologie dans l'onglet des devises"
 L_GUI_STATS_CURRENCY_COOKING = "Afficher les marques de Cuisine dans l'onglet des devises"
