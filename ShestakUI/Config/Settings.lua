@@ -88,7 +88,8 @@ C["unitframe"] = {
 	-- Main
 	["enable"] = true,							-- Enable unit frames
 	["own_color"] = false,						-- Set your color for health bars
-	["uf_color"] = {0.4, 0.4, 0.4},				-- Color for UF if ["own_color"] = true
+	["uf_color"] = {0.4, 0.4, 0.4},				-- Color for health bars if ["own_color"] = true
+	["uf_color_bg"] = {0.1, 0.1, 0.1},			-- Color for background
 	["enemy_health_color"] = true,				-- If enable, enemy target color is red
 	["show_total_value"] = false,				-- Display of info text on player and target with XXXX/Total
 	["color_value"] = false,					-- Health/mana value is colored
@@ -318,12 +319,11 @@ C["chat"] = {
 ----------------------------------------------------------------------------------------
 C["nameplate"] = {
 	["enable"] = true, 							-- Enable nameplate
-	["height"] = 9,								-- Nameplate height
 	["width"] = 120,							-- Nameplate width
-	["alpha"] = 0.5,							-- Non-target nameplate alpha
-	["distance"] = 40,							-- Show nameplates for units within this range
-	["ad_height"] = 2,							-- Additional height for selected nameplate
+	["height"] = 9,								-- Nameplate height
 	["ad_width"] = 16,							-- Additional width for selected nameplate
+	["ad_height"] = 2,							-- Additional height for selected nameplate
+	["alpha"] = 0.5,							-- Non-target nameplate alpha
 	["combat"] = false,							-- Automatically show nameplate in combat
 	["health_value"] = false,					-- Numeral health value
 	["show_castbar_name"] = false,				-- Show castbar name
@@ -335,6 +335,9 @@ C["nameplate"] = {
 	["auras_size"] = 26,						-- Debuffs size
 	["healer_icon"] = true,					-- Show icon above enemy healers nameplate in battlegrounds
 	["totem_icons"] = true,					-- Show icon above enemy totems nameplate
+	["target_glow"] = true,					-- Show glow texture for target
+	["only_name"] = false,						-- Show only name for friendly units
+	-- Threat
 	["enhance_threat"] = true,					-- Enable threat feature, automatically changes by your role
 	["good_color"] = {0.2, 0.8, 0.2},			-- Good threat color
 	["near_color"] = {1, 1, 0},					-- Near threat color

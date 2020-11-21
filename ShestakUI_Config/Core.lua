@@ -164,6 +164,57 @@ local function onValueChanged(self, value)
 	end
 end
 
+local function onMouseWheel(self, delta)
+	value = self.textInput:GetText()
+
+	local step = self.step
+	if IsControlKeyDown() then
+		step = self.step * 5
+	elseif IsShiftKeyDown() then
+		step = self.step * 2
+	end
+
+	if delta < 0 then
+		value = value + step
+	else
+		value = value - step
+	end
+
+	if self.step < 1 then
+		if self.option == "uiscale" then
+			value = tonumber(string.format("%.3f", value))
+		else
+			value = tonumber(string.format("%.2f", value))
+		end
+	else
+		value = floor(value + 0.5)
+	end
+
+	if value < self.min then
+		value = self.min
+	elseif value > self.max then
+		value = self.max
+	end
+
+	if self.textInput then
+		self.textInput:SetText(value)
+	end
+
+	self:SetValue(value)
+
+	if userChangedSlider then
+		SaveValue(self, value)
+
+		if self.needsReload then
+			if self.step < 1 then
+				self.oldValue = tonumber(string.format("%.2f", self.oldValue))
+			end
+			old[self] = self.oldValue
+			checkIsReloadNeeded()
+		end
+	end
+end
+
 local function createSlider(parent, option, lowText, highText, low, high, step, needsReload, text, textDesc)
 	local sliderName = parent:GetName()..option
 	local f = CreateFrame("Slider", sliderName, parent, "OptionsSliderTemplate")
@@ -194,8 +245,11 @@ local function createSlider(parent, option, lowText, highText, low, high, step, 
 
 	f.needsReload = needsReload
 	f.step = step
+	f.min = low
+	f.max = high
 
 	f:SetScript("OnValueChanged", onValueChanged)
+	f:SetScript("OnMouseWheel", onMouseWheel)
 	parent[option] = f
 
 	tinsert(sliders, f)
@@ -340,9 +394,14 @@ local function resetColour(previousValues)
 	checkIsReloadNeeded()
 end
 
-local function onColourSwatchClicked(self)
-	local colourTable = C[self.group][self.option]
+local function onColourSwatchClicked(self, button)
+	if button == "RightButton" then
+		C.options[self.group][self.option] = nil
+		setReloadNeeded(true)
+		return
+	end
 
+	local colourTable = C[self.group][self.option]
 	local r, g, b = unpack(colourTable)
 	r, g, b = round(r), round(g), round(b)
 	local originalR, originalG, originalB = r, g, b
@@ -387,7 +446,7 @@ ns.CreateColourPicker = function(parent, option, needsReload, text)
 
 	f.needsReload = needsReload
 
-	f:SetScript("OnClick", onColourSwatchClicked)
+	f:SetScript("OnMouseUp", onColourSwatchClicked)
 	parent[option] = f
 
 	tinsert(colourpickers, f)
@@ -715,7 +774,7 @@ local function changeProfile()
 	for group, options in pairs(profile) do
 		if C[group] then
 			for option, value in pairs(options) do
-				if C[group][option] == nil or (group == "unitframes" and (tonumber(profile[group][option]) or type(profile[group][option]) == "table")) then
+				if C[group][option] == nil or C[group][option] == value then
 					profile[group][option] = nil
 				else
 					C[group][option] = value
@@ -739,11 +798,11 @@ local function displaySettings()
 
 	for _, slider in pairs(sliders) do
 		local value = C[slider.group][slider.option]
-		if slider.group == "font" and T.screenHeight > 1200 then
+		if T.screenHeight > 1200 and slider.group == "font" and not slider.option == "nameplates_font_size" then
 			value = value / T.mult
 		end
 		slider:SetValue(value)
-		slider.textInput:SetText(floor(value*1000)/1000)
+		slider.textInput:SetText(floor(value * 1000) / 1000)
 		slider.textInput:SetCursorPosition(0)
 		slider.oldValue = value
 	end

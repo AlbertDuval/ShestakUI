@@ -30,7 +30,6 @@ if C.combattext.merge_aoe_spam then
 	T.aoespam[195256] = 4			-- Stormlash
 	T.aoespam[270827] = 0.5			-- Webweaver's Soul Gem (Vessel of Skittering Shadows Trinket)
 	T.aoespam[207694] = 3			-- Symbiote Strike
-	--FIXME T.aoespam[210380] = 4			-- Aura of Sacrifice
 	T.aoespam[252907] = 5			-- Torment the Weak
 	T.aoespam[252896] = 0.5			-- Chaotic Darkness
 	T.aoespam[253022] = 0.5			-- Sorrow
@@ -106,13 +105,11 @@ if T.class == "DEATHKNIGHT" then
 elseif T.class == "DEMONHUNTER" then
 	if C.combattext.merge_aoe_spam then
 		T.aoespam[258926] = 3.5		-- Fel Barrage
-		T.aoespam[258921] = 0.5		-- Immolation Aura (Havoc Talent)
-		T.aoespam[258922] = 4		-- Immolation Aura Tick (Havoc Talent)
+		T.aoespam[258921] = 0.5		-- Immolation Aura
+		T.aoespam[258922] = 4		-- Immolation Aura Tick
 		T.aoespam[258883] = 4		-- Trail of Ruin
 		T.aoespam[247455] = 1		-- Spirit Bomb
 		T.aoespam[243160] = 0		-- Erupting Souls
-		--FIXME T.aoespam[187727] = 0		-- Immolation Aura
-		-- T.aoespam[178741] = 6		-- Immolation Aura Tick
 		T.aoespam[189112] = 0		-- Infernal Strike
 		T.aoespam[228478] = 0		-- Soul Cleave
 		T.aoespam[204598] = 7		-- Sigil of Flame
@@ -397,7 +394,7 @@ elseif T.class == "PALADIN" then
 elseif T.class == "PRIEST" then
 	if C.combattext.merge_aoe_spam then
 		-- Healing spells
-		--FIXME T.aoespam[204065] = 0		-- Shadow Covenant
+		T.aoespam[314867] = 0		-- Shadow Covenant
 		T.aoespam[270501] = 2.5		-- Contrition
 		T.merge[281469] = 270501	-- Contrition
 		T.aoespam[194509] = 0.5		-- Power Word: Radiance
@@ -419,7 +416,6 @@ elseif T.class == "PRIEST" then
 		-- Damaging spells
 		T.aoespam[204213] = 4		-- Purge the Wicked
 		T.aoespam[205386] = 0.5		-- Shadow Crash
-		T.aoespam[263346] = 0.5		-- Dark Void
 		T.aoespam[49821] = 3		-- Mind Sear
 		T.aoespam[263165] = 5		-- Void Torrent
 		T.aoespam[228361] = 1		-- Void Eruption
@@ -505,8 +501,8 @@ elseif T.class == "SHAMAN" then
 		T.aoespam[224125] = 4		-- Fiery Jaws
 		T.aoespam[198480] = 1		-- Fire Nova
 		T.aoespam[199116] = 4		-- Doom Vortex
-		--FIXME T.aoespam[421] = 1			-- Chain Lightning
-		-- T.merge[45297] = 421		-- Chain Lightning Overload
+		T.aoespam[188443] = 1		-- Chain Lightning
+		T.merge[45297] = 188443		-- Chain Lightning Overload
 		--FIXME T.aoespam[8349] = 0			-- Fire Nova
 		T.aoespam[77478] = 3		-- Earhquake
 		T.aoespam[51490] = 0		-- Thunderstorm
@@ -620,7 +616,7 @@ elseif T.class == "WARRIOR" then
 		T.aoespam[23881] = 0		-- Bloodthirst
 		T.merge[85384] = 96103		-- Raging Blow Off-Hand
 		T.merge[95738] = 50622		-- Bladestorm Off-Hand
-		T.merge[163558] = 280849		-- Execute Off-Hand
+		T.merge[163558] = 280849	-- Execute Off-Hand
 	end
 	if C.combattext.healing then
 		T.healfilter[117313] = true	-- Bloodthirst Heal

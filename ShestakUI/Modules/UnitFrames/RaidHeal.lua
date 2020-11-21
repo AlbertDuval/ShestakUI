@@ -70,7 +70,7 @@ local function Shared(self, unit)
 	self.Health.bg:SetAllPoints(self.Health)
 	self.Health.bg:SetTexture(C.media.texture)
 	if C.unitframe.own_color == true then
-		self.Health.bg:SetVertexColor(C.unitframe.uf_color[1], C.unitframe.uf_color[2], C.unitframe.uf_color[3], 0.2)
+		self.Health.bg:SetVertexColor(unpack(C.unitframe.uf_color_bg))
 	else
 		self.Health.bg.multiplier = 0.2
 	end
@@ -143,8 +143,8 @@ local function Shared(self, unit)
 	-- LFD role icons
 	if C.raidframe.icons_role == true and not (suffix == "target") then
 		self.GroupRoleIndicator = self.Health:CreateTexture(nil, "OVERLAY")
-		self.GroupRoleIndicator:SetSize(12, 12)
-		self.GroupRoleIndicator:SetPoint("TOP", self.Health, 0, 8)
+		self.GroupRoleIndicator:SetSize(10, 10)
+		self.GroupRoleIndicator:SetPoint("TOP", self.Health, 0, 6)
 	end
 
 	-- Ready check icons

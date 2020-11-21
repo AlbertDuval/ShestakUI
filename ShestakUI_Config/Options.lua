@@ -972,6 +972,9 @@ do
 	local uf_color = ns.CreateColourPicker(parent, "uf_color", true, L_GUI_UF_UF_COLOR)
 	uf_color:SetPoint("TOPLEFT", own_color, "BOTTOMLEFT", 24, -4)
 
+	local uf_color_bg = ns.CreateColourPicker(parent, "uf_color_bg", true)
+	uf_color_bg:SetPoint("LEFT", uf_color, "RIGHT", 248, 0)
+
 	local enemy_health_color = ns.CreateCheckBox(parent, "enemy_health_color", L_GUI_UF_ENEMY_HEALTH_COLOR)
 	enemy_health_color:SetPoint("TOPLEFT", uf_color, "BOTTOMLEFT", -24, -4)
 
@@ -1607,29 +1610,28 @@ end
 do
 	local parent = ShestakUIOptionsPanel.nameplate
 
+	local multScale = 768 / select(2, GetPhysicalScreenSize())
+
 	local enable = ns.CreateCheckBox(parent, "enable", L_GUI_NAMEPLATE_ENABLE)
 	enable:SetPoint("TOPLEFT", parent.subText, "BOTTOMLEFT", 0, 0)
 
-	local distance = ns.CreateNumberSlider(parent, "distance", nil, nil, 0, 200, 1, true, L_GUI_NAMEPLATE_DISTANCE)
-	distance:SetPoint("TOPLEFT", enable, "BOTTOMLEFT", 0, -20)
+	local width = ns.CreateNumberSlider(parent, "width", nil, nil, 0, 150 / multScale, 1, true, L_GUI_NAMEPLATE_WIDTH)
+	width:SetPoint("TOPLEFT", enable, "BOTTOMLEFT", 0, -20)
+
+	local height = ns.CreateNumberSlider(parent, "height", nil, nil, 0, 20 / multScale, 1, true, L_GUI_NAMEPLATE_HEIGHT)
+	height:SetPoint("LEFT", width, "RIGHT", 120, 0)
+
+	local ad_width = ns.CreateNumberSlider(parent, "ad_width", nil, nil, 0, 80 / multScale, 1, true)
+	ad_width:SetPoint("TOPLEFT", width, "BOTTOMLEFT", 0, -20)
+
+	local ad_height = ns.CreateNumberSlider(parent, "ad_height", nil, nil, 0, 15 / multScale, 1, true)
+	ad_height:SetPoint("LEFT", ad_width, "RIGHT", 120, 0)
 
 	local alpha = ns.CreateNumberSlider(parent, "alpha", nil, nil, 0, 1, 0.05, true)
-	alpha:SetPoint("LEFT", distance, "RIGHT", 120, 0)
-
-	local height = ns.CreateNumberSlider(parent, "height", nil, nil, 0, 20, 1, true, L_GUI_NAMEPLATE_HEIGHT)
-	height:SetPoint("TOPLEFT", distance, "BOTTOMLEFT", 0, -20)
-
-	local ad_height = ns.CreateNumberSlider(parent, "ad_height", nil, nil, 0, 30, 1, true)
-	ad_height:SetPoint("LEFT", height, "RIGHT", 120, 0)
-
-	local width = ns.CreateNumberSlider(parent, "width", nil, nil, 0, 200, 1, true, L_GUI_NAMEPLATE_WIDTH)
-	width:SetPoint("TOPLEFT", height, "BOTTOMLEFT", 0, -20)
-
-	local ad_width = ns.CreateNumberSlider(parent, "ad_width", nil, nil, 0, 50, 1, true)
-	ad_width:SetPoint("LEFT", width, "RIGHT", 120, 0)
+	alpha:SetPoint("TOPLEFT", ad_width, "BOTTOMLEFT", 0, -20)
 
 	local combat = ns.CreateCheckBox(parent, "combat", L_GUI_NAMEPLATE_COMBAT)
-	combat:SetPoint("TOPLEFT", width, "BOTTOMLEFT", 0, -10)
+	combat:SetPoint("TOPLEFT", alpha, "BOTTOMLEFT", 0, -10)
 
 	local health_value = ns.CreateCheckBox(parent, "health_value", L_GUI_NAMEPLATE_HEALTH)
 	health_value:SetPoint("TOPLEFT", combat, "BOTTOMLEFT", 0, 0)
@@ -1652,7 +1654,7 @@ do
 	local track_buffs = ns.CreateCheckBox(parent, "track_buffs", L_GUI_NAMEPLATE_SHOW_BUFFS)
 	track_buffs:SetPoint("TOPLEFT", track_debuffs, "BOTTOMLEFT", 0, 0)
 
-	local auras_size = ns.CreateNumberSlider(parent, "auras_size", nil, nil, 0, 50, 1, true, L_GUI_NAMEPLATE_DEBUFFS_SIZE)
+	local auras_size = ns.CreateNumberSlider(parent, "auras_size", nil, nil, 0, 35 / multScale, 1, true, L_GUI_NAMEPLATE_DEBUFFS_SIZE)
 	auras_size:SetPoint("TOPLEFT", track_buffs, "BOTTOMLEFT", 0, -20)
 
 	local healer_icon = ns.CreateCheckBox(parent, "healer_icon", L_GUI_NAMEPLATE_HEALER_ICON)
@@ -1660,6 +1662,12 @@ do
 
 	local totem_icons = ns.CreateCheckBox(parent, "totem_icons", L_GUI_NAMEPLATE_TOTEM_ICONS)
 	totem_icons:SetPoint("TOPLEFT", healer_icon, "BOTTOMLEFT", 0, 0)
+
+	local target_glow = ns.CreateCheckBox(parent, "target_glow")
+	target_glow:SetPoint("TOPLEFT", totem_icons, "BOTTOMLEFT", 0, 0)
+
+	local only_name = ns.CreateCheckBox(parent, "only_name")
+	only_name:SetPoint("TOPLEFT", target_glow, "BOTTOMLEFT", 0, 0)
 
 	-- Panel 2
 	local parent = ShestakUIOptionsPanel.nameplate2
