@@ -1522,7 +1522,7 @@ if C.raidframe.auto_position == "DYNAMIC" then
 			self:UnregisterEvent("GROUP_ROSTER_UPDATE")
 		end
 	end
-	if SavedOptions and SavedOptions.RaidLayout == "VHEAL" and not C.raidframe.raid_groups_vertical then
+	if ShestakUISettings and ShestakUISettings.RaidLayout == "VHEAL" and not C.raidframe.raid_groups_vertical then
 		if a < 5 then a = 5 end
 		if C.unitframe.castbar_icon == true then
 			oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4] + 11 - (a - 5) * 33.6, C.position.unitframes.player_castbar[5])

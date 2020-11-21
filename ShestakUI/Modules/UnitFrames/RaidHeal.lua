@@ -376,7 +376,7 @@ oUF:Factory(function(self)
 	end
 
 	if C.raidframe.show_raid == true then
-		if C.raidframe.raid_groups_vertical or SavedOptions.RaidLayout == "VHEAL" then
+		if C.raidframe.raid_groups_vertical or ShestakUISettings.RaidLayout == "VHEAL" then
 			-- Raid vertical
 			local raid = {}
 			for i = 1, C.raidframe.raid_groups do

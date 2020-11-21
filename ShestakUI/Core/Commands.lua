@@ -225,7 +225,7 @@ SLASH_DPS2 = "/взы"
 --	Switch to blizzard layout
 ----------------------------------------------------------------------------------------
 SlashCmdList.BLI = function()
-	SavedOptions.RaidLayout = "NONE"
+	ShestakUISettings.RaidLayout = "NONE"
 	ReloadUI()
 end
 SLASH_BLI1 = "/bliz"
