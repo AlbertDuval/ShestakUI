@@ -114,6 +114,7 @@ local function LoadSkin()
 		if frame.shine then frame.shine:Kill() end
 		if frame.raidArt then frame.raidArt:Kill() end
 		if frame.heroicIcon then frame.heroicIcon:Kill() end
+		if frame.dungeonArt then frame.dungeonArt:Kill() end
 		if frame.dungeonArt1 then frame.dungeonArt1:Kill() end
 		if frame.dungeonArt2 then frame.dungeonArt2:Kill() end
 		if frame.dungeonArt3 then frame.dungeonArt3:Kill() end
@@ -266,17 +267,9 @@ local function LoadSkin()
 			frame.backdrop:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -22, 6)
 		end
 
-		frame.shine:Kill()
-
 		-- Background
-		for i = 1, frame:GetNumRegions() do
-			local region = select(i, frame:GetRegions())
-			if region:GetObjectType() == "Texture" then
-				if region:GetTexture() == "Interface\\LFGFrame\\UI-LFG-DUNGEONTOAST" then
-					region:Kill()
-				end
-			end
-		end
+		frame.ToastBackground:Kill()
+		frame.shine:Kill()
 
 		-- Icon
 		frame.QuestTexture:SetTexCoord(0.1, 0.9, 0.1, 0.9)

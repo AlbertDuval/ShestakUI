@@ -69,6 +69,9 @@ L.font_subheader_aura = "Auras font" -- Need review
 L.font_subheader_filger = "Filger font" -- Need review
 L.font_subheader_style = "Stylization font" -- Need review
 L.font_subheader_bag = "Bags font" -- Need review
+L.font_subheader_blizzard = "System font size" -- Need review
+L.font_tooltip_header_font_size = "Tooltip header" -- Need review
+L.font_tooltip_font_size = "Tooltip text" -- Need review
 
 -- Skins options
 L_GUI_SKINS = "Estilización"
@@ -300,8 +303,8 @@ L_GUI_NAMEPLATE_CLASS_ICON = "Iconos de clase en JcJ"
 L_GUI_NAMEPLATE_NAME_ABBREV = "Mostrar los nombres abreviados"
 L_GUI_NAMEPLATE_CLAMP = "Clamp nameplates to the top of the screen when outside of view" -- Need review
 L_GUI_NAMEPLATE_SHOW_DEBUFFS = "Mostrar perjuicios (Nombres abreviados debe ser desactivado)"
-L_GUI_NAMEPLATE_SHOW_BUFFS = "Show buffs above player nameplate (from the list)" -- Need review
-L_GUI_NAMEPLATE_DEBUFFS_SIZE = "Tamaño de los perjuicios"
+L_GUI_NAMEPLATE_SHOW_BUFFS = "Show dispellable enemy buffs and buffs from the list" -- Need review
+L_GUI_NAMEPLATE_DEBUFFS_SIZE = "Tamaño de los perjuicios" -- Need review
 L_GUI_NAMEPLATE_HEALER_ICON = "Show icon above enemy healers nameplate in battlegrounds" -- Needs review
 L_GUI_NAMEPLATE_TOTEM_ICONS = "Show icon above enemy totems nameplate" -- Need review
 L.nameplate_target_glow = "Show glow texture for target" -- Need review
