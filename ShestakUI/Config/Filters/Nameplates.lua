@@ -60,7 +60,6 @@ T.DebuffWhiteList = {
 	[SpellName(2094)] = true,	-- Blind
 	[SpellName(1776)] = true,	-- Gouge
 	-- Shaman
-	[SpellName(118905)] = true,	-- Lightning Surge Totem
 	[SpellName(51514)] = true,	-- Hex
 	[SpellName(3600)] = true,	-- Earthbind
 	[SpellName(196840)] = true,	-- Frost Shock
@@ -102,7 +101,7 @@ T.BuffWhiteList = {
 	-- [SpellName(spellID)] = true,	-- Spell Name
 }
 
-if C.nameplate.debuffs_list then
+if C.nameplate.buffs_list then
 	for _, spell in pairs(C.nameplate.buffs_list) do
 		T.BuffWhiteList[SpellName(spell)] = true
 	end
@@ -113,5 +112,6 @@ T.BuffBlackList = {
 }
 
 T.PlateBlacklist = {
-	-- [SpellName(spellID)] = true,	-- Spell Name
+	["24207"] = true, -- Army of the Dead
+	["29630"] = true, -- Fanged Pit Viper (Gundrak)
 }
