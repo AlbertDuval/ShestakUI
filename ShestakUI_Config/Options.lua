@@ -493,7 +493,7 @@ ns.addCategory("unitframe", UNITFRAME_LABEL, L_GUI_UF_SUBTEXT, 3)
 ns.addCategory("unitframe_class_bar", L_GUI_UF_PLUGINS_CLASS_BAR, L_GUI_UF_PLUGINS_CLASS_BAR_SUBTEXT)
 ns.addCategory("raidframe", RAID_FRAMES_LABEL, L_GUI_UF_RAIDFRAMES_SUBTEXT, 2)
 ns.addCategory("aura", BUFFOPTIONS_LABEL, BUFFOPTIONS_SUBTEXT)
-ns.addCategory("actionbar", L_GUI_ACTIONBAR, ACTIONBARS_SUBTEXT, 2)
+ns.addCategory("actionbar", L_GUI_ACTIONBAR, ACTIONBARS_SUBTEXT)
 ns.addCategory("tooltip", L.tooltip, L.tooltip_subtext)
 ns.addCategory("chat", SOCIALS, L_GUI_CHAT_SUBTEXT)
 ns.addCategory("nameplate", UNIT_NAMEPLATES, L_GUI_NAMEPLATE_SUBTEXT, 2)
@@ -2411,7 +2411,7 @@ do
 	local currency_raid = ns.CreateCheckBox(parent, "currency_raid", L_GUI_STATS_CURRENCY_RAID)
 	currency_raid:SetPoint("TOPLEFT", currency_cooking, "BOTTOMLEFT", 0, 0)
 
-	local currency_misc = ns.CreateCheckBox(parent, "currency_misc", CURRENCY.. " "..EXPANSION_NAME7)
+	local currency_misc = ns.CreateCheckBox(parent, "currency_misc", CURRENCY.. " "..EXPANSION_NAME8)
 	currency_misc:SetPoint("TOPLEFT", currency_raid, "BOTTOMLEFT", 0, 0)
 end
 

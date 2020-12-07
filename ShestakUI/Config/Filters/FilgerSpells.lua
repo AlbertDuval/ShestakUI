@@ -808,6 +808,8 @@ C["filger_spells"] = {
 			{spellID = 108978, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Temporal Shield
 			{spellID = 198111, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Rune of Power
+			{spellID = 116011, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Mirror Image
 			{spellID = 55342, filter = "ICD", trigger = "NONE", duration = 40},
 			-- Icicles
@@ -859,8 +861,8 @@ C["filger_spells"] = {
 			{spellID = 122, unitID = "target", caster = "all", filter = "DEBUFF"},
 			-- Cone of Cold
 			{spellID = 120, unitID = "target", caster = "player", filter = "DEBUFF"},
-			-- Flurry
-			{spellID = 228354, unitID = "target", caster = "player", filter = "DEBUFF", absID = true},
+			-- Winter's Chill
+			{spellID = 228358, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Ice Nova
 			{spellID = 157997, unitID = "target", caster = "player", filter = "DEBUFF"},
 			-- Slow
@@ -2567,8 +2569,6 @@ C["filger_spells"] = {
 			{spellID = 1833, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Kidney Shot
 			{spellID = 408, unitID = "player", caster = "all", filter = "DEBUFF"},
-			-- Between the Eyes
-			{spellID = 199804, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Gouge
 			{spellID = 1776, unitID = "player", caster = "all", filter = "DEBUFF"},
 
@@ -2959,8 +2959,6 @@ C["filger_spells"] = {
 			{spellID = 1833, unitID = "target", caster = "all", filter = "DEBUFF"},
 			-- Kidney Shot
 			{spellID = 408, unitID = "target", caster = "all", filter = "DEBUFF"},
-			-- Between the Eyes
-			{spellID = 199804, unitID = "target", caster = "all", filter = "DEBUFF"},
 			-- Garrote
 			{spellID = 1330, unitID = "target", caster = "all", filter = "DEBUFF"},
 			-- Smoke Bomb
