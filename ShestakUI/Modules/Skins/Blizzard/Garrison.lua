@@ -986,7 +986,13 @@ local function LoadSkin()
 	T.SkinCloseButton(CovenantMissionFrame.MissionTab.MissionPage.CloseButton)
 	CovenantMissionFrame.MissionTab.MissionPage.StartMissionButton:SkinButton()
 
+	CovenantMissionFrame.MissionComplete.CompleteFrame.ContinueButton:SkinButton()
+	CovenantMissionFrame.MissionComplete.RewardsScreen.FinalRewardsPanel.ContinueButton:SkinButton()
+
 	HandleGarrisonPortrait(GarrisonLandingPage.FollowerTab.CovenantFollowerPortraitFrame)
+
+	CovenantMissionFrame.MissionTab.MissionPage.CostFrame.CostLabel:SetFont(C.media.normal_font, 14)
+	CovenantMissionFrame.MissionTab.MissionPage.CostFrame.CostIcon:SetTexCoord(0.1, 0.9, 0.1, 0.9)
 end
 
 T.SkinFuncs["Blizzard_GarrisonUI"] = LoadSkin

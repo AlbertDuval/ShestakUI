@@ -5,6 +5,7 @@
 	<Script file="AdventureMap.lua"/>
 	<Script file="AlertFrames.lua"/>
 	<Script file="AlliedRaces.lua"/>
+	<Script file="AnimaDiversion.lua"/>
 	<Script file="Archeology.lua"/>
 	<Script file="Artifact.lua"/>
 	<Script file="Auction.lua"/>
@@ -82,6 +83,6 @@
 	<Script file="Trainer.lua"/>
 	<Script file="Tutorial.lua"/>
 	<Script file="VoidStorage.lua"/>
-	<Script file="Warboard.lua"/>
+	<Script file="WeeklyRewards.lua"/>
 	<Script file="WorldMap.lua"/>
 </Ui>
