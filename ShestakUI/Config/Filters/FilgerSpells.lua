@@ -402,6 +402,8 @@ C["filger_spells"] = {
 			{spellID = 170856, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Dash
 			{spellID = 1850, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Starfall
+			{spellID = 191034, unitID = "player", caster = "player", filter = "BUFF"},
 		},
 		{
 			Name = "P_PROC_ICON",
@@ -427,6 +429,10 @@ C["filger_spells"] = {
 			{spellID = 69369, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Guardian of Elune
 			{spellID = 213680, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Eclipse (Solar)
+			{spellID = 48517, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Eclipse (Lunar)
+			{spellID = 48518, unitID = "player", caster = "player", filter = "BUFF"},
 		},
 		{
 			Name = "T_DEBUFF_ICON",
@@ -807,7 +813,7 @@ C["filger_spells"] = {
 			-- Temporal Shield
 			{spellID = 198111, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Rune of Power
-			{spellID = 116011, unitID = "player", caster = "player", filter = "BUFF"},
+			{spellID = 116014, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Mirror Image
 			{spellID = 55342, filter = "ICD", trigger = "NONE", duration = 40},
 			-- Icicles
@@ -837,6 +843,8 @@ C["filger_spells"] = {
 			{spellID = 269651, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Clearcasting
 			{spellID = 263725, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Rune of Power
+			{spellID = 116011, filter = "ICD", trigger = "NONE", totem = true},
 		},
 		{
 			Name = "T_DEBUFF_ICON",
