@@ -68,7 +68,7 @@ end)
 ----------------------------------------------------------------------------------------
 --	Farm mode for minimap(by Elv22)
 ----------------------------------------------------------------------------------------
-local show = false
+local show = true
 SlashCmdList.FARMMODE = function()
 	if show == false then
 		MinimapAnchor:SetSize(C.minimap.size * 1.65, C.minimap.size * 1.65)

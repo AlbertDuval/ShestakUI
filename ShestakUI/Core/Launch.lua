@@ -264,6 +264,10 @@ OnLogon:SetScript("OnEvent", function(self)
 		StaticPopup_Show("SWITCH_RAID")
 	end
 
+	-- [FM-Add] Minimap FarmMode by default
+	MinimapAnchor:SetSize(C.minimap.size * 1.65, C.minimap.size * 1.65)
+	Minimap:SetSize(MinimapAnchor:GetWidth(), MinimapAnchor:GetWidth())
+
 	-- Welcome message
 	if C.general.welcome_message == true then
 		print("|cffffff00"..L_WELCOME_LINE_1..T.version.." "..T.client..", "..T.name..".|r")
