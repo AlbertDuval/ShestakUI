@@ -91,6 +91,7 @@ if C.enemycooldown.enable == true then
     {77130, 8},	-- [ADD FM] Shaman
 		-- Interrupts and Silences
 		{187707, 15},	-- [ADD FM] Muzzle (Hunt kick)
+		{132409, 15},	-- [ADD FM] Spell Lock (Lock kick)
 		{57994, 12},	-- Wind Shear
 		{47528, 15},	-- Mind Freeze
 		{183752, 15},	-- Disrupt

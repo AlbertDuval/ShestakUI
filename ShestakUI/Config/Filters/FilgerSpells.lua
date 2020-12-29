@@ -1236,6 +1236,8 @@ C["filger_spells"] = {
 			Position = {"TOP", COOLDOWN_Anchor},
 
 			-- Self
+			-- Crusader Strike [FM ADD]
+			{spellID = 35395, filter = "CD"},
 			-- Holy Shock [FM ADD]
 			{spellID = 20473, filter = "CD"},
 			-- Eye of Tyr
@@ -1764,6 +1766,8 @@ C["filger_spells"] = {
 			IconSize = C.filger.buffs_size,
 			Position = {"TOP", P_BUFF_ICON_Anchor},
 
+			-- Primordial Wave [ADD_FM]
+			{spellID = 327164, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Surging Vitality [ADD_FM]
 			{spellID = 318211, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Manifesto of Madness Crit [ADD_FM]
@@ -1926,6 +1930,10 @@ C["filger_spells"] = {
 			{spellID = 61295, filter = "CD"},
 			-- Stormstrike
 			{spellID = 17364, filter = "CD"},
+			-- [ADD FM] Primordial Wave
+			{spellID = 326059, filter = "CD"},
+			-- [ADD FM] Fleshcraft
+			{spellID = 324631, filter = "CD"},
 			-- [ADD FM] Lightning Lasso
 			{spellID = 305483, filter = "CD"},
 			-- [ADD FM] Overcharge Mana
