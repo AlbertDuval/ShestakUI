@@ -1115,11 +1115,8 @@ do
 	local plugins_experience_bar = ns.CreateCheckBox(parent, "plugins_experience_bar")
 	plugins_experience_bar:SetPoint("TOPLEFT", plugins_reputation_bar, "BOTTOMLEFT", 0, 0)
 
-	local plugins_artifact_bar = ns.CreateCheckBox(parent, "plugins_artifact_bar")
-	plugins_artifact_bar:SetPoint("TOPLEFT", plugins_experience_bar, "BOTTOMLEFT", 0, 0)
-
 	local plugins_smooth_bar = ns.CreateCheckBox(parent, "plugins_smooth_bar", L_GUI_UF_PLUGINS_SMOOTH_BAR)
-	plugins_smooth_bar:SetPoint("TOPLEFT", plugins_artifact_bar, "BOTTOMLEFT", 0, 0)
+	plugins_smooth_bar:SetPoint("TOPLEFT", plugins_experience_bar, "BOTTOMLEFT", 0, 0)
 
 	local plugins_enemy_spec = ns.CreateCheckBox(parent, "plugins_enemy_spec", L_GUI_UF_PLUGINS_ENEMY_SPEC)
 	plugins_enemy_spec:SetPoint("TOPLEFT", plugins_smooth_bar, "BOTTOMLEFT", 0, 0)
@@ -1238,8 +1235,11 @@ do
 	local auto_position = ns.CreateDropDown(parent, "auto_position", true, L.raidframe_auto_position, {"DYNAMIC", "STATIC", "NONE"})
 	auto_position:SetPoint("TOPLEFT", raid_groups, "BOTTOMLEFT", -16, -10)
 
+	local party_vertical = ns.CreateCheckBox(parent, "party_vertical", nil, L.raidframe_raid_groups_vertical_desc)
+	party_vertical:SetPoint("TOPLEFT", auto_position, "BOTTOMLEFT", 16, 0)
+
 	local raid_groups_vertical = ns.CreateCheckBox(parent, "raid_groups_vertical")
-	raid_groups_vertical:SetPoint("TOPLEFT", auto_position, "BOTTOMLEFT", 16, 0)
+	raid_groups_vertical:SetPoint("TOPLEFT", party_vertical, "BOTTOMLEFT", 0, 0)
 
 	local vertical_health = ns.CreateCheckBox(parent, "vertical_health")
 	vertical_health:SetPoint("TOPLEFT", raid_groups_vertical, "BOTTOMLEFT", 0, 0)
@@ -1962,8 +1962,11 @@ do
 	local ilvl = ns.CreateCheckBox(parent, "ilvl", L_GUI_BAGS_ILVL)
 	ilvl:SetPoint("TOPLEFT", enable, "BOTTOMLEFT", 0, 0)
 
+	local new_items = ns.CreateCheckBox(parent, "new_items")
+	new_items:SetPoint("TOPLEFT", ilvl, "BOTTOMLEFT", 0, 0)
+
 	local button_size = ns.CreateNumberSlider(parent, "button_size", nil, nil, 0, 40, 1, true, L_GUI_BAGS_BUTTON_SIZE)
-	button_size:SetPoint("TOPLEFT", ilvl, "BOTTOMLEFT", 0, -20)
+	button_size:SetPoint("TOPLEFT", new_items, "BOTTOMLEFT", 0, -20)
 
 	local button_space = ns.CreateNumberSlider(parent, "button_space", nil, nil, 0, 10, 1, true, L_GUI_BAGS_BUTTON_SPACE)
 	button_space:SetPoint("LEFT", button_size, "RIGHT", 120, 0)
