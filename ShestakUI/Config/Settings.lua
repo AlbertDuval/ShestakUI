@@ -557,6 +557,7 @@ C["enemycooldown"] = {
 	["show_always"] = false,					-- Show everywhere
 	["show_inpvp"] = true,						-- Show in bg zone
 	["show_inarena"] = true,					-- Show in arena zone
+	["class_color"] = true,					-- [ADD-FM] Class color on icon
 }
 
 C["friendsdcooldown"] = {
