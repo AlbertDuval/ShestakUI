@@ -14,9 +14,9 @@ ObjectiveTrackerFrame:SetHeight(T.screenHeight / 1.6)
 ObjectiveTrackerFrame.IsUserPlaced = function() return true end
 
 local headers = {
+	ObjectiveTrackerBlocksFrame.ScenarioHeader,
 	ObjectiveTrackerBlocksFrame.CampaignQuestHeader,
 	ObjectiveTrackerBlocksFrame.QuestHeader,
-	ObjectiveTrackerBlocksFrame.ScenarioHeader,
 	ObjectiveTrackerBlocksFrame.AchievementHeader,
 	BONUS_OBJECTIVE_TRACKER_MODULE.Header,
 	WORLD_QUEST_TRACKER_MODULE.Header,
@@ -62,16 +62,17 @@ hooksecurefunc("QuestObjectiveSetupBlockButton_Item", function(block)
 end)
 
 hooksecurefunc("QuestObjectiveSetupBlockButton_FindGroup", function(block)
-	if block.hasGroupFinderButton and block.groupFinderButton and not block.groupFinderButton.styled then
+	if block.groupFinderButton and not block.groupFinderButton.styled then
 		local icon = block.groupFinderButton
 		icon:SetSize(26, 26)
 		icon:SetNormalTexture("")
 		icon:SetHighlightTexture("")
 		icon:SetPushedTexture("")
-		icon.b = CreateFrame("Frame", nil, block)
+		icon.b = CreateFrame("Frame", nil, icon)
 		icon.b:SetTemplate("Overlay")
 		icon.b:SetPoint("TOPLEFT", icon, "TOPLEFT", 2, -3)
 		icon.b:SetPoint("BOTTOMRIGHT", icon, "BOTTOMRIGHT", -4, 3)
+		icon.b:SetFrameLevel(1)
 
 		icon:HookScript("OnEnter", function(self)
 			if self:IsEnabled() then
@@ -89,16 +90,8 @@ hooksecurefunc("QuestObjectiveSetupBlockButton_FindGroup", function(block)
 			end
 		end)
 
-		hooksecurefunc(icon, "Show", function(button)
-			if button.b then
-				button.b:Show()
-			end
-		end)
-
-		hooksecurefunc(icon, "Hide", function(button)
-			if button.b then
-				button.b:Hide()
-			end
+		hooksecurefunc(icon, "Show", function(self)
+			self.b:SetFrameLevel(1)
 		end)
 
 		icon.styled = true
@@ -293,6 +286,7 @@ local function SkinBarIcon(_, _, line)
 
 		icon:SetPoint("RIGHT", 24, 0)
 		icon:SetSize(20, 20)
+		icon:SetMask(nil)
 
 		local border = CreateFrame("Frame", "$parentBorder", bar)
 		border:SetAllPoints(icon)
@@ -395,6 +389,27 @@ StageBlock.backdrop:SetPoint("BOTTOMRIGHT", ScenarioStageBlock.NormalBG, -6, 5)
 StageBlock.NormalBG:SetAlpha(0)
 StageBlock.FinalBG:SetAlpha(0)
 StageBlock.GlowTexture:SetTexture("")
+
+----------------------------------------------------------------------------------------
+--	Skin ScenarioStageBlock
+----------------------------------------------------------------------------------------
+local ChallengeBlock = _G["ScenarioChallengeModeBlock"]
+ChallengeBlock:CreateBackdrop("Overlay")
+ChallengeBlock.backdrop:SetPoint("TOPLEFT", ChallengeBlock, 3, -3)
+ChallengeBlock.backdrop:SetPoint("BOTTOMRIGHT", ChallengeBlock, -6, 3)
+ChallengeBlock.backdrop.overlay:SetVertexColor(0.12, 0.12, 0.12, 1)
+
+local bg = select(3, ChallengeBlock:GetRegions())
+bg:Hide()
+
+ChallengeBlock.TimerBGBack:Hide()
+ChallengeBlock.TimerBG:Hide()
+
+ChallengeBlock.StatusBar:SetStatusBarTexture(C.media.texture)
+ChallengeBlock.StatusBar:CreateBackdrop("Overlay")
+ChallengeBlock.StatusBar.backdrop:SetFrameLevel(ChallengeBlock.backdrop:GetFrameLevel() + 1)
+ChallengeBlock.StatusBar:SetStatusBarColor(0, 0.6, 1)
+ChallengeBlock.StatusBar:SetFrameLevel(ChallengeBlock.StatusBar:GetFrameLevel() + 3)
 
 ----------------------------------------------------------------------------------------
 --	Skin MawBuffsBlock
