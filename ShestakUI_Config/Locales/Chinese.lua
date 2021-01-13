@@ -140,6 +140,8 @@ L.unitframe_extra_height_auto = "血量/能量框架自动增高"
 L.unitframe_extra_height_auto_desc = "按字体大小智能调节框架高度"
 L.unitframe_extra_health_height = "血量框架额外增高"
 L.unitframe_extra_power_height = "能量框架额外增高"
+L.unitframe_subheader_castbar = "Size of player and target castbar" -- Need review
+L.unitframe_castbar_height = "Height" -- Need review
 
 -- Unit Frames Class bar options
 L_GUI_UF_PLUGINS_CLASS_BAR = "职业资源栏"
@@ -448,7 +450,7 @@ L_GUI_ANNOUNCEMENTS_TOY_TRAIN = "使用玩具火车/烈酒的遥控器时进行�
 L_GUI_ANNOUNCEMENTS_PULL_COUNTDOWN = "倒计时通告(/pc #)"
 L_GUI_ANNOUNCEMENTS_FLASK_FOOD = "通告食物和合剂的使用情況(/ffcheck)"
 L_GUI_ANNOUNCEMENTS_FLASK_FOOD_RAID = "在团队频道通告"
-L_GUI_ANNOUNCEMENTS_FLASK_FOOD_AUTO = "当团队检查就绪时进行通告" -- Needs review
+L_GUI_ANNOUNCEMENTS_FLASK_FOOD_AUTO = "当团队就位确认时进行检查"
 L_GUI_ANNOUNCEMENTS_FEASTS = "放置食物/大锅/灵魂井/修理机器人时进行通告"
 L_GUI_ANNOUNCEMENTS_PORTALS = "开启传送门/召唤仪式时进行通告"
 L.announcements_bad_gear = "检查装备"
