@@ -170,8 +170,13 @@ if C.enemycooldown.enable == true then
 		end
 	end
 	T.EnemySpells = {}
+	T.FriendSpells = {}
 	for _, spell in pairs(T.enemy_spells) do
 		T.EnemySpells[spell[1]] = spell[2]
+		T.FriendSpells[spell[1]] = spell[2]
+	end
+	for _, spell in pairs(T.trinket_spells) do
+		T.FriendSpells[spell[1]] = spell[2]
 	end
 end
 

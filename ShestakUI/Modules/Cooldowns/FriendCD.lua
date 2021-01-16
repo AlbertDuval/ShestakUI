@@ -15,6 +15,7 @@ local icons = {}
 local band = bit.band
 local pos = C.position.enemy_cooldown
 local limit = (C.actionbar.button_size * 12)/C.friendsdcooldown.size
+local space = C.filger.cooldown_space
 
 local EnemyCDAnchor = CreateFrame("Frame", "EnemyCDAnchor", UIParent)
 if C.unitframe.enable ~= true then
@@ -54,15 +55,15 @@ local UpdatePositions = function()
 			icons[i]:SetPoint("BOTTOMLEFT", EnemyCDAnchor, "BOTTOMLEFT", 0, 0)
 		elseif i < limit then
 			if direction == "UP" then
-				icons[i]:SetPoint("BOTTOM", icons[i-1], "TOP", 0, 3)
+				icons[i]:SetPoint("BOTTOM", icons[i-1], "TOP", 0, space)
 			elseif direction == "DOWN" then
-				icons[i]:SetPoint("TOP", icons[i-1], "BOTTOM", 0, -3)
+				icons[i]:SetPoint("TOP", icons[i-1], "BOTTOM", 0, -space)
 			elseif direction == "RIGHT" then
-				icons[i]:SetPoint("LEFT", icons[i-1], "RIGHT", 3, 0)
+				icons[i]:SetPoint("LEFT", icons[i-1], "RIGHT", space, 0)
 			elseif direction == "LEFT" then
-				icons[i]:SetPoint("RIGHT", icons[i-1], "LEFT", -3, 0)
+				icons[i]:SetPoint("RIGHT", icons[i-1], "LEFT", -space, 0)
 			else
-				icons[i]:SetPoint("LEFT", icons[i-1], "RIGHT", 3, 0)
+				icons[i]:SetPoint("LEFT", icons[i-1], "RIGHT", space, 0)
 			end
 
 		end
@@ -108,14 +109,20 @@ local StartTimer = function(name, sID)
 	icon.Texture:SetTexture(texture)
 	icon.Texture:SetTexCoord(0.1, 0.9, 0.1, 0.9)
 	local timerID = 120
-	if T.enemy_spells[sID] then
-		timerID = T.enemy_spells[sID]
+	if T.FriendSpells[sID] then
+		timerID = T.FriendSpells[sID]
 	end
 	-- icon.endTime = GetTime() + T.enemy_spells[sID]
 	icon.endTime = GetTime() + timerID
 	local color = (CUSTOM_CLASS_COLORS or RAID_CLASS_COLORS)[select(2, UnitClass(name))]
 	if color then
 		name = format("|cff%02x%02x%02x%s|r", color.r * 255, color.g * 255, color.b * 255, name)
+		icon:SetBackdropBorderColor(color.r, color.g, color.b)
+	end
+	for _, v in pairs(icons) do
+		if v.name == name and v.sID == sID then
+			StopTimer(v)
+		end
 	end
 	icon.name = name
 	icon.sID = sID
@@ -125,8 +132,9 @@ local StartTimer = function(name, sID)
 	icon:SetScript("OnLeave", GameTooltip_Hide)
 	-- CooldownFrame_SetTimer(icon.Cooldown, GetTime(), T.enemy_spells[sID], 1)
 	CooldownFrame_Set(icon.Cooldown, GetTime(), timerID, 1)
-	tinsert(icons, icon)
-	table.sort(icons, sortByExpiration)
+	tinsert(icons, 1, icon)
+	-- tinsert(icons, icon)
+	-- table.sort(icons, sortByExpiration)
 	UpdatePositions()
 end
 
@@ -136,8 +144,8 @@ local OnEvent = function(self, event, ...)
 
 		if eventType == "SPELL_CAST_SUCCESS" then
 			if sourceName ~= T.name then
-				-- if (T.enemy_spells[spellID] or spellID == 208683) and (UnitInParty(sourceName) or UnitInRaid(sourceName)) and show[select(2, IsInInstance())] then
-				if (T.enemy_spells[spellID] or spellID == 208683) and (UnitInParty(sourceName) or UnitInRaid(sourceName)) then
+				-- if (T.EnemySpells[spellID] or spellID == 208683) and (UnitInParty(sourceName) or UnitInRaid(sourceName)) and show[select(2, IsInInstance())] then
+				if (T.FriendSpells[spellID] or spellID == 208683) and (UnitInParty(sourceName) or UnitInRaid(sourceName)) then
 					StartTimer(sourceName, spellID)
 				end
 			end
@@ -162,11 +170,13 @@ addon:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 addon:RegisterEvent("ZONE_CHANGED_NEW_AREA")
 
 SlashCmdList.FriendCD = function()
-	StartTimer(T.name, 57994)
-	StartTimer(T.name, 78675)
-	StartTimer(T.name, 8122)
+	StartTimer(T.name, 47528)
+	StartTimer(T.name, 19647)
+	StartTimer(T.name, 47476)
 	StartTimer(T.name, 51514)
-	StartTimer(T.name, 286348)
+	StartTimer(T.name, 184052)
+	StartTimer(T.name, 6793)
+	StartTimer(T.name, 192058)
 end
 SLASH_FriendCD1 = "/friendcd"
 SLASH_FriendCD2 = "/fcd"
