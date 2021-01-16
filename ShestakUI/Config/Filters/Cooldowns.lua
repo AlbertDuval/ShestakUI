@@ -77,18 +77,20 @@ if C.enemycooldown.enable == true then
     {126629, 120},
     {126630, 120},
     {126631, 120},
-    {126152, 120}
+    {126152, 120},
+		-- Trinket Shadowlands
+		{184052, 120},
 	}
 	T.enemy_spells = {
-    {286348, 120},	-- [ADD FM] Maledic trinket
-    {286349, 120},	-- [ADD FM] Maledic trinket
-    {2782, 8},	-- [ADD FM] Drood Dispell
 		-- Dispells [ADD FM]
+		{2782, 8},	-- [ADD FM] Drood Dispell
     {88423, 8},	-- [ADD FM] Druid
     {4987, 8},	-- [ADD FM] Paladin
     {527, 8},	-- [ADD FM] Priest
     {115450, 8},	-- [ADD FM] Monk
     {77130, 8},	-- [ADD FM] Shaman
+		-- Other [ADD FM]
+		{8143, 60},	-- [ADD FM] Tremor
 		-- Interrupts and Silences
 		{187707, 15},	-- [ADD FM] Muzzle (Hunt kick)
 		{132409, 15},	-- [ADD FM] Spell Lock (Lock kick)
@@ -122,9 +124,12 @@ if C.enemycooldown.enable == true then
 		{119381, 45},	-- Leg Sweep
 		{64044, 45},	-- Psychic Horror
 		{6789, 45},		-- Mortal Coil
-		{853, 60},		-- Hammer of Justice
+		{853, 30},		-- Hammer of Justice
 		{5246, 90},	-- [ADD FM] Fear War
 		-- Defense abilities
+		{23920, 25}, -- Shield Reflect (Warrior) [FM ADD]
+		{118038, 120}, -- Die by the Sword (Warrior) [FM ADD]
+		{122470, 90}, -- Touch of Karma [FM ADD]
 		{210256, 45}, -- Blessing of Sanctuary [FM ADD]
 		{205604, 60}, -- Reverse Magic [FM ADD]
 		{198589, 60}, -- Blur [FM ADD]
@@ -144,6 +149,7 @@ if C.enemycooldown.enable == true then
 		{196718, 180}, -- Darkness [FM ADD]
 		{642, 300}, -- Divine Shield [FM ADD]
 		-- Ofensive abilities
+		{106951, 120}, -- Berserk Feral [FM ADD]
 		{114050, 180}, -- Ascendance (Elemental)
 		{114051, 180}, -- Ascendance (Enhancement)
 		{114052, 180}, -- Ascendance (Restauration)

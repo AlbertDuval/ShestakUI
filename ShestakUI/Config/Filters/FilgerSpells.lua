@@ -1796,8 +1796,6 @@ C["filger_spells"] = {
 			{spellID = 197211, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Windsong
 			{spellID = 201898, unitID = "player", caster = "player", filter = "BUFF"},
-			-- Elemental Focus [FM ADD]
-			{spellID = 16246, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Power of the Maelstorm [FM ADD]
 			{spellID = 191877, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Control of Lava [FM ADD]
@@ -1915,7 +1913,7 @@ C["filger_spells"] = {
 			-- [ADD FM] Purge
 			{spellID = 370, filter = "CD"},
 			-- [ADD FM] Flame Shock
-			{spellID = 188838, filter = "CD"},
+			{spellID = 188389, filter = "CD"},
 			-- Earth Shock
 			{spellID = 8042, filter = "CD"},
 			-- Lava Burst
