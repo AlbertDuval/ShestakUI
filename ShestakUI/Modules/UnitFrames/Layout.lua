@@ -1435,23 +1435,25 @@ end
 if C.raidframe.auto_position == "DYNAMIC" then
 	local prevNum = 5
 	local function Reposition(self)
+		local maxGroup = 5
+		local num = GetNumGroupMembers()
+		if num > 5 then
+			local _, _, subgroup = GetRaidRosterInfo(num)
+			if subgroup and subgroup > maxGroup then
+				maxGroup = subgroup
+			end
+		end
+		if maxGroup >= C.raidframe.raid_groups then
+			maxGroup = C.raidframe.raid_groups
+		end
 		if ShestakUISettings and ShestakUISettings.RaidLayout == "HEAL" and not C.raidframe.raid_groups_vertical and C.raidframe.raid_groups > 5 then
 			if InCombatLockdown() then return end
-			local maxGroup = 5
-			local num = GetNumGroupMembers()
-			if num > 5 then
-				local _, _, subgroup = GetRaidRosterInfo(num)
-				if subgroup and subgroup > maxGroup then
-					maxGroup = subgroup
-				end
-			end
-			if maxGroup >= C.raidframe.raid_groups then
-				maxGroup = C.raidframe.raid_groups
-			end
-			local offset = max(0, maxGroup - 5) * (C.raidframe.heal_height + 4)
+			local offset = max(0, maxGroup - 4) * (C.raidframe.heal_height + 4)
 			-- print("|cffffff00"..num.." "..maxGroup.." "..offset.."|r")
+			if maxGroup > 4 then
+				offset = offset - 24
+			end
 			if prevNum ~= maxGroup then
-				local offset = (maxGroup - 5) * 33
 				if C.unitframe.castbar_icon == true then
 					oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4] + 11, C.position.unitframes.player_castbar[5] + offset)
 				else
@@ -1462,19 +1464,14 @@ if C.raidframe.auto_position == "DYNAMIC" then
 				target:SetPoint(C.position.unitframes.target[1], C.position.unitframes.target[2], C.position.unitframes.target[3], C.position.unitframes.target[4], C.position.unitframes.target[5] + offset)
 				prevNum = maxGroup
 			end
+		-- else if ShestakUISettings and ShestakUISettings.RaidLayout == "VHEAL" and not C.raidframe.raid_groups_vertical then
+		elseif ShestakUISettings and ShestakUISettings.RaidLayout == "VHEAL" then
+			local offset = max(0, maxGroup - 5) * ((C.raidframe.heal_width + 8) / 2)
+			oUF_Player:SetPoint(C.position.unitframes.player[1], C.position.unitframes.player[2], C.position.unitframes.player[3], C.position.unitframes.player[4] - offset, C.position.unitframes.player[5])
+			oUF_Target:SetPoint(C.position.unitframes.target[1], C.position.unitframes.target[2], C.position.unitframes.target[3], C.position.unitframes.target[4] + offset, C.position.unitframes.target[5])
 		else
 			self:UnregisterEvent("GROUP_ROSTER_UPDATE")
 		end
-	end
-	if ShestakUISettings and ShestakUISettings.RaidLayout == "VHEAL" and not C.raidframe.raid_groups_vertical then
-		if a < 5 then a = 5 end
-		if C.unitframe.castbar_icon == true then
-			oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4] + 11 - (a - 5) * 33.6, C.position.unitframes.player_castbar[5])
-		else
-			oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4] - (a - 5) * 33.6, C.position.unitframes.player_castbar[5])
-		end
-		oUF_Player:SetPoint(C.position.unitframes.player[1], C.position.unitframes.player[2], C.position.unitframes.player[3], C.position.unitframes.player[4] - (a - 5) * 33.6, C.position.unitframes.player[5])
-		oUF_Target:SetPoint(C.position.unitframes.target[1], C.position.unitframes.target[2], C.position.unitframes.target[3], C.position.unitframes.target[4] + (a - 5) * 33.6, C.position.unitframes.target[5])
 	end
 
 	local frame = CreateFrame("Frame")

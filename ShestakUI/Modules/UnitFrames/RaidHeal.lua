@@ -459,7 +459,7 @@ oUF:Factory(function(self)
 						self:SetHeight(header:GetAttribute("initial-height"))
 					]],
 					"initial-width", unit_width,
-					"initial-height", T.Scale(27),
+					"initial-height", unit_height,
 					"showRaid", true,
 					"yOffset", T.Scale(-5),
 					"point", "TOPLEFT",
@@ -467,7 +467,7 @@ oUF:Factory(function(self)
 					"groupBy", C.raidframe.by_role and "ASSIGNEDROLE",
 					"groupingOrder", C.raidframe.by_role and "TANK,HEALER,DAMAGER,NONE",
 					"sortMethod", C.raidframe.by_role and "NAME",
-					"maxColumns", 5,
+					"maxColumns", 8,
 					"unitsPerColumn", 1,
 					"columnSpacing", T.Scale(7),
 					"columnAnchorPoint", "TOP"
