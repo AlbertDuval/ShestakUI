@@ -132,9 +132,9 @@ local StartTimer = function(name, sID)
 	icon:SetScript("OnLeave", GameTooltip_Hide)
 	-- CooldownFrame_SetTimer(icon.Cooldown, GetTime(), T.enemy_spells[sID], 1)
 	CooldownFrame_Set(icon.Cooldown, GetTime(), timerID, 1)
-	tinsert(icons, 1, icon)
-	-- tinsert(icons, icon)
-	-- table.sort(icons, sortByExpiration)
+	-- tinsert(icons, 1, icon)
+	tinsert(icons, icon)
+	table.sort(icons, sortByExpiration)
 	UpdatePositions()
 end
 
