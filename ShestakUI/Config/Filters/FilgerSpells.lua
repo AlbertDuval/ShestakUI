@@ -2567,6 +2567,8 @@ C["filger_spells"] = {
 			{spellID = 64044, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Psychic Scream
 			{spellID = 8122, unitID = "player", caster = "all", filter = "DEBUFF"},
+			-- Mind Bomb
+			{spellID = 205369, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Sin and Punishment
 			{spellID = 87204, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Holy Word: Chastise
@@ -2592,7 +2594,7 @@ C["filger_spells"] = {
 			-- Static Charge
 			{spellID = 118905, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Pulverize (Earth Elemental)
-			{spellID = 118345, unitID = "player", caster = "all", filter = "DEBUFF"},
+			{spellID = 118345, unitID = "player", caster = "all", filter = "DEBUFF", absID = true},
 			-- Sundering
 			{spellID = 197214, unitID = "player", caster = "all", filter = "DEBUFF"},
 			-- Lightning Lasso
@@ -2854,6 +2856,8 @@ C["filger_spells"] = {
 			{spellID = 117526, unitID = "target", caster = "all", filter = "DEBUFF", absID = true},
 			-- Intimidation
 			{spellID = 24394, unitID = "target", caster = "all", filter = "DEBUFF"},
+			-- Scatter Shot
+			{spellID = 213691, unitID = "target", caster = "all", filter = "DEBUFF"},
 			-- Roar of Sacrifice
 			{spellID = 53480, unitID = "target", caster = "all", filter = "DEBUFF"},
 
@@ -2956,6 +2960,8 @@ C["filger_spells"] = {
 			{spellID = 64044, unitID = "target", caster = "all", filter = "DEBUFF"},
 			-- Psychic Scream
 			{spellID = 8122, unitID = "target", caster = "all", filter = "DEBUFF"},
+			-- Mind Bomb
+			{spellID = 205369, unitID = "target", caster = "all", filter = "DEBUFF"},
 			-- Silence
 			{spellID = 15487, unitID = "target", caster = "all", filter = "DEBUFF"},
 
@@ -3003,7 +3009,7 @@ C["filger_spells"] = {
 			-- Static Charge
 			{spellID = 118905, unitID = "target", caster = "all", filter = "DEBUFF"},
 			-- Pulverize (Earth Elemental)
-			{spellID = 118345, unitID = "target", caster = "all", filter = "DEBUFF"},
+			{spellID = 118345, unitID = "target", caster = "all", filter = "DEBUFF", absID = true},
 			-- Sundering
 			{spellID = 197214, unitID = "target", caster = "all", filter = "DEBUFF"},
 			-- Lightning Lasso
