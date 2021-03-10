@@ -1276,6 +1276,10 @@ C["filger_spells"] = {
 			{spellID = 214202, filter = "CD"},
 			-- Seraphim
 			{spellID = 152262, filter = "CD"},
+			-- Beacon of Virtue [FM-ADD]
+			{spellID = 200025, filter = "CD"},
+			-- Divine Toll [FM-ADD]
+			{spellID = 304971, filter = "CD"},
 			-- Wake of Ashes
 			{spellID = 255937, filter = "CD"},
 			-- Speed of Light
@@ -1294,20 +1298,20 @@ C["filger_spells"] = {
 			{spellID = 210220, filter = "CD"},
 			-- Aura Mastery
 			{spellID = 31821, filter = "CD"},
-			-- Blessing of Sacrifice
-			{spellID = 6940, filter = "CD"},
-			-- Avenging Wrath
-			{spellID = 31884, filter = "CD"},
-			-- Shield of Vengeance
-			{spellID = 184662, filter = "CD"},
+			-- -- Blessing of Sacrifice
+			-- {spellID = 6940, filter = "CD"},
+			-- -- Avenging Wrath
+			-- {spellID = 31884, filter = "CD"},
+			-- -- Shield of Vengeance
+			-- {spellID = 184662, filter = "CD"},
 			-- Ardent Defender
 			{spellID = 31850, filter = "CD", absID = true},
 			-- Guardian of Ancient Kings
 			{spellID = 86659, filter = "CD"},
-			-- Blessing of Protection
-			{spellID = 1022, filter = "CD"},
-			-- Divine Shield
-			{spellID = 642, filter = "CD"},
+			-- -- Blessing of Protection
+			-- {spellID = 1022, filter = "CD"},
+			-- -- Divine Shield
+			-- {spellID = 642, filter = "CD"},
 		},
 	},
 	["PRIEST"] = {
@@ -1808,6 +1812,8 @@ C["filger_spells"] = {
 			{spellID = 260881, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Synapse Shock [FM ADD]
 			{spellID = 277960, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Vital Accretion [FM ADD]
+			{spellID = 337984, unitID = "player", caster = "player", filter = "BUFF"},
 		},
 		{
 			Name = "P_PROC_ICON",
@@ -1825,6 +1831,10 @@ C["filger_spells"] = {
 			{spellID = 118522, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Tidal Waves
 			{spellID = 53390, unitID = "player", caster = "player", filter = "BUFF"},
+			-- [ADD FM] Swirling Current
+			{spellID = 338340, unitID = "player", caster = "player", filter = "BUFF"},
+			-- [ADD FM] Echoing Shock
+			{spellID = 320125, unitID = "player", caster = "player", filter = "BUFF"},
 			-- [ADD FM] Tectonic Thunder
 			{spellID = 286976, unitID = "player", caster = "player", filter = "BUFF"},
 			-- [ADD FM] Flash Flodd
@@ -1926,6 +1936,8 @@ C["filger_spells"] = {
 			{spellID = 17364, filter = "CD"},
 			-- [ADD FM] Primordial Wave
 			{spellID = 326059, filter = "CD"},
+			-- [ADD FM] Echoing Shock
+			{spellID = 320125, filter = "CD"},
 			-- [ADD FM] Fleshcraft
 			{spellID = 324631, filter = "CD"},
 			-- [ADD FM] Lightning Lasso
