@@ -82,6 +82,25 @@ if C.enemycooldown.enable == true then
 		-- Trinket Shadowlands
 		{184052, 120},
 	}
+	T.enemy_kicks = {
+		{187707, 15},	-- [ADD FM] Muzzle (Hunt kick)
+		{132409, 15},	-- [ADD FM] Spell Lock (Lock kick)
+		{57994, 12},	-- Wind Shear
+		{47528, 15},	-- Mind Freeze
+		{183752, 15},	-- Disrupt
+		{106839, 15},	-- Skull Bash
+		{116705, 15},	-- Spear Hand Strike
+		{96231, 15},	-- Rebuke
+		{1766, 15},		-- Kick
+		{6552, 15},		-- Pummel
+		{147362, 24},	-- Counter Shot
+		{2139, 24},		-- Counterspell
+		{19647, 24},	-- Spell Lock
+		{115781, 24},	-- Optical Blast
+		{15487, 45},	-- Silence
+		{47476, 60},	-- Strangulate
+		{78675, 60},	-- Solar Beam
+	}
 	T.enemy_spells = {
 		-- Dispells [ADD FM]
 		{2782, 8},	-- [ADD FM] Drood Dispell
@@ -127,8 +146,10 @@ if C.enemycooldown.enable == true then
 		{119381, 50},	-- Leg Sweep
 		{853, 30},		-- Hammer of Justice
 		{5246, 90},	-- [ADD FM] Fear War
+		{115750, 90},	-- [ADD FM] Blinding Light
 		-- Defense abilities
 		{23920, 25}, -- Shield Reflect (Warrior) [FM ADD]
+		{32379, 30}, -- Shadow Word: Death (Priest) [FM ADD]
 		{118038, 120}, -- Die by the Sword (Warrior) [FM ADD]
 		{122470, 90}, -- Touch of Karma [FM ADD]
 		{210256, 45}, -- Blessing of Sanctuary [FM ADD]
@@ -150,13 +171,16 @@ if C.enemycooldown.enable == true then
 		{196718, 180}, -- Darkness [FM ADD]
 		{642, 300}, -- Divine Shield [FM ADD]
 		-- Ofensive abilities
+		{107574, 90}, -- [ADD FM] Avatar
+		{10060, 120}, -- [ADD FM] Power Infusion
+		{113858, 120}, -- [ADD FM] Dark Soul
+		{190319, 90}, -- [ADD FM] Combustion
 		{106951, 120}, -- Berserk Feral [FM ADD]
 		{114050, 180}, -- Ascendance (Elemental)
 		{114051, 180}, -- Ascendance (Enhancement)
 		{114052, 180}, -- Ascendance (Restauration)
 		{31884, 120}, -- Avenging Wrath
 		{79140, 120}, -- [ADD FM] Vendetta
-		{190319, 120}, -- [ADD FM] Combustion
 		{113858, 120}, -- [ADD FM] Dark soul
 		{12472, 180}, -- Icy Veins
 		{102543, 180}, -- Incarnation (Feral)
@@ -174,6 +198,9 @@ if C.enemycooldown.enable == true then
 	T.FriendSpells = {}
 	for _, spell in pairs(T.enemy_spells) do
 		T.EnemySpells[spell[1]] = spell[2]
+		-- T.FriendSpells[spell[1]] = spell[2]
+	end
+	for _, spell in pairs(T.enemy_kicks) do
 		T.FriendSpells[spell[1]] = spell[2]
 	end
 	for _, spell in pairs(T.trinket_spells) do
