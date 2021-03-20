@@ -1417,7 +1417,7 @@ end
 ----------------------------------------------------------------------------------------
 if C.raidframe.auto_position == "DYNAMIC" then
 	local prevNum = 5
-	local function Reposition(self)
+	local function Reposition(self, event)
 		local maxGroup = 5
 		local num = GetNumGroupMembers()
 		if num > 5 then
@@ -1429,8 +1429,12 @@ if C.raidframe.auto_position == "DYNAMIC" then
 		if maxGroup >= C.raidframe.raid_groups then
 			maxGroup = C.raidframe.raid_groups
 		end
+		if InCombatLockdown() then
+			self:RegisterEvent("PLAYER_REGEN_ENABLED")
+			return
+		end
+
 		if ShestakUISettings and ShestakUISettings.RaidLayout == "HEAL" and not C.raidframe.raid_groups_vertical and C.raidframe.raid_groups > 5 then
-			if InCombatLockdown() then return end
 			local offset = max(0, maxGroup - 4) * (C.raidframe.heal_height + 4)
 			-- print("|cffffff00"..num.." "..maxGroup.." "..offset.."|r")
 			if maxGroup > 4 then
@@ -1454,6 +1458,10 @@ if C.raidframe.auto_position == "DYNAMIC" then
 			oUF_Target:SetPoint(C.position.unitframes.target[1], C.position.unitframes.target[2], C.position.unitframes.target[3], C.position.unitframes.target[4] + offset, C.position.unitframes.target[5])
 		else
 			self:UnregisterEvent("GROUP_ROSTER_UPDATE")
+		end
+		
+		if event == "PLAYER_REGEN_ENABLED" then
+			self:UnregisterEvent("PLAYER_REGEN_ENABLED")
 		end
 	end
 
