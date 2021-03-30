@@ -320,6 +320,8 @@ L_GUI_NAMEPLATE_HEALER_ICON = "战场中显示治疗职业图标"
 L_GUI_NAMEPLATE_TOTEM_ICONS = "显示敌对图腾图标"
 L.nameplate_target_glow = "目标边框高亮"
 L.nameplate_only_name = "友方玩家只显示名称"
+L.nameplate_quests = "Show quest icon" -- Need review
+L.nameplate_cast_color = "Show color border for casting important spells" -- Need review
 L.nameplate_low_health_value = "Health value" -- Need review
 L.nameplate_low_health = "Low health highlight" -- Need review
 L_GUI_NAMEPLATE_THREAT = "仇恨情况"
@@ -405,7 +407,6 @@ L_GUI_MINIMAP_HIDE_COMBAT = "战斗中隐藏小地图"
 L_GUI_MINIMAP_TOGGLE_MENU = "小地图顶部快捷菜单"
 L.minimap_bg_map_stylization = "战场地图增强"
 L.minimap_fog_of_war = "地图全亮"
-L.minimap_fog_of_war_desc = "可在世界地图关闭按钮的菜单上选择开关"
 
 -- Loot options
 L_GUI_LOOT_SUBTEXT = "拾取框架设置"

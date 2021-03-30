@@ -320,6 +320,8 @@ L_GUI_NAMEPLATE_HEALER_ICON = "Отображать иконку над враж
 L_GUI_NAMEPLATE_TOTEM_ICONS = "Отображать иконку тотемов"
 L.nameplate_target_glow = "Выделять текущую цель"
 L.nameplate_only_name = "Отображать только имя для союзников"
+L.nameplate_quests = "Отображать иконку квестов"
+L.nameplate_cast_color = "Выделить цветом чтение важных заклинаний"
 L.nameplate_low_health_value = "Уровень здоровья"
 L.nameplate_low_health = "Подсветка низкого здоровья"
 L_GUI_NAMEPLATE_THREAT = "Цветовое обозначение угрозы (зависит от роли)"
@@ -405,7 +407,6 @@ L_GUI_MINIMAP_HIDE_COMBAT = "Скрыть миникарту в бою"
 L_GUI_MINIMAP_TOGGLE_MENU = "Отображать меню над миникартой"
 L.minimap_bg_map_stylization = "Стилизация карты полей боя"
 L.minimap_fog_of_war = "Убрать туман войны с глобальной карты"
-L.minimap_fog_of_war_desc = "Нажмите правой кнопкой по кнопке закрытия карты, чтобы активировать опцию скрытия тумана"
 
 -- Loot options
 L_GUI_LOOT_SUBTEXT = "Настройка окна добычи."

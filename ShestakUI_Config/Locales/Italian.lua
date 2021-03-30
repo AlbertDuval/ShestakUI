@@ -320,6 +320,8 @@ L_GUI_NAMEPLATE_HEALER_ICON = "Nei Campi di Battaglia, mostra un'icona 'guaritor
 L_GUI_NAMEPLATE_TOTEM_ICONS = "Mostra un’icona sopra la barra dei totem nemici"
 L.nameplate_target_glow = "Show glow texture for target" -- Need review
 L.nameplate_only_name = "Show only name for friendly units" -- Need review
+L.nameplate_quests = "Show quest icon" -- Need review
+L.nameplate_cast_color = "Show color border for casting important spells" -- Need review
 L.nameplate_low_health_value = "Health value" -- Need review
 L.nameplate_low_health = "Low health highlight" -- Need review
 L_GUI_NAMEPLATE_THREAT = "Attiva il sensore di rilevamento minaccia (si adatta automaticamente al tuo ruolo)"
@@ -405,7 +407,6 @@ L_GUI_MINIMAP_HIDE_COMBAT = "Nascondi la minimappa in combattimento"
 L_GUI_MINIMAP_TOGGLE_MENU = "Mostra il menu a scomparsa"
 L.minimap_bg_map_stylization = "Restyling della mappa dei Campi di Battaglia"
 L.minimap_fog_of_war = "Nebbia della guerra sulla mappa del mondo"
-L.minimap_fog_of_war_desc = "Right click on the close button of World Map to activate the option to hide fog of war" -- Need review
 
 -- Loot options
 L_GUI_LOOT_SUBTEXT = "Settings for loot frame." -- Need review

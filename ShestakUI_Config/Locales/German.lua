@@ -320,6 +320,8 @@ L_GUI_NAMEPLATE_HEALER_ICON = "Zeige Heilersymbol auf allen gegnerischen Heiler-
 L_GUI_NAMEPLATE_TOTEM_ICONS = "Symbol über dem Namensschild des feindlichen Totems anzeigen"
 L.nameplate_target_glow = "Show glow texture for target" -- Need review
 L.nameplate_only_name = "Show only name for friendly units" -- Need review
+L.nameplate_quests = "Show quest icon" -- Need review
+L.nameplate_cast_color = "Show color border for casting important spells" -- Need review
 L.nameplate_low_health_value = "Health value" -- Need review
 L.nameplate_low_health = "Low health highlight" -- Need review
 L_GUI_NAMEPLATE_THREAT = "Aktiviere Bedrohungsanzeige, ändert sich automatisch je nach deiner Rolle"
@@ -405,7 +407,6 @@ L_GUI_MINIMAP_HIDE_COMBAT = "Minimap im Kampf verstecken"
 L_GUI_MINIMAP_TOGGLE_MENU = "Zeige Toggle Menü"
 L.minimap_bg_map_stylization = "Schlachtfeldkarte Aussehn"
 L.minimap_fog_of_war = "Nebel des Krieges auf der Weltkarte"
-L.minimap_fog_of_war_desc = "Klicke mit der rechten Maustaste auf die Schaltfläche zum Schließen der Weltkarte, um die Option zum Ausblenden des Kriegsnebels zu aktivieren"
 
 -- Loot options
 L_GUI_LOOT_SUBTEXT = "Einstellungen für den Beuterahmen."
