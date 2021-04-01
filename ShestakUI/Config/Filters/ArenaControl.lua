@@ -23,6 +23,7 @@ T.ArenaControl = {
 	[SpellName(217832)] = 5,		-- Imprison
 	[SpellName(179057)] = 5,		-- Chaos Nova
 	-- Death Knight
+	[SpellName(207167)] = 5,	-- Blinding Sleet (FM-ADD)
 	[SpellName(91800)] = 5,		-- Gnaw (Ghoul)
 	[SpellName(91797)] = 5,		-- Monstrous Blow (Mutated Ghoul)
 	[SpellName(108194)] = 5,	-- Asphyxiate

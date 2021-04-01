@@ -137,6 +137,7 @@ if C.reminder.solo_buffs_enable == true then
 				["spells"] = {
 					SpellName(52127),	-- Water Shield
 					SpellName(974),	-- Earth Shield
+					SpellName(192106),	-- Lightning Shield
 				},
 				["combat"] = true,
 				["instance"] = true,
