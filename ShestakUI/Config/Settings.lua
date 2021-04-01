@@ -356,7 +356,7 @@ C["nameplate"] = {
 	["height"] = 9,								-- Nameplate height
 	["ad_width"] = 16,							-- Additional width for selected nameplate
 	["ad_height"] = 2,							-- Additional height for selected nameplate
-	["alpha"] = 0.5,							-- Non-target nameplate alpha
+	["alpha"] = 0.67,							-- Non-target nameplate alpha
 	["combat"] = false,							-- Automatically show nameplate in combat
 	["health_value"] = true,					-- Numeral health value
 	["show_castbar_name"] = false,				-- Show castbar name
@@ -371,7 +371,7 @@ C["nameplate"] = {
 	["target_glow"] = true,					-- Show glow texture for target
 	["only_name"] = false,						-- Show only name for friendly units
 	["quests"] = false,							-- Show quest icon
-	["low_health"] = false,						-- Show red border when low health
+	["low_health"] = true,						-- Show red border when low health
 	["low_health_value"] = 0.2,					-- Value for low health (between 0.1 and 1)
 	["cast_color"] = false,						-- Show color border for casting important spells
 	-- Threat
