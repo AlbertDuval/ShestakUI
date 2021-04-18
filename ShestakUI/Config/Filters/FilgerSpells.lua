@@ -1142,6 +1142,12 @@ C["filger_spells"] = {
 			IconSize = C.filger.buffs_size,
 			Position = {"TOP", P_BUFF_ICON_Anchor},
 
+			-- Divine Favor [FM ADD]
+			{spellID = 210294, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Reckoning [FM ADD]
+			{spellID = 247676, unitID = "player", caster = "player", filter = "BUFF"},
+			-- Divine Steed [FM ADD]
+			{spellID = 221886, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Inquisition
 			{spellID = 84963, unitID = "player", caster = "player", filter = "BUFF"},
 			-- Shield of Vengeance
@@ -1232,6 +1238,10 @@ C["filger_spells"] = {
 			Position = {"TOP", COOLDOWN_Anchor},
 
 			-- Self
+			-- Final Rockoning [FM ADD]
+			{spellID = 343721, filter = "CD"},
+			-- Divine Favor [FM ADD]
+			{spellID = 210294, filter = "CD"},
 			-- Crusader Strike [FM ADD]
 			{spellID = 35395, filter = "CD"},
 			-- Holy Shock [FM ADD]
@@ -1296,12 +1306,12 @@ C["filger_spells"] = {
 			{spellID = 105809, filter = "CD"},
 			-- Holy Wrath
 			{spellID = 210220, filter = "CD"},
-			-- Aura Mastery
-			{spellID = 31821, filter = "CD"},
+			-- -- Aura Mastery
+			-- {spellID = 31821, filter = "CD"},
 			-- -- Blessing of Sacrifice
 			-- {spellID = 6940, filter = "CD"},
-			-- -- Avenging Wrath
-			-- {spellID = 31884, filter = "CD"},
+			-- Avenging Wrath
+			{spellID = 31884, filter = "CD"},
 			-- -- Shield of Vengeance
 			-- {spellID = 184662, filter = "CD"},
 			-- Ardent Defender
@@ -1934,6 +1944,8 @@ C["filger_spells"] = {
 			{spellID = 61295, filter = "CD"},
 			-- Stormstrike
 			{spellID = 17364, filter = "CD"},
+			-- [ADD FM] Wellspring
+			{spellID = 197995, filter = "CD"},
 			-- [ADD FM] Primordial Wave
 			{spellID = 326059, filter = "CD"},
 			-- [ADD FM] Echoing Shock
