@@ -286,80 +286,6 @@ local AurasPostUpdateIcon = function(_, _, icon, _, _, duration, expiration)
 	icon.first = true
 end
 
-local function threatColor(self, forced)
-	if UnitIsPlayer(self.unit) then return end
-
-	if C.nameplate.enhance_threat ~= true then
-		SetColorBorder(self.Health, unpack(C.media.border_color))
-	end
-	if UnitIsTapDenied(self.unit) then
-		self.Health:SetStatusBarColor(0.6, 0.6, 0.6)
-	elseif UnitAffectingCombat("player") then
-		local threatStatus = UnitThreatSituation("player", self.unit)
-		if self.npcID == "120651" then	-- Explosives affix
-			self.Health:SetStatusBarColor(unpack(C.nameplate.extra_color))
-		elseif self.npcID == "174773" then	-- Spiteful Shade affix
-			if threatStatus == 3 then
-				self.Health:SetStatusBarColor(unpack(C.nameplate.extra_color))
-			else
-				self.Health:SetStatusBarColor(unpack(C.nameplate.good_color))
-			end
-		elseif threatStatus == 3 then	-- securely tanking, highest threat
-			if T.Role == "Tank" then
-				if C.nameplate.enhance_threat == true then
-					self.Health:SetStatusBarColor(unpack(C.nameplate.good_color))
-				else
-					SetColorBorder(self.Health, unpack(C.nameplate.bad_color))
-				end
-			else
-				if C.nameplate.enhance_threat == true then
-					self.Health:SetStatusBarColor(unpack(C.nameplate.bad_color))
-				else
-					SetColorBorder(self.Health, unpack(C.nameplate.bad_color))
-				end
-			end
-		elseif threatStatus == 2 then	-- insecurely tanking, another unit have higher threat but not tanking
-			if C.nameplate.enhance_threat == true then
-				self.Health:SetStatusBarColor(unpack(C.nameplate.near_color))
-			else
-				SetColorBorder(self.Health, unpack(C.nameplate.near_color))
-			end
-		elseif threatStatus == 1 then	-- not tanking, higher threat than tank
-			if C.nameplate.enhance_threat == true then
-				self.Health:SetStatusBarColor(unpack(C.nameplate.near_color))
-			else
-				SetColorBorder(self.Health, unpack(C.nameplate.near_color))
-			end
-		elseif threatStatus == 0 then	-- not tanking, lower threat than tank
-			if C.nameplate.enhance_threat == true then
-				if T.Role == "Tank" then
-					local offTank = false
-					if IsInRaid() then
-						for i = 1, GetNumGroupMembers() do
-							if UnitExists("raid"..i) and not UnitIsUnit("raid"..i, "player") and UnitGroupRolesAssigned("raid"..i) == "TANK" then
-								local isTanking = UnitDetailedThreatSituation("raid"..i, self.unit)
-								if isTanking then
-									offTank = true
-									break
-								end
-							end
-						end
-					end
-					if offTank then
-						self.Health:SetStatusBarColor(unpack(C.nameplate.offtank_color))
-					else
-						self.Health:SetStatusBarColor(unpack(C.nameplate.bad_color))
-					end
-				else
-					self.Health:SetStatusBarColor(unpack(C.nameplate.good_color))
-				end
-			end
-		end
-	elseif not forced then
-		self.Health:ForceUpdate()
-	end
-end
-
 local function UpdateTarget(self)
 	local isTarget = UnitIsUnit(self.unit, "target")
 	local isMe = UnitIsUnit(self.unit, "player")
@@ -445,13 +371,54 @@ local function UpdateName(self)
 	end
 end
 
+local kickID = 0
+if C.nameplate.kick_color then
+	if T.class == "DEATHKNIGHT" then
+		kickID = 47528
+	elseif T.class == "DEMONHUNTER" then
+		kickID = 183752
+	elseif T.class == "DRUID" then
+		kickID = 106839
+	elseif T.class == "HUNTER" then
+		kickID = GetSpecialization() == 3 and 187707 or 147362
+	elseif T.class == "MAGE" then
+		kickID = 2139
+	elseif T.class == "MONK" then
+		kickID = 116705
+	elseif T.class == "PALADIN" then
+		kickID = 96231
+	elseif T.class == "PRIEST" then
+		kickID = 15487
+	elseif T.class == "ROGUE" then
+		kickID = 1766
+	elseif T.class == "SHAMAN" then
+		kickID = 57994
+	elseif T.class == "WARLOCK" then
+		kickID = 119910
+	elseif T.class == "WARRIOR" then
+		kickID = 6552
+	end
+end
+
+-- Cast color
 local function castColor(self)
 	if self.notInterruptible then
 		self:SetStatusBarColor(0.78, 0.25, 0.25)
 		self.bg:SetColorTexture(0.78, 0.25, 0.25, 0.2)
 	else
-		self:SetStatusBarColor(1, 0.8, 0)
-		self.bg:SetColorTexture(1, 0.8, 0, 0.2)
+		if C.nameplate.kick_color then
+			local start = GetSpellCooldown(kickID)
+			if start ~= 0 then
+				self:SetStatusBarColor(1, 0.5, 0)
+				self.bg:SetColorTexture(1, 0.5, 0, 0.2)
+			else
+				self:SetStatusBarColor(1, 0.8, 0)
+				self.bg:SetColorTexture(1, 0.8, 0, 0.2)
+			end
+		else
+			self:SetStatusBarColor(1, 0.8, 0)
+			self.bg:SetColorTexture(1, 0.8, 0, 0.2)
+		end
 	end
 
 	if C.nameplate.cast_color then
@@ -462,6 +429,89 @@ local function castColor(self)
 		else
 			SetColorBorder(self, unpack(C.media.border_color))
 		end
+	end
+end
+
+-- Health color
+local function threatColor(self, forced)
+	if UnitIsPlayer(self.unit) then return end
+
+	if C.nameplate.enhance_threat ~= true then
+		SetColorBorder(self.Health, unpack(C.media.border_color))
+	end
+	if UnitIsTapDenied(self.unit) then
+		self.Health:SetStatusBarColor(0.6, 0.6, 0.6)
+	elseif UnitAffectingCombat("player") then
+		local threatStatus = UnitThreatSituation("player", self.unit)
+		if self.npcID == "120651" then	-- Explosives affix
+			self.Health:SetStatusBarColor(unpack(C.nameplate.extra_color))
+		elseif self.npcID == "174773" then	-- Spiteful Shade affix
+			if threatStatus == 3 then
+				self.Health:SetStatusBarColor(unpack(C.nameplate.extra_color))
+			else
+				self.Health:SetStatusBarColor(unpack(C.nameplate.good_color))
+			end
+		elseif threatStatus == 3 then	-- securely tanking, highest threat
+			if T.Role == "Tank" then
+				if C.nameplate.enhance_threat == true then
+					if C.nameplate.mob_color_enable and T.ColorPlate[self.npcID] then
+						self.Health:SetStatusBarColor(unpack(T.ColorPlate[self.npcID]))
+					else
+						self.Health:SetStatusBarColor(unpack(C.nameplate.good_color))
+					end
+				else
+					SetColorBorder(self.Health, unpack(C.nameplate.bad_color))
+				end
+			else
+				if C.nameplate.enhance_threat == true then
+					self.Health:SetStatusBarColor(unpack(C.nameplate.bad_color))
+				else
+					SetColorBorder(self.Health, unpack(C.nameplate.bad_color))
+				end
+			end
+		elseif threatStatus == 2 then	-- insecurely tanking, another unit have higher threat but not tanking
+			if C.nameplate.enhance_threat == true then
+				self.Health:SetStatusBarColor(unpack(C.nameplate.near_color))
+			else
+				SetColorBorder(self.Health, unpack(C.nameplate.near_color))
+			end
+		elseif threatStatus == 1 then	-- not tanking, higher threat than tank
+			if C.nameplate.enhance_threat == true then
+				self.Health:SetStatusBarColor(unpack(C.nameplate.near_color))
+			else
+				SetColorBorder(self.Health, unpack(C.nameplate.near_color))
+			end
+		elseif threatStatus == 0 then	-- not tanking, lower threat than tank
+			if C.nameplate.enhance_threat == true then
+				if T.Role == "Tank" then
+					local offTank = false
+					if IsInRaid() then
+						for i = 1, GetNumGroupMembers() do
+							if UnitExists("raid"..i) and not UnitIsUnit("raid"..i, "player") and UnitGroupRolesAssigned("raid"..i) == "TANK" then
+								local isTanking = UnitDetailedThreatSituation("raid"..i, self.unit)
+								if isTanking then
+									offTank = true
+									break
+								end
+							end
+						end
+					end
+					if offTank then
+						self.Health:SetStatusBarColor(unpack(C.nameplate.offtank_color))
+					else
+						self.Health:SetStatusBarColor(unpack(C.nameplate.bad_color))
+					end
+				else
+					if C.nameplate.mob_color_enable and T.ColorPlate[self.npcID] then
+						self.Health:SetStatusBarColor(unpack(T.ColorPlate[self.npcID]))
+					else
+						self.Health:SetStatusBarColor(unpack(C.nameplate.good_color))
+					end
+				end
+			end
+		end
+	elseif not forced then
+		self.Health:ForceUpdate()
 	end
 end
 
@@ -481,11 +531,15 @@ local function HealthPostUpdate(self, unit, cur, max)
 		self:SetStatusBarColor(r, g, b)
 		self.bg:SetVertexColor(r * mu, g * mu, b * mu)
 	elseif not UnitIsTapDenied(unit) and not isPlayer then
-		local reaction = T.oUF_colors.reaction[unitReaction]
-		if reaction then
-			r, g, b = reaction[1], reaction[2], reaction[3]
+		if C.nameplate.mob_color_enable and T.ColorPlate[main.npcID] then
+			r, g, b = unpack(T.ColorPlate[main.npcID])
 		else
-			r, g, b = UnitSelectionColor(unit, true)
+			local reaction = T.oUF_colors.reaction[unitReaction]
+			if reaction then
+				r, g, b = reaction[1], reaction[2], reaction[3]
+			else
+				r, g, b = UnitSelectionColor(unit, true)
+			end
 		end
 
 		self:SetStatusBarColor(r, g, b)
@@ -803,6 +857,16 @@ local function style(self, unit)
 	end)
 
 	self.Health.PostUpdate = HealthPostUpdate
+
+	-- Absorb
+	if C.raidframe.plugins_healcomm == true then
+		local ahpb = self.Health:CreateTexture(nil, "ARTWORK")
+		ahpb:SetTexture(C.media.texture)
+		ahpb:SetVertexColor(1, 1, 0, 1)
+		self.HealthPrediction = {
+			absorbBar = ahpb
+		}
+	end
 
 	-- Every event should be register with this
 	table.insert(self.__elements, UpdateName)

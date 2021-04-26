@@ -1441,6 +1441,7 @@ if C.raidframe.auto_position == "DYNAMIC" then
 				offset = offset - 24
 			end
 			if prevNum ~= maxGroup then
+				-- local offset = (maxGroup - 5) * (C.raidframe.heal_height + 7)
 				if C.unitframe.castbar_icon == true then
 					oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4] + 11, C.position.unitframes.player_castbar[5] + offset)
 				else
@@ -1459,7 +1460,7 @@ if C.raidframe.auto_position == "DYNAMIC" then
 		else
 			self:UnregisterEvent("GROUP_ROSTER_UPDATE")
 		end
-		
+
 		if event == "PLAYER_REGEN_ENABLED" then
 			self:UnregisterEvent("PLAYER_REGEN_ENABLED")
 		end
@@ -1474,7 +1475,7 @@ if C.raidframe.auto_position == "DYNAMIC" then
 elseif C.raidframe.auto_position == "STATIC" then
 	local function Reposition()
 		if ShestakUISettings and ShestakUISettings.RaidLayout == "HEAL" and not C.raidframe.raid_groups_vertical and C.raidframe.raid_groups > 5 then
-			local offset = (C.raidframe.raid_groups - 5) * 33
+			local offset = (C.raidframe.raid_groups - 5) * (C.raidframe.heal_height + 7)
 			if C.unitframe.castbar_icon == true then
 				oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4] + 11, C.position.unitframes.player_castbar[5] + offset)
 			else

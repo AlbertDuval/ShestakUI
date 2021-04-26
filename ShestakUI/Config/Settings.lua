@@ -374,6 +374,7 @@ C["nameplate"] = {
 	["low_health"] = true,						-- Show red border when low health
 	["low_health_value"] = 0.2,					-- Value for low health (between 0.1 and 1)
 	["cast_color"] = false,						-- Show color border for casting important spells
+	["kick_color"] = false,						-- Change cast color if interrupt on cd
 	-- Threat
 	["enhance_threat"] = true,					-- Enable threat feature, automatically changes by your role
 	["good_color"] = {0.2, 0.8, 0.2},			-- Good threat color
@@ -381,6 +382,8 @@ C["nameplate"] = {
 	["bad_color"] = {1, 0, 0},					-- Bad threat color
 	["offtank_color"] = {0, 0.5, 1},			-- Offtank threat color
 	["extra_color"] = {1, 0.3, 0},				-- Explosive and Spiteful affix color
+	["mob_color_enable"] = false,				-- Change color for important mobs in dungeons
+	["mob_color"] = {0, 0.5, 0.8},				-- Color for mobs
 }
 
 ----------------------------------------------------------------------------------------
@@ -490,17 +493,17 @@ C["filger"] = {
 --	Announcements options
 ----------------------------------------------------------------------------------------
 C["announcements"] = {
-	["drinking"] = true,						-- Announce when arena enemy is drinking
 	["interrupts"] = true,						-- Announce when you interrupt
 	["spells"] = true,							-- Announce when you cast some spell (from the list)
 	["spells_from_all"] = false,				-- Check spells cast from all members
+	["feasts"] = false,							-- Announce Feasts/Souls/Repair Bots cast
+	["portals"] = false,						-- Announce Portals/Ritual of Summoning cast
 	["toys"] = false,							-- Announce some annoying toys
-	["pull_countdown"] = true,					-- Pull countdown announce (/pc #)
 	["flask_food"] = false,						-- Announce the usage of flasks and food (/ffcheck)
 	["flask_food_raid"] = false,				-- Announce to raid channel
 	["flask_food_auto"] = false,				-- Auto check when ReadyCheck
-	["feasts"] = true,							-- Announce Feasts/Souls/Repair Bots cast
-	["portals"] = true,						-- Announce Portals/Ritual of Summoning cast
+	["drinking"] = true,						-- Announce when arena enemy is drinking
+	["pull_countdown"] = true,					-- Pull countdown announce (/pc #)
 	["bad_gear"] = false,						-- Check your bad gear in instance (fishing pole, from the list)
 	["safari_hat"] = true,						-- Check Safari Hat when starting Pet Battle
 }
