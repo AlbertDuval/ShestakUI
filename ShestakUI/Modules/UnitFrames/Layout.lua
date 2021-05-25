@@ -472,7 +472,7 @@ local function Shared(self, unit)
 		end
 
 		-- Totem bar for other classes
-		if C.unitframe_class_bar.totem == true and T.class ~= "SHAMAN" then
+		if C.unitframe_class_bar.totem == true and C.unitframe_class_bar.totem_other == true and T.class ~= "SHAMAN" then
 			self.TotemBar = CreateFrame("Frame", self:GetName().."_TotemBar", self)
 			self.TotemBar:SetFrameLevel(self.Health:GetFrameLevel() + 2)
 			self.TotemBar:SetPoint("TOPLEFT", self, "TOPLEFT", 0, 0)
@@ -1419,13 +1419,20 @@ end
 ----------------------------------------------------------------------------------------
 if C.raidframe.auto_position == "DYNAMIC" then
 	local prevNum = 5
+	local maxGroup = 5
 	local function Reposition(self, event)
-		local maxGroup = 5
-		local num = GetNumGroupMembers()
-		if num > 5 then
-			local _, _, subgroup = GetRaidRosterInfo(num)
-			if subgroup and subgroup > maxGroup then
-				maxGroup = subgroup
+		if C.raidframe.layout == "HEAL" and C.raidframe.raid_groups > 5 then
+			if InCombatLockdown() then
+				self:RegisterEvent("PLAYER_REGEN_ENABLED")
+				return
+			end
+			-- local maxGroup = 5
+			local num = GetNumGroupMembers()
+			if num > 5 then
+				local _, _, subgroup = GetRaidRosterInfo(num)
+				if subgroup and subgroup > maxGroup then
+					maxGroup = subgroup
+				end
 			end
 		end
 		if maxGroup >= C.raidframe.raid_groups then
@@ -1436,29 +1443,26 @@ if C.raidframe.auto_position == "DYNAMIC" then
 			return
 		end
 
-		if ShestakUISettings and ShestakUISettings.RaidLayout == "HEAL" and not C.raidframe.raid_groups_vertical and C.raidframe.raid_groups > 5 then
-			local offset = max(0, maxGroup - 4) * (C.raidframe.heal_height + 4)
-			-- print("|cffffff00"..num.." "..maxGroup.." "..offset.."|r")
-			if maxGroup > 4 then
-				offset = offset - 24
-			end
+		if C.raidframe.layout == "HEAL" and C.raidframe.raid_groups > 5 then
 			if prevNum ~= maxGroup then
-				-- local offset = (maxGroup - 5) * (C.raidframe.heal_height + 7)
-				if C.unitframe.castbar_icon == true then
-					oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4] + 11, C.position.unitframes.player_castbar[5] + offset)
-				else
-					oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4], C.position.unitframes.player_castbar[5] + offset)
-				end
+				-- local offset = (maxGroup - 5) * (C.raidframe.heal_height + 7) + ((maxGroup - ((maxGroup - 5))) * (C.raidframe.heal_height - 26))
+				local offset = (maxGroup - 5) * (C.raidframe.heal_height + 7)
 
-				player:SetPoint(C.position.unitframes.player[1], C.position.unitframes.player[2], C.position.unitframes.player[3], C.position.unitframes.player[4], C.position.unitframes.player[5] + offset)
-				target:SetPoint(C.position.unitframes.target[1], C.position.unitframes.target[2], C.position.unitframes.target[3], C.position.unitframes.target[4], C.position.unitframes.target[5] + offset)
+				if C.raidframe.raid_groups_vertical then
+					offset = max(0, maxGroup - 5) * ((C.raidframe.heal_width + 8) / 2)
+					player:SetPoint(C.position.unitframes.player[1], C.position.unitframes.player[2], C.position.unitframes.player[3], C.position.unitframes.player[4] - offset, C.position.unitframes.player[5])
+					target:SetPoint(C.position.unitframes.target[1], C.position.unitframes.target[2], C.position.unitframes.target[3], C.position.unitframes.target[4] + offset, C.position.unitframes.target[5])
+				else
+					if C.unitframe.castbar_icon == true then
+						oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4] + 11, C.position.unitframes.player_castbar[5] + offset)
+					else
+						oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4], C.position.unitframes.player_castbar[5] + offset)
+					end
+					player:SetPoint(C.position.unitframes.player[1], C.position.unitframes.player[2], C.position.unitframes.player[3], C.position.unitframes.player[4], C.position.unitframes.player[5] + offset)
+					target:SetPoint(C.position.unitframes.target[1], C.position.unitframes.target[2], C.position.unitframes.target[3], C.position.unitframes.target[4], C.position.unitframes.target[5] + offset)
+				end
 				prevNum = maxGroup
 			end
-		-- else if ShestakUISettings and ShestakUISettings.RaidLayout == "VHEAL" and not C.raidframe.raid_groups_vertical then
-		elseif ShestakUISettings and ShestakUISettings.RaidLayout == "VHEAL" then
-			local offset = max(0, maxGroup - 5) * ((C.raidframe.heal_width + 8) / 2)
-			oUF_Player:SetPoint(C.position.unitframes.player[1], C.position.unitframes.player[2], C.position.unitframes.player[3], C.position.unitframes.player[4] - offset, C.position.unitframes.player[5])
-			oUF_Target:SetPoint(C.position.unitframes.target[1], C.position.unitframes.target[2], C.position.unitframes.target[3], C.position.unitframes.target[4] + offset, C.position.unitframes.target[5])
 		else
 			self:UnregisterEvent("GROUP_ROSTER_UPDATE")
 		end
@@ -1476,7 +1480,8 @@ if C.raidframe.auto_position == "DYNAMIC" then
 
 elseif C.raidframe.auto_position == "STATIC" then
 	local function Reposition()
-		if ShestakUISettings and ShestakUISettings.RaidLayout == "HEAL" and not C.raidframe.raid_groups_vertical and C.raidframe.raid_groups > 5 then
+		if C.raidframe.layout == "HEAL" and not C.raidframe.raid_groups_vertical and C.raidframe.raid_groups > 5 then
+			-- local offset = (C.raidframe.raid_groups - 5) * (C.raidframe.heal_height + 7) + ((C.raidframe.raid_groups - ((C.raidframe.raid_groups - 5))) * (C.raidframe.heal_height - 26))
 			local offset = (C.raidframe.raid_groups - 5) * (C.raidframe.heal_height + 7)
 			if C.unitframe.castbar_icon == true then
 				oUF_Player_Castbar:SetPoint(C.position.unitframes.player_castbar[1], C.position.unitframes.player_castbar[2], C.position.unitframes.player_castbar[3], C.position.unitframes.player_castbar[4] + 11, C.position.unitframes.player_castbar[5] + offset)

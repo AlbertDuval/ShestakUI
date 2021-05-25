@@ -208,7 +208,6 @@ SlashCmdList.VHEAL = function()
 	ReloadUI()
 end
 SLASH_VHEAL1 = "/vheal"
-SLASH_VHEAL2 = "/vheal2"
 
 ----------------------------------------------------------------------------------------
 --	Switch to DPS layout
@@ -225,11 +224,10 @@ SLASH_DPS2 = "/взы"
 --	Switch to blizzard layout
 ----------------------------------------------------------------------------------------
 SlashCmdList.BLI = function()
-	ShestakUISettings.RaidLayout = "NONE"
+	ShestakUISettings.RaidLayout = "BLIZZARD"
 	ReloadUI()
 end
 SLASH_BLI1 = "/bliz"
-SLASH_BLI2 = "/bliz2"
 
 ----------------------------------------------------------------------------------------
 --	Command to show frame you currently have mouseovered
