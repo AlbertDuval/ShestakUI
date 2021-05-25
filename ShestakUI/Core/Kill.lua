@@ -12,6 +12,27 @@ frame:SetScript("OnEvent", function(_, _, addon)
 		end
 	end
 
+	if ShestakUISettings then
+		C.raidframe.party_vertical = false
+		C.raidframe.raid_groups_vertical = false
+		if ShestakUISettings.RaidLayout == "HEAL" then
+			C.raidframe.layout = "HEAL"
+		elseif ShestakUISettings.RaidLayout == "DPS" then
+			C.raidframe.layout = "DPS"
+		elseif ShestakUISettings.RaidLayout == "BLIZZARD" then
+			C.raidframe.layout = "BLIZZARD"
+		elseif ShestakUISettings.RaidLayout == "VHEAL" then
+			C.raidframe.layout = "HEAL"
+			C.raidframe.party_vertical = true
+			C.raidframe.raid_groups_vertical = true
+		end
+	end
+	local a = "False"
+	if C.raidframe.party_vertical then
+		a = "True"
+	end
+	print("|caaaaff00".."__Kill__ "..C.raidframe.layout.." |cbbbbff00"..ShestakUISettings.RaidLayout.." "..a.."|r")
+
 	if C.unitframe.enable and C.raidframe.layout ~= "BLIZZARD" then
 		InterfaceOptionsFrameCategoriesButton10:SetScale(0.00001)
 		InterfaceOptionsFrameCategoriesButton10:SetAlpha(0)
