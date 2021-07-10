@@ -26,7 +26,6 @@ local function LoadSkin()
 
 		-- Background
 		frame.Background:SetTexture(nil)
-		frame.OldAchievement:Kill()
 		frame.glow:Kill()
 		frame.shine:Kill()
 		frame.GuildBanner:Kill()

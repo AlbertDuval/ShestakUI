@@ -86,6 +86,7 @@ local function LoadSkin()
 
 	QuestMapFrame.DetailsFrame:StripTextures()
 	QuestMapFrame.DetailsFrame.RewardsFrame:StripTextures()
+	QuestMapFrame.DetailsFrame.Bg:Hide()
 
 	QuestMapFrame.DetailsFrame.BackButton:SkinButton()
 	QuestMapFrame.DetailsFrame.BackButton:ClearAllPoints()

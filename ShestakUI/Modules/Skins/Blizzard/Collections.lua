@@ -500,9 +500,10 @@ local function LoadSkin()
 	WardrobeTransmogFrame.ApplyButton:SkinButton()
 	WardrobeTransmogFrame.SpecButton:SetPoint("RIGHT", WardrobeTransmogFrame.ApplyButton, "LEFT", -2, 0)
 	WardrobeTransmogFrame.ModelScene.ClearAllPendingButton:SkinButton()
+	T.SkinCheckBox(WardrobeTransmogFrame.ToggleSecondaryAppearanceCheckbox)
 
-	for i = 1, #WardrobeTransmogFrame.ModelScene.SlotButtons do
-		local slot = WardrobeTransmogFrame.ModelScene.SlotButtons[i]
+	for i = 1, #WardrobeTransmogFrame.SlotButtons do
+		local slot = WardrobeTransmogFrame.SlotButtons[i]
 		local icon = slot.Icon
 		local border = slot.Border
 

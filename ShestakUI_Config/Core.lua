@@ -122,6 +122,8 @@ ns.CreateCheckBox = function(parent, option, text, textDesc)
 		f.Text:SetText(ns[parent.tag.."_"..option])
 	end
 
+	f.Text:SetWidth(540)
+
 	f.tooltipText = ns[parent.tag.."_"..option.."_desc"] or textDesc or ns[parent.tag.."_"..option] or text
 
 	f.needsReload = true
@@ -482,6 +484,8 @@ local DropDownText = {
 	["DPS"] = L.raidframe_dps_layout,
 	["AUTO"] = L.raidframe_auto_layout,
 	["BLIZZARD"] = "Blizzard",
+	["ICONS"] = L.unitframe_portrait_type_icons,
+	["OVERLAY"] = L.unitframe_portrait_type_overlay,
 }
 
 ns.CreateDropDown = function(parent, option, needsReload, text, tableValue, LSM, isFont)
